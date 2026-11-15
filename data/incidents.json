@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-15T09:28:14Z",
+ "updated": "2026-11-15T17:57:41Z",
  "sources": [
   "The Hacker News",
   "BleepingComputer",
@@ -18,8 +18,70 @@
   "CISA",
   "Inside Higher Ed"
  ],
- "feed_errors": [],
+ "feed_errors": [
+  "The Cyber Express: robots.txt does not allow this feed"
+ ],
  "incidents": [
+  {
+   "id": "bbb8a67270",
+   "victim": null,
+   "victim_key": "",
+   "sector": null,
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-15T15:23:48Z",
+   "last_seen": "2026-11-15T15:23:48Z",
+   "sources": [
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/tsmc-employee-data-breach-linked-to-cloud-provider/",
+     "title": "TSMC employee data breach linked to cloud provider",
+     "published": "2026-11-15T15:23:48Z"
+    }
+   ]
+  },
+  {
+   "id": "254208bdc6",
+   "victim": "La Poste Subsidiary Maileva Affects",
+   "victim_key": "la poste subsidiary maileva affects",
+   "sector": null,
+   "country": "France",
+   "country_key": "France",
+   "city": null,
+   "lat": 46.61,
+   "lon": 2.34,
+   "precision": "country",
+   "type": "data_breach",
+   "records": "22 Million People",
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "summary": null,
+   "confidence": "medium",
+   "first_seen": "2026-11-15T10:43:16Z",
+   "last_seen": "2026-11-15T10:43:16Z",
+   "sources": [
+    {
+     "name": "Security Affairs",
+     "url": "https://securityaffairs.com/203126/data-breach/data-breach-at-la-poste-subsidiary-maileva-affects-22-million-people-in-france.html",
+     "title": "Data Breach at La Poste Subsidiary Maileva Affects 22 Million People in France",
+     "published": "2026-11-15T10:43:16Z"
+    }
+   ]
+  },
   {
    "id": "960f41318e",
    "victim": null,
