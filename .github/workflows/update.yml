@@ -1,0 +1,36 @@
+name: Update incidents
+
+on:
+  schedule:
+    - cron: "7,37 * * * *"      # every 30 minutes (GitHub may run scheduled jobs a few minutes late)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-incidents
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Read feeds and extract incidents      # standard library only: no packages, no keys
+        run: python pipeline/update.py
+      - name: Publish new data
+        run: |
+          if git diff --quiet -- data; then
+            echo "No changes"
+          else
+            git config user.name "incident-bot"
+            git config user.email "incident-bot@users.noreply.github.com"
+            git add data
+            git commit -m "Update incidents"
+            git push
+          fi
