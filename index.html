@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Live Cyber Attack Map | Datafloq</title>
+<meta name="description" content="Dashboard and 3D globe of the latest reported cyber attacks and data breaches worldwide, updated through the day from cybersecurity news reporting.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="map.css">
+<script type="importmap">{ "imports": { "three": "./vendor/three.module.min.js" } }</script>
+<script src="vendor/topojson-client.min.js" defer></script>
+</head>
+<body>
+<div id="app">
+
+  <aside class="side">
+    <a href="https://datafloq.com/" target="_blank" rel="noopener" class="logo"><img src="assets/datafloq-logo-dark.svg" alt="Datafloq" width="150" height="31"></a>
+    <h1>Live Cyber Attack Map</h1>
+    <p class="sub">Reported attacks and breaches, placed where the victim is based.</p>
+
+    <div class="mode" role="group" aria-label="Animation mode">
+      <button type="button" id="modeReplay" aria-pressed="true">Replay</button>
+      <button type="button" id="modeLive" aria-pressed="false">Realtime</button>
+    </div>
+    <p class="note" id="modeNote"></p>
+
+    <nav id="legend" aria-label="Filter by attack type"></nav>
+
+    <div class="side-foot">
+      <details class="about">
+        <summary>About this map</summary>
+        <p>Pins mark the country where the victim is based. A missile flies from another country only when a headline names where the attack came from; otherwise it drops in from above.</p>
+        <p>Details are picked out automatically by keyword rules, so check the linked reports.</p>
+        <p>Reporting: <span id="sources"></span>.</p>
+        <p>Earth imagery: NASA. Borders: Natural Earth.</p>
+      </details>
+      <p class="note" id="asof"></p>
+    </div>
+  </aside>
+
+  <section class="kpis" aria-label="Summary">
+    <article class="kpi">
+      <h2>Incidents reported</h2>
+      <p class="val" id="kIncidents">–</p>
+      <p class="kpi-sub" id="kIncidentsSub"></p>
+      <div class="bars good" id="sparkBars" role="img" aria-label="New reports per day over the last 14 days"></div>
+    </article>
+    <article class="kpi">
+      <h2>Countries affected</h2>
+      <p class="val" id="kCountries">–</p>
+      <p class="kpi-sub" id="kCountriesSub"></p>
+      <div class="dial" id="kCountriesDial" aria-hidden="true"></div>
+    </article>
+    <article class="kpi">
+      <h2>Most common attack</h2>
+      <p class="val small" id="kType">–</p>
+      <p class="kpi-sub" id="kTypeSub"></p>
+      <div class="dial" id="kTypeDial" aria-hidden="true"></div>
+    </article>
+    <article class="kpi">
+      <h2>Latest report</h2>
+      <p class="val" id="kLatest">–</p>
+      <p class="kpi-sub" id="kLatestSub"></p>
+      <div class="bars warn" id="kLatestBars" role="img" aria-label="Incidents by news source"></div>
+    </article>
+  </section>
+
+  <section class="mapPanel" aria-label="Threat map">
+    <header>
+      <h2>Threat map</h2>
+      <label class="sr" for="window">Time range</label>
+      <select id="window">
+        <option value="1">Last 24 hours</option>
+        <option value="7">Last 7 days</option>
+        <option value="30" selected>Last 30 days</option>
+        <option value="0">Everything</option>
+      </select>
+    </header>
+    <p class="ticker" id="ticker" hidden><span class="live replay" id="liveBadge"><i></i><span id="liveText">REPLAY</span></span><button type="button" id="tickText" title="Show this incident"></button></p>
+    <div id="stage">
+      <canvas id="globe" role="img" aria-label="3D globe showing recently reported cyber attacks. Use the Recent activity list for a text version."></canvas>
+      <svg id="fx" aria-hidden="true"></svg>
+      <div id="fxLabels" aria-hidden="true"></div>
+      <div class="zoom" role="group" aria-label="Globe controls">
+        <button type="button" id="zin" aria-label="Zoom in">+</button>
+        <button type="button" id="zout" aria-label="Zoom out">&minus;</button>
+        <button type="button" id="zreset" aria-label="Reset view">&#8634;</button>
+        <button type="button" id="style" aria-label="Switch globe style">&#9680;</button>
+      </div>
+      <div id="tip" role="tooltip" hidden></div>
+      <div id="hint" hidden>Use Ctrl + scroll to zoom</div>
+      <div id="loading">Loading globe…</div>
+    </div>
+    <div id="rankWrap" hidden>
+      <h3>Most reported countries</h3>
+      <div id="rank"></div>
+    </div>
+  </section>
+
+  <section class="activity" id="panel" aria-label="Recent activity">
+    <header>
+      <h2>Recent activity <span id="listCount"></span></h2>
+    </header>
+    <label class="sr" for="search">Search incidents</label>
+    <input id="search" type="search" placeholder="Search victim, country, group" autocomplete="off">
+    <ul id="list"></ul>
+    <p id="empty" hidden>No incidents match these filters.</p>
+    <p class="panel-note" id="unmapped"></p>
+    <section id="card" aria-live="polite" hidden>
+      <button type="button" class="close" id="cardClose" aria-label="Close details">&times;</button>
+      <div id="cardBody"></div>
+    </section>
+  </section>
+
+</div>
+<script>
+  // Browsers refuse to run the map from a file on disk; explain what to do instead.
+  if (location.protocol === 'file:') {
+    var box = document.getElementById('loading');
+    box.style.cssText = 'position:fixed;inset:0;z-index:99;display:grid;place-items:center;padding:24px;background:#0b0b0d;color:#f3f1ee;font:17px/1.5 system-ui,sans-serif;text-align:center';
+    box.innerHTML = '<div style="max-width:560px"><p style="font-size:22px;font-weight:700;margin:0 0 12px">This map needs to be opened through a web server</p>' +
+      '<p style="margin:0 0 10px">Browsers block 3D pages opened straight from a file, so double-clicking <code>index.html</code> will not work.</p>' +
+      '<p style="margin:0"><b>To preview it on this computer:</b> double-click <b>Preview map.cmd</b> in this folder.</p></div>';
+  }
+</script>
+<script type="module" src="map.js"></script>
+</body>
+</html>
