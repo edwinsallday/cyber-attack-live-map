@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-15T17:57:41Z",
+ "updated": "2026-11-15T22:44:37Z",
  "sources": [
   "The Hacker News",
   "BleepingComputer",
@@ -18,10 +18,38 @@
   "CISA",
   "Inside Higher Ed"
  ],
- "feed_errors": [
-  "The Cyber Express: robots.txt does not allow this feed"
- ],
+ "feed_errors": [],
  "incidents": [
+  {
+   "id": "4201db3ac6",
+   "victim": null,
+   "victim_key": "",
+   "sector": null,
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "type": "supply_chain",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-15T18:29:53Z",
+   "last_seen": "2026-11-15T18:29:53Z",
+   "sources": [
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/fbi-warns-artex-ai-hacking-tool-is-powering-global-cyberattacks/",
+     "title": "FBI warns ARTEX AI hacking tool is powering global cyberattacks",
+     "published": "2026-11-15T18:29:53Z"
+    }
+   ]
+  },
   {
    "id": "bbb8a67270",
    "victim": null,
