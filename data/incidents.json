@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-16T11:00:13Z",
+ "updated": "2026-11-16T20:56:55Z",
  "sources": [
   "The Hacker News",
   "BleepingComputer",
@@ -20,6 +20,294 @@
  ],
  "feed_errors": [],
  "incidents": [
+  {
+   "id": "f66e964ba9",
+   "victim": null,
+   "victim_key": "",
+   "sector": null,
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-16T19:57:13Z",
+   "last_seen": "2026-11-16T19:57:13Z",
+   "sources": [
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/barracuda-links-cloud-breach-to-artex-ai-powered-cyberattack/",
+     "title": "Barracuda links cloud breach to ARTEX AI-powered cyberattack",
+     "published": "2026-11-16T19:57:13Z"
+    }
+   ]
+  },
+  {
+   "id": "809d6a9f65",
+   "victim": null,
+   "victim_key": "",
+   "sector": null,
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "type": "supply_chain",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-16T16:41:44Z",
+   "last_seen": "2026-11-16T16:41:44Z",
+   "sources": [
+    {
+     "name": "Cybersecurity News",
+     "url": "https://cybersecuritynews.com/hackers-use-ai-powered-marketplace/",
+     "title": "Hackers Use AI-Powered Marketplace to Find Infected Computers With Corporate VPN and Cloud Access",
+     "published": "2026-11-16T16:41:44Z"
+    }
+   ]
+  },
+  {
+   "id": "10d373a62a",
+   "victim": "China-Nexus Actors",
+   "victim_key": "chinanexus actors",
+   "sector": null,
+   "country": "China",
+   "country_key": "China",
+   "city": null,
+   "lat": 36.61,
+   "lon": 103.87,
+   "precision": "country",
+   "type": "data_breach",
+   "records": "10 Organizations",
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "summary": null,
+   "confidence": "medium",
+   "first_seen": "2026-11-16T16:36:55Z",
+   "last_seen": "2026-11-16T16:36:55Z",
+   "sources": [
+    {
+     "name": "Dark Reading",
+     "url": "https://www.darkreading.com/cyberattacks-data-breaches/china-nexus-actors-breach-10-organizations-ai-driven-attacks",
+     "title": "China-Nexus Actors Breach 10 Organizations in AI-Driven Attacks",
+     "published": "2026-11-16T16:36:55Z"
+    }
+   ]
+  },
+  {
+   "id": "44737d5252",
+   "victim": null,
+   "victim_key": "",
+   "sector": null,
+   "country": "United States",
+   "country_key": "United States of America",
+   "city": null,
+   "lat": 39.5,
+   "lon": -99.06,
+   "precision": "country",
+   "type": "other",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-16T15:36:55Z",
+   "last_seen": "2026-11-16T15:48:20Z",
+   "sources": [
+    {
+     "name": "Cybersecurity News",
+     "url": "https://cybersecuritynews.com/fully-automated-ai-attacks/",
+     "title": "Google Reveals How Hackers Are Using AI Agents to Automate Real-World Cyberattacks",
+     "published": "2026-11-16T15:36:55Z"
+    },
+    {
+     "name": "Cybersecurity News",
+     "url": "https://cybersecuritynews.com/hackers-use-artex/",
+     "title": "Cisco Talos Reveals How Hackers Use ARTEX, PentAGI, and HexStrike AI to Automate Cyberattacks",
+     "published": "2026-11-16T15:48:20Z"
+    }
+   ]
+  },
+  {
+   "id": "d29e040f40",
+   "victim": null,
+   "victim_key": "",
+   "sector": null,
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-16T15:44:21Z",
+   "last_seen": "2026-11-16T15:44:21Z",
+   "sources": [
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/fandango-says-hackers-stole-payment-card-details-from-checkout-pages/",
+     "title": "Fandango says hackers stole payment card details from checkout pages",
+     "published": "2026-11-16T15:44:21Z"
+    }
+   ]
+  },
+  {
+   "id": "254208bdc6",
+   "victim": "La Poste Subsidiary Maileva Affects",
+   "victim_key": "la poste subsidiary maileva affects",
+   "sector": null,
+   "country": "France",
+   "country_key": "France",
+   "city": null,
+   "lat": 46.61,
+   "lon": 2.34,
+   "precision": "country",
+   "type": "data_breach",
+   "records": "22 Million People",
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "summary": null,
+   "confidence": "medium",
+   "first_seen": "2026-11-15T10:43:16Z",
+   "last_seen": "2026-11-16T15:25:00Z",
+   "sources": [
+    {
+     "name": "Security Affairs",
+     "url": "https://securityaffairs.com/203126/data-breach/data-breach-at-la-poste-subsidiary-maileva-affects-22-million-people-in-france.html",
+     "title": "Data Breach at La Poste Subsidiary Maileva Affects 22 Million People in France",
+     "published": "2026-11-15T10:43:16Z"
+    },
+    {
+     "name": "SecurityWeek",
+     "url": "https://www.securityweek.com/uber-data-breach-impacts-150000-people/",
+     "title": "Uber Data Breach Impacts 150,000 People",
+     "published": "2026-11-16T11:02:48Z"
+    },
+    {
+     "name": "Infosecurity Magazine",
+     "url": "https://www.infosecurity-magazine.com/news/maileva-docaposte-22-million-breach/",
+     "title": "La Poste Subsidiary Maileva Breach Exposes 22 Million People",
+     "published": "2026-11-16T15:25:00Z"
+    }
+   ]
+  },
+  {
+   "id": "0f4c5e3465",
+   "victim": "Barracuda",
+   "victim_key": "barracuda",
+   "sector": null,
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "type": "other",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-16T15:07:32Z",
+   "last_seen": "2026-11-16T15:07:32Z",
+   "sources": [
+    {
+     "name": "SecurityWeek",
+     "url": "https://www.securityweek.com/barracuda-hacked-amid-surge-in-artex-powered-cyberattacks/",
+     "title": "Barracuda Hacked Amid Surge in Artex-Powered Cyberattacks",
+     "published": "2026-11-16T15:07:32Z"
+    }
+   ]
+  },
+  {
+   "id": "53ccac0a43",
+   "victim": null,
+   "victim_key": "",
+   "sector": null,
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-16T14:38:24Z",
+   "last_seen": "2026-11-16T14:38:24Z",
+   "sources": [
+    {
+     "name": "Cybersecurity News",
+     "url": "https://cybersecuritynews.com/leaked-credentials-are-an-enterprise-problem-gitguardian-extends-its-good-samaritan-program-to-security-teams/",
+     "title": "Leaked Credentials Are an Enterprise Problem: GitGuardian Extends Its Good Samaritan Program to Security Teams",
+     "published": "2026-11-16T14:38:24Z"
+    }
+   ]
+  },
+  {
+   "id": "f592fc7cd9",
+   "victim": null,
+   "victim_key": "",
+   "sector": null,
+   "country": "United States",
+   "country_key": "United States of America",
+   "city": null,
+   "lat": 39.5,
+   "lon": -99.06,
+   "precision": "country",
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-16T11:57:54Z",
+   "last_seen": "2026-11-16T11:57:54Z",
+   "sources": [
+    {
+     "name": "Help Net Security",
+     "url": "https://www.helpnetsecurity.com/2026/11/16/microsoft-remote-lock-feature-preview/",
+     "title": "Microsoft previews remote lock for lost or stolen Windows devices",
+     "published": "2026-11-16T11:57:54Z"
+    }
+   ]
+  },
   {
    "id": "f6f4a6d64a",
    "victim": null,
@@ -191,36 +479,6 @@
      "url": "https://www.bleepingcomputer.com/news/security/tsmc-employee-data-breach-linked-to-cloud-provider/",
      "title": "TSMC employee data breach linked to cloud provider",
      "published": "2026-11-15T15:23:48Z"
-    }
-   ]
-  },
-  {
-   "id": "254208bdc6",
-   "victim": "La Poste Subsidiary Maileva Affects",
-   "victim_key": "la poste subsidiary maileva affects",
-   "sector": null,
-   "country": "France",
-   "country_key": "France",
-   "city": null,
-   "lat": 46.61,
-   "lon": 2.34,
-   "precision": "country",
-   "type": "data_breach",
-   "records": "22 Million People",
-   "actor": null,
-   "attacker_country": null,
-   "attacker_lat": null,
-   "attacker_lon": null,
-   "summary": null,
-   "confidence": "medium",
-   "first_seen": "2026-11-15T10:43:16Z",
-   "last_seen": "2026-11-15T10:43:16Z",
-   "sources": [
-    {
-     "name": "Security Affairs",
-     "url": "https://securityaffairs.com/203126/data-breach/data-breach-at-la-poste-subsidiary-maileva-affects-22-million-people-in-france.html",
-     "title": "Data Breach at La Poste Subsidiary Maileva Affects 22 Million People in France",
-     "published": "2026-11-15T10:43:16Z"
     }
    ]
   },
