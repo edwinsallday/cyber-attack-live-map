@@ -578,6 +578,18 @@ function stepStrikes(now) {
   }
 }
 
+let theme = 'dark';
+try { if (localStorage.getItem('mapTheme') === 'light') theme = 'light'; } catch (e) {}
+function setTheme(t) {
+  theme = t;
+  document.documentElement.dataset.theme = t;
+  $('#themeBtn').setAttribute('aria-pressed', String(t === 'light'));
+  $('#themeBtn').setAttribute('aria-label', t === 'light' ? 'Switch to dark theme' : 'Switch to light theme');
+  try { localStorage.setItem('mapTheme', t); } catch (e) {}
+}
+$('#themeBtn').addEventListener('click', () => setTheme(theme === 'light' ? 'dark' : 'light'));
+setTheme(theme);
+
 // ---------- Replay or Realtime ----------
 // Replay loops through the incidents in view. Realtime stays quiet until a report arrives that was not there before.
 let mode = 'replay', beats = 0;

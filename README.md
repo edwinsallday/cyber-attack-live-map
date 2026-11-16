@@ -23,7 +23,7 @@ Double-click **Preview map.cmd**. A small window opens and the map appears in yo
 | `logs/` | The daily update's log. Kept out of the repository |
 | `.github/workflows/update.yml` | Runs the pipeline every 30 minutes on GitHub |
 | `eval/` | 75 stories with hand-checked answers. Kept out of the repository (it holds feed excerpts) |
-| `vendor/`, `assets/` | three.js, Earth imagery (NASA), borders (Natural Earth), logo |
+| `vendor/`, `assets/` | three.js, Earth imagery (NASA), borders (Natural Earth), logo, theme icons |
 
 ## Sources
 
@@ -85,6 +85,12 @@ Measured with `python pipeline/evaluate.py` on 75 stories from 15 November 2026 
 Those 75 stories come from the first three sources only. The sources added later have not been hand-checked; a read-through of their output showed some wrong placements (for example a company pinned to the country of a supplier named in the same headline) and repeated coverage of one incident under different headlines.
 
 The rules were adjusted while looking at these same 75 stories, so the figures are optimistic. Expect worse on new stories, and re-run the check after adding fresh hand-checked stories to `eval/`.
+
+## Dark and light theme
+
+The switch sits at the bottom of the side panel, beside *About this map*: a moon for dark, a sun for light. Dark is the starting theme, the choice is remembered on this computer under the saved key `mapTheme`, and the 3D globe keeps its night surface in both themes, so pins, arcs and map labels look the same either way.
+
+Only the surrounding panels change. Sun and moon icons are the Solar Broken Line set by Solar Icons, CC BY 4.0, recoloured to follow the panel text.
 
 ## Put it online (GitHub Pages)
 
