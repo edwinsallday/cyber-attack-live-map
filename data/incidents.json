@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-16T02:41:18Z",
+ "updated": "2026-11-16T11:00:13Z",
  "sources": [
   "The Hacker News",
   "BleepingComputer",
@@ -20,6 +20,120 @@
  ],
  "feed_errors": [],
  "incidents": [
+  {
+   "id": "f6f4a6d64a",
+   "victim": null,
+   "victim_key": "",
+   "sector": null,
+   "country": "Germany",
+   "country_key": "Germany",
+   "city": null,
+   "lat": 51.13,
+   "lon": 10.29,
+   "precision": "country",
+   "type": "other",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-13T17:31:56Z",
+   "last_seen": "2026-11-16T09:06:11Z",
+   "sources": [
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/german-military-drone-operations-disrupted-by-cyberattack/",
+     "title": "German military drone operations disrupted by cyberattack",
+     "published": "2026-11-13T17:31:56Z"
+    },
+    {
+     "name": "Security Affairs",
+     "url": "https://securityaffairs.com/203085/cyber-crime/german-military-grounds-quantum-systems-drones-following-reported-cyberattack.html",
+     "title": "German Military Grounds Quantum Systems Drones Following Reported Cyberattack",
+     "published": "2026-11-16T09:06:11Z"
+    }
+   ]
+  },
+  {
+   "id": "d030547d1a",
+   "victim": null,
+   "victim_key": "",
+   "sector": null,
+   "country": "Taiwan",
+   "country_key": "Taiwan",
+   "city": null,
+   "lat": 23.74,
+   "lon": 120.97,
+   "precision": "country",
+   "type": "espionage",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-12T14:30:00Z",
+   "last_seen": "2026-11-16T08:11:01Z",
+   "sources": [
+    {
+     "name": "Infosecurity Magazine",
+     "url": "https://www.infosecurity-magazine.com/news/silentair-liminal-panda-telco/",
+     "title": "Hacked Asian Telcos Used to Intercept Taiwanese Calls and Texts",
+     "published": "2026-11-12T14:30:00Z"
+    },
+    {
+     "name": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/silentair-hijacks-asian-telecom.html",
+     "title": "SilentAir Hijacks Asian Telecom Networks to Intercept SMS 2FA Codes and Spy on Taiwanese Users",
+     "published": "2026-11-13T11:10:40Z"
+    },
+    {
+     "name": "SecurityWeek",
+     "url": "https://www.securityweek.com/silentair-hackers-intercept-calls-sms-from-inside-mobile-networks/",
+     "title": "SilentAir Hackers Intercept Calls, SMS From Inside Mobile Networks",
+     "published": "2026-11-13T12:20:28Z"
+    },
+    {
+     "name": "Security Affairs",
+     "url": "https://securityaffairs.com/203099/apt/silentair-and-liminal-panda-target-telecom-networks-to-spy-on-subscribers.html",
+     "title": "SilentAir and LIMINAL PANDA Target Telecom Networks to Spy on Subscribers",
+     "published": "2026-11-16T08:11:01Z"
+    }
+   ]
+  },
+  {
+   "id": "f7b8e5994f",
+   "victim": "Coles",
+   "victim_key": "coles",
+   "sector": null,
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "type": "other",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-16T07:27:46Z",
+   "last_seen": "2026-11-16T07:27:46Z",
+   "sources": [
+    {
+     "name": "The Cyber Express",
+     "url": "https://thecyberexpress.com/coles-cyberattack-woolworths/",
+     "title": "Coles Confirms Cyber Incident, Woolworths Investigates Gift Card Complaints",
+     "published": "2026-11-16T07:27:46Z"
+    }
+   ]
+  },
   {
    "id": "4201db3ac6",
    "victim": null,
@@ -249,36 +363,6 @@
    ]
   },
   {
-   "id": "f6f4a6d64a",
-   "victim": null,
-   "victim_key": "",
-   "sector": null,
-   "country": "Germany",
-   "country_key": "Germany",
-   "city": null,
-   "lat": 51.13,
-   "lon": 10.29,
-   "precision": "country",
-   "type": "other",
-   "records": null,
-   "actor": null,
-   "attacker_country": null,
-   "attacker_lat": null,
-   "attacker_lon": null,
-   "summary": null,
-   "confidence": "low",
-   "first_seen": "2026-11-13T17:31:56Z",
-   "last_seen": "2026-11-13T17:31:56Z",
-   "sources": [
-    {
-     "name": "BleepingComputer",
-     "url": "https://www.bleepingcomputer.com/news/security/german-military-drone-operations-disrupted-by-cyberattack/",
-     "title": "German military drone operations disrupted by cyberattack",
-     "published": "2026-11-13T17:31:56Z"
-    }
-   ]
-  },
-  {
    "id": "b297d87623",
    "victim": null,
    "victim_key": "",
@@ -401,48 +485,6 @@
      "url": "https://www.securityweek.com/apify-confirms-customer-data-accessed-in-cyberattack/",
      "title": "Apify Confirms Customer Data Accessed in Cyberattack",
      "published": "2026-11-13T12:41:01Z"
-    }
-   ]
-  },
-  {
-   "id": "d030547d1a",
-   "victim": null,
-   "victim_key": "",
-   "sector": null,
-   "country": "Taiwan",
-   "country_key": "Taiwan",
-   "city": null,
-   "lat": 23.74,
-   "lon": 120.97,
-   "precision": "country",
-   "type": "espionage",
-   "records": null,
-   "actor": null,
-   "attacker_country": null,
-   "attacker_lat": null,
-   "attacker_lon": null,
-   "summary": null,
-   "confidence": "low",
-   "first_seen": "2026-11-12T14:30:00Z",
-   "last_seen": "2026-11-13T12:20:28Z",
-   "sources": [
-    {
-     "name": "Infosecurity Magazine",
-     "url": "https://www.infosecurity-magazine.com/news/silentair-liminal-panda-telco/",
-     "title": "Hacked Asian Telcos Used to Intercept Taiwanese Calls and Texts",
-     "published": "2026-11-12T14:30:00Z"
-    },
-    {
-     "name": "The Hacker News",
-     "url": "https://thehackernews.com/2026/11/silentair-hijacks-asian-telecom.html",
-     "title": "SilentAir Hijacks Asian Telecom Networks to Intercept SMS 2FA Codes and Spy on Taiwanese Users",
-     "published": "2026-11-13T11:10:40Z"
-    },
-    {
-     "name": "SecurityWeek",
-     "url": "https://www.securityweek.com/silentair-hackers-intercept-calls-sms-from-inside-mobile-networks/",
-     "title": "SilentAir Hackers Intercept Calls, SMS From Inside Mobile Networks",
-     "published": "2026-11-13T12:20:28Z"
     }
    ]
   },
@@ -2303,36 +2345,6 @@
      "url": "https://www.infosecurity-magazine.com/news/experts-gyazos-breach-490-million/",
      "title": "Experts Alarmed Over Gyazo’s Breach of 490 Million Metadata Records",
      "published": "2026-09-21T09:30:00Z"
-    }
-   ]
-  },
-  {
-   "id": "7d728cc439",
-   "victim": null,
-   "victim_key": "",
-   "sector": null,
-   "country": null,
-   "country_key": null,
-   "city": null,
-   "lat": null,
-   "lon": null,
-   "precision": "none",
-   "type": "data_breach",
-   "records": null,
-   "actor": null,
-   "attacker_country": null,
-   "attacker_lat": null,
-   "attacker_lon": null,
-   "summary": null,
-   "confidence": "low",
-   "first_seen": "2026-09-17T08:25:00Z",
-   "last_seen": "2026-09-17T08:25:00Z",
-   "sources": [
-    {
-     "name": "Infosecurity Magazine",
-     "url": "https://www.infosecurity-magazine.com/news/ai-agent-carries-out-multistage/",
-     "title": "AI Agent Carries Out Multi-Stage Data Theft Attack",
-     "published": "2026-09-17T08:25:00Z"
     }
    ]
   }
