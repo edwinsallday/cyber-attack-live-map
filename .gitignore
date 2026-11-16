@@ -1,0 +1,22 @@
+# Generated product state, logs, and scratch space. Never a source of truth to commit.
+logs/
+eval/
+tmp/
+__pycache__/
+*.pyc
+
+# Local machine and editor state.
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.sublime-workspace
+
+# Agent instruction files: guidance, not product source.
+AGENTS.md
+RULES.md
+CLAUDE.md
+.opencode/
+.cursor/
+.github/copilot-instructions.md
