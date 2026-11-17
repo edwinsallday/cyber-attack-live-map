@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-16T20:56:55Z",
+ "updated": "2026-11-17T03:43:47Z",
  "sources": [
   "The Hacker News",
   "BleepingComputer",
@@ -20,6 +20,66 @@
  ],
  "feed_errors": [],
  "incidents": [
+  {
+   "id": "05b6417e27",
+   "victim": null,
+   "victim_key": "",
+   "sector": null,
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "type": "supply_chain",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-17T02:12:17Z",
+   "last_seen": "2026-11-17T02:12:17Z",
+   "sources": [
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/optimizely-supply-chain-attack-infects-major-brands-sites-with-malware/",
+     "title": "Optimizely supply chain attack infects major brands' sites with malware",
+     "published": "2026-11-17T02:12:17Z"
+    }
+   ]
+  },
+  {
+   "id": "868eb4ec9f",
+   "victim": null,
+   "victim_key": "",
+   "sector": null,
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-17T01:39:14Z",
+   "last_seen": "2026-11-17T01:39:14Z",
+   "sources": [
+    {
+     "name": "Cybersecurity News",
+     "url": "https://cybersecuritynews.com/optimizely-websites-hijacked/",
+     "title": "Hackers Infect 178 Major Websites via Optimizely to Steal Credit Cards and Target iPhones",
+     "published": "2026-11-17T01:39:14Z"
+    }
+   ]
+  },
   {
    "id": "f66e964ba9",
    "victim": null,
