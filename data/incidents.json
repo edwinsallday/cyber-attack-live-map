@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T03:43:47Z",
+ "updated": "2026-11-17T13:11:02Z",
  "sources": [
   "The Hacker News",
   "BleepingComputer",
@@ -20,6 +20,354 @@
  ],
  "feed_errors": [],
  "incidents": [
+  {
+   "id": "254208bdc6",
+   "victim": "La Poste Subsidiary Maileva Affects",
+   "victim_key": "la poste subsidiary maileva affects",
+   "sector": null,
+   "country": "France",
+   "country_key": "France",
+   "city": null,
+   "lat": 46.61,
+   "lon": 2.34,
+   "precision": "country",
+   "type": "data_breach",
+   "records": "22 Million People",
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "summary": null,
+   "confidence": "medium",
+   "first_seen": "2026-11-15T10:43:16Z",
+   "last_seen": "2026-11-17T12:59:04Z",
+   "sources": [
+    {
+     "name": "Security Affairs",
+     "url": "https://securityaffairs.com/203126/data-breach/data-breach-at-la-poste-subsidiary-maileva-affects-22-million-people-in-france.html",
+     "title": "Data Breach at La Poste Subsidiary Maileva Affects 22 Million People in France",
+     "published": "2026-11-15T10:43:16Z"
+    },
+    {
+     "name": "SecurityWeek",
+     "url": "https://www.securityweek.com/uber-data-breach-impacts-150000-people/",
+     "title": "Uber Data Breach Impacts 150,000 People",
+     "published": "2026-11-16T11:02:48Z"
+    },
+    {
+     "name": "Infosecurity Magazine",
+     "url": "https://www.infosecurity-magazine.com/news/maileva-docaposte-22-million-breach/",
+     "title": "La Poste Subsidiary Maileva Breach Exposes 22 Million People",
+     "published": "2026-11-16T15:25:00Z"
+    },
+    {
+     "name": "SecurityWeek",
+     "url": "https://www.securityweek.com/access-dental-management-data-breach-impacts-over-340000/",
+     "title": "Access Dental Management Data Breach Impacts Over 340,000",
+     "published": "2026-11-17T12:59:04Z"
+    }
+   ]
+  },
+  {
+   "id": "f592fc7cd9",
+   "victim": null,
+   "victim_key": "",
+   "sector": null,
+   "country": "United States",
+   "country_key": "United States of America",
+   "city": null,
+   "lat": 39.5,
+   "lon": -99.06,
+   "precision": "country",
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-16T11:57:54Z",
+   "last_seen": "2026-11-17T11:19:51Z",
+   "sources": [
+    {
+     "name": "Help Net Security",
+     "url": "https://www.helpnetsecurity.com/2026/11/16/microsoft-remote-lock-feature-preview/",
+     "title": "Microsoft previews remote lock for lost or stolen Windows devices",
+     "published": "2026-11-16T11:57:54Z"
+    },
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-testing-remote-lock-for-lost-or-stolen-windows-devices/",
+     "title": "Microsoft testing Remote Lock for lost or stolen Windows devices",
+     "published": "2026-11-17T11:19:51Z"
+    }
+   ]
+  },
+  {
+   "id": "380b276640",
+   "victim": "Infoblox",
+   "victim_key": "infoblox",
+   "sector": null,
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "type": "supply_chain",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-17T10:54:35Z",
+   "last_seen": "2026-11-17T10:54:35Z",
+   "sources": [
+    {
+     "name": "Security Affairs",
+     "url": "https://securityaffairs.com/203309/data-breach/infoblox-confirms-supply-chain-breach-after-attackers-access-sensitive-data.html",
+     "title": "Infoblox Confirms Supply Chain Breach After Attackers Access Sensitive Data",
+     "published": "2026-11-17T10:54:35Z"
+    }
+   ]
+  },
+  {
+   "id": "2f07cffd88",
+   "victim": null,
+   "victim_key": "",
+   "sector": null,
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-17T10:42:58Z",
+   "last_seen": "2026-11-17T10:42:58Z",
+   "sources": [
+    {
+     "name": "Industrial Cyber",
+     "url": "https://industrialcyber.co/expert/inside-ots-fundamentals-gap-a-plc-fault-an-ai-exploit-and-leaked-identities/",
+     "title": "Inside OT’s Fundamentals Gap: A PLC Fault, an AI Exploit, and Leaked Identities",
+     "published": "2026-11-17T10:42:58Z"
+    }
+   ]
+  },
+  {
+   "id": "10eb36112f",
+   "victim": null,
+   "victim_key": "",
+   "sector": null,
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "type": "financial_theft",
+   "records": "$25 million",
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-17T09:44:22Z",
+   "last_seen": "2026-11-17T09:44:22Z",
+   "sources": [
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/court-clears-brothers-of-25-million-ethereum-crypto-heist-charges/",
+     "title": "Court clears brothers of $25 million Ethereum crypto heist charges",
+     "published": "2026-11-17T09:44:22Z"
+    }
+   ]
+  },
+  {
+   "id": "f66e964ba9",
+   "victim": null,
+   "victim_key": "",
+   "sector": null,
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-16T19:57:13Z",
+   "last_seen": "2026-11-17T08:42:21Z",
+   "sources": [
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/barracuda-links-cloud-breach-to-artex-ai-powered-cyberattack/",
+     "title": "Barracuda links cloud breach to ARTEX AI-powered cyberattack",
+     "published": "2026-11-16T19:57:13Z"
+    },
+    {
+     "name": "Cybersecurity News",
+     "url": "https://cybersecuritynews.com/barracuda-cloud-account-breach/",
+     "title": "Hackers Exploit Exposed AI Vendor Key to Breach 10 Barracuda Cloud Accounts in 44 Hours",
+     "published": "2026-11-17T08:42:21Z"
+    }
+   ]
+  },
+  {
+   "id": "5a26ef385a",
+   "victim": "Uber",
+   "victim_key": "uber",
+   "sector": null,
+   "country": "United States",
+   "country_key": "United States of America",
+   "city": null,
+   "lat": 39.5,
+   "lon": -99.06,
+   "precision": "country",
+   "type": "data_breach",
+   "records": "nearly 150,000 people",
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "summary": null,
+   "confidence": "medium",
+   "first_seen": "2026-11-14T01:19:57Z",
+   "last_seen": "2026-11-17T08:35:42Z",
+   "sources": [
+    {
+     "name": "Cybersecurity News",
+     "url": "https://cybersecuritynews.com/uber-confirms-data-breach/",
+     "title": "Uber Confirms Data Breach – Hackers Stole Users’ Personal Information",
+     "published": "2026-11-14T01:19:57Z"
+    },
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/uber-notifies-drivers-of-data-breach-affecting-nearly-150-000-people/",
+     "title": "Uber notifies drivers of data breach affecting nearly 150,000 people",
+     "published": "2026-11-17T08:35:42Z"
+    }
+   ]
+  },
+  {
+   "id": "50868e3a64",
+   "victim": null,
+   "victim_key": "",
+   "sector": null,
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "type": "other",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-17T07:12:13Z",
+   "last_seen": "2026-11-17T07:12:13Z",
+   "sources": [
+    {
+     "name": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/hijacked-optimizely-scripts-served-card.html",
+     "title": "Hijacked Optimizely Scripts Served Card Skimmer and iOS Exploit Kits to CNN, BBC and Zoom Visitors",
+     "published": "2026-11-17T07:12:13Z"
+    }
+   ]
+  },
+  {
+   "id": "44737d5252",
+   "victim": null,
+   "victim_key": "",
+   "sector": null,
+   "country": "United States",
+   "country_key": "United States of America",
+   "city": null,
+   "lat": 39.5,
+   "lon": -99.06,
+   "precision": "country",
+   "type": "other",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-16T15:36:55Z",
+   "last_seen": "2026-11-17T06:53:22Z",
+   "sources": [
+    {
+     "name": "Cybersecurity News",
+     "url": "https://cybersecuritynews.com/fully-automated-ai-attacks/",
+     "title": "Google Reveals How Hackers Are Using AI Agents to Automate Real-World Cyberattacks",
+     "published": "2026-11-16T15:36:55Z"
+    },
+    {
+     "name": "Cybersecurity News",
+     "url": "https://cybersecuritynews.com/hackers-use-artex/",
+     "title": "Cisco Talos Reveals How Hackers Use ARTEX, PentAGI, and HexStrike AI to Automate Cyberattacks",
+     "published": "2026-11-16T15:48:20Z"
+    },
+    {
+     "name": "The Cyber Express",
+     "url": "https://thecyberexpress.com/ai-threat-tracker-threat-actors/",
+     "title": "Google Finds Hackers Using AI Agents to Automate Cyberattacks",
+     "published": "2026-11-17T06:53:22Z"
+    }
+   ]
+  },
+  {
+   "id": "1911a2e8f2",
+   "victim": null,
+   "victim_key": "",
+   "sector": null,
+   "country": "United States",
+   "country_key": "United States of America",
+   "city": null,
+   "lat": 39.5,
+   "lon": -99.06,
+   "precision": "country",
+   "type": "other",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-17T05:37:45Z",
+   "last_seen": "2026-11-17T05:37:45Z",
+   "sources": [
+    {
+     "name": "The Cyber Express",
+     "url": "https://thecyberexpress.com/openai-lawsuit-ai-agents-attack-hugging-face/",
+     "title": "California Sues OpenAI After Its AI Agents Escaped Testing and Hacked Hugging Face",
+     "published": "2026-11-17T05:37:45Z"
+    }
+   ]
+  },
   {
    "id": "05b6417e27",
    "victim": null,
@@ -46,6 +394,12 @@
      "name": "BleepingComputer",
      "url": "https://www.bleepingcomputer.com/news/security/optimizely-supply-chain-attack-infects-major-brands-sites-with-malware/",
      "title": "Optimizely supply chain attack infects major brands' sites with malware",
+     "published": "2026-11-17T02:12:17Z"
+    },
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/optimizely-supply-chain-attack-delivers-malware-to-cnn-fox-news-bbc-salesforce-sites/",
+     "title": "Optimizely hack infected CNN, Fox News, BBC, Salesforce sites with malware",
      "published": "2026-11-17T02:12:17Z"
     }
    ]
@@ -77,36 +431,6 @@
      "url": "https://cybersecuritynews.com/optimizely-websites-hijacked/",
      "title": "Hackers Infect 178 Major Websites via Optimizely to Steal Credit Cards and Target iPhones",
      "published": "2026-11-17T01:39:14Z"
-    }
-   ]
-  },
-  {
-   "id": "f66e964ba9",
-   "victim": null,
-   "victim_key": "",
-   "sector": null,
-   "country": null,
-   "country_key": null,
-   "city": null,
-   "lat": null,
-   "lon": null,
-   "precision": "none",
-   "type": "data_breach",
-   "records": null,
-   "actor": null,
-   "attacker_country": null,
-   "attacker_lat": null,
-   "attacker_lon": null,
-   "summary": null,
-   "confidence": "low",
-   "first_seen": "2026-11-16T19:57:13Z",
-   "last_seen": "2026-11-16T19:57:13Z",
-   "sources": [
-    {
-     "name": "BleepingComputer",
-     "url": "https://www.bleepingcomputer.com/news/security/barracuda-links-cloud-breach-to-artex-ai-powered-cyberattack/",
-     "title": "Barracuda links cloud breach to ARTEX AI-powered cyberattack",
-     "published": "2026-11-16T19:57:13Z"
     }
    ]
   },
@@ -171,42 +495,6 @@
    ]
   },
   {
-   "id": "44737d5252",
-   "victim": null,
-   "victim_key": "",
-   "sector": null,
-   "country": "United States",
-   "country_key": "United States of America",
-   "city": null,
-   "lat": 39.5,
-   "lon": -99.06,
-   "precision": "country",
-   "type": "other",
-   "records": null,
-   "actor": null,
-   "attacker_country": null,
-   "attacker_lat": null,
-   "attacker_lon": null,
-   "summary": null,
-   "confidence": "low",
-   "first_seen": "2026-11-16T15:36:55Z",
-   "last_seen": "2026-11-16T15:48:20Z",
-   "sources": [
-    {
-     "name": "Cybersecurity News",
-     "url": "https://cybersecuritynews.com/fully-automated-ai-attacks/",
-     "title": "Google Reveals How Hackers Are Using AI Agents to Automate Real-World Cyberattacks",
-     "published": "2026-11-16T15:36:55Z"
-    },
-    {
-     "name": "Cybersecurity News",
-     "url": "https://cybersecuritynews.com/hackers-use-artex/",
-     "title": "Cisco Talos Reveals How Hackers Use ARTEX, PentAGI, and HexStrike AI to Automate Cyberattacks",
-     "published": "2026-11-16T15:48:20Z"
-    }
-   ]
-  },
-  {
    "id": "d29e040f40",
    "victim": null,
    "victim_key": "",
@@ -233,48 +521,6 @@
      "url": "https://www.bleepingcomputer.com/news/security/fandango-says-hackers-stole-payment-card-details-from-checkout-pages/",
      "title": "Fandango says hackers stole payment card details from checkout pages",
      "published": "2026-11-16T15:44:21Z"
-    }
-   ]
-  },
-  {
-   "id": "254208bdc6",
-   "victim": "La Poste Subsidiary Maileva Affects",
-   "victim_key": "la poste subsidiary maileva affects",
-   "sector": null,
-   "country": "France",
-   "country_key": "France",
-   "city": null,
-   "lat": 46.61,
-   "lon": 2.34,
-   "precision": "country",
-   "type": "data_breach",
-   "records": "22 Million People",
-   "actor": null,
-   "attacker_country": null,
-   "attacker_lat": null,
-   "attacker_lon": null,
-   "summary": null,
-   "confidence": "medium",
-   "first_seen": "2026-11-15T10:43:16Z",
-   "last_seen": "2026-11-16T15:25:00Z",
-   "sources": [
-    {
-     "name": "Security Affairs",
-     "url": "https://securityaffairs.com/203126/data-breach/data-breach-at-la-poste-subsidiary-maileva-affects-22-million-people-in-france.html",
-     "title": "Data Breach at La Poste Subsidiary Maileva Affects 22 Million People in France",
-     "published": "2026-11-15T10:43:16Z"
-    },
-    {
-     "name": "SecurityWeek",
-     "url": "https://www.securityweek.com/uber-data-breach-impacts-150000-people/",
-     "title": "Uber Data Breach Impacts 150,000 People",
-     "published": "2026-11-16T11:02:48Z"
-    },
-    {
-     "name": "Infosecurity Magazine",
-     "url": "https://www.infosecurity-magazine.com/news/maileva-docaposte-22-million-breach/",
-     "title": "La Poste Subsidiary Maileva Breach Exposes 22 Million People",
-     "published": "2026-11-16T15:25:00Z"
     }
    ]
   },
@@ -335,36 +581,6 @@
      "url": "https://cybersecuritynews.com/leaked-credentials-are-an-enterprise-problem-gitguardian-extends-its-good-samaritan-program-to-security-teams/",
      "title": "Leaked Credentials Are an Enterprise Problem: GitGuardian Extends Its Good Samaritan Program to Security Teams",
      "published": "2026-11-16T14:38:24Z"
-    }
-   ]
-  },
-  {
-   "id": "f592fc7cd9",
-   "victim": null,
-   "victim_key": "",
-   "sector": null,
-   "country": "United States",
-   "country_key": "United States of America",
-   "city": null,
-   "lat": 39.5,
-   "lon": -99.06,
-   "precision": "country",
-   "type": "data_breach",
-   "records": null,
-   "actor": null,
-   "attacker_country": null,
-   "attacker_lat": null,
-   "attacker_lon": null,
-   "summary": null,
-   "confidence": "low",
-   "first_seen": "2026-11-16T11:57:54Z",
-   "last_seen": "2026-11-16T11:57:54Z",
-   "sources": [
-    {
-     "name": "Help Net Security",
-     "url": "https://www.helpnetsecurity.com/2026/11/16/microsoft-remote-lock-feature-preview/",
-     "title": "Microsoft previews remote lock for lost or stolen Windows devices",
-     "published": "2026-11-16T11:57:54Z"
     }
    ]
   },
@@ -611,36 +827,6 @@
      "url": "https://securityaffairs.com/203062/cyber-crime/extortion-group-claims-theft-of-nearly-one-billion-expedia-traveler-records.html",
      "title": "Extortion Group Claims Theft of Nearly One Billion Expedia Traveler Records",
      "published": "2026-11-14T16:46:26Z"
-    }
-   ]
-  },
-  {
-   "id": "5a26ef385a",
-   "victim": "Uber",
-   "victim_key": "uber",
-   "sector": null,
-   "country": "United States",
-   "country_key": "United States of America",
-   "city": null,
-   "lat": 39.5,
-   "lon": -99.06,
-   "precision": "country",
-   "type": "data_breach",
-   "records": null,
-   "actor": null,
-   "attacker_country": null,
-   "attacker_lat": null,
-   "attacker_lon": null,
-   "summary": null,
-   "confidence": "medium",
-   "first_seen": "2026-11-14T01:19:57Z",
-   "last_seen": "2026-11-14T01:19:57Z",
-   "sources": [
-    {
-     "name": "Cybersecurity News",
-     "url": "https://cybersecuritynews.com/uber-confirms-data-breach/",
-     "title": "Uber Confirms Data Breach – Hackers Stole Users’ Personal Information",
-     "published": "2026-11-14T01:19:57Z"
     }
    ]
   },
