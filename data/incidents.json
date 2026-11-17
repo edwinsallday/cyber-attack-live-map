@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T13:11:02Z",
+ "updated": "2026-11-17T21:53:06Z",
  "sources": [
   "The Hacker News",
   "BleepingComputer",
@@ -20,6 +20,282 @@
  ],
  "feed_errors": [],
  "incidents": [
+  {
+   "id": "ddec81ba80",
+   "victim": null,
+   "victim_key": "",
+   "sector": null,
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-17T21:27:17Z",
+   "last_seen": "2026-11-17T21:27:17Z",
+   "sources": [
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/cloud-keys-leaked-in-docker-hub-images-are-stolen-within-seconds/",
+     "title": "Cloud keys leaked in Docker Hub images are stolen within seconds",
+     "published": "2026-11-17T21:27:17Z"
+    }
+   ]
+  },
+  {
+   "id": "c7731ed1bb",
+   "victim": null,
+   "victim_key": "",
+   "sector": null,
+   "country": "Norway",
+   "country_key": "Norway",
+   "city": null,
+   "lat": 64.54,
+   "lon": 14.24,
+   "precision": "country",
+   "type": "other",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-17T20:52:24Z",
+   "last_seen": "2026-11-17T20:52:24Z",
+   "sources": [
+    {
+     "name": "Security Affairs",
+     "url": "https://securityaffairs.com/203354/security/apple-outages-add-to-growing-concerns-over-technology-service-disruptions.html",
+     "title": "Apple Services Disrupted as NSA Network Goes Down and Equinor Faces Cyberattack",
+     "published": "2026-11-17T20:52:24Z"
+    }
+   ]
+  },
+  {
+   "id": "1dff6dd6c9",
+   "victim": null,
+   "victim_key": "",
+   "sector": null,
+   "country": "Japan",
+   "country_key": "Japan",
+   "city": null,
+   "lat": 36.02,
+   "lon": 136.88,
+   "precision": "country",
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-17T20:51:21Z",
+   "last_seen": "2026-11-17T20:51:21Z",
+   "sources": [
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/japan-takes-fugaku-supercomputer-offlline-after-cyberattack/",
+     "title": "Japan takes Fugaku supercomputer offlline after cyberattack",
+     "published": "2026-11-17T20:51:21Z"
+    }
+   ]
+  },
+  {
+   "id": "7646e96e2e",
+   "victim": "Fireworks AI",
+   "victim_key": "fireworks ai",
+   "sector": null,
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-10T15:33:59Z",
+   "last_seen": "2026-11-17T19:11:20Z",
+   "sources": [
+    {
+     "name": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/fireworks-ai-breach-widens-to-expose.html",
+     "title": "Fireworks AI Confirms Wider Breach Affecting Customer Datasets, Model Weights and Notion AI Chats",
+     "published": "2026-11-10T15:33:59Z"
+    },
+    {
+     "name": "Security Affairs",
+     "url": "https://securityaffairs.com/203339/data-breach/fireworks-ai-breach-exposes-uber-data-and-highlights-supply-chain-risks.html",
+     "title": "Fireworks AI Breach Exposes Uber Data and Highlights Supply Chain Risks",
+     "published": "2026-11-17T19:11:20Z"
+    }
+   ]
+  },
+  {
+   "id": "960f41318e",
+   "victim": null,
+   "victim_key": "",
+   "sector": null,
+   "country": "United States",
+   "country_key": "United States of America",
+   "city": null,
+   "lat": 39.5,
+   "lon": -99.06,
+   "precision": "country",
+   "type": "supply_chain",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-14T09:09:31Z",
+   "last_seen": "2026-11-17T18:38:37Z",
+   "sources": [
+    {
+     "name": "Cybersecurity News",
+     "url": "https://cybersecuritynews.com/cursor-data-breach/",
+     "title": "Cursor Reveals How a Leaked Fireworks AI Key Led to a Backdoored Claude Code Extension",
+     "published": "2026-11-14T09:09:31Z"
+    },
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/cursor-confirms-security-breach-led-to-malicious-claude-code-extension/",
+     "title": "Cursor confirms security breach led to malicious Claude Code extension",
+     "published": "2026-11-14T17:27:25Z"
+    },
+    {
+     "name": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/stolen-fireworks-ai-key-led-to-cursor.html",
+     "title": "Stolen Fireworks AI Key Led to Cursor Data Breach and Trojanized Claude Code Extension",
+     "published": "2026-11-15T08:22:04Z"
+    },
+    {
+     "name": "Dark Reading",
+     "url": "https://www.darkreading.com/application-security/cursor-malicious-claude-code-extension-third-party-breach",
+     "title": "Cursor Traces Malicious Claude Code Extension to Third-Party Breach",
+     "published": "2026-11-17T18:38:37Z"
+    }
+   ]
+  },
+  {
+   "id": "669e38d056",
+   "victim": null,
+   "victim_key": "",
+   "sector": null,
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-17T16:03:24Z",
+   "last_seen": "2026-11-17T16:03:24Z",
+   "sources": [
+    {
+     "name": "Cybersecurity Dive",
+     "url": "https://www.cybersecuritydive.com/news/healthcare-ai-cybersecurity-monitoring/874902/",
+     "title": "Healthcare firms fail to monitor AI tools, even as shadow AI begins leading to breaches",
+     "published": "2026-11-17T16:03:24Z"
+    }
+   ]
+  },
+  {
+   "id": "76496683be",
+   "victim": "Market Research Giant Ipsos",
+   "victim_key": "market research giant ipsos",
+   "sector": null,
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-17T14:55:30Z",
+   "last_seen": "2026-11-17T14:55:30Z",
+   "sources": [
+    {
+     "name": "SecurityWeek",
+     "url": "https://www.securityweek.com/market-research-giant-ipsos-investigating-breach-of-internal-system/",
+     "title": "Market Research Giant Ipsos Investigating Breach of Internal System",
+     "published": "2026-11-17T14:55:30Z"
+    }
+   ]
+  },
+  {
+   "id": "f66e964ba9",
+   "victim": null,
+   "victim_key": "",
+   "sector": null,
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-16T19:57:13Z",
+   "last_seen": "2026-11-17T13:13:20Z",
+   "sources": [
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/barracuda-links-cloud-breach-to-artex-ai-powered-cyberattack/",
+     "title": "Barracuda links cloud breach to ARTEX AI-powered cyberattack",
+     "published": "2026-11-16T19:57:13Z"
+    },
+    {
+     "name": "Cybersecurity News",
+     "url": "https://cybersecuritynews.com/barracuda-cloud-account-breach/",
+     "title": "Hackers Exploit Exposed AI Vendor Key to Breach 10 Barracuda Cloud Accounts in 44 Hours",
+     "published": "2026-11-17T08:42:21Z"
+    },
+    {
+     "name": "Cybersecurity News",
+     "url": "https://cybersecuritynews.com/barracuda-cloud-accounts/",
+     "title": "Hackers Exploit Exposed AI Vendor Key to Breach 10 Barracuda Cloud Accounts in 44 Hours",
+     "published": "2026-11-17T13:13:20Z"
+    }
+   ]
+  },
   {
    "id": "254208bdc6",
    "victim": "La Poste Subsidiary Maileva Affects",
@@ -191,42 +467,6 @@
      "url": "https://www.bleepingcomputer.com/news/security/court-clears-brothers-of-25-million-ethereum-crypto-heist-charges/",
      "title": "Court clears brothers of $25 million Ethereum crypto heist charges",
      "published": "2026-11-17T09:44:22Z"
-    }
-   ]
-  },
-  {
-   "id": "f66e964ba9",
-   "victim": null,
-   "victim_key": "",
-   "sector": null,
-   "country": null,
-   "country_key": null,
-   "city": null,
-   "lat": null,
-   "lon": null,
-   "precision": "none",
-   "type": "data_breach",
-   "records": null,
-   "actor": null,
-   "attacker_country": null,
-   "attacker_lat": null,
-   "attacker_lon": null,
-   "summary": null,
-   "confidence": "low",
-   "first_seen": "2026-11-16T19:57:13Z",
-   "last_seen": "2026-11-17T08:42:21Z",
-   "sources": [
-    {
-     "name": "BleepingComputer",
-     "url": "https://www.bleepingcomputer.com/news/security/barracuda-links-cloud-breach-to-artex-ai-powered-cyberattack/",
-     "title": "Barracuda links cloud breach to ARTEX AI-powered cyberattack",
-     "published": "2026-11-16T19:57:13Z"
-    },
-    {
-     "name": "Cybersecurity News",
-     "url": "https://cybersecuritynews.com/barracuda-cloud-account-breach/",
-     "title": "Hackers Exploit Exposed AI Vendor Key to Breach 10 Barracuda Cloud Accounts in 44 Hours",
-     "published": "2026-11-17T08:42:21Z"
     }
    ]
   },
@@ -755,48 +995,6 @@
      "url": "https://www.bleepingcomputer.com/news/security/tsmc-employee-data-breach-linked-to-cloud-provider/",
      "title": "TSMC employee data breach linked to cloud provider",
      "published": "2026-11-15T15:23:48Z"
-    }
-   ]
-  },
-  {
-   "id": "960f41318e",
-   "victim": null,
-   "victim_key": "",
-   "sector": null,
-   "country": "United States",
-   "country_key": "United States of America",
-   "city": null,
-   "lat": 39.5,
-   "lon": -99.06,
-   "precision": "country",
-   "type": "supply_chain",
-   "records": null,
-   "actor": null,
-   "attacker_country": null,
-   "attacker_lat": null,
-   "attacker_lon": null,
-   "summary": null,
-   "confidence": "low",
-   "first_seen": "2026-11-14T09:09:31Z",
-   "last_seen": "2026-11-15T08:22:04Z",
-   "sources": [
-    {
-     "name": "Cybersecurity News",
-     "url": "https://cybersecuritynews.com/cursor-data-breach/",
-     "title": "Cursor Reveals How a Leaked Fireworks AI Key Led to a Backdoored Claude Code Extension",
-     "published": "2026-11-14T09:09:31Z"
-    },
-    {
-     "name": "BleepingComputer",
-     "url": "https://www.bleepingcomputer.com/news/security/cursor-confirms-security-breach-led-to-malicious-claude-code-extension/",
-     "title": "Cursor confirms security breach led to malicious Claude Code extension",
-     "published": "2026-11-14T17:27:25Z"
-    },
-    {
-     "name": "The Hacker News",
-     "url": "https://thehackernews.com/2026/11/stolen-fireworks-ai-key-led-to-cursor.html",
-     "title": "Stolen Fireworks AI Key Led to Cursor Data Breach and Trojanized Claude Code Extension",
-     "published": "2026-11-15T08:22:04Z"
     }
    ]
   },
@@ -1367,36 +1565,6 @@
      "url": "https://www.darkreading.com/cyber-risk/ai-coding-agents-leak-secrets-github",
      "title": "AI Coding Agents Leak Thousands of Secrets to GitHub",
      "published": "2026-11-10T18:46:22Z"
-    }
-   ]
-  },
-  {
-   "id": "7646e96e2e",
-   "victim": "Fireworks AI",
-   "victim_key": "fireworks ai",
-   "sector": null,
-   "country": null,
-   "country_key": null,
-   "city": null,
-   "lat": null,
-   "lon": null,
-   "precision": "none",
-   "type": "data_breach",
-   "records": null,
-   "actor": null,
-   "attacker_country": null,
-   "attacker_lat": null,
-   "attacker_lon": null,
-   "summary": null,
-   "confidence": "low",
-   "first_seen": "2026-11-10T15:33:59Z",
-   "last_seen": "2026-11-10T15:33:59Z",
-   "sources": [
-    {
-     "name": "The Hacker News",
-     "url": "https://thehackernews.com/2026/11/fireworks-ai-breach-widens-to-expose.html",
-     "title": "Fireworks AI Confirms Wider Breach Affecting Customer Datasets, Model Weights and Notion AI Chats",
-     "published": "2026-11-10T15:33:59Z"
     }
    ]
   },
