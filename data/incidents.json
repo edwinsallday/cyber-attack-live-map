@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-18T12:57:35Z",
+ "updated": "2026-11-18T21:21:52Z",
  "coverage_from": "2026-11-18T03:12:00Z",
  "sources": [
   "The Hacker News",
@@ -27,6 +27,514 @@
  ],
  "feed_errors": [],
  "incidents": [
+  {
+   "id": "b0d9354dce",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Transport & logistics",
+   "country": "United Kingdom",
+   "country_key": "United Kingdom",
+   "city": null,
+   "lat": 53.88,
+   "lon": -2.66,
+   "precision": "country",
+   "country_source": null,
+   "type": "data_breach",
+   "records": "265,000 customers",
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": true,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-18T21:08:50Z",
+   "last_seen": "2026-11-18T21:08:50Z",
+   "sources": [
+    {
+     "name": "DataBreaches.net",
+     "url": "https://databreaches.net/2026/11/18/uk-transport-for-london-photocard-breach-exposes-265000-customers/",
+     "title": "UK: Transport for London photocard breach exposes 265,000 customers",
+     "published": "2026-11-18T21:08:50Z"
+    }
+   ]
+  },
+  {
+   "id": "9f639cd353",
+   "victim": "Data",
+   "victim_key": "data",
+   "sector": "Banking & finance",
+   "country": "Ireland",
+   "country_key": "Ireland",
+   "city": null,
+   "lat": 53.18,
+   "lon": -8.01,
+   "precision": "country",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": true,
+   "summary": null,
+   "confidence": "medium",
+   "first_seen": "2026-11-18T19:39:33Z",
+   "last_seen": "2026-11-18T19:39:33Z",
+   "sources": [
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/data-breach-impacts-40-irish-credit-unions-in-reported-it-provider-hack/",
+     "title": "Data breach impacts 40 Irish credit unions in reported IT provider hack",
+     "published": "2026-11-18T19:39:33Z"
+    }
+   ]
+  },
+  {
+   "id": "f7e2b10e71",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Banking & finance",
+   "country": "Germany",
+   "country_key": "Germany",
+   "city": null,
+   "lat": 51.13,
+   "lon": 10.29,
+   "precision": "country",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": true,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-18T19:14:57Z",
+   "last_seen": "2026-11-18T19:14:57Z",
+   "sources": [
+    {
+     "name": "DataBreaches.net",
+     "url": "https://databreaches.net/2026/11/18/deutsche-bank-chair-backs-ceo-after-reports-expose-past-lapses-trump-calls-tax-leak-illegal/",
+     "title": "Deutsche Bank chair backs CEO after reports expose past lapses; Trump calls tax leak ‘illegal’",
+     "published": "2026-11-18T19:14:57Z"
+    }
+   ]
+  },
+  {
+   "id": "b675efb54a",
+   "victim": "Microsoft’s Agent Framework PyPI Package",
+   "victim_key": "microsofts agent framework pypi package",
+   "sector": "Technology",
+   "country": "United States",
+   "country_key": "United States of America",
+   "city": null,
+   "lat": 39.5,
+   "lon": -99.06,
+   "precision": "country",
+   "country_source": null,
+   "type": "supply_chain",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "medium",
+   "first_seen": "2026-11-18T03:30:19Z",
+   "last_seen": "2026-11-18T16:58:42Z",
+   "sources": [
+    {
+     "name": "Cybersecurity News",
+     "url": "https://cybersecuritynews.com/microsofts-agent-framework-pypi-package/",
+     "title": "Microsoft’s Agent Framework PyPI Package Hacked to Steal Azure and GitHub Credentials",
+     "published": "2026-11-18T03:30:19Z"
+    },
+    {
+     "name": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/attackers-compromise-microsofts-agent.html",
+     "title": "Attackers Compromise Microsoft's Agent Framework PyPI Package to Steal Cloud Credentials",
+     "published": "2026-11-18T06:45:26Z"
+    },
+    {
+     "name": "SC Media",
+     "url": "https://www.scworld.com/brief/microsoft-agent-framework-package-compromised-to-steal-credentials",
+     "title": "Microsoft agent-framework package compromised to steal credentials",
+     "published": "2026-11-18T16:46:49Z"
+    },
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/microsofts-agent-framework-pypi-package-compromised-to-steal-credentials/",
+     "title": "Microsoft’s Agent Framework PyPI package compromised to steal credentials",
+     "published": "2026-11-18T16:58:42Z"
+    }
+   ]
+  },
+  {
+   "id": "ddec81ba80",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Technology",
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-17T21:27:17Z",
+   "last_seen": "2026-11-18T16:52:11Z",
+   "sources": [
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/cloud-keys-leaked-in-docker-hub-images-are-stolen-within-seconds/",
+     "title": "Cloud keys leaked in Docker Hub images are stolen within seconds",
+     "published": "2026-11-17T21:27:17Z"
+    },
+    {
+     "name": "SC Media",
+     "url": "https://www.scworld.com/brief/researchers-find-attackers-exploit-leaked-credentials-in-docker-hub-images-within-seconds",
+     "title": "Researchers find attackers exploit leaked credentials in docker hub images within seconds",
+     "published": "2026-11-18T16:52:11Z"
+    }
+   ]
+  },
+  {
+   "id": "034812d316",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Technology",
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-18T15:36:50Z",
+   "last_seen": "2026-11-18T15:36:50Z",
+   "sources": [
+    {
+     "name": "Cybersecurity News",
+     "url": "https://cybersecuritynews.com/spycloud-2027-cybersecurity-forecast-trusted-access-ai-agents/",
+     "title": "SpyCloud’s 2027 Forecast: Attackers Will Exploit Trusted Access, From Hijacked Sessions to AI Agents",
+     "published": "2026-11-18T15:36:50Z"
+    }
+   ]
+  },
+  {
+   "id": "c17617028e",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Government & defence",
+   "country": "United States",
+   "country_key": "United States of America",
+   "city": null,
+   "lat": 39.5,
+   "lon": -99.06,
+   "precision": "country",
+   "country_source": null,
+   "type": "other",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-18T15:33:31Z",
+   "last_seen": "2026-11-18T15:33:31Z",
+   "sources": [
+    {
+     "name": "DataBreaches.net",
+     "url": "https://databreaches.net/2026/11/18/sc-sled-charleston-county-investigating-after-cybersecurity-incident-on-county-network/",
+     "title": "SC: SLED, Charleston County investigating after ‘cybersecurity incident’ on county network",
+     "published": "2026-11-18T15:33:31Z"
+    }
+   ]
+  },
+  {
+   "id": "9c4ee0f215",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Education",
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "country_source": null,
+   "type": "other",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-18T15:32:24Z",
+   "last_seen": "2026-11-18T15:32:24Z",
+   "sources": [
+    {
+     "name": "DataBreaches.net",
+     "url": "https://databreaches.net/2026/11/18/a-month-after-richmond-public-school-cyberattack-schools-are-far-from-normal/",
+     "title": "A month after Richmond Public School cyberattack, schools are far from normal",
+     "published": "2026-11-18T15:32:24Z"
+    }
+   ]
+  },
+  {
+   "id": "1dff6dd6c9",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Technology",
+   "country": "Japan",
+   "country_key": "Japan",
+   "city": null,
+   "lat": 36.02,
+   "lon": 136.88,
+   "precision": "country",
+   "country_source": null,
+   "type": "data_breach",
+   "records": "4,597 Users",
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-17T15:13:38Z",
+   "last_seen": "2026-11-18T15:24:33Z",
+   "sources": [
+    {
+     "name": "DataBreaches.net",
+     "url": "https://databreaches.net/2026/11/17/cyberattack-on-japans-fugaku-supercomputer-puts-data-of-4597-users-at-risk/",
+     "title": "​Cyberattack on Japan’s Fugaku Supercomputer Puts Data of 4,597 Users at Risk",
+     "published": "2026-11-17T15:13:38Z"
+    },
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/japan-takes-fugaku-supercomputer-offlline-after-cyberattack/",
+     "title": "Japan takes Fugaku supercomputer offlline after cyberattack",
+     "published": "2026-11-17T20:51:21Z"
+    },
+    {
+     "name": "Cybersecurity News",
+     "url": "https://cybersecuritynews.com/japan-shuts-down-fugaku-supercomputer/",
+     "title": "Japan Shuts Down Fugaku Supercomputer After Hackers Breach Internal Servers",
+     "published": "2026-11-18T07:59:16Z"
+    },
+    {
+     "name": "DataBreaches.net",
+     "url": "https://databreaches.net/2026/11/18/japan-to-postpone-launch-of-sex-offense-check-system-over-data-leak-risk/",
+     "title": "Japan to postpone launch of sex offense check system over data leak risk",
+     "published": "2026-11-18T15:24:33Z"
+    }
+   ]
+  },
+  {
+   "id": "8d5ff285d4",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Education",
+   "country": "United States",
+   "country_key": "United States of America",
+   "city": null,
+   "lat": 39.5,
+   "lon": -99.06,
+   "precision": "country",
+   "country_source": null,
+   "type": "ransomware",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-18T15:24:24Z",
+   "last_seen": "2026-11-18T15:24:24Z",
+   "sources": [
+    {
+     "name": "DataBreaches.net",
+     "url": "https://databreaches.net/2026/11/18/il-wilmington-school-district-209u-reports-ransomware-attack-and-possible-data-breach/",
+     "title": "IL: Wilmington School District 209U Reports Ransomware Attack And Possible Data Breach",
+     "published": "2026-11-18T15:24:24Z"
+    }
+   ]
+  },
+  {
+   "id": "d4ae36431d",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Energy & utilities",
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "country_source": null,
+   "type": "other",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": true,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-18T15:16:00Z",
+   "last_seen": "2026-11-18T15:16:00Z",
+   "sources": [
+    {
+     "name": "Cybersecurity Dive",
+     "url": "https://www.cybersecuritydive.com/news/energy-equinor-investigates-cyberattack/875035/",
+     "title": "Energy giant Equinor investigates cyberattack impacting IT systems",
+     "published": "2026-11-18T15:16:00Z"
+    }
+   ]
+  },
+  {
+   "id": "787f32d48d",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Technology",
+   "country": "Russia",
+   "country_key": "Russia",
+   "city": null,
+   "lat": 60.0,
+   "lon": 95.0,
+   "precision": "country",
+   "country_source": null,
+   "type": "espionage",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-18T11:45:00Z",
+   "last_seen": "2026-11-18T15:15:00Z",
+   "sources": [
+    {
+     "name": "Infosecurity Magazine",
+     "url": "https://www.infosecurity-magazine.com/news/russian-star-blizzard-cloud-data/",
+     "title": "Russian Espionage Actor Star Blizzard Focuses on Cloud Identities for Mass Data Theft",
+     "published": "2026-11-18T11:45:00Z"
+    },
+    {
+     "name": "The Record",
+     "url": "https://therecord.media/russia-cyber-espionage-google",
+     "title": "Russian cyber-espionage group used stolen cloud data to hack into organizations, Google says",
+     "published": "2026-11-18T15:15:00Z"
+    }
+   ]
+  },
+  {
+   "id": "d0edd2ef74",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Manufacturing & industry",
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "country_source": null,
+   "type": "ransomware",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-18T13:37:43Z",
+   "last_seen": "2026-11-18T13:37:43Z",
+   "sources": [
+    {
+     "name": "Cybersecurity News",
+     "url": "https://cybersecuritynews.com/nvidia-data-breach-claim/",
+     "title": "The Gentlemen Ransomware Gang Allegedly Claims to Have Breached NVIDIA",
+     "published": "2026-11-18T13:37:43Z"
+    }
+   ]
+  },
+  {
+   "id": "ee9a23761b",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Technology",
+   "country": "Russia",
+   "country_key": "Russia",
+   "city": null,
+   "lat": 60.0,
+   "lon": 95.0,
+   "precision": "country",
+   "country_source": null,
+   "type": "espionage",
+   "records": null,
+   "actor": "UNC4057",
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-18T05:58:04Z",
+   "last_seen": "2026-11-18T13:33:47Z",
+   "sources": [
+    {
+     "name": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/russian-cold-relic-hackers-use-stolen.html",
+     "title": "Russian COLD RELIC Hackers Use Stolen Google Workspace Data to Breach Second U.S. Organization",
+     "published": "2026-11-18T05:58:04Z"
+    },
+    {
+     "name": "Cybersecurity News",
+     "url": "https://cybersecuritynews.com/russian-hackers-3/",
+     "title": "Google Reveals How Russian Hackers Used One Cloud Breach to Compromise Another US Organization",
+     "published": "2026-11-18T06:18:38Z"
+    },
+    {
+     "name": "SecurityWeek",
+     "url": "https://www.securityweek.com/russian-apt-poses-as-employee-of-hacked-firm-to-breach-another-us-organization/",
+     "title": "Russian APT Poses as Employee of Hacked Firm to Breach Another US Organization",
+     "published": "2026-11-18T13:33:47Z"
+    }
+   ]
+  },
   {
    "id": "b4edaf042f",
    "victim": null,
@@ -56,38 +564,6 @@
      "url": "https://cybersecuritynews.com/global-banks/",
      "title": "Chinese APT Hackers Target Global Banks to Steal Financial Intelligence and Spy on Microsoft 365 Accounts",
      "published": "2026-11-18T12:37:05Z"
-    }
-   ]
-  },
-  {
-   "id": "787f32d48d",
-   "victim": null,
-   "victim_key": "",
-   "sector": "Technology",
-   "country": "Russia",
-   "country_key": "Russia",
-   "city": null,
-   "lat": 60.0,
-   "lon": 95.0,
-   "precision": "country",
-   "country_source": null,
-   "type": "espionage",
-   "records": null,
-   "actor": null,
-   "attacker_country": null,
-   "attacker_lat": null,
-   "attacker_lon": null,
-   "critical": false,
-   "summary": null,
-   "confidence": "low",
-   "first_seen": "2026-11-18T11:45:00Z",
-   "last_seen": "2026-11-18T11:45:00Z",
-   "sources": [
-    {
-     "name": "Infosecurity Magazine",
-     "url": "https://www.infosecurity-magazine.com/news/russian-star-blizzard-cloud-data/",
-     "title": "Russian Espionage Actor Star Blizzard Focuses on Cloud Identities for Mass Data Theft",
-     "published": "2026-11-18T11:45:00Z"
     }
    ]
   },
@@ -162,50 +638,6 @@
    ]
   },
   {
-   "id": "1dff6dd6c9",
-   "victim": null,
-   "victim_key": "",
-   "sector": "Technology",
-   "country": "Japan",
-   "country_key": "Japan",
-   "city": null,
-   "lat": 36.02,
-   "lon": 136.88,
-   "precision": "country",
-   "country_source": null,
-   "type": "data_breach",
-   "records": "4,597 Users",
-   "actor": null,
-   "attacker_country": null,
-   "attacker_lat": null,
-   "attacker_lon": null,
-   "critical": false,
-   "summary": null,
-   "confidence": "low",
-   "first_seen": "2026-11-17T15:13:38Z",
-   "last_seen": "2026-11-18T07:59:16Z",
-   "sources": [
-    {
-     "name": "DataBreaches.net",
-     "url": "https://databreaches.net/2026/11/17/cyberattack-on-japans-fugaku-supercomputer-puts-data-of-4597-users-at-risk/",
-     "title": "​Cyberattack on Japan’s Fugaku Supercomputer Puts Data of 4,597 Users at Risk",
-     "published": "2026-11-17T15:13:38Z"
-    },
-    {
-     "name": "BleepingComputer",
-     "url": "https://www.bleepingcomputer.com/news/security/japan-takes-fugaku-supercomputer-offlline-after-cyberattack/",
-     "title": "Japan takes Fugaku supercomputer offlline after cyberattack",
-     "published": "2026-11-17T20:51:21Z"
-    },
-    {
-     "name": "Cybersecurity News",
-     "url": "https://cybersecuritynews.com/japan-shuts-down-fugaku-supercomputer/",
-     "title": "Japan Shuts Down Fugaku Supercomputer After Hackers Breach Internal Servers",
-     "published": "2026-11-18T07:59:16Z"
-    }
-   ]
-  },
-  {
    "id": "1742e6088e",
    "victim": null,
    "victim_key": "",
@@ -270,82 +702,6 @@
    ]
   },
   {
-   "id": "b675efb54a",
-   "victim": "Microsoft’s Agent Framework PyPI Package",
-   "victim_key": "microsofts agent framework pypi package",
-   "sector": "Technology",
-   "country": "United States",
-   "country_key": "United States of America",
-   "city": null,
-   "lat": 39.5,
-   "lon": -99.06,
-   "precision": "country",
-   "country_source": null,
-   "type": "supply_chain",
-   "records": null,
-   "actor": null,
-   "attacker_country": null,
-   "attacker_lat": null,
-   "attacker_lon": null,
-   "critical": false,
-   "summary": null,
-   "confidence": "medium",
-   "first_seen": "2026-11-18T03:30:19Z",
-   "last_seen": "2026-11-18T06:45:26Z",
-   "sources": [
-    {
-     "name": "Cybersecurity News",
-     "url": "https://cybersecuritynews.com/microsofts-agent-framework-pypi-package/",
-     "title": "Microsoft’s Agent Framework PyPI Package Hacked to Steal Azure and GitHub Credentials",
-     "published": "2026-11-18T03:30:19Z"
-    },
-    {
-     "name": "The Hacker News",
-     "url": "https://thehackernews.com/2026/11/attackers-compromise-microsofts-agent.html",
-     "title": "Attackers Compromise Microsoft's Agent Framework PyPI Package to Steal Cloud Credentials",
-     "published": "2026-11-18T06:45:26Z"
-    }
-   ]
-  },
-  {
-   "id": "ee9a23761b",
-   "victim": null,
-   "victim_key": "",
-   "sector": "Technology",
-   "country": "Russia",
-   "country_key": "Russia",
-   "city": null,
-   "lat": 60.0,
-   "lon": 95.0,
-   "precision": "country",
-   "country_source": null,
-   "type": "espionage",
-   "records": null,
-   "actor": "UNC4057",
-   "attacker_country": null,
-   "attacker_lat": null,
-   "attacker_lon": null,
-   "critical": false,
-   "summary": null,
-   "confidence": "low",
-   "first_seen": "2026-11-18T05:58:04Z",
-   "last_seen": "2026-11-18T06:18:38Z",
-   "sources": [
-    {
-     "name": "The Hacker News",
-     "url": "https://thehackernews.com/2026/11/russian-cold-relic-hackers-use-stolen.html",
-     "title": "Russian COLD RELIC Hackers Use Stolen Google Workspace Data to Breach Second U.S. Organization",
-     "published": "2026-11-18T05:58:04Z"
-    },
-    {
-     "name": "Cybersecurity News",
-     "url": "https://cybersecuritynews.com/russian-hackers-3/",
-     "title": "Google Reveals How Russian Hackers Used One Cloud Breach to Compromise Another US Organization",
-     "published": "2026-11-18T06:18:38Z"
-    }
-   ]
-  },
-  {
    "id": "bb92338073",
    "victim": null,
    "victim_key": "",
@@ -374,38 +730,6 @@
      "url": "https://databreaches.net/2026/11/17/canada-highland-shores-childrens-aid-reveals-cybersecurity-breach-involving-personal-information/",
      "title": "Canada: Highland Shores Children’s Aid Reveals Cybersecurity Breach Involving Personal Information",
      "published": "2026-11-18T00:15:28Z"
-    }
-   ]
-  },
-  {
-   "id": "ddec81ba80",
-   "victim": null,
-   "victim_key": "",
-   "sector": "Technology",
-   "country": null,
-   "country_key": null,
-   "city": null,
-   "lat": null,
-   "lon": null,
-   "precision": "none",
-   "country_source": null,
-   "type": "data_breach",
-   "records": null,
-   "actor": null,
-   "attacker_country": null,
-   "attacker_lat": null,
-   "attacker_lon": null,
-   "critical": false,
-   "summary": null,
-   "confidence": "low",
-   "first_seen": "2026-11-17T21:27:17Z",
-   "last_seen": "2026-11-17T21:27:17Z",
-   "sources": [
-    {
-     "name": "BleepingComputer",
-     "url": "https://www.bleepingcomputer.com/news/security/cloud-keys-leaked-in-docker-hub-images-are-stolen-within-seconds/",
-     "title": "Cloud keys leaked in Docker Hub images are stolen within seconds",
-     "published": "2026-11-17T21:27:17Z"
     }
    ]
   },
