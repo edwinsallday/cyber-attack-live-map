@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-18T03:13:10Z",
+ "updated": "2026-11-18T03:39:37Z",
  "coverage_from": "2026-11-18T03:12:00Z",
  "sources": [
   "The Hacker News",
@@ -25,7 +25,9 @@
   "Wired Security",
   "CSIS"
  ],
- "feed_errors": [],
+ "feed_errors": [
+  "Cybersecurity News: not well-formed (invalid token): line 1, column 119"
+ ],
  "incidents": [
   {
    "id": "bb92338073",
