@@ -1,0 +1,103 @@
+{
+ "access dental management": {
+  "checked": "2026-11-18"
+ },
+ "asos": {
+  "qid": "Q211951",
+  "label": "ASOS",
+  "description": "British online fashion and beauty retailer",
+  "country": "United Kingdom",
+  "checked": "2026-11-18"
+ },
+ "binance": {
+  "qid": "Q51403327",
+  "label": "Binance",
+  "description": "cryptocurrency exchange",
+  "country": "United Arab Emirates",
+  "checked": "2026-11-18"
+ },
+ "capcom": {
+  "qid": "Q14428",
+  "label": "Capcom",
+  "description": "Japanese video game company",
+  "country": "Japan",
+  "checked": "2026-11-18"
+ },
+ "cognitive health technologies": {
+  "checked": "2026-11-18"
+ },
+ "coles": {
+  "checked": "2026-11-18"
+ },
+ "collins aerospace": {
+  "qid": "Q358594",
+  "label": "Collins Aerospace",
+  "description": "American aerospace manufacturer",
+  "country": "United States",
+  "checked": "2026-11-18"
+ },
+ "copenhagen university": {
+  "qid": "Q186285",
+  "label": "University of Copenhagen",
+  "description": "public research university in Copenhagen, Denmark",
+  "country": "Denmark",
+  "checked": "2026-11-18"
+ },
+ "engie": {
+  "qid": "Q13416787",
+  "label": "Engie",
+  "description": "French multinational energy company",
+  "country": "France",
+  "checked": "2026-11-18"
+ },
+ "fireworks ai": {
+  "checked": "2026-11-18"
+ },
+ "frontline education": {
+  "checked": "2026-11-18"
+ },
+ "infoblox": {
+  "qid": "Q15831130",
+  "label": "Infoblox",
+  "description": "American technology company in Silicon Valley",
+  "country": "United States",
+  "checked": "2026-11-18"
+ },
+ "ipsos": {
+  "qid": "Q1672300",
+  "label": "Ipsos",
+  "description": "French market research company",
+  "country": "France",
+  "checked": "2026-11-18"
+ },
+ "maileva": {
+  "checked": "2026-11-18"
+ },
+ "optimizely": {
+  "qid": "Q17073302",
+  "label": "Optimizely",
+  "description": "American multinational Internet and technology corporation",
+  "country": "United States",
+  "checked": "2026-11-18"
+ },
+ "revolut": {
+  "qid": "Q22908307",
+  "label": "Revolut",
+  "description": "financial technology company",
+  "country": "Lithuania",
+  "checked": "2026-11-18"
+ },
+ "stockal": {
+  "checked": "2026-11-18"
+ },
+ "tsmc": {
+  "qid": "Q713418",
+  "label": "TSMC",
+  "description": "semiconductor foundry company headquartered in Taiwan",
+  "country": "Taiwan",
+  "checked": "2026-11-18"
+ },
+ "uta": {
+  "checked": "2026-11-18"
+ }
+}

@@ -95,7 +95,11 @@ POLICE = re.compile(r"\b(?:arrests?|arrested|takes? down|took down|seizes?|seize
 VULN = re.compile(r"\b(?:flaws?|patch(?:es|ed)?|cve-\d|vulnerabilit\w+|zero-day|bugs?|fix(?:es|ed)?|poc|exploits? work|security updates?|rce)\b", re.I)
 HYPOTHETICAL = re.compile(r"\b(?:could|can|lets?|may|might|would|warns of|show|shows|benchmark)\b", re.I)
 CONFIRMED = re.compile(r"\b(?:confirms?|confirmed|discloses?|disclosed|admits?|blames?|says stolen|suffers?|suffered|hit by|disrupted by|breached|hacked|extorted|stole)\b", re.I)
-INCIDENT = re.compile(r"\b(?:breach(?:es|ed)?|hacked|stole|stolen|theft|heist|ransomware attack|cyber ?attacks?|extort\w*|leak(?:ed|s)?|hijacked|hijacks|compromised?|sabotage|intercept\w*|implants?|spy on|wip(?:e|ed|er)|defaced|knocked offline|infect\w*|attacks target)\b", re.I)
+INCIDENT = re.compile(r"\b(?:breach(?:es|ed)?|hacked|stole|stolen|theft|heist|ransomware attack|cyber ?attacks?|extort\w*|leak(?:ed|s)?|hijacked|hijacks|compromised?|sabotage|intercept\w*|implants?|spy on|wip(?:e|ed|er)|defaced|knocked offline|infect\w*|attacks target"
+                      r"|cyber ?incident|security incident|cybersecurity incident|unauthori[sz]ed (?:access|trades|transactions))\b", re.I)
+# Trend pieces, research and commentary that mention attacks without reporting one.
+NOT_AN_EVENT = re.compile(r"\b(?:increasingly|shed light|fail to|extends|propaganda|court|clears|trend|lessons|inside|explained|"
+                          r"what we know|analysis|opinion)\b|\bmost\b.*\bvictims\b|^\w+:\s*AI\b", re.I)
 
 TYPE_RULES = [
     ("ransomware", r"ransomware|extort"),
@@ -110,29 +114,86 @@ ACTORS = re.compile(r"\b(ShinyHunters|Qilin|LockBit|Lazarus(?: Group)?|Turla|Sca
 SCALE = re.compile(r"((?:about |over |more than |nearly |at least |an estimated )?(?:\$\s?[\d.,]+\s?(?:million|billion|[MBK])?|[\d.,]+\+?\s?(?:million|billion|[MK])?\s(?:customers|users|records|accounts|people|patients|employees|endpoints|organi[sz]ations|sites|repositories|servers|devices|wallets|agents)))", re.I)
 
 NAME = r"[A-Z][\w.&'’-]*(?: (?:[A-Z&][\w.&'’-]*|AI|of|de))*"
-NOT_A_VICTIM = re.compile(r"^(?:Hackers?|Attackers?|Researchers?|Police|New|Critical|Massive|Over|Three|Two|Russian|Chinese|Iranian|North Korean|CISA|Feds|Tech Firms|Threat Actors?)\b|" + "|".join(re.escape(k) + r"$" for k in ("France", "Germany", "U.S.", "US", "U.K.", "UK", "China", "Russia", "Iran")))
+NOT_A_VICTIM = re.compile(r"^(?:January|February|March|April|May|June|July|August|September|October|November|December|"
+                          r"Announced|Suspected|Reported|Alleged|Hackers?|Attackers?|Researchers?|Experts?|Police|New|Critical|Massive|Over|Three|Two|Russian|Chinese|Iranian|North Korean|CISA|Feds|Tech Firms|Threat Actors?)\b|" + "|".join(re.escape(k) + r"$" for k in ("France", "Germany", "U.S.", "US", "U.K.", "UK", "China", "Russia", "Iran")))
 VICTIM_PATTERNS = [
     re.compile(r"^(" + NAME + r") (?:[Cc]onfirms|[Dd]iscloses|[Aa]dmits|[Ss]uffers|[Hh]it [Bb]y|[Bb]reached|[Hh]acked|[Nn]otifies|[Ii]nvestigat\w+)\b"),
     re.compile(r"^(" + NAME + r") [Ss]ays (?=.*\b(?:[Ss]tolen|[Bb]reach|[Hh]acked|[Aa]ttack|[Ll]eak))"),
     re.compile(r"\b(?:[Bb]reaches|[Hh]acks|[Ee]xtorted|[Ee]xtorts|[Hh]its|[Ss]tole (?:[Ff]rom|[Dd]ata [Ff]rom)|[Dd]ata [Ff]rom(?: the)?) (" + NAME + r")"),
     re.compile(r"\b(?:[Aa]ttack|[Bb]reach|[Hh]ack|[Cc]yberattack|[Ii]ntrusion) (?:[Oo]n|[Aa]t|[Aa]gainst|[Oo]f) (" + NAME + r")"),
     re.compile(r"^(" + NAME + r") (?:[Dd]ata )?(?:[Bb]reach|[Cc]yberattack|[Hh]ack)\b"),
+    re.compile(r"(" + NAME + r")['’]s (?:[Dd]ata )?(?:[Bb]reach|[Hh]ack|[Cc]yberattack|[Ll]eak)\b"),
+    re.compile(r"^(" + NAME + r") (?:has |have )?(?:reportedly )?(?:leaked|exposed|suffered|been hit|been hacked|been breached)\b"),
 ]
 TRAILING = re.compile(r"\s+(?:Prior|After|Amid|Over|Via|And|In|To|For|With|Using|Customers?)$")
+# Verbs that end a company name ("Karaoke Giant Reveals Data ..." -> "Karaoke Giant")
+NAME_STOP = re.compile(r"\s+(?:Reveals?|Confirms?|Discloses?|Investigat\w+|Notifies|Says|Reports?|Suffers?|Hit|Affects?|Affecting|"
+                       r"Impacts?|Impacting|Exposes?|Compromises?|Leaks?|Puts|Hits?|Data|Breach\w*|Restarts?|Warns?)\b.*$")
+# Descriptions in front of a name ("Market Research Giant Ipsos" -> "Ipsos")
+DESCRIPTOR = re.compile(r"^(?:[A-Z][\w-]*\s+){0,3}(?:Giant|Firm|Maker|Provider|Operator|Retailer|Chain|Startup|Insurer|Airline|"
+                        r"Lender|Platform|Company|Subsidiary)\s+(?=[A-Z])")
 
 
 def victim_of(title):
     for pat in VICTIM_PATTERNS:
         m = pat.search(title)
         if m:
-            v = TRAILING.sub("", m.group(1)).strip(" ,.'’")
+            v = NAME_STOP.sub("", m.group(1))
+            v = re.sub(r"['’]s$", "", TRAILING.sub("", v)).strip(" ,.'’")
+            stripped = DESCRIPTOR.sub("", v)
+            v = stripped if len(stripped) > 1 else v
+            if GENERIC_NAME.search(v):         # "Karaoke Giant": a description, not a name
+                return None
             if len(v) > 1 and not NOT_A_VICTIM.search(v):
                 return v
     return None
 
 
+GENERIC_NAME = re.compile(r"(?:^|\s)(?:Giant|Firm|Maker|Provider|Operator|Retailer|Chain|Startup|Company|Companies|Firms)$")
+
+
+# ---------- sector ----------
+# Checked in order; the first match wins. Matched against the headline first, then the start of the excerpt.
+SECTOR_RULES = [
+    ("Crypto & blockchain", r"crypto|bitcoin|ethereum|blockchain|\bdefi\b|binance|coinbase|kraken|bybit|bitget|trezor|\bwallets?\b.*\b(?:seed|recovery)"),
+    ("Healthcare", r"hospital|health|medical|clinic|patient|pharma|dental|hipaa|nhs\b|biotech|oncology|epilep|physician|ambulance|care home|"
+                   r"laborator|healthcare"),
+    ("Education", r"universit|college|school|student|education|academ|campus|k-12|alumni"),
+    ("Finance & insurance", r"\bbank|financ|insur|credit union|fintech|payment|lender|mortgage|investment|securities|brokerage|"
+                            r"pension|\bloan|trading account|stockal|cr[ée]dit"),
+    ("Telecoms", r"telecom|telco|mobile operator|mobile network|carrier|broadband|\bisp\b|\bsms\b"),
+    ("Energy & utilities", r"\benergy|\boil\b|\bgas\b|power grid|power plant|electric|utilit|water (?:utility|supply|treatment)|nuclear|engie"),
+    ("Transport & logistics", r"airline|airport|aviation|\brail|railway|shipping|maritime|\bport of|logistics|transport|freight|"
+                              r"maersk|transit|metro\b|passenger|widerøe|tunnel|postal|la poste|maileva|post office|courier"),
+    ("Travel & hospitality", r"hotel|resort|restaurant|travel|cruise|theme park|legoland|expedia|booking|karaoke|casino"),
+    ("Retail & e-commerce", r"retail|\bstores?\b|\bshops?\b|e-?commerce|supermarket|grocer|fashion|asos|coles|woolworths|sogo|muji|"
+                            r"gift card|card skimm|checkout|consumer"),
+    ("Manufacturing & industry", r"manufactur|factory|industrial|\bics\b|\bot\b|scada|\bplc\b|automotive|carmaker|chemical|steel|"
+                                 r"refrigeration|semiconductor|tsmc|chip ?maker|drone"),
+    ("Media & entertainment", r"\bmedia\b|news(?:paper)?s?\b|broadcast|gaming|video game|\bgames?\b|entertainment|streaming|"
+                              r"publisher|capcom|sega|\bcnn\b|\bbbc\b|fox news"),
+    ("Legal & professional services", r"law firm|legal|accounting|consult|audit|market research|ipsos|recruit"),
+    ("Charities & non-profits", r"charit|non-?profit|\bngo\b|children['’]s aid|foundation"),
+    ("Government & defence", r"government|ministry|\bagency\b|council|municipal|city hall|county|federal|police|military|"
+                             r"defen[cs]e|army|navy|parliament|embassy|public sector|\bfbi\b|\bnato\b|state department|"
+                             r"department of|town\b|\bcity of\b"),
+    ("Technology", r"software|saas|cloud|\btech\b|developer|github|\bai\b|platform|\bapp\b|open[- ]source|\bnpm\b|pypi|"
+                   r"it services|\bmsps?\b|data cent|screenconnect|optimizely|docker|website|vpn|microsoft|apple|google|"
+                   r"teams|exchange servers?|infoblox|gyazo"),
+]
+SECTOR_RES = [(name, re.compile(pat, re.I)) for name, pat in SECTOR_RULES]
+
+
+def sector_of(title, excerpt):
+    for text in (title, (excerpt or "")[:300]):
+        for name, rx in SECTOR_RES:
+            if rx.search(text):
+                return name
+    return None
+
+
 def classify(title, excerpt):
-    if NOT_NEWS.search(title):
+    if NOT_NEWS.search(title) or NOT_AN_EVENT.search(title):
         return "other"
     confirmed = bool(CONFIRMED.search(title))
     if POLICE.search(title) and not confirmed:
@@ -172,7 +233,7 @@ def extract(items):
         low = text.lower()
         m_scale, m_actor = SCALE.search(title), ACTORS.search(text)      # scale from the headline only: excerpts are too noisy
         rec.update(
-            victim=victim, country=country,
+            victim=victim, country=country, sector=sector_of(title, excerpt),
             attack_type=next((t for t, pat in TYPE_RULES if re.search(pat, low)), "other"),
             records=m_scale.group(1).strip() if m_scale else None,
             actor=m_actor.group(1) if m_actor else None,

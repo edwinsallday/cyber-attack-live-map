@@ -305,14 +305,28 @@ function buildPins(list) {
 }
 
 // ---------- filters ----------
-const search = $('#search'), windowSel = $('#window'), list = $('#list');
-let selected = null, updatedAt = null, feedErrors = [], onlyType = '';
+const search = $('#search'), windowSel = $('#window'), sectorSel = $('#sector'), list = $('#list');
+let selected = null, updatedAt = null, feedErrors = [], onlyType = '', onlyCountry = '', lastShown = [];
 const typeKey = (c) => (TYPES[c.type] ? c.type : 'other');
+const countryName = new Map();                 // country_key -> the name shown for it
+const DAY = 864e5;
+const daysAgo = (iso) => (Date.now() - Date.parse(iso)) / DAY;
+const countBy = (arr, key) => { const m = new Map(); for (const o of arr) { const k = key(o); if (k) m.set(k, (m.get(k) || 0) + 1); } return m; };
+const topOf = (m) => [...m].sort((a, b) => b[1] - a[1])[0];
+const plural = (n, one, many) => `${n} ${n === 1 ? one : many}`;
+// Collection is complete only from the date the map started collecting continuously (data.coverage_from).
+// Period comparisons are shown only when both periods fall after it; earlier days are drawn dimmed.
+let coverageFrom = null;
+const coveredFor = (days) => !!coverageFrom && Date.now() - Date.parse(coverageFrom) >= days * DAY;
+const coveredFrom = (days) => new Date(Date.parse(coverageFrom) + days * DAY).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', timeZone: 'UTC' });
 
-function matches(o) {
+// ignoreWindow: used by the weekly trend, which always compares the last 7 days with the 7 before
+function matches(o, ignoreWindow) {
   const c = o.c, days = Number(windowSel.value), q = search.value.trim().toLowerCase();
   if (onlyType && typeKey(c) !== onlyType) return false;
-  if (days && ageHours(c.last_seen) > days * 24) return false;
+  if (sectorSel.value && c.sector !== sectorSel.value) return false;
+  if (onlyCountry && c.country_key !== onlyCountry) return false;
+  if (!ignoreWindow && days && ageHours(c.last_seen) > days * 24) return false;
   if (!q) return true;
   return [c.victim, c.country, c.city, c.sector, c.actor, c.attacker_country, typeOf(c).label, ...c.sources.map(s => s.title)]
     .some(v => (v || '').toLowerCase().includes(q));
@@ -324,7 +338,7 @@ function row(o) {
   const open = el('button', { type: 'button', class: 'open', 'data-id': o.c.id, 'aria-current': selected === o ? 'true' : 'false' },
     el('span', { class: 'tile', 'aria-hidden': 'true' }, el('i', { style: `background:${t.color};box-shadow:0 0 10px ${t.color}` })),
     el('span', { class: 'txt' }, el('span', { class: 'nm', text: nameOf(o.c) }),
-      el('span', { class: 'meta', text: [t.label, o.c.country || 'Location not reported', when(o.c)].join(' • ') })));
+      el('span', { class: 'meta', text: [t.label, o.c.sector, o.c.country || 'Location not reported', when(o.c)].filter(Boolean).join(' • ') })));
   open.addEventListener('click', () => select(o, true));
   const link = src && safeUrl(src.url)
     ? el('a', { class: 'go', href: safeUrl(src.url), target: '_blank', rel: 'noopener', title: 'Open the report at ' + src.name, 'aria-label': 'Open the report at ' + src.name, text: '↗' })
@@ -332,8 +346,25 @@ function row(o) {
   return el('li', {}, open, link);
 }
 
+// ---------- active filters, shown as removable chips ----------
+function drawChips() {
+  const chip = (label, clear) => {
+    const b = el('button', { type: 'button', class: 'chip', title: 'Remove this filter' }, label, el('span', { 'aria-hidden': 'true', text: '×' }));
+    b.addEventListener('click', () => { clear(); refresh(); });
+    return b;
+  };
+  const chips = [];
+  if (onlyType) chips.push(chip(TYPES[onlyType].label, () => { onlyType = ''; }));
+  if (sectorSel.value) chips.push(chip(sectorSel.value, () => { sectorSel.value = ''; }));
+  if (onlyCountry) chips.push(chip(countryName.get(onlyCountry) || onlyCountry, () => { onlyCountry = ''; }));
+  if (search.value.trim()) chips.push(chip('“' + search.value.trim() + '”', () => { search.value = ''; }));
+  $('#chips').replaceChildren(...chips);
+  $('#chips').hidden = !chips.length;
+}
+
 function refresh() {
-  const shown = incidents.filter(matches);                       // already newest first
+  const shown = incidents.filter(o => matches(o));               // already newest first
+  lastShown = shown;
   const shownSet = new Set(shown);
   for (const o of incidents) if (o.g) o.g.visible = shownSet.has(o);
   view.mapped = shown.filter(o => o.mapped); view.k = -1;
@@ -347,10 +378,10 @@ function refresh() {
   for (const b of $('#legend').children) b.setAttribute('aria-current', String(b.dataset.type === onlyType));
   outlineCountries(shown);
   ticker.items = shown.slice(0, 6); ticker.i = -1; tick();
-  drawStats(shown); drawRank(shown);
+  drawChips(); drawStats(shown); drawBreakdown(shown);
 }
 
-// ---------- stat cards ----------
+// ---------- stat cards and the weekly trend ----------
 function dial(target, share, color, half) {
   const pct = Math.round(share * 100);
   target.innerHTML = half
@@ -361,50 +392,134 @@ function dial(target, share, color, half) {
       + `<circle cx="32" cy="32" r="22" fill="none" stroke="${color}" stroke-width="4" stroke-linecap="round" stroke-dasharray="${(138.2 * share).toFixed(1)} 139" transform="rotate(-90 32 32)"/>`
       + `<text x="32" y="36" text-anchor="middle">${pct}%</text></svg>`;
 }
-function bars(target, values, titles) {
+function bars(target, values, titles, partial) {
   const max = Math.max(1, ...values);
-  target.replaceChildren(...values.map((n, i) => el('i', { style: `height:${n ? 18 + 82 * n / max : 6}%;opacity:${n ? 1 : 0.3}`, title: titles[i] })));
+  target.replaceChildren(...values.map((n, i) => el('i', { class: partial && partial[i] ? 'partial' : null,
+    style: `height:${n ? 18 + 82 * n / max : 6}%;opacity:${n ? 1 : 0.3}`, title: titles[i] + (partial && partial[i] ? ' (before collection was complete)' : '') })));
+}
+// Incidents first reported per day for the last `span` days, among those matching the filters (window ignored).
+// Entries known only to the month (CSIS) are left out of day-level counts.
+function perDay(span) {
+  const out = new Array(span).fill(0), today = Math.floor(Date.now() / DAY);
+  for (const o of incidents) {
+    if (o.c.date_precision === 'month' || !matches(o, true)) continue;
+    const i = span - 1 - (today - Math.floor(Date.parse(o.c.first_seen) / DAY));
+    if (i >= 0 && i < span) out[i]++;
+  }
+  const dayOf = (i) => new Date((today - (span - 1 - i)) * DAY);
+  const start = coverageFrom ? Math.floor(Date.parse(coverageFrom) / DAY) : Infinity;
+  return { counts: out, dayOf, partial: out.map((_, i) => today - (span - 1 - i) < start) };
+}
+function weeks() {
+  const base = incidents.filter(o => o.c.date_precision !== 'month' && matches(o, true));
+  return { now: base.filter(o => daysAgo(o.c.first_seen) < 7), prev: base.filter(o => daysAgo(o.c.first_seen) >= 7 && daysAgo(o.c.first_seen) < 14) };
 }
 function drawStats(shown) {
-  const n = shown.length, days = Number(windowSel.value);
-  $('#kIncidents').textContent = String(n);
-  $('#kIncidentsSub').textContent = days === 1 ? 'in the last 24 hours' : days ? `in the last ${days} days` : 'currently on the map';
-  const span = 14, perDay = new Array(span).fill(0), today = Math.floor(Date.now() / 864e5);
-  for (const o of shown) { const i = span - 1 - (today - Math.floor(Date.parse(o.c.first_seen) / 864e5)); if (i >= 0 && i < span) perDay[i]++; }
-  bars($('#sparkBars'), perDay, perDay.map((v, i) => `${v} first reported on ${fmtDate(new Date((today - (span - 1 - i)) * 864e5).toISOString())}`));
+  const w = weeks(), n7 = w.now.length, p7 = w.prev.length;
+  $('#kWeek').textContent = String(n7);
+  const sub = $('#kWeekSub');
+  if (!coveredFor(14)) {
+    sub.textContent = coverageFrom ? `Weekly change from ${coveredFrom(14)}` : '';
+    sub.className = 'kpi-sub trend';
+  } else if (p7) {
+    const pct = Math.round((n7 - p7) / p7 * 100);
+    sub.textContent = `${pct > 0 ? '▲ +' : pct < 0 ? '▼ ' : ''}${pct}% vs the 7 days before (${p7})`;
+    sub.className = 'kpi-sub trend ' + (pct > 0 ? 'up' : pct < 0 ? 'down' : '');
+  } else {
+    sub.textContent = n7 ? 'none in the 7 days before' : 'none in the last 7 days';
+    sub.className = 'kpi-sub trend';
+  }
+  const d14 = perDay(14);
+  bars($('#sparkBars'), d14.counts, d14.counts.map((v, i) => `${v} first reported on ${fmtDate(d14.dayOf(i).toISOString())}`), d14.partial);
 
-  const located = shown.filter(o => o.c.country).length;
-  $('#kCountries').textContent = String(new Set(shown.map(o => o.c.country).filter(Boolean)).size);
-  $('#kCountriesSub').textContent = n ? `${located} of ${n} reports name a country` : '';
+  const n = shown.length, byC = countBy(shown, o => o.c.country_key), tc = topOf(byC);
+  const located = shown.filter(o => o.c.country_key).length;
+  $('#kCountries').textContent = String(byC.size);
+  $('#kCountriesSub').textContent = tc ? `Most reports: ${countryName.get(tc[0])} (${tc[1]})` : '';
   dial($('#kCountriesDial'), n ? located / n : 0, '#8ae64d', false);
 
-  const byType = {};
-  for (const o of shown) byType[typeKey(o.c)] = (byType[typeKey(o.c)] || 0) + 1;
-  const top = Object.keys(byType).sort((a, b) => byType[b] - byType[a])[0];
-  $('#kType').textContent = top ? TYPES[top].label : '–';
-  $('#kTypeSub').textContent = top ? `${byType[top]} of ${n} incidents` : '';
-  dial($('#kTypeDial'), top ? byType[top] / n : 0, top ? TYPES[top].color : '#b7c7bb', true);
+  const withSector = shown.filter(o => o.c.sector), ts = topOf(countBy(withSector, o => o.c.sector));
+  $('#kSector').textContent = ts ? ts[0] : '–';
+  $('#kSectorSub').textContent = ts ? `${ts[1]} of ${plural(withSector.length, 'incident', 'incidents')} with a known sector` : 'No sector identified';
+  dial($('#kSectorDial'), ts ? ts[1] / withSector.length : 0, '#8ae64d', true);
 
-  const bySource = new Map();
-  for (const o of shown) for (const s of o.c.sources) bySource.set(s.name, (bySource.get(s.name) || 0) + 1);
-  const ranked = [...bySource].sort((a, b) => b[1] - a[1]);
-  $('#kLatest').textContent = n ? when(shown[0].c).replace(' ago', '') : '–';
-  $('#kLatestSub').textContent = n ? 'ago, from ' + shown[0].c.sources[shown[0].c.sources.length - 1].name : '';
-  bars($('#kLatestBars'), ranked.map(r => r[1]), ranked.map(r => `${r[0]}: ${r[1]} ${r[1] === 1 ? 'story' : 'stories'}`));
+  const tt = topOf(countBy(shown, o => typeKey(o.c)));
+  $('#kType').textContent = tt ? TYPES[tt[0]].label : '–';
+  $('#kTypeSub').textContent = tt ? `${tt[1]} of ${plural(n, 'incident', 'incidents')}` : '';
+  dial($('#kTypeDial'), tt ? tt[1] / n : 0, tt ? TYPES[tt[0]].color : '#b7c7bb', true);
+
+  drawInsight(w);
+}
+// One or two plain sentences on what changed this week, written from the data (no AI).
+function drawInsight(w) {
+  const n = w.now.length, p = w.prev.length, parts = [];
+  if (!n && !p) { $('#insight').hidden = true; return; }
+  const scope = [onlyType && TYPES[onlyType].label.toLowerCase(), sectorSel.value && sectorSel.value.toLowerCase(),
+    onlyCountry && 'in ' + countryName.get(onlyCountry)].filter(Boolean).join(', ');
+  let s = `${plural(n, 'incident was', 'incidents were')} reported in the last 7 days${scope ? ' (' + scope + ')' : ''}`;
+  const canCompare = coveredFor(14);
+  if (p && canCompare) {
+    const pct = Math.round((n - p) / p * 100);
+    s += Math.abs(pct) < 5 ? ', about the same as the week before' : `, ${pct > 0 ? 'up' : 'down'} ${Math.abs(pct)}% on the week before`;
+  }
+  parts.push(s + '.');
+  if (!sectorSel.value) {
+    const sNow = countBy(w.now, o => o.c.sector), sPrev = countBy(w.prev, o => o.c.sector);
+    let mover = null;
+    if (canCompare) for (const [k, v] of sNow) { const d = v - (sPrev.get(k) || 0); if (v >= 3 && d >= 2 && (!mover || d > mover.d)) mover = { k, v, was: sPrev.get(k) || 0, d }; }
+    if (mover) parts.push(`${mover.k} rose from ${mover.was} to ${mover.v}.`);
+    else { const ts = topOf(sNow); if (ts && ts[1] >= 2) parts.push(`${ts[0]} was the most-hit sector (${ts[1]}).`); }
+  }
+  if (!onlyCountry) { const tc = topOf(countBy(w.now, o => o.c.country_key)); if (tc && tc[1] >= 2) parts.push(`${countryName.get(tc[0])} had the most reports (${tc[1]}).`); }
+  $('#insightText').textContent = parts.join(' ');
+  $('#insight').hidden = false;
 }
 
-// ---------- most reported countries ----------
-function drawRank(shown) {
-  const by = new Map();
-  for (const o of shown) if (o.c.country) by.set(o.c.country, (by.get(o.c.country) || 0) + 1);
-  const top = [...by].sort((a, b) => b[1] - a[1]).slice(0, 4), max = top.length ? top[0][1] : 1;
-  $('#rank').replaceChildren(...top.map(([name, n]) => {
-    const b = el('button', { type: 'button', title: `Show incidents in ${name}` },
-      el('span', { class: 'n', text: String(n) }), el('span', { class: 'c', text: name }), el('span', { class: 'bar' }, el('i', { style: `width:${100 * n / max}%` })));
-    b.addEventListener('click', () => { search.value = search.value === name ? '' : name; refresh(); });
+// ---------- breakdown under the globe: countries, sectors, attack types, per day ----------
+let bdTab = 'country';
+function drawBreakdown(shown) {
+  const body = $('#bdBody');
+  if (bdTab === 'daily') {
+    const d30 = perDay(30), max = Math.max(1, ...d30.counts);
+    body.replaceChildren(el('div', { class: 'daily', role: 'img', 'aria-label': 'Incidents first reported per day over the last 30 days' },
+      ...d30.counts.map((v, i) => {
+        const day = d30.dayOf(i), label = i % 7 === 29 % 7 ? day.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', timeZone: 'UTC' }) : '';
+        return el('div', { class: 'col' + (d30.partial[i] ? ' partial' : ''), title: `${v} first reported on ${fmtDate(day.toISOString())}` + (d30.partial[i] ? ' (before collection was complete)' : '') },
+          el('span', { class: 'v', text: v ? String(v) : '' }), el('i', { style: `height:${v ? 6 + 94 * v / max : 2}%` }), el('span', { class: 'd', text: label }));
+      })));
+    return;
+  }
+  const key = { country: o => o.c.country_key, sector: o => o.c.sector, type: o => typeKey(o.c) }[bdTab];
+  const label = { country: k => countryName.get(k) || k, sector: k => k, type: k => TYPES[k].label }[bdTab];
+  const active = { country: onlyCountry, sector: sectorSel.value, type: onlyType }[bdTab];
+  const days = Number(windowSel.value);
+  const before = days && coveredFor(2 * days) ? countBy(incidents.filter(o => o.c.date_precision !== 'month' && matches(o, true)
+    && ageHours(o.c.last_seen) > days * 24 && ageHours(o.c.last_seen) <= 2 * days * 24), key) : null;
+  const rows = [...countBy(shown, key)].sort((a, b) => b[1] - a[1]), max = rows.length ? rows[0][1] : 1;
+  $('#bdNote').textContent = before ? `vs previous ${days === 1 ? 'day' : days + ' days'}`
+    : days && coverageFrom ? `Change from ${coveredFrom(2 * days)}` : '';
+  if (!rows.length) { body.replaceChildren(el('p', { class: 'note', text: 'Nothing to show for these filters.' })); return; }
+  body.replaceChildren(...rows.map(([k, n]) => {
+    const d = before ? n - (before.get(k) || 0) : null;
+    const b = el('button', { type: 'button', class: 'bdrow', 'aria-pressed': String(active === k), title: active === k ? 'Remove this filter' : `Show only ${label(k)}` },
+      el('span', { class: 'n', text: String(n) }), el('span', { class: 'c', text: label(k) }),
+      d === null ? el('span', { class: 'delta' }) : el('span', { class: 'delta ' + (d > 0 ? 'up' : d < 0 ? 'down' : ''), text: d > 0 ? `+${d}` : d < 0 ? String(d) : '=' }),
+      el('span', { class: 'bar' }, el('i', { style: `width:${100 * n / max}%` + (bdTab === 'type' ? `;background:${TYPES[k].color}` : '') })));
+    b.addEventListener('click', () => {
+      if (bdTab === 'country') onlyCountry = onlyCountry === k ? '' : k;
+      else if (bdTab === 'sector') sectorSel.value = sectorSel.value === k ? '' : k;
+      else onlyType = onlyType === k ? '' : k;
+      refresh();
+    });
     return b;
   }));
-  $('#rankWrap').hidden = !top.length;
+}
+for (const t of document.querySelectorAll('#bdTabs [role="tab"]')) {
+  t.addEventListener('click', () => {
+    bdTab = t.dataset.tab;
+    for (const x of document.querySelectorAll('#bdTabs [role="tab"]')) x.setAttribute('aria-selected', String(x === t));
+    drawBreakdown(lastShown);
+  });
 }
 
 // ---------- ticker: shows the incident being animated, or cycles the newest headlines ----------
@@ -437,6 +552,17 @@ function buildLegend() {
   };
   $('#legend').replaceChildren(item('', 'All incidents', incidents.length, null),
     ...Object.entries(TYPES).filter(([k]) => counts[k]).map(([k, t]) => item(k, t.label, counts[k], t.color)));
+
+  countryName.clear();
+  for (const o of incidents) {
+    const k = o.c.country_key, nm = o.c.country;
+    if (k && nm && (!countryName.has(k) || nm.length < countryName.get(k).length)) countryName.set(k, nm);
+  }
+  if (onlyCountry && !countryName.has(onlyCountry)) onlyCountry = '';
+  const sectors = countBy(incidents, o => o.c.sector), current = sectorSel.value;
+  sectorSel.replaceChildren(el('option', { value: '', text: 'All sectors' }),
+    ...[...sectors].sort((a, b) => b[1] - a[1]).map(([k, n]) => el('option', { value: k, text: `${k} (${n})` })));
+  sectorSel.value = sectors.has(current) ? current : '';
 }
 
 // ---------- detail card ----------
@@ -466,6 +592,8 @@ function renderCard(c) {
   kids.push(el('h3', { text: 'How solid is this' }), el('ul', {},
     el('li', { text: CONF_LABEL[c.confidence] || CONF_LABEL.low }),
     el('li', { text: PIN_LABEL[c.precision] || PIN_LABEL.none }),
+    c.country_source === 'wikidata' ? el('li', { text: 'The report names the organisation but not its country; the country is its headquarters, looked up on Wikidata' }) : null,
+    c.country_source === 'source' ? el('li', { text: 'The report names no country; it is assumed from the publication’s focus' }) : null,
     el('li', { text: 'Details were picked out automatically by keyword rules from the reports below' })));
   const srcs = c.sources.filter(s => safeUrl(s.url));
   if (srcs.length) kids.push(el('h3', { text: srcs.length > 1 ? `Reported by ${srcs.length} stories` : 'Source' }), el('ul', { class: 'src' }, ...srcs.map(s =>
@@ -664,6 +792,7 @@ canvas.addEventListener('pointerup', (e) => {
 
 // ---------- filter controls ----------
 windowSel.addEventListener('change', refresh);
+sectorSel.addEventListener('change', refresh);
 search.addEventListener('input', refresh);
 
 // ---------- size and render loop ----------
@@ -707,7 +836,7 @@ async function loadData() {
   if (data.updated === updatedAt) { refresh(); return; }            // nothing new; just refresh the "x min ago" labels
   const keep = selected && selected.c.id;
   const firstLoad = !updatedAt, known = new Set(incidents.map(o => o.c.id));
-  updatedAt = data.updated; feedErrors = data.feed_errors || [];
+  updatedAt = data.updated; feedErrors = data.feed_errors || []; coverageFrom = data.coverage_from || null;
   buildPins(data.incidents || []);
   buildLegend(); refresh();
   if (!firstLoad) for (const o of incidents) if (!known.has(o.c.id)) { showTicker(o); launch(o, true); }      // a new report: animate it now

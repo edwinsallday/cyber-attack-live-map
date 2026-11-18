@@ -27,11 +27,13 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import rules  # noqa: E402
+import wikidata  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
 INCIDENTS = DATA / "incidents.json"
 SEEN = DATA / "seen.json"
+ORG_CACHE = DATA / "org_countries.json"      # Wikidata answers: organisation name -> headquarters country
 
 FEEDS = [
     {"name": "The Hacker News", "url": "https://feeds.feedburner.com/TheHackersNews"},
@@ -56,10 +58,11 @@ FEEDS = [
     # country is placed in the United States, the publication's focus.
     {"name": "Inside Higher Ed", "url": "https://www.insidehighered.com/rss.xml",
      "require": r"cyber|hack|breach|ransomware|data (?:leak|theft|exposure)|phishing|malware|stolen data|compromis",
-     "default_country": "United States"},
+     "default_country": "United States", "default_sector": "Education"},
     # Added 18 November 2026: breach-focused outlets and newsrooms that allow automated feed readers.
     {"name": "DataBreaches.net", "url": "https://databreaches.net/feed/"},
-    {"name": "HIPAA Journal", "url": "https://www.hipaajournal.com/feed/", "default_country": "United States"},  # US healthcare
+    {"name": "HIPAA Journal", "url": "https://www.hipaajournal.com/feed/", "default_country": "United States",   # US healthcare
+     "default_sector": "Healthcare"},
     {"name": "The Record", "url": "https://therecord.media/feed/"},
     {"name": "SC Media", "url": "https://www.scworld.com/rss"},
     {"name": "Wired Security", "url": "https://www.wired.com/feed/category/security/latest/rss", "pages": 1},
@@ -86,6 +89,8 @@ LARGE = {"United States of America", "Canada", "Russia", "China", "Brazil", "Aus
 ALIASES = {
     "united states": "United States of America", "usa": "United States of America", "us": "United States of America",
     "u.s.": "United States of America", "america": "United States of America",
+    "people's republic of china": "China", "kingdom of the netherlands": "Netherlands", "kingdom of denmark": "Denmark",
+    "republic of ireland": "Ireland", "state of israel": "Israel",
     "uk": "United Kingdom", "u.k.": "United Kingdom", "britain": "United Kingdom", "great britain": "United Kingdom",
     "england": "United Kingdom", "scotland": "United Kingdom", "wales": "United Kingdom",
     "uae": "United Arab Emirates", "czech republic": "Czechia", "turkiye": "Turkey", "türkiye": "Turkey",
@@ -165,8 +170,9 @@ def parse_feed(raw, feed):
             continue
         story = {"source": feed["name"], "title": title, "url": link.split("?")[0],
                  "published": when.strftime("%Y-%m-%dT%H:%M:%SZ"), "excerpt": excerpt}
-        if feed.get("default_country"):
-            story["default_country"] = feed["default_country"]
+        for k in ("default_country", "default_sector"):
+            if feed.get(k):
+                story[k] = feed[k]
         out.append(story)
     return out, len(items)
 
@@ -179,12 +185,16 @@ def parse_csis(raw, feed):
     """CSIS 'Significant Cyber Incidents' is a web page of 'Month YYYY: description' paragraphs, updated monthly.
     The description is used only to extract facts; it is never published (CSIS material is all rights reserved)."""
     out = []
+    # the page goes back to 2006; only entries recent enough to be shown are worth processing
+    oldest = dt.datetime.now(dt.timezone.utc) - dt.timedelta(days=KEEP_DAYS + 31)
     for m in re.finditer(r"(?is)<p[^>]*>(.*?)</p>", raw.decode("utf-8", "replace")):
         para = strip_html(m.group(1))
         e = CSIS_ENTRY.match(para)
         if not e:
             continue
         when = dt.datetime(int(e.group(2)), MONTHS.index(e.group(1)) + 1, 15, 12, tzinfo=dt.timezone.utc)   # month only: mid-month
+        if when < oldest:
+            continue
         text = e.group(3).strip()
         key = hashlib.sha1(text.encode("utf-8")).hexdigest()[:12]
         out.append({"source": feed["name"], "title": text[:400], "excerpt": "", "url": f"{feed['url']}#entry-{key}",
@@ -326,7 +336,9 @@ def merge(incidents, items, results):
         if not r or r["kind"] != "incident" or r.get("attack_type") not in TYPES:
             continue
         if not r.get("country") and it.get("default_country"):        # the source's home country, as a last resort
-            r = {**r, "country": it["default_country"], "confidence": "low"}
+            r = {**r, "country": it["default_country"], "confidence": "low", "country_source": "source"}
+        if not r.get("sector") and it.get("default_sector"):
+            r = {**r, "sector": it["default_sector"]}
         title = it["title"]
         if it.get("facts_only"):          # the source's own wording is not republished; show a label built from the facts
             where = r.get("country") or "an unreported country"
@@ -347,6 +359,10 @@ def merge(incidents, items, results):
                 twin["last_seen"] = twin["sources"][-1]["published"]
                 for f in ("records", "actor", "city", "sector"):      # a later report may add detail
                     twin[f] = twin.get(f) or r.get(f)
+                if not twin.get("country_key") and country_key(r.get("country")):   # a later report names the country
+                    t_lat, t_lon, t_prec = locate(r.get("country"), None, None)
+                    twin.update(country=r["country"], country_key=country_key(r["country"]), lat=t_lat, lon=t_lon,
+                                precision=t_prec, country_source=r.get("country_source"))
                 a = country_key(r.get("attacker_country")) if r.get("attribution_stated") else None
                 if a and not twin.get("attacker_country") and a != twin.get("country_key"):   # a later report names the origin
                     twin["attacker_country"] = r["attacker_country"]
@@ -367,7 +383,7 @@ def merge(incidents, items, results):
             "id": hashlib.sha1(it["url"].encode()).hexdigest()[:10],
             "victim": r.get("victim"), "victim_key": vk, "sector": r.get("sector"),
             "country": r.get("country"), "country_key": country_key(r.get("country")), "city": r.get("city") if precision == "city" else None,
-            "lat": lat, "lon": lon, "precision": precision,
+            "lat": lat, "lon": lon, "precision": precision, "country_source": r.get("country_source"),
             "type": r["attack_type"], "records": r.get("records"), "actor": r.get("actor"),
             "attacker_country": a_country, "attacker_lat": a_lat, "attacker_lon": a_lon,
             "summary": r.get("summary"), "confidence": r.get("confidence", "low"),
@@ -382,12 +398,15 @@ def load(path, default):
     return json.loads(path.read_text(encoding="utf-8")) if path.exists() else default
 
 
-def save(incidents, seen, errors, now):
+def save(incidents, seen, errors, now, coverage_from):
     cutoff = (now - dt.timedelta(days=KEEP_DAYS)).strftime("%Y-%m-%dT%H:%M:%SZ")
     incidents = sorted((x for x in incidents if x["last_seen"] >= cutoff), key=lambda x: x["last_seen"], reverse=True)
     DATA.mkdir(exist_ok=True)
     INCIDENTS.write_text(json.dumps({
         "updated": now.strftime("%Y-%m-%dT%H:%M:%SZ"),
+        # When continuous collection began. Feeds only reach back a little way, so counts before this date are
+        # incomplete; the page compares periods (week on week) only once both fall after it.
+        "coverage_from": coverage_from,
         "sources": [f["name"] for f in FEEDS],
         "feed_errors": errors,
         "incidents": incidents,
@@ -397,13 +416,30 @@ def save(incidents, seen, errors, now):
     return len(incidents)
 
 
+def place_by_wikidata(results):
+    """Incidents whose report names an organisation but no country: use the organisation's headquarters country."""
+    need = sorted({r["victim"] for r in results
+                   if r.get("kind") == "incident" and r.get("victim") and not r.get("country")})
+    if not need:
+        return
+    found = wikidata.countries_for(need, ORG_CACHE)
+    for r in results:
+        if r.get("kind") != "incident" or r.get("country") or not r.get("victim"):
+            continue
+        hit = found.get(r["victim"])
+        if hit and country_key(hit["country"]):
+            r["country"], r["country_source"] = hit["country"], "wikidata"
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--dump", metavar="PENDING")
     ap.add_argument("--apply", nargs=2, metavar=("PENDING", "RESULTS"))
     args = ap.parse_args()
     now = dt.datetime.now(dt.timezone.utc)
-    incidents = load(INCIDENTS, {"incidents": []})["incidents"]
+    existing = load(INCIDENTS, {"incidents": []})
+    incidents = existing["incidents"]
+    coverage_from = existing.get("coverage_from") or now.strftime("%Y-%m-%dT%H:%M:%SZ")
     seen = load(SEEN, {})
 
     if args.apply:
@@ -420,12 +456,13 @@ def main():
             return
         results = rules.extract(items)
 
+    place_by_wikidata(results)
     added, merged = merge(incidents, items, results)
     done = {r["i"] for r in results if isinstance(r.get("i"), int)}
     for i, it in enumerate(items):
         if i in done:
             seen[it["url"]] = it["published"][:10]
-    total = save(incidents, seen, errors, now)
+    total = save(incidents, seen, errors, now, coverage_from)
     kinds = {}
     for r in results:
         kinds[r["kind"]] = kinds.get(r["kind"], 0) + 1

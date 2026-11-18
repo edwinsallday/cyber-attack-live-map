@@ -86,9 +86,17 @@ h1, h2, h3, p { margin: 0; }
 .mapPanel > header, .activity > header { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 16px 10px; }
 .mapPanel h2, .activity h2 { font-size: 16px; font-weight: 400; }
 #listCount { margin-left: 6px; color: var(--muted); font-size: 13px; }
-#window { padding: 5px 8px; border: 0; border-radius: 7px; background: transparent; color: var(--muted); cursor: pointer; font-size: 13.5px; }
-#window:hover { color: var(--text); }
-#window option { background: var(--panel-solid); color: var(--text); }
+.mapPanel > header h2 { margin-right: auto; }
+.pick { max-width: 46%; padding: 5px 8px; border: 1px solid transparent; border-radius: 7px; background: transparent; color: var(--muted); cursor: pointer; font-size: 13.5px; }
+.pick:hover { color: var(--text); border-color: var(--line); }
+.pick option { background: var(--panel-solid); color: var(--text); }
+#sector:not([value=""]) { color: var(--text); }
+
+/* "What changed" line */
+.insight { display: flex; gap: 10px; align-items: baseline; margin: 0 16px 8px; padding: 8px 12px; border-radius: 9px;
+  background: linear-gradient(90deg, rgba(90, 175, 98, 0.16), rgba(138, 230, 77, 0.05)); border: 1px solid var(--line); font-size: 14px; line-height: 1.4; }
+.insight[hidden] { display: none; }
+.insight b { flex: none; color: var(--df-green-bright); font-weight: 600; font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; }
 
 .ticker { display: flex; align-items: center; gap: 10px; margin: 0 16px 10px; padding: 7px 10px 7px 8px; border: 1px solid var(--line); border-radius: 9px; background: rgba(0, 0, 0, 0.25); }
 .ticker[hidden] { display: none; }
@@ -126,14 +134,39 @@ h1, h2, h3, p { margin: 0; }
 #loading { position: absolute; inset: 0; display: grid; place-items: center; background: var(--inset); color: var(--muted); transition: opacity 0.5s; }
 #loading.done { opacity: 0; pointer-events: none; }
 
-#rankWrap { padding: 12px 16px 14px; }
-#rankWrap h3 { font-size: 12px; font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
-#rank button { display: grid; grid-template-columns: auto 1fr; align-items: baseline; row-gap: 5px; width: 100%; padding: 6px 0 2px; border: 0; background: none; cursor: pointer; text-align: left; }
-#rank .n { font-size: 14px; font-variant-numeric: tabular-nums; }
-#rank .c { justify-self: end; font-size: 13px; color: var(--muted); }
-#rank button:hover .c { color: var(--text); }
-#rank .bar { grid-column: 1 / 3; height: 3px; border-radius: 2px; background: repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.22) 0 1px, transparent 1px 4px); }
-#rank .bar i { display: block; height: 100%; border-radius: 2px; background: var(--accent); }
+/* breakdown under the globe */
+#breakdown { padding: 10px 16px 12px; }
+.bdhead { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 6px; }
+#bdTabs { display: flex; gap: 2px; padding: 3px; border-radius: 9px; background: rgba(0, 0, 0, 0.25); overflow-x: auto; scrollbar-width: none; }
+#bdTabs button { flex: none; padding: 5px 11px; border: 0; border-radius: 7px; background: none; color: var(--muted); cursor: pointer; font-size: 13px; }
+#bdTabs button:hover { color: var(--text); }
+#bdTabs button[aria-selected="true"] { background: var(--panel-solid); color: var(--text); box-shadow: inset 0 0 0 1px var(--line-strong); }
+#bdNote { font-size: 12px; white-space: nowrap; }
+#bdBody { height: 152px; overflow-y: auto; padding-right: 4px; }
+.bdrow { display: grid; grid-template-columns: 34px 1fr auto; align-items: baseline; column-gap: 8px; row-gap: 4px; width: 100%; padding: 5px 6px 3px;
+  border: 0; border-radius: 7px; background: none; cursor: pointer; text-align: left; }
+.bdrow:hover { background: rgba(255, 255, 255, 0.04); }
+.bdrow[aria-pressed="true"] { background: var(--accent-soft); }
+.bdrow .n { font-size: 14px; font-variant-numeric: tabular-nums; }
+.bdrow .c { font-size: 13.5px; color: var(--text); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.bdrow .delta { font-size: 12px; font-variant-numeric: tabular-nums; color: var(--muted); }
+.bdrow .delta.up, .kpi-sub.trend.up { color: #ffb547; }
+.bdrow .delta.down, .kpi-sub.trend.down { color: var(--df-green-bright); }
+.bdrow .bar { grid-column: 1 / 4; height: 3px; border-radius: 2px; background: repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.18) 0 1px, transparent 1px 4px); }
+.bdrow .bar i { display: block; height: 100%; border-radius: 2px; background: var(--accent); }
+.daily { display: flex; align-items: stretch; gap: 3px; height: 100%; padding-top: 4px; }
+.daily .col { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; min-width: 0; }
+.daily .col i { display: block; width: 100%; max-width: 14px; border-radius: 2px 2px 0 0; background: var(--df-gradient); }
+.daily .v { font-size: 10.5px; color: var(--muted); font-variant-numeric: tabular-nums; min-height: 14px; }
+.daily .d { height: 16px; margin-top: 3px; font-size: 10.5px; color: var(--muted); white-space: nowrap; overflow: visible; }
+
+/* active filters */
+#chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 16px 8px; }
+#chips[hidden] { display: none; }
+.chip { display: inline-flex; align-items: center; gap: 6px; padding: 4px 6px 4px 10px; border: 1px solid var(--line-strong); border-radius: 99px;
+  background: var(--accent-soft); color: var(--text); font-size: 12.5px; cursor: pointer; }
+.chip span { display: grid; place-items: center; width: 16px; height: 16px; border-radius: 50%; background: rgba(0, 0, 0, 0.3); font-size: 12px; line-height: 1; }
+.chip:hover span { background: var(--df-green); color: var(--df-ink); }
 
 /* ---------- recent activity ---------- */
 .activity { position: relative; overflow: hidden; }
@@ -175,6 +208,7 @@ h1, h2, h3, p { margin: 0; }
 @media (max-width: 1240px) and (min-width: 900px) {
   #app { grid-template-columns: 208px minmax(0, 1fr) 320px; }
   .kpi-sub { display: none; }
+  .kpi-sub.trend { display: block; max-width: none; font-size: 11.5px; }
   .kpi { min-height: 92px; padding: 12px 14px; }
   .kpi h2 { font-size: 13.5px; }
   .kpi .val { font-size: 26px; }
@@ -206,10 +240,29 @@ h1, h2, h3, p { margin: 0; }
   #stage { flex: none; height: 62vh; min-height: 320px; max-height: 520px; margin: 0 12px; }
   .mapPanel > header, .activity > header { padding: 12px 12px 8px; }
   .ticker { margin: 0 12px 8px; }
-  #rankWrap { padding: 10px 12px 12px; }
+  .kpi .kpi-sub.trend { display: block; max-width: none; font-size: 11.5px; }
+  #breakdown { padding: 10px 12px 12px; }
+  #bdBody { height: auto; max-height: 260px; }
+  .daily { height: 150px; }
+  .insight { margin: 0 12px 8px; flex-direction: column; gap: 2px; }
+  #chips { margin: 0 12px 8px; }
+  .mapPanel > header { flex-wrap: wrap; }
+  .pick { max-width: none; }
   #search { margin: 0 12px 8px; }
   #list { flex: none; max-height: 70vh; padding: 0 8px 6px; }
   .fxlabel span { display: none; }
   #card { position: fixed; inset: auto 0 0 0; z-index: 20; max-height: 72vh; border-radius: var(--radius) var(--radius) 0 0; border-top: 1px solid var(--line-strong); box-shadow: 0 -12px 40px rgba(0, 0, 0, 0.6); padding-bottom: 28px; }
 }
 @media (prefers-reduced-motion: reduce) { .ticker .live i, #fx .flame { animation: none; } #tickText.in { animation: none; opacity: 1; } #loading { transition: none; } }
+
+/* days before collection was complete are drawn dimmed */
+.bars i.partial, .daily .col.partial i { opacity: 0.35 !important; }
+.daily .col.partial .v { opacity: 0.5; }
+/* keep the weekly change readable next to its bar chart */
+.kpi .kpi-sub.trend { max-width: calc(100% - 96px); }
+.insight { font-size: 13.5px; }
+@media (max-width: 1240px) and (min-width: 900px) { #bdBody { height: 128px; } .kpi .kpi-sub.trend { max-width: calc(100% - 78px); } }
+@media (max-width: 899px) { .kpi .kpi-sub.trend { max-width: calc(100% - 70px); } }
+.bdhead { flex-wrap: wrap; row-gap: 4px; }
+#bdNote { font-size: 11.5px; }
+@media (max-width: 1240px) and (min-width: 900px) { #bdNote { display: none; } }

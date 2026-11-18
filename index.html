@@ -42,16 +42,22 @@
 
   <section class="kpis" aria-label="Summary">
     <article class="kpi">
-      <h2>Incidents reported</h2>
-      <p class="val" id="kIncidents">–</p>
-      <p class="kpi-sub" id="kIncidentsSub"></p>
-      <div class="bars good" id="sparkBars" role="img" aria-label="New reports per day over the last 14 days"></div>
+      <h2>Incidents this week</h2>
+      <p class="val" id="kWeek">–</p>
+      <p class="kpi-sub trend" id="kWeekSub"></p>
+      <div class="bars good" id="sparkBars" role="img" aria-label="Incidents first reported per day over the last 14 days"></div>
     </article>
     <article class="kpi">
       <h2>Countries affected</h2>
       <p class="val" id="kCountries">–</p>
       <p class="kpi-sub" id="kCountriesSub"></p>
-      <div class="dial" id="kCountriesDial" aria-hidden="true"></div>
+      <div class="dial" id="kCountriesDial" aria-hidden="true" title="Share of reports that name a country"></div>
+    </article>
+    <article class="kpi">
+      <h2>Most targeted sector</h2>
+      <p class="val small" id="kSector">–</p>
+      <p class="kpi-sub" id="kSectorSub"></p>
+      <div class="dial" id="kSectorDial" aria-hidden="true"></div>
     </article>
     <article class="kpi">
       <h2>Most common attack</h2>
@@ -59,25 +65,22 @@
       <p class="kpi-sub" id="kTypeSub"></p>
       <div class="dial" id="kTypeDial" aria-hidden="true"></div>
     </article>
-    <article class="kpi">
-      <h2>Latest report</h2>
-      <p class="val" id="kLatest">–</p>
-      <p class="kpi-sub" id="kLatestSub"></p>
-      <div class="bars warn" id="kLatestBars" role="img" aria-label="Incidents by news source"></div>
-    </article>
   </section>
 
   <section class="mapPanel" aria-label="Threat map">
     <header>
       <h2>Threat map</h2>
+      <label class="sr" for="sector">Sector</label>
+      <select id="sector" class="pick"><option value="">All sectors</option></select>
       <label class="sr" for="window">Time range</label>
-      <select id="window">
+      <select id="window" class="pick">
         <option value="1">Last 24 hours</option>
         <option value="7">Last 7 days</option>
         <option value="30" selected>Last 30 days</option>
         <option value="0">Everything</option>
       </select>
     </header>
+    <p class="insight" id="insight" hidden title="Written automatically from the reports this map has collected"><b>What changed</b><span id="insightText"></span></p>
     <p class="ticker" id="ticker" hidden><span class="live replay" id="liveBadge"><i></i><span id="liveText">REPLAY</span></span><button type="button" id="tickText" title="Show this incident"></button></p>
     <div id="stage">
       <canvas id="globe" role="img" aria-label="3D globe showing recently reported cyber attacks. Use the Recent activity list for a text version."></canvas>
@@ -93,9 +96,17 @@
       <div id="hint" hidden>Use Ctrl + scroll to zoom</div>
       <div id="loading">Loading globe…</div>
     </div>
-    <div id="rankWrap" hidden>
-      <h3>Most reported countries</h3>
-      <div id="rank"></div>
+    <div id="breakdown">
+      <div class="bdhead">
+        <div id="bdTabs" role="tablist" aria-label="Breakdown">
+          <button type="button" role="tab" data-tab="country" aria-selected="true">Countries</button>
+          <button type="button" role="tab" data-tab="sector" aria-selected="false">Sectors</button>
+          <button type="button" role="tab" data-tab="type" aria-selected="false">Attack types</button>
+          <button type="button" role="tab" data-tab="daily" aria-selected="false">Per day</button>
+        </div>
+        <span class="note" id="bdNote"></span>
+      </div>
+      <div id="bdBody" role="tabpanel"></div>
     </div>
   </section>
 
@@ -105,6 +116,7 @@
     </header>
     <label class="sr" for="search">Search incidents</label>
     <input id="search" type="search" placeholder="Search victim, country, group" autocomplete="off">
+    <div id="chips" aria-label="Active filters" hidden></div>
     <ul id="list"></ul>
     <p id="empty" hidden>No incidents match these filters.</p>
     <p class="panel-note" id="unmapped"></p>

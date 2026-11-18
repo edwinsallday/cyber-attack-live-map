@@ -11,7 +11,7 @@ It is a **static site** (HTML, CSS, JavaScript, images and one JSON data file) p
 | Part | Needs |
 |---|---|
 | The page | Any static web host serving over `http(s)://`. Opening `index.html` from disk does not work, because browsers block JavaScript modules on `file://` |
-| The updater | Python 3.10 or newer, outbound HTTPS to the news sites, and write access to `data/`. Runs every 30 minutes; a run takes under a minute (about five minutes the very first time with an empty `data/`) |
+| The updater | Python 3.10 or newer, outbound HTTPS to the news sites and to `www.wikidata.org`, and write access to `data/`. Runs every 30 minutes; a run takes under a minute (about five minutes the very first time with an empty `data/`) |
 
 ## What's in this folder
 
@@ -20,10 +20,12 @@ It is a **static site** (HTML, CSS, JavaScript, images and one JSON data file) p
 | `index.html`, `map.css`, `map.js` | The page |
 | `vendor/` | three.js 0.160.0 and OrbitControls (MIT), topojson-client 3.1.0 (ISC). Served locally, no CDN |
 | `assets/` | Earth at night (NASA), country borders (Natural Earth, public domain), Datafloq logo |
-| `data/incidents.json` | The data the page shows. Rewritten by the updater |
+| `data/incidents.json` | The data the page shows. Rewritten by the updater. Its `coverage_from` field records when continuous collection began; week-on-week comparisons switch on 14 days after it, so keep this file rather than starting from an empty `data/` |
 | `data/seen.json` | Stories already processed, so none is read twice. Must persist between runs |
 | `pipeline/update.py` | The updater: reads feeds, classifies, merges, writes `data/` |
-| `pipeline/rules.py` | Keyword rules that decide what counts as an attack and extract victim, country and type |
+| `pipeline/rules.py` | Keyword rules that decide what counts as an attack and extract victim, country, type and sector |
+| `pipeline/wikidata.py` | Headquarters-country lookup on Wikidata for reports that name an organisation but no country |
+| `data/org_countries.json` | Cache of those lookups. Must persist between runs, like `seen.json` |
 | `pipeline/countries.json` | Country positions; `pipeline/build_countries.py` rebuilds it from the border file |
 | `pipeline/evaluate.py` | Accuracy check against hand-checked stories. Its test set (`eval/`) is not included because it holds feed excerpts |
 | `pipeline/run_daily.ps1`, `pipeline/schedule_daily.ps1` | Windows-only helpers for running the updater on a PC. Not needed on a server |
@@ -99,6 +101,8 @@ The list is `FEEDS` in `pipeline/update.py`: The Hacker News, BleepingComputer, 
 - **Credits on the page.** Under "About this map": the news sources, NASA (Earth imagery) and Natural Earth (borders). Keep them. three.js and topojson-client keep their licence headers inside `vendor/`.
 - **Google Fonts.** The page loads the Outfit font from Google's servers (two lines in `index.html`). Some EU sites self-host fonts for privacy reasons. To do that, host the font files yourselves and change those lines; without them the page falls back to the system font.
 - **Accuracy.** Details are extracted by keyword rules, not checked by a person. On 75 hand-checked stories the rules found 15 of 21 incident stories, got the country right for 12 of 15, and got the attack type right for 14 of 15 (figures from the first three sources only; see `README.md`). Each incident card says how solid it is and links to the original reports.
+- **Wikidata lookups.** Wikidata's data is public domain (CC0), so commercial use is fine and no credit is legally required, though crediting it is good practice. Its API asks clients to identify themselves: `USER_AGENT` in `pipeline/wikidata.py` is generic, and Wikidata prefers one with a contact address, so consider adding a Datafloq contact. Lookups are cached, spaced out, capped at 30 per run, and back off when Wikidata asks.
+- **The "What changed" sentence and weekly change** are computed from the reports this map collects, not from all attacks worldwide. More sources or a quiet news week shift the numbers, so treat them as a reporting trend.
 - **No ransomware leak-site data is included.** A tracker such as ransomware.live would add far more activity, but its terms prohibit commercial use without written approval and forbid republishing its raw data. Not pursued.
 
 ## Changing things later

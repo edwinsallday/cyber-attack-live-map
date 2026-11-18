@@ -16,7 +16,9 @@ Double-click **Preview map.cmd**. A small window opens and the map appears in yo
 | `data/incidents.json` | The incidents on the map. Rewritten by the pipeline |
 | `data/seen.json` | Stories already processed, so none is read twice |
 | `pipeline/update.py` | Reads the feeds, merges and places incidents, writes the data |
-| `pipeline/rules.py` | The keyword rules that decide what is an incident and pull out its details |
+| `pipeline/rules.py` | The keyword rules that decide what is an incident and pull out its details, including the sector |
+| `pipeline/wikidata.py` | Looks up an organisation's headquarters country on Wikidata when a report names no country |
+| `data/org_countries.json` | Cache of Wikidata answers, so each organisation is looked up once |
 | `pipeline/evaluate.py` | Measures the rules against hand-checked stories in `eval/` |
 | `pipeline/countries.json` | Country positions, built from the border file by `pipeline/build_countries.py` |
 | `pipeline/run_daily.ps1`, `pipeline/schedule_daily.ps1` | The daily update on this computer, and the script that schedules it |
@@ -70,9 +72,20 @@ Once the map is on GitHub, the workflow there updates the published data every 3
 1. **Fetch.** New stories are read from each feed.
 2. **Classify.** Keyword rules sort each headline into incident, vulnerability or other. Only incidents continue.
 3. **Extract.** Victim (from the headline's wording), country (country names and words like "French" or "Taiwanese", ignoring ones that describe the attacker), attack type, scale, named group, and the attacker's country only when the headline itself ties the attack to one.
-4. **Locate.** The pin goes at the centre of the victim's country. Incidents with no country found appear in the list but not on the globe.
-5. **Merge.** Stories with the same victim, or headlines sharing most of their distinctive words, become one incident with several source links.
-6. **Expire.** Incidents drop off after 60 days.
+4. **Locate.** The pin goes at the centre of the victim's country. When a report names an organisation but no country, its headquarters country is looked up on Wikidata (public-domain data, no key; answers cached in `data/org_countries.json`). A match is accepted only when the name matches exactly and Wikidata describes it as an organisation, not a place. Incidents with no country found appear in the list but not on the globe.
+5. **Sector.** Keyword rules assign an industry (healthcare, finance, education, government, retail and so on) from the headline, then the start of the excerpt. HIPAA Journal stories default to Healthcare and Inside Higher Ed stories to Education.
+6. **Merge.** Stories with the same victim, or headlines sharing most of their distinctive words, become one incident with several source links. A later report can fill in a missing country, sector or attacker origin.
+7. **Expire.** Incidents drop off after 60 days.
+
+## What readers see
+
+- **Incidents this week**, with the change against the previous 7 days and a 14-day chart.
+- **Countries affected**, **most targeted sector** and **most common attack type** for the chosen time range.
+- **What changed:** one or two sentences written automatically from the data, for example "41 incidents were reported in the last 7 days, up 12% on the week before. Healthcare rose from 4 to 9."
+- **A breakdown under the globe** by country, sector, attack type, or per day over 30 days, with the change against the previous period. Clicking a row filters the whole page; active filters show as chips above the list.
+- **Filters** by attack type (sidebar), sector and time range (map header), and free-text search.
+
+**Comparisons wait for complete data.** News feeds only reach back a short way, so the first build under-collects older days, which would make any week-on-week change look like a surge. `data/incidents.json` therefore records `coverage_from`, the moment continuous collection began. The weekly change, the "rose from … to …" sentence and the breakdown's change column appear only once both periods fall after that date; until then the page says when they will appear, and day charts draw earlier days dimmed. Deleting `data/incidents.json` restarts this clock.
 
 ## How accurate the rules are
 
