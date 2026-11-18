@@ -29,6 +29,16 @@ PLACE.update({
     "Nigerian": "Nigeria", "Kenyan": "Kenya", "Argentine": "Argentina", "Colombian": "Colombia", "Chilean": "Chile",
     "Korean": "South Korea", "Thai": "Thailand", "Hong Kong": "Hong Kong", "Singapore": "Singapore",
 })
+US_STATE_PREFIX = re.compile(r"^(?:AL|AK|AZ|AR|CA|CO|CT|DE|DC|FL|GA|HI|ID|IL|IN|IA|KS|KY|LA|ME|MD|MA|MI|MN|MS|MO|MT|NE|NV|NH|NJ|NM|NY|NC|ND|OH|OK|OR|PA|RI|SC|SD|TN|TX|UT|VT|VA|WA|WV|WI|WY):\s")
+# Country prefixes DataBreaches.net uses. Codes that are also US state codes (DE, IN, ...) are deliberately absent.
+COUNTRY_PREFIXES = {"Ca": "Canada", "CA:": None, "SG": "Singapore", "JPN": "Japan", "JP": "Japan", "UK": "United Kingdom",
+                    "AU": "Australia", "NZ": "New Zealand", "HK": "Hong Kong", "KR": "South Korea", "PH": "Philippines",
+                    "MY": "Malaysia", "TW": "Taiwan", "FR": "France", "NL": "Netherlands", "IE": "Ireland", "IT": "Italy",
+                    "ES": "Spain", "BR": "Brazil", "MX": "Mexico", "ZA": "South Africa", "IL": None, "TH": "Thailand",
+                    "VN": "Vietnam", "ID": None, "CN": "China", "TR": "Turkey", "SE": "Sweden", "NO": "Norway", "DK": "Denmark",
+                    "FI": "Finland", "BE": "Belgium", "CH": "Switzerland", "AT": "Austria", "PL": "Poland", "PT": "Portugal"}
+COUNTRY_PREFIXES = {k: v for k, v in COUNTRY_PREFIXES.items() if v}
+COUNTRY_PREFIX = re.compile(r"^(" + "|".join(sorted(COUNTRY_PREFIXES, key=len, reverse=True)) + r"):\s")
 # US states (Georgia is left out: it is also a country). Their names place a story in the United States.
 PLACE.update({s: "United States" for s in (
     "Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Hawaii",
@@ -75,10 +85,13 @@ def places(text):
 
 
 # ---------- what kind of story ----------
-NOT_NEWS = re.compile(r"^(?:webinar|threatsday|weekly recap|in other news|week in review|how |why |when |what |who |want |beyond |we built)|\?\s*$|: the case for|\broundup\b|\bguide to\b", re.I)
+NOT_NEWS = re.compile(r"^(?:webinar|threatsday|weekly recap|weekly update|in other news|week in review|how |why |when |what |who |want |"
+                      r"beyond |we built|best |top \d)|\?\s*$|: the case for|\broundup\b|\bguide to\b|\bstatistics\b|\btools in \d{4}\b", re.I)
 POLICE = re.compile(r"\b(?:arrests?|arrested|takes? down|took down|seizes?|seized|sanctions?|dismantle[sd]?|disrupts|suspects?|indict\w*|sentenced|pleads?|extradit\w+|crackdown|disrupted after"
                     r"|pushes|funding|reprimands?|fines?|fined|lawsuit|sues|sued|settles?|settlement|regulators?|legislation"
-                    r"|cracks? down|cracked down|task force|liability|urges?|guidance|survey|study finds|report finds|recovers)\b", re.I)
+                    r"|cracks? down|cracked down|task force|liability|urges?|guidance|survey|study finds|report finds|recovers"
+                    r"|acquits?|acquitted|convicted|jailed|prison|sue|study|warned|warns of|insights)\b"
+                    r"|\bbreach report\b", re.I)
 VULN = re.compile(r"\b(?:flaws?|patch(?:es|ed)?|cve-\d|vulnerabilit\w+|zero-day|bugs?|fix(?:es|ed)?|poc|exploits? work|security updates?|rce)\b", re.I)
 HYPOTHETICAL = re.compile(r"\b(?:could|can|lets?|may|might|would|warns of|show|shows|benchmark)\b", re.I)
 CONFIRMED = re.compile(r"\b(?:confirms?|confirmed|discloses?|disclosed|admits?|blames?|says stolen|suffers?|suffered|hit by|disrupted by|breached|hacked|extorted|stole)\b", re.I)
@@ -147,7 +160,11 @@ def extract(items):
         victim = victim_of(title)
         t_victims, t_attackers = places(title)
         e_victims, e_attackers = places(excerpt[:600])
-        country = (t_victims[0][0] if t_victims else None) \
+        m_state = US_STATE_PREFIX.match(title)                     # "MA: Andover ..." style headlines (DataBreaches.net)
+        m_cc = COUNTRY_PREFIX.match(title)                         # "SG: ...", "Ca: ...", "JPN: ..."
+        country = ("United States" if m_state else None) \
+            or (COUNTRY_PREFIXES[m_cc.group(1)] if m_cc else None) \
+            or (t_victims[0][0] if t_victims else None) \
             or next((c for c, targeted in e_victims if targeted), None) \
             or next((c for org, c in HQ.items() if re.search(r"\b" + re.escape(org) + r"\b(?!:| (?:[Ss]ays|[Ww]arns|[Aa]rrests|[Aa]ttributes|[Rr]esearchers))", victim or title)), None)
         # Attribution is the most sensitive claim on the map, so it is taken from the headline only.

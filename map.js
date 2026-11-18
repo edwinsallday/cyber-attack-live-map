@@ -11,14 +11,14 @@ const REFRESH_MS = 5 * 60 * 1000;
 const FRESH_HOURS = 48;            // newer than this pulses
 
 const TYPES = {
-  ransomware:      { label: 'Ransomware',         color: '#ff4b14' },
-  data_breach:     { label: 'Data breach',        color: '#ffb23e' },
+  ransomware:      { label: 'Ransomware',         color: '#ff5a5f' },
+  data_breach:     { label: 'Data breach',        color: '#ffb547' },
   supply_chain:    { label: 'Supply chain',       color: '#4cc9f0' },
   espionage:       { label: 'Espionage',          color: '#b79cff' },
-  financial_theft: { label: 'Financial theft',    color: '#2fd47a' },
-  ddos:            { label: 'DDoS',               color: '#ff5fa2' },
+  financial_theft: { label: 'Financial theft',    color: '#ff7ad9' },
+  ddos:            { label: 'DDoS',               color: '#7a8cff' },
   phishing:        { label: 'Phishing',           color: '#ffe66b' },
-  other:           { label: 'Sabotage and other', color: '#e9e4dc' },
+  other:           { label: 'Sabotage and other', color: '#e6eee8' },
 };
 const CONF_LABEL = {
   high: 'Victim and attack type are stated outright in the report',
@@ -51,6 +51,9 @@ const typeOf = (c) => TYPES[c.type] || TYPES.other;
 // The headline is the most reliable label; the extracted victim name is shown as a field on the card.
 const nameOf = (c) => (c.sources[0] && c.sources[0].title) || c.victim || 'Unnamed incident';
 const ageHours = (iso) => (Date.now() - Date.parse(iso)) / 36e5;
+// Some sources (the CSIS timeline) give only the month of an incident.
+const monthOf = (iso) => new Date(iso).toLocaleDateString('en-GB', { month: 'long', year: 'numeric', timeZone: 'UTC' });
+const when = (c) => (c.date_precision === 'month' ? monthOf(c.last_seen) : ago(c.last_seen));
 function ago(iso) {
   const h = ageHours(iso);
   if (h < 1) return Math.max(1, Math.round(h * 60)) + ' min ago';
@@ -65,7 +68,7 @@ const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, powerPrefere
 renderer.setPixelRatio(Math.min(devicePixelRatio, 1.75));
 renderer.outputColorSpace = THREE.SRGBColorSpace;
 const scene = new THREE.Scene();
-scene.background = new THREE.Color(0x0e0e10);
+scene.background = new THREE.Color(0x081610);
 const camera = new THREE.PerspectiveCamera(35, 1, 0.01, 200);
 function homeDistance() {
   const vh = THREE.MathUtils.degToRad(camera.fov / 2), hh = Math.atan(Math.tan(vh) * camera.aspect);
@@ -159,10 +162,10 @@ async function buildEarth() {
         float facing = max(dot(vN, vV), 0.0);
         float sweep = smoothstep(0.05, 0.0, abs(fract(vUv.y + time*0.04) - 0.5));
         vec3 night = texture2D(lights, vUv).rgb;
-        vec3 col = vec3(0.020, 0.020, 0.024)
-          + vec3(0.20, 0.185, 0.175)*d*(0.45 + 0.55*facing)
-          + night*vec3(1.0, 0.50, 0.22)*1.25
-          + vec3(1.0, 0.36, 0.10)*sweep*(0.03 + 0.6*d);
+        vec3 col = vec3(0.012, 0.040, 0.028)
+          + vec3(0.16, 0.33, 0.20)*d*(0.45 + 0.55*facing)
+          + night*vec3(0.80, 1.0, 0.55)*1.15
+          + vec3(0.54, 0.90, 0.30)*sweep*(0.03 + 0.6*d);
         gl_FragColor = vec4(col, 1.0);
         #include <colorspace_fragment>
       }`,
@@ -172,12 +175,12 @@ async function buildEarth() {
   scene.add(new THREE.Mesh(new THREE.SphereGeometry(1.0015, 96, 64), new THREE.ShaderMaterial({
     transparent: true, depthWrite: false, blending: THREE.AdditiveBlending,
     vertexShader: `varying vec3 vN; varying vec3 vV; void main(){ vec4 mv = modelViewMatrix*vec4(position,1.0); vN = normalize(normalMatrix*normal); vV = normalize(-mv.xyz); gl_Position = projectionMatrix*mv; }`,
-    fragmentShader: `varying vec3 vN; varying vec3 vV; void main(){ float f = pow(1.0 - max(dot(vN, vV), 0.0), 3.0); gl_FragColor = vec4(vec3(1.0,0.34,0.10)*f*0.8, 1.0); }`,
+    fragmentShader: `varying vec3 vN; varying vec3 vV; void main(){ float f = pow(1.0 - max(dot(vN, vV), 0.0), 3.0); gl_FragColor = vec4(vec3(0.35,0.69,0.38)*f*0.9, 1.0); }`,
   })));
   scene.add(new THREE.Mesh(new THREE.SphereGeometry(1.09, 96, 64), new THREE.ShaderMaterial({
     side: THREE.BackSide, transparent: true, depthWrite: false, blending: THREE.AdditiveBlending,
     vertexShader: `varying vec3 vN; varying vec3 vW; void main(){ vN = normalize(normalMatrix*normal); vW = (modelMatrix*vec4(position,1.0)).xyz; gl_Position = projectionMatrix*viewMatrix*vec4(vW,1.0); }`,
-    fragmentShader: `varying vec3 vN; varying vec3 vW; void main(){ vec3 v = normalize((viewMatrix*vec4(vW - cameraPosition, 0.0)).xyz); float i = pow(clamp(0.12 + dot(v, vN), 0.0, 1.0), 3.2); gl_FragColor = vec4(vec3(1.0,0.32,0.08)*i*1.25, 1.0); }`,
+    fragmentShader: `varying vec3 vN; varying vec3 vW; void main(){ vec3 v = normalize((viewMatrix*vec4(vW - cameraPosition, 0.0)).xyz); float i = pow(clamp(0.12 + dot(v, vN), 0.0, 1.0), 3.2); gl_FragColor = vec4(vec3(0.42,0.82,0.36)*i*1.2, 1.0); }`,
   })));
 }
 
@@ -188,10 +191,10 @@ async function buildBorders() {
   const grid = [];
   for (let lat = -60; lat <= 60; lat += 20) for (let lon = -180; lon < 180; lon += 4) grid.push(sph(lat, lon, 1.001), sph(lat, lon + 4, 1.001));
   for (let lon = -180; lon < 180; lon += 20) for (let lat = -80; lat < 80; lat += 4) grid.push(sph(lat, lon, 1.001), sph(lat + 4, lon, 1.001));
-  scene.add(new THREE.LineSegments(new THREE.BufferGeometry().setFromPoints(grid), new THREE.LineBasicMaterial({ color: 0xff4b14, transparent: true, opacity: 0.09, depthWrite: false })));
+  scene.add(new THREE.LineSegments(new THREE.BufferGeometry().setFromPoints(grid), new THREE.LineBasicMaterial({ color: 0x8ae64d, transparent: true, opacity: 0.08, depthWrite: false })));
   const pts = [];
   for (const line of mesh.coordinates) for (let i = 0; i < line.length - 1; i++) pts.push(sph(line[i][1], line[i][0], 1.0012), sph(line[i + 1][1], line[i + 1][0], 1.0012));
-  scene.add(new THREE.LineSegments(new THREE.BufferGeometry().setFromPoints(pts), new THREE.LineBasicMaterial({ color: 0xffc3a6, transparent: true, opacity: 0.20, depthWrite: false })));
+  scene.add(new THREE.LineSegments(new THREE.BufferGeometry().setFromPoints(pts), new THREE.LineBasicMaterial({ color: 0xcfe8d4, transparent: true, opacity: 0.20, depthWrite: false })));
 }
 
 function buildStars() {
@@ -321,7 +324,7 @@ function row(o) {
   const open = el('button', { type: 'button', class: 'open', 'data-id': o.c.id, 'aria-current': selected === o ? 'true' : 'false' },
     el('span', { class: 'tile', 'aria-hidden': 'true' }, el('i', { style: `background:${t.color};box-shadow:0 0 10px ${t.color}` })),
     el('span', { class: 'txt' }, el('span', { class: 'nm', text: nameOf(o.c) }),
-      el('span', { class: 'meta', text: [t.label, o.c.country || 'Location not reported', ago(o.c.last_seen)].join(' • ') })));
+      el('span', { class: 'meta', text: [t.label, o.c.country || 'Location not reported', when(o.c)].join(' • ') })));
   open.addEventListener('click', () => select(o, true));
   const link = src && safeUrl(src.url)
     ? el('a', { class: 'go', href: safeUrl(src.url), target: '_blank', rel: 'noopener', title: 'Open the report at ' + src.name, 'aria-label': 'Open the report at ' + src.name, text: '↗' })
@@ -373,19 +376,19 @@ function drawStats(shown) {
   const located = shown.filter(o => o.c.country).length;
   $('#kCountries').textContent = String(new Set(shown.map(o => o.c.country).filter(Boolean)).size);
   $('#kCountriesSub').textContent = n ? `${located} of ${n} reports name a country` : '';
-  dial($('#kCountriesDial'), n ? located / n : 0, '#ff4b14', false);
+  dial($('#kCountriesDial'), n ? located / n : 0, '#8ae64d', false);
 
   const byType = {};
   for (const o of shown) byType[typeKey(o.c)] = (byType[typeKey(o.c)] || 0) + 1;
   const top = Object.keys(byType).sort((a, b) => byType[b] - byType[a])[0];
   $('#kType').textContent = top ? TYPES[top].label : '–';
   $('#kTypeSub').textContent = top ? `${byType[top]} of ${n} incidents` : '';
-  dial($('#kTypeDial'), top ? byType[top] / n : 0, top ? TYPES[top].color : '#9b968f', true);
+  dial($('#kTypeDial'), top ? byType[top] / n : 0, top ? TYPES[top].color : '#b7c7bb', true);
 
   const bySource = new Map();
   for (const o of shown) for (const s of o.c.sources) bySource.set(s.name, (bySource.get(s.name) || 0) + 1);
   const ranked = [...bySource].sort((a, b) => b[1] - a[1]);
-  $('#kLatest').textContent = n ? ago(shown[0].c.last_seen).replace(' ago', '') : '–';
+  $('#kLatest').textContent = n ? when(shown[0].c).replace(' ago', '') : '–';
   $('#kLatestSub').textContent = n ? 'ago, from ' + shown[0].c.sources[shown[0].c.sources.length - 1].name : '';
   bars($('#kLatestBars'), ranked.map(r => r[1]), ranked.map(r => `${r[0]}: ${r[1]} ${r[1] === 1 ? 'story' : 'stories'}`));
 }
@@ -410,7 +413,7 @@ const tickText = $('#tickText');
 function showTicker(o) {
   ticker.shown = o;
   tickText.classList.remove('in'); void tickText.offsetWidth;          // restart the fade
-  tickText.replaceChildren(el('span', { class: 'tdot', style: `background:${typeOf(o.c).color}` }), nameOf(o.c), el('span', { class: 'tago', text: ' · ' + ago(o.c.last_seen) }));
+  tickText.replaceChildren(el('span', { class: 'tdot', style: `background:${typeOf(o.c).color}` }), nameOf(o.c), el('span', { class: 'tago', text: ' · ' + when(o.c) }));
   tickText.classList.add('in');
 }
 function tick() {
@@ -450,7 +453,7 @@ function renderCard(c) {
   const dl = el('dl', {});
   for (const [k, v] of [['Victim', c.victim], ['Attack type', t.label], ['Sector', c.sector], ['Scale', c.records], ['Group named', c.actor],
     ['Attributed to', c.attacker_country ? c.attacker_country + ' (as stated in the report)' : null],
-    ['First reported', fmtDate(c.first_seen)], ['Latest report', c.sources.length > 1 ? fmtDate(c.last_seen) : null]]) {
+    ['First reported', c.date_precision === 'month' ? monthOf(c.first_seen) : fmtDate(c.first_seen)], ['Latest report', c.sources.length > 1 ? fmtDate(c.last_seen) : null]]) {
     if (v) dl.append(el('dt', { text: k }), el('dd', { text: v }));
   }
   const kids = [
@@ -466,7 +469,7 @@ function renderCard(c) {
     el('li', { text: 'Details were picked out automatically by keyword rules from the reports below' })));
   const srcs = c.sources.filter(s => safeUrl(s.url));
   if (srcs.length) kids.push(el('h3', { text: srcs.length > 1 ? `Reported by ${srcs.length} stories` : 'Source' }), el('ul', { class: 'src' }, ...srcs.map(s =>
-    el('li', {}, el('a', { href: safeUrl(s.url), target: '_blank', rel: 'noopener', text: s.title }), ` · ${s.name}, ${fmtDate(s.published)}`))));
+    el('li', {}, el('a', { href: safeUrl(s.url), target: '_blank', rel: 'noopener', text: s.title }), ` · ${s.name}, ${s.date_precision === 'month' ? monthOf(s.published) : fmtDate(s.published)}`))));
   $('#cardBody').replaceChildren(...kids);
   const card = $('#card'); card.hidden = false; card.setAttribute('aria-labelledby', 'cardTitle'); card.scrollTop = 0;
 }
@@ -646,7 +649,7 @@ canvas.addEventListener('pointermove', (e) => {
   if (e.buttons || e.pointerType === 'touch') return;
   const o = pick(e.clientX, e.clientY);
   if (!o) return hideTip();
-  tip.replaceChildren(el('strong', { text: nameOf(o.c) }), el('span', { style: `color:${typeOf(o.c).color}`, text: typeOf(o.c).label }), document.createTextNode(' · ' + ago(o.c.last_seen)));
+  tip.replaceChildren(el('strong', { text: nameOf(o.c) }), el('span', { style: `color:${typeOf(o.c).color}`, text: typeOf(o.c).label }), document.createTextNode(' · ' + when(o.c)));
   const r = $('#stage').getBoundingClientRect();
   tip.style.left = Math.min(e.clientX - r.left + 14, r.width - 290) + 'px';
   tip.style.top = (e.clientY - r.top + 14) + 'px';

@@ -57,6 +57,18 @@ FEEDS = [
     {"name": "Inside Higher Ed", "url": "https://www.insidehighered.com/rss.xml",
      "require": r"cyber|hack|breach|ransomware|data (?:leak|theft|exposure)|phishing|malware|stolen data|compromis",
      "default_country": "United States"},
+    # Added 18 November 2026: breach-focused outlets and newsrooms that allow automated feed readers.
+    {"name": "DataBreaches.net", "url": "https://databreaches.net/feed/"},
+    {"name": "HIPAA Journal", "url": "https://www.hipaajournal.com/feed/", "default_country": "United States"},  # US healthcare
+    {"name": "The Record", "url": "https://therecord.media/feed/"},
+    {"name": "SC Media", "url": "https://www.scworld.com/rss"},
+    {"name": "Wired Security", "url": "https://www.wired.com/feed/category/security/latest/rss", "pages": 1},
+    # CSIS 'Significant Cyber Incidents' timeline (web page, updated monthly). Used for facts only (country, attack type,
+    # stated origin, month); its text is never shown. Often names the country behind an attack.
+    {"name": "CSIS", "url": "https://www.csis.org/programs/strategic-technologies-program/significant-cyber-incidents",
+     "kind": "csis", "pages": 1},
+    # Not included, because their robots.txt does not allow automated feed readers: CSO Online, Graham Cluley,
+    # Threatpost, The Register. Not reachable when tested: Cybersecurity Insiders, Naked Security, The Security Ledger.
     # Cybernews (https://cybernews.com/feed/) answers automated readers with a Cloudflare challenge (HTTP 403),
     # so it is left out. Add it here if they provide a feed URL or permission.
 ]
@@ -66,6 +78,9 @@ MERGE_DAYS = 14            # same victim reported again within this window = sam
 MAX_INPUT_CHARS = 1500     # of each story's feed excerpt kept in memory for the rules to read
 
 TYPES = ["ransomware", "data_breach", "ddos", "phishing", "supply_chain", "espionage", "financial_theft", "other"]
+TYPE_LABEL = {"ransomware": "Ransomware attack", "data_breach": "Data breach", "ddos": "DDoS attack", "phishing": "Phishing campaign",
+              "supply_chain": "Supply-chain attack", "espionage": "Cyber espionage", "financial_theft": "Financial theft",
+              "other": "Cyber incident"}
 LARGE = {"United States of America", "Canada", "Russia", "China", "Brazil", "Australia", "India", "Indonesia",
          "Kazakhstan", "Argentina", "Greenland"}
 ALIASES = {
@@ -156,6 +171,27 @@ def parse_feed(raw, feed):
     return out, len(items)
 
 
+MONTHS = "January February March April May June July August September October November December".split()
+CSIS_ENTRY = re.compile(r"^(" + "|".join(MONTHS) + r")\s+(\d{4}):\s*(.{20,})$", re.S)
+
+
+def parse_csis(raw, feed):
+    """CSIS 'Significant Cyber Incidents' is a web page of 'Month YYYY: description' paragraphs, updated monthly.
+    The description is used only to extract facts; it is never published (CSIS material is all rights reserved)."""
+    out = []
+    for m in re.finditer(r"(?is)<p[^>]*>(.*?)</p>", raw.decode("utf-8", "replace")):
+        para = strip_html(m.group(1))
+        e = CSIS_ENTRY.match(para)
+        if not e:
+            continue
+        when = dt.datetime(int(e.group(2)), MONTHS.index(e.group(1)) + 1, 15, 12, tzinfo=dt.timezone.utc)   # month only: mid-month
+        text = e.group(3).strip()
+        key = hashlib.sha1(text.encode("utf-8")).hexdigest()[:12]
+        out.append({"source": feed["name"], "title": text[:400], "excerpt": "", "url": f"{feed['url']}#entry-{key}",
+                    "published": when.strftime("%Y-%m-%dT%H:%M:%SZ"), "date_precision": "month", "facts_only": True})
+    return out, len(out)
+
+
 class Robots:
     """Reads each site's robots.txt once per run and answers whether a URL may be fetched."""
     def __init__(self):
@@ -194,7 +230,7 @@ def fetch_all(seen, now):
             url, limit = feed["url"], feed.get("pages", MAX_PAGES + 1)
             while True:
                 try:
-                    stories, raw_count = parse_feed(get(url), feed)
+                    stories, raw_count = (parse_csis if feed.get("kind") == "csis" else parse_feed)(get(url), feed)
                 except Exception:
                     if pages:                  # an older page that is missing or slow just ends the paging
                         break
@@ -291,7 +327,13 @@ def merge(incidents, items, results):
             continue
         if not r.get("country") and it.get("default_country"):        # the source's home country, as a last resort
             r = {**r, "country": it["default_country"], "confidence": "low"}
-        src = {"name": it["source"], "url": it["url"], "title": it["title"], "published": it["published"]}
+        title = it["title"]
+        if it.get("facts_only"):          # the source's own wording is not republished; show a label built from the facts
+            where = r.get("country") or "an unreported country"
+            title = f"{TYPE_LABEL[r['attack_type']]} in {where} (CSIS significant cyber incidents timeline)"
+        src = {"name": it["source"], "url": it["url"], "title": title, "published": it["published"]}
+        if it.get("date_precision"):
+            src["date_precision"] = it["date_precision"]
         vk = victim_key(r.get("victim"))
         twin = next((x for x in incidents if vk and x.get("victim_key") == vk
                      and abs((parse(x["first_seen"]) - parse(it["published"])).days) <= MERGE_DAYS), None) \
@@ -305,6 +347,12 @@ def merge(incidents, items, results):
                 twin["last_seen"] = twin["sources"][-1]["published"]
                 for f in ("records", "actor", "city", "sector"):      # a later report may add detail
                     twin[f] = twin.get(f) or r.get(f)
+                a = country_key(r.get("attacker_country")) if r.get("attribution_stated") else None
+                if a and not twin.get("attacker_country") and a != twin.get("country_key"):   # a later report names the origin
+                    twin["attacker_country"] = r["attacker_country"]
+                    twin["attacker_lat"], twin["attacker_lon"] = COUNTRIES[a]
+                if twin.get("date_precision") and not it.get("date_precision"):
+                    twin.pop("date_precision")                    # a dated news report replaces a month-only entry
                 merged += 1
             continue
         lat, lon, precision = locate(r.get("country"), r.get("lat"), r.get("lon"))
@@ -315,6 +363,7 @@ def merge(incidents, items, results):
         else:
             a_country = None
         incidents.append({
+            **({"date_precision": it["date_precision"]} if it.get("date_precision") else {}),
             "id": hashlib.sha1(it["url"].encode()).hexdigest()[:10],
             "victim": r.get("victim"), "victim_key": vk, "sector": r.get("sector"),
             "country": r.get("country"), "country_key": country_key(r.get("country")), "city": r.get("city") if precision == "city" else None,

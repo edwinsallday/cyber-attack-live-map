@@ -15,10 +15,14 @@ $script = Join-Path $PSScriptRoot 'run_daily.ps1'
 $action = New-ScheduledTaskAction -Execute 'powershell.exe' `
   -Argument "-NoProfile -NonInteractive -WindowStyle Hidden -ExecutionPolicy Bypass -File `"$script`"" `
   -WorkingDirectory (Split-Path -Parent $PSScriptRoot)
-$trigger = New-ScheduledTaskTrigger -Daily -At $At
+# Daily at the set time, and also shortly after you sign in to Windows (so a day the PC was off is not skipped).
+$daily = New-ScheduledTaskTrigger -Daily -At $At
+$logon = New-ScheduledTaskTrigger -AtLogOn -User "$env:USERDOMAIN\$env:USERNAME"
+$logon.Delay = 'PT5M'
+$trigger = @($daily, $logon)
 # StartWhenAvailable: if the computer was off or asleep at the set time, run as soon as it is back.
 $settings = New-ScheduledTaskSettingsSet -StartWhenAvailable -RunOnlyIfNetworkAvailable -ExecutionTimeLimit (New-TimeSpan -Minutes 30) `
   -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries
 Register-ScheduledTask -TaskName $name -Action $action -Trigger $trigger -Settings $settings `
   -Description 'Reads cybersecurity news feeds and updates data\incidents.json for the cyber attack map.' -Force | Out-Null
-Write-Host "Scheduled '$name' to run daily at $At. Log: logs\update.log"
+Write-Host "Scheduled '$name' to run daily at $At and 5 minutes after you sign in. Log: logs\update.log"

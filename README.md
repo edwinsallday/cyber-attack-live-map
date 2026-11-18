@@ -36,7 +36,11 @@ Double-click **Preview map.cmd**. A small window opens and the map appears in yo
 | Cybersecurity Dive, Industrial Cyber, CrowdStrike Blog | Read from their RSS feeds |
 | CISA | Two feeds: news, and cybersecurity advisories (mostly patch notices, so rarely an incident) |
 | Inside Higher Ed | General higher-education news. Only stories mentioning a cyber incident are kept; one that names no country is placed in the United States, the publication's focus, and marked low confidence |
-| Hackread | **Not included.** Its robots.txt does not allow automated feed readers |
+| DataBreaches.net, HIPAA Journal, The Record, SC Media, Wired Security | Read from their RSS feeds. HIPAA Journal covers US healthcare, so a story naming no country is placed in the United States (low confidence) |
+| CSIS Significant Cyber Incidents | A web page updated monthly. Used for facts only (country, attack type, stated origin, month); its text is never shown, because CSIS material is all rights reserved. Entries show the month, not a day |
+| Hackread, CSO Online, Graham Cluley, Threatpost, The Register | **Not included.** Their robots.txt does not allow automated feed readers |
+| Cybersecurity Insiders, Naked Security, The Security Ledger | **Not included.** Not reachable when tested on 18 November 2026 |
+| Information is Beautiful "World's Biggest Data Breaches" | **Not included.** A curated list of historical breaches, not a live feed, and its licence needs paid permission for commercial websites |
 | Cybernews | **Not included.** Its feed answers automated readers with a Cloudflare challenge (HTTP 403). Add it to `FEEDS` in `pipeline/update.py` if Cybernews provides a feed URL or permission |
 
 Only the headline, link and date of each story are published. No article text, summary or image is stored.
@@ -50,7 +54,7 @@ Only the headline, link and date of each story are published. No article text, s
 
 ## Daily update on this computer
 
-`pipeline\run_daily.ps1` runs the update once and appends what happened to `logs\update.log`. Windows Task Scheduler runs it every day at 08:00 as the task **Cyber Attack Map - daily news update**. If the computer is off or asleep at 08:00, it runs as soon as it is back on and online.
+`pipeline\run_daily.ps1` runs the update once and appends what happened to `logs\update.log`. Windows Task Scheduler runs it every day at 08:00, and five minutes after you sign in to Windows, as the task **Cyber Attack Map - daily news update**.
 
 Change the time or remove it:
 

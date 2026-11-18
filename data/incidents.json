@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T21:53:06Z",
+ "updated": "2026-11-18T01:46:20Z",
  "sources": [
   "The Hacker News",
   "BleepingComputer",
@@ -16,10 +16,46 @@
   "CrowdStrike Blog",
   "CISA",
   "CISA",
-  "Inside Higher Ed"
+  "Inside Higher Ed",
+  "DataBreaches.net",
+  "HIPAA Journal",
+  "The Record",
+  "SC Media",
+  "Wired Security",
+  "CSIS"
  ],
  "feed_errors": [],
  "incidents": [
+  {
+   "id": "bb92338073",
+   "victim": null,
+   "victim_key": "",
+   "sector": null,
+   "country": "Canada",
+   "country_key": "Canada",
+   "city": null,
+   "lat": 57.75,
+   "lon": -101.57,
+   "precision": "country",
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-18T00:15:28Z",
+   "last_seen": "2026-11-18T00:15:28Z",
+   "sources": [
+    {
+     "name": "DataBreaches.net",
+     "url": "https://databreaches.net/2026/11/17/canada-highland-shores-childrens-aid-reveals-cybersecurity-breach-involving-personal-information/",
+     "title": "Canada: Highland Shores Children’s Aid Reveals Cybersecurity Breach Involving Personal Information",
+     "published": "2026-11-18T00:15:28Z"
+    }
+   ]
+  },
   {
    "id": "ddec81ba80",
    "victim": null,
@@ -47,6 +83,36 @@
      "url": "https://www.bleepingcomputer.com/news/security/cloud-keys-leaked-in-docker-hub-images-are-stolen-within-seconds/",
      "title": "Cloud keys leaked in Docker Hub images are stolen within seconds",
      "published": "2026-11-17T21:27:17Z"
+    }
+   ]
+  },
+  {
+   "id": "8f75784be3",
+   "victim": null,
+   "victim_key": "",
+   "sector": null,
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-17T21:20:00Z",
+   "last_seen": "2026-11-17T21:20:00Z",
+   "sources": [
+    {
+     "name": "The Record",
+     "url": "https://therecord.media/optimizely-malicious-code-customer-sites",
+     "title": "Website management platform Optimizely confirms hackers put malicious code into customer sites",
+     "published": "2026-11-17T21:20:00Z"
     }
    ]
   },
@@ -92,16 +158,22 @@
    "lon": 136.88,
    "precision": "country",
    "type": "data_breach",
-   "records": null,
+   "records": "4,597 Users",
    "actor": null,
    "attacker_country": null,
    "attacker_lat": null,
    "attacker_lon": null,
    "summary": null,
    "confidence": "low",
-   "first_seen": "2026-11-17T20:51:21Z",
+   "first_seen": "2026-11-17T15:13:38Z",
    "last_seen": "2026-11-17T20:51:21Z",
    "sources": [
+    {
+     "name": "DataBreaches.net",
+     "url": "https://databreaches.net/2026/11/17/cyberattack-on-japans-fugaku-supercomputer-puts-data-of-4597-users-at-risk/",
+     "title": "​Cyberattack on Japan’s Fugaku Supercomputer Puts Data of 4,597 Users at Risk",
+     "published": "2026-11-17T15:13:38Z"
+    },
     {
      "name": "BleepingComputer",
      "url": "https://www.bleepingcomputer.com/news/security/japan-takes-fugaku-supercomputer-offlline-after-cyberattack/",
@@ -111,7 +183,7 @@
    ]
   },
   {
-   "id": "7646e96e2e",
+   "id": "eb8e076309",
    "victim": "Fireworks AI",
    "victim_key": "fireworks ai",
    "sector": null,
@@ -121,7 +193,7 @@
    "lat": null,
    "lon": null,
    "precision": "none",
-   "type": "data_breach",
+   "type": "supply_chain",
    "records": null,
    "actor": null,
    "attacker_country": null,
@@ -129,14 +201,20 @@
    "attacker_lon": null,
    "summary": null,
    "confidence": "low",
-   "first_seen": "2026-11-10T15:33:59Z",
+   "first_seen": "2026-11-17T10:54:35Z",
    "last_seen": "2026-11-17T19:11:20Z",
    "sources": [
     {
-     "name": "The Hacker News",
-     "url": "https://thehackernews.com/2026/11/fireworks-ai-breach-widens-to-expose.html",
-     "title": "Fireworks AI Confirms Wider Breach Affecting Customer Datasets, Model Weights and Notion AI Chats",
-     "published": "2026-11-10T15:33:59Z"
+     "name": "Security Affairs",
+     "url": "https://securityaffairs.com/203309/data-breach/infoblox-confirms-supply-chain-breach-after-attackers-access-sensitive-data.html",
+     "title": "Infoblox Confirms Supply Chain Breach After Attackers Access Sensitive Data",
+     "published": "2026-11-17T10:54:35Z"
+    },
+    {
+     "name": "SecurityWeek",
+     "url": "https://www.securityweek.com/access-dental-management-data-breach-impacts-over-340000/",
+     "title": "Access Dental Management Data Breach Impacts Over 340,000",
+     "published": "2026-11-17T12:59:04Z"
     },
     {
      "name": "Security Affairs",
@@ -148,8 +226,8 @@
   },
   {
    "id": "960f41318e",
-   "victim": null,
-   "victim_key": "",
+   "victim": "Cursor",
+   "victim_key": "cursor",
    "sector": null,
    "country": "United States",
    "country_key": "United States of America",
@@ -164,26 +242,14 @@
    "attacker_lat": null,
    "attacker_lon": null,
    "summary": null,
-   "confidence": "low",
-   "first_seen": "2026-11-14T09:09:31Z",
+   "confidence": "medium",
+   "first_seen": "2026-11-15T08:22:04Z",
    "last_seen": "2026-11-17T18:38:37Z",
    "sources": [
     {
-     "name": "Cybersecurity News",
-     "url": "https://cybersecuritynews.com/cursor-data-breach/",
-     "title": "Cursor Reveals How a Leaked Fireworks AI Key Led to a Backdoored Claude Code Extension",
-     "published": "2026-11-14T09:09:31Z"
-    },
-    {
-     "name": "BleepingComputer",
-     "url": "https://www.bleepingcomputer.com/news/security/cursor-confirms-security-breach-led-to-malicious-claude-code-extension/",
-     "title": "Cursor confirms security breach led to malicious Claude Code extension",
-     "published": "2026-11-14T17:27:25Z"
-    },
-    {
      "name": "The Hacker News",
      "url": "https://thehackernews.com/2026/11/stolen-fireworks-ai-key-led-to-cursor.html",
-     "title": "Stolen Fireworks AI Key Led to Cursor Data Breach and Trojanized Claude Code Extension",
+     "title": "Cursor Says Stolen Fireworks AI Key Led to Trojanized Claude Code Extension Incident",
      "published": "2026-11-15T08:22:04Z"
     },
     {
@@ -225,6 +291,36 @@
    ]
   },
   {
+   "id": "06d3575971",
+   "victim": null,
+   "victim_key": "",
+   "sector": null,
+   "country": "United States",
+   "country_key": "United States of America",
+   "city": null,
+   "lat": 39.5,
+   "lon": -99.06,
+   "precision": "country",
+   "type": "other",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-17T14:57:59Z",
+   "last_seen": "2026-11-17T14:57:59Z",
+   "sources": [
+    {
+     "name": "DataBreaches.net",
+     "url": "https://databreaches.net/2026/11/17/ma-andover-withholds-cyberattack-alerts-four-internal-reviews/",
+     "title": "MA: Andover Withholds Cyberattack Alerts, Four Internal Reviews",
+     "published": "2026-11-17T14:57:59Z"
+    }
+   ]
+  },
+  {
    "id": "76496683be",
    "victim": "Market Research Giant Ipsos",
    "victim_key": "market research giant ipsos",
@@ -255,7 +351,7 @@
    ]
   },
   {
-   "id": "f66e964ba9",
+   "id": "7396b21270",
    "victim": null,
    "victim_key": "",
    "sector": null,
@@ -273,15 +369,69 @@
    "attacker_lon": null,
    "summary": null,
    "confidence": "low",
-   "first_seen": "2026-11-16T19:57:13Z",
-   "last_seen": "2026-11-17T13:13:20Z",
+   "first_seen": "2026-11-17T13:43:43Z",
+   "last_seen": "2026-11-17T13:43:43Z",
    "sources": [
     {
-     "name": "BleepingComputer",
-     "url": "https://www.bleepingcomputer.com/news/security/barracuda-links-cloud-breach-to-artex-ai-powered-cyberattack/",
-     "title": "Barracuda links cloud breach to ARTEX AI-powered cyberattack",
-     "published": "2026-11-16T19:57:13Z"
-    },
+     "name": "DataBreaches.net",
+     "url": "https://databreaches.net/2026/11/17/iphone-users-targeted-in-major-website-security-breach/",
+     "title": "iPhone Users Targeted in Major Website Security Breach",
+     "published": "2026-11-17T13:43:43Z"
+    }
+   ]
+  },
+  {
+   "id": "0c91d31367",
+   "victim": "Suspected",
+   "victim_key": "suspected",
+   "sector": null,
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "type": "other",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-17T13:43:07Z",
+   "last_seen": "2026-11-17T13:43:07Z",
+   "sources": [
+    {
+     "name": "DataBreaches.net",
+     "url": "https://databreaches.net/2026/11/17/suspected-cyberattack-keeps-south-portland-city-hall-closed-for-second-day/",
+     "title": "Suspected Cyberattack Keeps South Portland City Hall Closed for Second Day",
+     "published": "2026-11-17T13:43:07Z"
+    }
+   ]
+  },
+  {
+   "id": "824f551b81",
+   "victim": null,
+   "victim_key": "",
+   "sector": null,
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-17T08:42:21Z",
+   "last_seen": "2026-11-17T13:13:20Z",
+   "sources": [
     {
      "name": "Cybersecurity News",
      "url": "https://cybersecuritynews.com/barracuda-cloud-account-breach/",
@@ -297,55 +447,7 @@
    ]
   },
   {
-   "id": "254208bdc6",
-   "victim": "La Poste Subsidiary Maileva Affects",
-   "victim_key": "la poste subsidiary maileva affects",
-   "sector": null,
-   "country": "France",
-   "country_key": "France",
-   "city": null,
-   "lat": 46.61,
-   "lon": 2.34,
-   "precision": "country",
-   "type": "data_breach",
-   "records": "22 Million People",
-   "actor": null,
-   "attacker_country": null,
-   "attacker_lat": null,
-   "attacker_lon": null,
-   "summary": null,
-   "confidence": "medium",
-   "first_seen": "2026-11-15T10:43:16Z",
-   "last_seen": "2026-11-17T12:59:04Z",
-   "sources": [
-    {
-     "name": "Security Affairs",
-     "url": "https://securityaffairs.com/203126/data-breach/data-breach-at-la-poste-subsidiary-maileva-affects-22-million-people-in-france.html",
-     "title": "Data Breach at La Poste Subsidiary Maileva Affects 22 Million People in France",
-     "published": "2026-11-15T10:43:16Z"
-    },
-    {
-     "name": "SecurityWeek",
-     "url": "https://www.securityweek.com/uber-data-breach-impacts-150000-people/",
-     "title": "Uber Data Breach Impacts 150,000 People",
-     "published": "2026-11-16T11:02:48Z"
-    },
-    {
-     "name": "Infosecurity Magazine",
-     "url": "https://www.infosecurity-magazine.com/news/maileva-docaposte-22-million-breach/",
-     "title": "La Poste Subsidiary Maileva Breach Exposes 22 Million People",
-     "published": "2026-11-16T15:25:00Z"
-    },
-    {
-     "name": "SecurityWeek",
-     "url": "https://www.securityweek.com/access-dental-management-data-breach-impacts-over-340000/",
-     "title": "Access Dental Management Data Breach Impacts Over 340,000",
-     "published": "2026-11-17T12:59:04Z"
-    }
-   ]
-  },
-  {
-   "id": "f592fc7cd9",
+   "id": "1dc4676c82",
    "victim": null,
    "victim_key": "",
    "sector": null,
@@ -363,50 +465,14 @@
    "attacker_lon": null,
    "summary": null,
    "confidence": "low",
-   "first_seen": "2026-11-16T11:57:54Z",
+   "first_seen": "2026-11-17T11:19:51Z",
    "last_seen": "2026-11-17T11:19:51Z",
    "sources": [
-    {
-     "name": "Help Net Security",
-     "url": "https://www.helpnetsecurity.com/2026/11/16/microsoft-remote-lock-feature-preview/",
-     "title": "Microsoft previews remote lock for lost or stolen Windows devices",
-     "published": "2026-11-16T11:57:54Z"
-    },
     {
      "name": "BleepingComputer",
      "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-testing-remote-lock-for-lost-or-stolen-windows-devices/",
      "title": "Microsoft testing Remote Lock for lost or stolen Windows devices",
      "published": "2026-11-17T11:19:51Z"
-    }
-   ]
-  },
-  {
-   "id": "380b276640",
-   "victim": "Infoblox",
-   "victim_key": "infoblox",
-   "sector": null,
-   "country": null,
-   "country_key": null,
-   "city": null,
-   "lat": null,
-   "lon": null,
-   "precision": "none",
-   "type": "supply_chain",
-   "records": null,
-   "actor": null,
-   "attacker_country": null,
-   "attacker_lat": null,
-   "attacker_lon": null,
-   "summary": null,
-   "confidence": "low",
-   "first_seen": "2026-11-17T10:54:35Z",
-   "last_seen": "2026-11-17T10:54:35Z",
-   "sources": [
-    {
-     "name": "Security Affairs",
-     "url": "https://securityaffairs.com/203309/data-breach/infoblox-confirms-supply-chain-breach-after-attackers-access-sensitive-data.html",
-     "title": "Infoblox Confirms Supply Chain Breach After Attackers Access Sensitive Data",
-     "published": "2026-11-17T10:54:35Z"
     }
    ]
   },
@@ -471,7 +537,7 @@
    ]
   },
   {
-   "id": "5a26ef385a",
+   "id": "3ad387c63e",
    "victim": "Uber",
    "victim_key": "uber",
    "sector": null,
@@ -489,14 +555,20 @@
    "attacker_lon": null,
    "summary": null,
    "confidence": "medium",
-   "first_seen": "2026-11-14T01:19:57Z",
+   "first_seen": "2026-11-13T13:49:19Z",
    "last_seen": "2026-11-17T08:35:42Z",
    "sources": [
     {
-     "name": "Cybersecurity News",
-     "url": "https://cybersecuritynews.com/uber-confirms-data-breach/",
-     "title": "Uber Confirms Data Breach – Hackers Stole Users’ Personal Information",
-     "published": "2026-11-14T01:19:57Z"
+     "name": "HIPAA Journal",
+     "url": "https://www.hipaajournal.com/data-breach-hood-river-dental-liberty-health-keep-smiling-dental/",
+     "title": "Oregon Dental Practice Reports Two Data Breaches Affecting More Than 31,000 Patients",
+     "published": "2026-11-13T13:49:19Z"
+    },
+    {
+     "name": "DataBreaches.net",
+     "url": "https://databreaches.net/2026/11/14/uber-data-breach-driver-licenses-stolen-via-fireworks-ai/",
+     "title": "Uber Data Breach: Driver Licenses Stolen via Fireworks AI",
+     "published": "2026-11-14T15:55:27Z"
     },
     {
      "name": "BleepingComputer",
@@ -537,7 +609,7 @@
    ]
   },
   {
-   "id": "44737d5252",
+   "id": "efddc91bf4",
    "victim": null,
    "victim_key": "",
    "sector": null,
@@ -547,7 +619,7 @@
    "lat": 39.5,
    "lon": -99.06,
    "precision": "country",
-   "type": "other",
+   "type": "espionage",
    "records": null,
    "actor": null,
    "attacker_country": null,
@@ -609,9 +681,39 @@
    ]
   },
   {
-   "id": "05b6417e27",
+   "id": "20a6495fc6",
    "victim": null,
    "victim_key": "",
+   "sector": null,
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-17T03:04:19Z",
+   "last_seen": "2026-11-17T03:04:19Z",
+   "sources": [
+    {
+     "name": "DataBreaches.net",
+     "url": "https://databreaches.net/2026/11/16/customer-personal-information-leak-at-legoland-even-annual-pass-barcodes-stolen/",
+     "title": "Customer Personal Information Leak at Legoland… Even Annual Pass Barcodes Stolen",
+     "published": "2026-11-17T03:04:19Z"
+    }
+   ]
+  },
+  {
+   "id": "50204565d4",
+   "victim": "Optimizely",
+   "victim_key": "optimizely",
    "sector": null,
    "country": null,
    "country_key": null,
@@ -630,12 +732,6 @@
    "first_seen": "2026-11-17T02:12:17Z",
    "last_seen": "2026-11-17T02:12:17Z",
    "sources": [
-    {
-     "name": "BleepingComputer",
-     "url": "https://www.bleepingcomputer.com/news/security/optimizely-supply-chain-attack-infects-major-brands-sites-with-malware/",
-     "title": "Optimizely supply chain attack infects major brands' sites with malware",
-     "published": "2026-11-17T02:12:17Z"
-    },
     {
      "name": "BleepingComputer",
      "url": "https://www.bleepingcomputer.com/news/security/optimizely-supply-chain-attack-delivers-malware-to-cnn-fox-news-bbc-salesforce-sites/",
@@ -671,6 +767,72 @@
      "url": "https://cybersecuritynews.com/optimizely-websites-hijacked/",
      "title": "Hackers Infect 178 Major Websites via Optimizely to Steal Credit Cards and Target iPhones",
      "published": "2026-11-17T01:39:14Z"
+    }
+   ]
+  },
+  {
+   "id": "f457dbb851",
+   "victim": null,
+   "victim_key": "",
+   "sector": null,
+   "country": "United States",
+   "country_key": "United States of America",
+   "city": null,
+   "lat": 39.5,
+   "lon": -99.06,
+   "precision": "country",
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-16T18:53:52Z",
+   "last_seen": "2026-11-16T18:53:52Z",
+   "sources": [
+    {
+     "name": "DataBreaches.net",
+     "url": "https://databreaches.net/2026/11/16/nv-douglas-county-data-leak-exposes-social-security-numbers-after-public-records-request/",
+     "title": "NV: Douglas County data leak exposes Social Security numbers after public records request",
+     "published": "2026-11-16T18:53:52Z"
+    }
+   ]
+  },
+  {
+   "id": "5dc65084ce",
+   "victim": "Announced",
+   "victim_key": "announced",
+   "sector": null,
+   "country": "United States",
+   "country_key": "United States of America",
+   "city": null,
+   "lat": 39.5,
+   "lon": -99.06,
+   "precision": "country",
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-04T11:49:30Z",
+   "last_seen": "2026-11-16T17:30:18Z",
+   "sources": [
+    {
+     "name": "HIPAA Journal",
+     "url": "https://www.hipaajournal.com/data-breaches-hca-healthcare-blossom-health/",
+     "title": "Data Breaches Announced by HCA Healthcare; Blossom Health",
+     "published": "2026-11-04T11:49:30Z"
+    },
+    {
+     "name": "HIPAA Journal",
+     "url": "https://www.hipaajournal.com/data-breach-lifetouch-mpower-health-geisinger/",
+     "title": "Data Breaches Announced by LifeTouch Health; MPOWERHealth; Geisinger",
+     "published": "2026-11-16T17:30:18Z"
     }
    ]
   },
@@ -723,9 +885,15 @@
    "attacker_lon": null,
    "summary": null,
    "confidence": "medium",
-   "first_seen": "2026-11-16T16:36:55Z",
+   "first_seen": "2026-11-12T12:37:30Z",
    "last_seen": "2026-11-16T16:36:55Z",
    "sources": [
+    {
+     "name": "DataBreaches.net",
+     "url": "https://databreaches.net/2026/11/12/active-screenconnect-attacks-breach-msps-impact-dozens-of-organizations/",
+     "title": "Active ScreenConnect attacks breach MSPs, impact dozens of organizations",
+     "published": "2026-11-12T12:37:30Z"
+    },
     {
      "name": "Dark Reading",
      "url": "https://www.darkreading.com/cyberattacks-data-breaches/china-nexus-actors-breach-10-organizations-ai-driven-attacks",
@@ -735,9 +903,9 @@
    ]
   },
   {
-   "id": "d29e040f40",
-   "victim": null,
-   "victim_key": "",
+   "id": "dcfc43b1ba",
+   "victim": "La Poste Subsidiary Maileva",
+   "victim_key": "la poste subsidiary maileva",
    "sector": null,
    "country": null,
    "country_key": null,
@@ -746,51 +914,27 @@
    "lon": null,
    "precision": "none",
    "type": "data_breach",
-   "records": null,
+   "records": "22 Million People",
    "actor": null,
    "attacker_country": null,
    "attacker_lat": null,
    "attacker_lon": null,
    "summary": null,
    "confidence": "low",
-   "first_seen": "2026-11-16T15:44:21Z",
-   "last_seen": "2026-11-16T15:44:21Z",
+   "first_seen": "2026-11-15T10:43:16Z",
+   "last_seen": "2026-11-16T15:25:00Z",
    "sources": [
     {
-     "name": "BleepingComputer",
-     "url": "https://www.bleepingcomputer.com/news/security/fandango-says-hackers-stole-payment-card-details-from-checkout-pages/",
-     "title": "Fandango says hackers stole payment card details from checkout pages",
-     "published": "2026-11-16T15:44:21Z"
-    }
-   ]
-  },
-  {
-   "id": "0f4c5e3465",
-   "victim": "Barracuda",
-   "victim_key": "barracuda",
-   "sector": null,
-   "country": null,
-   "country_key": null,
-   "city": null,
-   "lat": null,
-   "lon": null,
-   "precision": "none",
-   "type": "other",
-   "records": null,
-   "actor": null,
-   "attacker_country": null,
-   "attacker_lat": null,
-   "attacker_lon": null,
-   "summary": null,
-   "confidence": "low",
-   "first_seen": "2026-11-16T15:07:32Z",
-   "last_seen": "2026-11-16T15:07:32Z",
-   "sources": [
+     "name": "Security Affairs",
+     "url": "https://securityaffairs.com/203126/data-breach/data-breach-at-la-poste-subsidiary-maileva-affects-22-million-people-in-france.html",
+     "title": "Data Breach at La Poste Subsidiary Maileva Affects 22 Million People in France",
+     "published": "2026-11-15T10:43:16Z"
+    },
     {
-     "name": "SecurityWeek",
-     "url": "https://www.securityweek.com/barracuda-hacked-amid-surge-in-artex-powered-cyberattacks/",
-     "title": "Barracuda Hacked Amid Surge in Artex-Powered Cyberattacks",
-     "published": "2026-11-16T15:07:32Z"
+     "name": "Infosecurity Magazine",
+     "url": "https://www.infosecurity-magazine.com/news/maileva-docaposte-22-million-breach/",
+     "title": "La Poste Subsidiary Maileva Breach Exposes 22 Million People",
+     "published": "2026-11-16T15:25:00Z"
     }
    ]
   },
@@ -825,9 +969,45 @@
    ]
   },
   {
-   "id": "f6f4a6d64a",
+   "id": "c6e1d6a772",
    "victim": null,
    "victim_key": "",
+   "sector": null,
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "type": "financial_theft",
+   "records": "Over $400 Million",
+   "actor": null,
+   "attacker_country": "North Korea",
+   "attacker_lat": 40.14,
+   "attacker_lon": 127.16,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-13T14:28:58Z",
+   "last_seen": "2026-11-16T14:28:37Z",
+   "sources": [
+    {
+     "name": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/fbi-says-north-korean-hackers-stole.html",
+     "title": "FBI Says North Korean Hackers Stole Over $400 Million in Crypto Using Deepfake Video Calls",
+     "published": "2026-11-13T14:28:58Z"
+    },
+    {
+     "name": "DataBreaches.net",
+     "url": "https://databreaches.net/2026/11/16/fbi-says-north-korean-hackers-stole-over-400-million-in-crypto-using-deepfake-video-calls/",
+     "title": "FBI Says North Korean Hackers Stole Over $400 Million in Crypto Using Deepfake Video Calls",
+     "published": "2026-11-16T14:28:37Z"
+    }
+   ]
+  },
+  {
+   "id": "81705f9b40",
+   "victim": "German Military Grounds Quantum Systems Drones Following Reported",
+   "victim_key": "german military grounds quantum systems drones following reported",
    "sector": null,
    "country": "Germany",
    "country_key": "Germany",
@@ -835,23 +1015,17 @@
    "lat": 51.13,
    "lon": 10.29,
    "precision": "country",
-   "type": "other",
+   "type": "espionage",
    "records": null,
    "actor": null,
    "attacker_country": null,
    "attacker_lat": null,
    "attacker_lon": null,
    "summary": null,
-   "confidence": "low",
-   "first_seen": "2026-11-13T17:31:56Z",
+   "confidence": "medium",
+   "first_seen": "2026-11-16T09:06:11Z",
    "last_seen": "2026-11-16T09:06:11Z",
    "sources": [
-    {
-     "name": "BleepingComputer",
-     "url": "https://www.bleepingcomputer.com/news/security/german-military-drone-operations-disrupted-by-cyberattack/",
-     "title": "German military drone operations disrupted by cyberattack",
-     "published": "2026-11-13T17:31:56Z"
-    },
     {
      "name": "Security Affairs",
      "url": "https://securityaffairs.com/203085/cyber-crime/german-military-grounds-quantum-systems-drones-following-reported-cyberattack.html",
@@ -895,12 +1069,6 @@
      "published": "2026-11-13T11:10:40Z"
     },
     {
-     "name": "SecurityWeek",
-     "url": "https://www.securityweek.com/silentair-hackers-intercept-calls-sms-from-inside-mobile-networks/",
-     "title": "SilentAir Hackers Intercept Calls, SMS From Inside Mobile Networks",
-     "published": "2026-11-13T12:20:28Z"
-    },
-    {
      "name": "Security Affairs",
      "url": "https://securityaffairs.com/203099/apt/silentair-and-liminal-panda-target-telecom-networks-to-spy-on-subscribers.html",
      "title": "SilentAir and LIMINAL PANDA Target Telecom Networks to Spy on Subscribers",
@@ -939,7 +1107,7 @@
    ]
   },
   {
-   "id": "4201db3ac6",
+   "id": "16ac19c7d1",
    "victim": null,
    "victim_key": "",
    "sector": null,
@@ -957,44 +1125,14 @@
    "attacker_lon": null,
    "summary": null,
    "confidence": "low",
-   "first_seen": "2026-11-15T18:29:53Z",
-   "last_seen": "2026-11-15T18:29:53Z",
+   "first_seen": "2026-11-15T20:56:08Z",
+   "last_seen": "2026-11-15T20:56:08Z",
    "sources": [
     {
-     "name": "BleepingComputer",
-     "url": "https://www.bleepingcomputer.com/news/security/fbi-warns-artex-ai-hacking-tool-is-powering-global-cyberattacks/",
+     "name": "DataBreaches.net",
+     "url": "https://databreaches.net/2026/11/15/fbi-warns-artex-ai-hacking-tool-is-powering-global-cyberattacks/",
      "title": "FBI warns ARTEX AI hacking tool is powering global cyberattacks",
-     "published": "2026-11-15T18:29:53Z"
-    }
-   ]
-  },
-  {
-   "id": "bbb8a67270",
-   "victim": null,
-   "victim_key": "",
-   "sector": null,
-   "country": null,
-   "country_key": null,
-   "city": null,
-   "lat": null,
-   "lon": null,
-   "precision": "none",
-   "type": "data_breach",
-   "records": null,
-   "actor": null,
-   "attacker_country": null,
-   "attacker_lat": null,
-   "attacker_lon": null,
-   "summary": null,
-   "confidence": "low",
-   "first_seen": "2026-11-15T15:23:48Z",
-   "last_seen": "2026-11-15T15:23:48Z",
-   "sources": [
-    {
-     "name": "BleepingComputer",
-     "url": "https://www.bleepingcomputer.com/news/security/tsmc-employee-data-breach-linked-to-cloud-provider/",
-     "title": "TSMC employee data breach linked to cloud provider",
-     "published": "2026-11-15T15:23:48Z"
+     "published": "2026-11-15T20:56:08Z"
     }
    ]
   },
@@ -1029,6 +1167,36 @@
    ]
   },
   {
+   "id": "af568f0b41",
+   "victim": null,
+   "victim_key": "",
+   "sector": null,
+   "country": "Norway",
+   "country_key": "Norway",
+   "city": null,
+   "lat": 64.54,
+   "lon": 14.24,
+   "precision": "country",
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-13T14:46:54Z",
+   "last_seen": "2026-11-13T14:46:54Z",
+   "sources": [
+    {
+     "name": "DataBreaches.net",
+     "url": "https://databreaches.net/2026/11/13/over-144000-norwegian-and-wideroe-passengers-affected-by-data-breach/",
+     "title": "Over 144,000 Norwegian and Widerøe passengers affected by data breach",
+     "published": "2026-11-13T14:46:54Z"
+    }
+   ]
+  },
+  {
    "id": "79815295aa",
    "victim": "Trezor",
    "victim_key": "trezor",
@@ -1048,85 +1216,13 @@
    "summary": null,
    "confidence": "medium",
    "first_seen": "2026-11-13T13:54:20Z",
-   "last_seen": "2026-11-13T19:38:36Z",
+   "last_seen": "2026-11-13T13:54:20Z",
    "sources": [
     {
      "name": "The Hacker News",
      "url": "https://thehackernews.com/2026/11/trezor-confirms-hidden-hardware.html",
      "title": "Trezor Confirms Hidden Implants in CryptoBilis-Sold Wallets That Can Steal Recovery Phrases",
      "published": "2026-11-13T13:54:20Z"
-    },
-    {
-     "name": "BleepingComputer",
-     "url": "https://www.bleepingcomputer.com/news/cryptocurrency/trezor-confirms-crypto-stealing-implants-in-three-wallets-releases-fix/",
-     "title": "Trezor confirms crypto-stealing implants in three wallets, releases fix",
-     "published": "2026-11-13T19:38:36Z"
-    }
-   ]
-  },
-  {
-   "id": "b297d87623",
-   "victim": null,
-   "victim_key": "",
-   "sector": null,
-   "country": "Israel",
-   "country_key": "Israel",
-   "city": null,
-   "lat": 31.49,
-   "lon": 35.0,
-   "precision": "country",
-   "type": "other",
-   "records": null,
-   "actor": null,
-   "attacker_country": null,
-   "attacker_lat": null,
-   "attacker_lon": null,
-   "summary": null,
-   "confidence": "low",
-   "first_seen": "2026-11-13T11:35:05Z",
-   "last_seen": "2026-11-13T16:21:43Z",
-   "sources": [
-    {
-     "name": "Security Affairs",
-     "url": "https://securityaffairs.com/202982/hacking/unpatched-check-point-gateways-are-being-wiped-exploiting-php2shell.html",
-     "title": "Unpatched Check Point Gateways Are Being Wiped exploiting PHP2Shell",
-     "published": "2026-11-13T11:35:05Z"
-    },
-    {
-     "name": "BleepingComputer",
-     "url": "https://www.bleepingcomputer.com/news/security/check-point-gateways-hacked-via-php2shell-to-deploy-vmware-esxi-wiper/",
-     "title": "Check Point gateways hacked via PHP2Shell to deploy VMware ESXi wiper",
-     "published": "2026-11-13T16:21:43Z"
-    }
-   ]
-  },
-  {
-   "id": "c6e1d6a772",
-   "victim": null,
-   "victim_key": "",
-   "sector": null,
-   "country": null,
-   "country_key": null,
-   "city": null,
-   "lat": null,
-   "lon": null,
-   "precision": "none",
-   "type": "financial_theft",
-   "records": "Over $400 Million",
-   "actor": null,
-   "attacker_country": "North Korea",
-   "attacker_lat": 40.14,
-   "attacker_lon": 127.16,
-   "summary": null,
-   "confidence": "low",
-   "first_seen": "2026-11-13T14:28:58Z",
-   "last_seen": "2026-11-13T14:28:58Z",
-   "sources": [
-    {
-     "name": "The Hacker News",
-     "url": "https://thehackernews.com/2026/11/fbi-says-north-korean-hackers-stole.html",
-     "title": "FBI Says North Korean Hackers Stole Over $400 Million in Crypto Using Deepfake Video Calls",
-     "published": "2026-11-13T14:28:58Z"
     }
    ]
   },
@@ -1161,16 +1257,16 @@
    ]
   },
   {
-   "id": "4084f96e5a",
-   "victim": "Apify",
-   "victim_key": "apify",
+   "id": "0003d402f0",
+   "victim": null,
+   "victim_key": "",
    "sector": null,
-   "country": null,
-   "country_key": null,
+   "country": "Israel",
+   "country_key": "Israel",
    "city": null,
-   "lat": null,
-   "lon": null,
-   "precision": "none",
+   "lat": 31.49,
+   "lon": 35.0,
+   "precision": "country",
    "type": "other",
    "records": null,
    "actor": null,
@@ -1179,44 +1275,14 @@
    "attacker_lon": null,
    "summary": null,
    "confidence": "low",
-   "first_seen": "2026-11-13T12:41:01Z",
-   "last_seen": "2026-11-13T12:41:01Z",
+   "first_seen": "2026-11-13T11:35:05Z",
+   "last_seen": "2026-11-13T11:35:05Z",
    "sources": [
     {
-     "name": "SecurityWeek",
-     "url": "https://www.securityweek.com/apify-confirms-customer-data-accessed-in-cyberattack/",
-     "title": "Apify Confirms Customer Data Accessed in Cyberattack",
-     "published": "2026-11-13T12:41:01Z"
-    }
-   ]
-  },
-  {
-   "id": "474c0fc5bb",
-   "victim": null,
-   "victim_key": "",
-   "sector": null,
-   "country": null,
-   "country_key": null,
-   "city": null,
-   "lat": null,
-   "lon": null,
-   "precision": "none",
-   "type": "financial_theft",
-   "records": "$400 million",
-   "actor": null,
-   "attacker_country": "North Korea",
-   "attacker_lat": 40.14,
-   "attacker_lon": 127.16,
-   "summary": null,
-   "confidence": "low",
-   "first_seen": "2026-11-13T06:30:30Z",
-   "last_seen": "2026-11-13T06:30:30Z",
-   "sources": [
-    {
-     "name": "Help Net Security",
-     "url": "https://www.helpnetsecurity.com/2026/11/13/fbi-north-korean-fake-zoom-calls/",
-     "title": "Stolen webcam clips of 900+ victims feed North Korea’s $400 million fake Zoom scheme",
-     "published": "2026-11-13T06:30:30Z"
+     "name": "Security Affairs",
+     "url": "https://securityaffairs.com/202982/hacking/unpatched-check-point-gateways-are-being-wiped-exploiting-php2shell.html",
+     "title": "Unpatched Check Point Gateways Are Being Wiped exploiting PHP2Shell",
+     "published": "2026-11-13T11:35:05Z"
     }
    ]
   },
@@ -1251,38 +1317,32 @@
    ]
   },
   {
-   "id": "417b99b824",
+   "id": "2f27756ae3",
    "victim": null,
    "victim_key": "",
    "sector": null,
-   "country": "United States",
-   "country_key": "United States of America",
+   "country": null,
+   "country_key": null,
    "city": null,
-   "lat": 39.5,
-   "lon": -99.06,
-   "precision": "country",
-   "type": "supply_chain",
-   "records": "1,806+ Repositories",
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "type": "data_breach",
+   "records": "46,000 employees",
    "actor": null,
    "attacker_country": null,
    "attacker_lat": null,
    "attacker_lon": null,
    "summary": null,
    "confidence": "low",
-   "first_seen": "2026-11-12T06:42:47Z",
-   "last_seen": "2026-11-12T22:25:30Z",
+   "first_seen": "2026-11-12T21:26:33Z",
+   "last_seen": "2026-11-12T21:26:33Z",
    "sources": [
     {
-     "name": "The Hacker News",
-     "url": "https://thehackernews.com/2026/11/4837-hijacked-github-accounts-ran-ci.html",
-     "title": "Attacker Used 4,837 Hijacked GitHub Accounts to Run a CI Secret Stealer in 1,806+ Repositories",
-     "published": "2026-11-12T06:42:47Z"
-    },
-    {
-     "name": "BleepingComputer",
-     "url": "https://www.bleepingcomputer.com/news/security/hackers-compromise-4-800-github-accounts-to-steal-cloud-credentials/",
-     "title": "Hackers compromise 4,800 GitHub accounts to steal cloud credentials",
-     "published": "2026-11-12T22:25:30Z"
+     "name": "DataBreaches.net",
+     "url": "https://databreaches.net/2026/11/12/tsmc-has-reportedly-leaked-the-personal-data-of-46000-employees-but-emphasized-that-no-evidence-of-intrusion-was-found-in-the-system/",
+     "title": "TSMC has reportedly leaked the personal data of 46,000 employees, but emphasized that no evidence of intrusion was found in the system.",
+     "published": "2026-11-12T21:26:33Z"
     }
    ]
   },
@@ -1317,7 +1377,37 @@
    ]
   },
   {
-   "id": "9b10d73bdc",
+   "id": "a679392f63",
+   "victim": "Hong Kong Sogo",
+   "victim_key": "hong kong sogo",
+   "sector": null,
+   "country": "Hong Kong",
+   "country_key": "Hong Kong",
+   "city": null,
+   "lat": 22.32,
+   "lon": 114.17,
+   "precision": "country",
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "summary": null,
+   "confidence": "medium",
+   "first_seen": "2026-11-12T15:42:32Z",
+   "last_seen": "2026-11-12T15:42:32Z",
+   "sources": [
+    {
+     "name": "DataBreaches.net",
+     "url": "https://databreaches.net/2026/11/12/hong-kong-sogo-data-breach-puts-personal-information-of-820000-members-at-risk/",
+     "title": "Hong Kong Sogo data breach puts personal information of 820,000 members at risk",
+     "published": "2026-11-12T15:42:32Z"
+    }
+   ]
+  },
+  {
+   "id": "8e43fd06ab",
    "victim": null,
    "victim_key": "",
    "sector": null,
@@ -1327,7 +1417,7 @@
    "lat": 39.5,
    "lon": -99.06,
    "precision": "country",
-   "type": "supply_chain",
+   "type": "data_breach",
    "records": null,
    "actor": null,
    "attacker_country": null,
@@ -1335,14 +1425,74 @@
    "attacker_lon": null,
    "summary": null,
    "confidence": "low",
-   "first_seen": "2026-11-12T15:17:54Z",
-   "last_seen": "2026-11-12T15:17:54Z",
+   "first_seen": "2026-11-12T15:24:33Z",
+   "last_seen": "2026-11-12T15:24:33Z",
    "sources": [
     {
-     "name": "Cybersecurity Dive",
-     "url": "https://www.cybersecuritydive.com/news/connectwise-disables-third-party-extensions-cyberattack-ScreenConnect/874490/",
-     "title": "ConnectWise disables third-party extensions as it probes cyberattack targeting ScreenConnect users",
-     "published": "2026-11-12T15:17:54Z"
+     "name": "HIPAA Journal",
+     "url": "https://www.hipaajournal.com/minnesota-epilepsy-group-data-breach/",
+     "title": "Minnesota Epilepsy Group Falls Victim to Second 2026 Cyberattack",
+     "published": "2026-11-12T15:24:33Z"
+    }
+   ]
+  },
+  {
+   "id": "40db23da9b",
+   "victim": null,
+   "victim_key": "",
+   "sector": null,
+   "country": "Japan",
+   "country_key": "Japan",
+   "city": null,
+   "lat": 36.02,
+   "lon": 136.88,
+   "precision": "country",
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-12T12:36:54Z",
+   "last_seen": "2026-11-12T12:36:54Z",
+   "sources": [
+    {
+     "name": "DataBreaches.net",
+     "url": "https://databreaches.net/2026/11/12/jpn-muji-operator-apologizes-for-data-breach/",
+     "title": "JPN: Muji operator apologizes for data breach",
+     "published": "2026-11-12T12:36:54Z"
+    }
+   ]
+  },
+  {
+   "id": "297f7e9b3a",
+   "victim": null,
+   "victim_key": "",
+   "sector": null,
+   "country": "Singapore",
+   "country_key": "Singapore",
+   "city": null,
+   "lat": 1.35,
+   "lon": 103.82,
+   "precision": "country",
+   "type": "other",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-12T12:36:42Z",
+   "last_seen": "2026-11-12T12:36:42Z",
+   "sources": [
+    {
+     "name": "DataBreaches.net",
+     "url": "https://databreaches.net/2026/11/12/sg-aic-hit-by-cybersecurity-incident-personal-data-of-over-4000-healthcare-and-community-care-employees-possibly-affected/",
+     "title": "SG: AIC hit by cybersecurity incident, personal data of over 4,000 healthcare and community care employees possibly affected",
+     "published": "2026-11-12T12:36:42Z"
     }
    ]
   },
@@ -1375,6 +1525,12 @@
      "published": "2026-11-11T20:47:36Z"
     },
     {
+     "name": "DataBreaches.net",
+     "url": "https://databreaches.net/2026/11/11/whitearmor-demands-5-million-from-maersk-claims-theft-of-100gb-of-data/",
+     "title": "WhiteArmor Demands $5 Million from Maersk, Claims Theft of 100GB of Data",
+     "published": "2026-11-11T21:45:18Z"
+    },
+    {
      "name": "Infosecurity Magazine",
      "url": "https://www.infosecurity-magazine.com/news/maersk-data-breach-extortion-group/",
      "title": "Maersk Reveals Data Breach as Extortion Group Demands $5m",
@@ -1385,6 +1541,36 @@
      "url": "https://industrialcyber.co/ransomware/maersk-investigates-legacy-system-breach-after-whitearmor-ransomware-group-claims-100gb-logistics-data-theft/",
      "title": "Maersk investigates legacy-system breach after WhiteArmor ransomware group claims 100GB logistics data theft",
      "published": "2026-11-12T10:09:07Z"
+    }
+   ]
+  },
+  {
+   "id": "417b99b824",
+   "victim": null,
+   "victim_key": "",
+   "sector": null,
+   "country": "United States",
+   "country_key": "United States of America",
+   "city": null,
+   "lat": 39.5,
+   "lon": -99.06,
+   "precision": "country",
+   "type": "supply_chain",
+   "records": "1,806+ Repositories",
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-12T06:42:47Z",
+   "last_seen": "2026-11-12T06:42:47Z",
+   "sources": [
+    {
+     "name": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/4837-hijacked-github-accounts-ran-ci.html",
+     "title": "Attacker Used 4,837 Hijacked GitHub Accounts to Run a CI Secret Stealer in 1,806+ Repositories",
+     "published": "2026-11-12T06:42:47Z"
     }
    ]
   },
@@ -1449,17 +1635,47 @@
    ]
   },
   {
-   "id": "b80a24c893",
+   "id": "84cbc82b08",
    "victim": null,
    "victim_key": "",
    "sector": null,
-   "country": null,
-   "country_key": null,
+   "country": "United States",
+   "country_key": "United States of America",
    "city": null,
-   "lat": null,
-   "lon": null,
-   "precision": "none",
-   "type": "other",
+   "lat": 39.5,
+   "lon": -99.06,
+   "precision": "country",
+   "type": "financial_theft",
+   "records": "$26 Million",
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-11T16:55:59Z",
+   "last_seen": "2026-11-11T16:55:59Z",
+   "sources": [
+    {
+     "name": "DataBreaches.net",
+     "url": "https://databreaches.net/2026/11/11/the-26-million-cyber-heist-rocking-a-small-new-jersey-town/",
+     "title": "The $26 Million Cyber Heist Rocking a Small New Jersey Town",
+     "published": "2026-11-11T16:55:59Z"
+    }
+   ]
+  },
+  {
+   "id": "931e938304",
+   "victim": null,
+   "victim_key": "",
+   "sector": null,
+   "country": "Canada",
+   "country_key": "Canada",
+   "city": null,
+   "lat": 57.75,
+   "lon": -101.57,
+   "precision": "country",
+   "type": "data_breach",
    "records": null,
    "actor": null,
    "attacker_country": null,
@@ -1467,74 +1683,74 @@
    "attacker_lon": null,
    "summary": null,
    "confidence": "low",
-   "first_seen": "2026-11-11T12:00:53Z",
-   "last_seen": "2026-11-11T12:00:53Z",
+   "first_seen": "2026-11-11T15:21:34Z",
+   "last_seen": "2026-11-11T15:21:34Z",
    "sources": [
     {
-     "name": "The Hacker News",
-     "url": "https://thehackernews.com/2026/11/emudhra-revokes-8-more-cas-it.html",
-     "title": "eMudhra Revokes 8 More CAs It Previously Declared Unaffected by Key Compromise",
-     "published": "2026-11-11T12:00:53Z"
+     "name": "DataBreaches.net",
+     "url": "https://databreaches.net/2026/11/11/ca-york-university-breach-exposes-19-years-of-student-health-and-financial-data/",
+     "title": "Ca: York University Breach Exposes 19 Years of Student Health and Financial Data",
+     "published": "2026-11-11T15:21:34Z"
     }
    ]
   },
   {
-   "id": "890bd5d68a",
-   "victim": "Railway",
-   "victim_key": "railway",
+   "id": "186ecfc88a",
+   "victim": null,
+   "victim_key": "",
    "sector": null,
-   "country": null,
-   "country_key": null,
+   "country": "Russia",
+   "country_key": "Russia",
    "city": null,
-   "lat": null,
-   "lon": null,
-   "precision": "none",
+   "lat": 60.0,
+   "lon": 95.0,
+   "precision": "country",
    "type": "data_breach",
-   "records": "$740,000",
+   "records": null,
    "actor": null,
    "attacker_country": null,
    "attacker_lat": null,
    "attacker_lon": null,
    "summary": null,
    "confidence": "low",
-   "first_seen": "2026-11-11T07:49:04Z",
-   "last_seen": "2026-11-11T07:49:04Z",
+   "first_seen": "2026-11-11T14:12:09Z",
+   "last_seen": "2026-11-11T14:12:09Z",
    "sources": [
     {
-     "name": "The Hacker News",
-     "url": "https://thehackernews.com/2026/11/railway-says-stolen-customer-ai-keys.html",
-     "title": "Railway Says Stolen Customer AI Keys Led to $740,000 in Estimated Unauthorized Usage Charges",
-     "published": "2026-11-11T07:49:04Z"
+     "name": "DataBreaches.net",
+     "url": "https://databreaches.net/2026/11/11/2013-breach-at-russian-cybercrime-forum-resurfaces-with-millions-of-victims-credentials/",
+     "title": "2013 breach at Russian cybercrime forum resurfaces with millions of victims’ credentials",
+     "published": "2026-11-11T14:12:09Z"
     }
    ]
   },
   {
-   "id": "b958c22720",
-   "victim": "NEAR AI",
-   "victim_key": "near ai",
+   "id": "ce04062100",
+   "victim": null,
+   "victim_key": "",
    "sector": null,
-   "country": null,
-   "country_key": null,
+   "country": "United States",
+   "country_key": "United States of America",
    "city": null,
-   "lat": null,
-   "lon": null,
-   "precision": "none",
+   "lat": 39.5,
+   "lon": -99.06,
+   "precision": "country",
    "type": "data_breach",
-   "records": "18 Agents",
+   "records": null,
    "actor": null,
    "attacker_country": null,
    "attacker_lat": null,
    "attacker_lon": null,
    "summary": null,
    "confidence": "low",
-   "first_seen": "2026-11-10T19:19:39Z",
-   "last_seen": "2026-11-10T19:19:39Z",
+   "first_seen": "2026-11-11T11:00:08Z",
+   "last_seen": "2026-11-11T11:00:08Z",
    "sources": [
     {
-     "name": "The Hacker News",
-     "url": "https://thehackernews.com/2026/11/sglang-rce-exploit-breaches-near-ai.html",
-     "title": "SGLang RCE Exploit Breaches NEAR AI, Steals Data From 18 Agents and About 100 Users",
-     "published": "2026-11-10T19:19:39Z"
+     "name": "HIPAA Journal",
+     "url": "https://www.hipaajournal.com/premise-health-telecare-corp-enara-health-data-breaches/",
+     "title": "Insider Data Theft Incident Reported by Premise Health",
+     "published": "2026-11-11T11:00:08Z"
     }
    ]
   },
@@ -1599,9 +1815,9 @@
    ]
   },
   {
-   "id": "e56a3763b1",
-   "victim": "Refrigeration Controllers",
-   "victim_key": "refrigeration controllers",
+   "id": "c3e8eb5b17",
+   "victim": "Iran’s IRGC",
+   "victim_key": "irans irgc",
    "sector": null,
    "country": "France",
    "country_key": "France",
@@ -1617,15 +1833,9 @@
    "attacker_lon": 54.29,
    "summary": null,
    "confidence": "medium",
-   "first_seen": "2026-11-10T09:08:20Z",
+   "first_seen": "2026-11-10T13:13:15Z",
    "last_seen": "2026-11-10T13:13:15Z",
    "sources": [
-    {
-     "name": "The Hacker News",
-     "url": "https://thehackernews.com/2026/11/france-blames-iran-for-sabotage-attack.html",
-     "title": "France Blames Iran for Sabotage Attack on Refrigeration Controllers at About 700 Retail Sites",
-     "published": "2026-11-10T09:08:20Z"
-    },
     {
      "name": "The Cyber Express",
      "url": "https://thecyberexpress.com/supermarket-refrigeration-cyberattack-iran/",
@@ -1911,36 +2121,6 @@
    ]
   },
   {
-   "id": "9e35110e9d",
-   "victim": "French Blood Banks",
-   "victim_key": "french blood banks",
-   "sector": null,
-   "country": "France",
-   "country_key": "France",
-   "city": null,
-   "lat": 46.61,
-   "lon": 2.34,
-   "precision": "country",
-   "type": "other",
-   "records": null,
-   "actor": null,
-   "attacker_country": null,
-   "attacker_lat": null,
-   "attacker_lon": null,
-   "summary": null,
-   "confidence": "medium",
-   "first_seen": "2026-11-04T19:01:57Z",
-   "last_seen": "2026-11-04T19:01:57Z",
-   "sources": [
-    {
-     "name": "Security Affairs",
-     "url": "https://securityaffairs.com/202431/hacking/cyberattack-hits-french-blood-banks-as-hackers-target-refrigeration-systems-across-europe.html",
-     "title": "Cyberattack Hits French Blood Banks as Hackers Target Refrigeration Systems Across Europe",
-     "published": "2026-11-04T19:01:57Z"
-    }
-   ]
-  },
-  {
    "id": "d40f262688",
    "victim": null,
    "victim_key": "",
@@ -1967,6 +2147,36 @@
      "url": "https://www.infosecurity-magazine.com/news/3am-ransomware-hybrid-ai-uk-school/",
      "title": "3AM Ransomware Used Human-AI Hybrid Tactics in UK School Estate Compromise",
      "published": "2026-11-04T12:00:00Z"
+    }
+   ]
+  },
+  {
+   "id": "e860e4a6f5",
+   "victim": null,
+   "victim_key": "",
+   "sector": null,
+   "country": "United States",
+   "country_key": "United States of America",
+   "city": null,
+   "lat": 39.5,
+   "lon": -99.06,
+   "precision": "country",
+   "type": "other",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-04T11:05:10Z",
+   "last_seen": "2026-11-04T11:05:10Z",
+   "sources": [
+    {
+     "name": "HIPAA Journal",
+     "url": "https://www.hipaajournal.com/university-hospitals-eyemed-facial-surgery-group-data-breaches/",
+     "title": "University Hospitals Working on Restoring Systems After Cyberattack",
+     "published": "2026-11-04T11:05:10Z"
     }
    ]
   },
@@ -2061,7 +2271,7 @@
    ]
   },
   {
-   "id": "8158b1dc74",
+   "id": "373769a804",
    "victim": null,
    "victim_key": "",
    "sector": null,
@@ -2071,6 +2281,36 @@
    "lat": null,
    "lon": null,
    "precision": "none",
+   "type": "financial_theft",
+   "records": "$6.34 Billion",
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-03T19:04:58Z",
+   "last_seen": "2026-11-03T19:04:58Z",
+   "sources": [
+    {
+     "name": "Wired Security",
+     "url": "https://www.wired.com/story/binance-says-hackers-used-well-known-tricks-to-carry-out-a-dollar634-billion-heist/",
+     "title": "Binance Says Hackers Used Well-Known Tricks to Carry Out a $6.34 Billion Heist",
+     "published": "2026-11-03T19:04:58Z"
+    }
+   ]
+  },
+  {
+   "id": "0598a73861",
+   "victim": "Marathon Health Data",
+   "victim_key": "marathon health data",
+   "sector": null,
+   "country": "United States",
+   "country_key": "United States of America",
+   "city": null,
+   "lat": 39.5,
+   "lon": -99.06,
+   "precision": "country",
    "type": "data_breach",
    "records": null,
    "actor": null,
@@ -2078,15 +2318,21 @@
    "attacker_lat": null,
    "attacker_lon": null,
    "summary": null,
-   "confidence": "low",
-   "first_seen": "2026-11-02T22:27:24Z",
-   "last_seen": "2026-11-02T22:27:24Z",
+   "confidence": "medium",
+   "first_seen": "2026-11-03T11:00:10Z",
+   "last_seen": "2026-11-03T11:26:17Z",
    "sources": [
     {
-     "name": "Dark Reading",
-     "url": "https://www.darkreading.com/cyberattacks-data-breaches/binance-hack-test-attack-paths",
-     "title": "One Compromised Laptop, Billions Lost: The Binance Attack-Path Warning",
-     "published": "2026-11-02T22:27:24Z"
+     "name": "HIPAA Journal",
+     "url": "https://www.hipaajournal.com/cognitive-health-technologies-data-breach/",
+     "title": "Cognitive Health Technologies Data Breach Affects 49,500 Individuals",
+     "published": "2026-11-03T11:00:10Z"
+    },
+    {
+     "name": "HIPAA Journal",
+     "url": "https://www.hipaajournal.com/marathon-health-data-breach/",
+     "title": "Marathon Health Data Breach Reportedly Affects 5.7 Million Individuals",
+     "published": "2026-11-03T11:26:17Z"
     }
    ]
   },
@@ -2207,6 +2453,36 @@
      "url": "https://www.infosecurity-magazine.com/news/energy-giant-engie-supply-chain/",
      "title": "Energy Giant Engie Notifies Customers of Supply Chain Breach",
      "published": "2026-10-28T14:05:00Z"
+    }
+   ]
+  },
+  {
+   "id": "ca44aa5255",
+   "victim": null,
+   "victim_key": "",
+   "sector": null,
+   "country": "United States",
+   "country_key": "United States of America",
+   "city": null,
+   "lat": 39.5,
+   "lon": -99.06,
+   "precision": "country",
+   "type": "ransomware",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-10-28T10:10:28Z",
+   "last_seen": "2026-10-28T10:10:28Z",
+   "sources": [
+    {
+     "name": "HIPAA Journal",
+     "url": "https://www.hipaajournal.com/university-new-mexico-health-system-cyberattack/",
+     "title": "University of New Mexico Health System Diverts Ambulances Due to Ransomware Attack",
+     "published": "2026-10-28T10:10:28Z"
     }
    ]
   },
@@ -2511,36 +2787,6 @@
    ]
   },
   {
-   "id": "ee3ad99ea6",
-   "victim": "Yonsei University",
-   "victim_key": "yonsei university",
-   "sector": null,
-   "country": null,
-   "country_key": null,
-   "city": null,
-   "lat": null,
-   "lon": null,
-   "precision": "none",
-   "type": "data_breach",
-   "records": null,
-   "actor": null,
-   "attacker_country": null,
-   "attacker_lat": null,
-   "attacker_lon": null,
-   "summary": null,
-   "confidence": "low",
-   "first_seen": "2026-10-22T07:29:35Z",
-   "last_seen": "2026-10-22T07:29:35Z",
-   "sources": [
-    {
-     "name": "The Cyber Express",
-     "url": "https://thecyberexpress.com/yonsei-university-cyberattack/",
-     "title": "Yonsei University Cyberattack Hits 10,000 Students, Months After Sogang Breach",
-     "published": "2026-10-22T07:29:35Z"
-    }
-   ]
-  },
-  {
    "id": "eee29200b0",
    "victim": null,
    "victim_key": "",
@@ -2601,36 +2847,6 @@
    ]
   },
   {
-   "id": "a2455f6f78",
-   "victim": "BAE Systems",
-   "victim_key": "bae systems",
-   "sector": null,
-   "country": null,
-   "country_key": null,
-   "city": null,
-   "lat": null,
-   "lon": null,
-   "precision": "none",
-   "type": "other",
-   "records": null,
-   "actor": null,
-   "attacker_country": null,
-   "attacker_lat": null,
-   "attacker_lon": null,
-   "summary": null,
-   "confidence": "low",
-   "first_seen": "2026-10-19T07:47:08Z",
-   "last_seen": "2026-10-19T07:47:08Z",
-   "sources": [
-    {
-     "name": "The Cyber Express",
-     "url": "https://thecyberexpress.com/bae-systems-cyberattack-halts-us-bankruptcy/",
-     "title": "BAE Systems Cyberattack Halts Bankruptcy Notices at Every U.S. Federal Court",
-     "published": "2026-10-19T07:47:08Z"
-    }
-   ]
-  },
-  {
    "id": "5987fef0dd",
    "victim": null,
    "victim_key": "",
@@ -2657,6 +2873,38 @@
      "url": "https://www.infosecurity-magazine.com/news/ransomware-threats-physical/",
      "title": "Ransomware Gangs Increasingly Turn to Threats of Physical Violence to Extort Payments",
      "published": "2026-10-16T13:00:00Z"
+    }
+   ]
+  },
+  {
+   "date_precision": "month",
+   "id": "a69d1ce6d8",
+   "victim": null,
+   "victim_key": "",
+   "sector": null,
+   "country": "South Korea",
+   "country_key": "South Korea",
+   "city": null,
+   "lat": 36.43,
+   "lon": 127.82,
+   "precision": "country",
+   "type": "other",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-10-15T12:00:00Z",
+   "last_seen": "2026-10-15T12:00:00Z",
+   "sources": [
+    {
+     "name": "CSIS",
+     "url": "https://www.csis.org/programs/strategic-technologies-program/significant-cyber-incidents#entry-f99302b98d04",
+     "title": "Cyber incident in South Korea (CSIS significant cyber incidents timeline)",
+     "published": "2026-10-15T12:00:00Z",
+     "date_precision": "month"
     }
    ]
   },

@@ -119,7 +119,7 @@
   // Browsers refuse to run the map from a file on disk; explain what to do instead.
   if (location.protocol === 'file:') {
     var box = document.getElementById('loading');
-    box.style.cssText = 'position:fixed;inset:0;z-index:99;display:grid;place-items:center;padding:24px;background:#0b0b0d;color:#f3f1ee;font:17px/1.5 system-ui,sans-serif;text-align:center';
+    box.style.cssText = 'position:fixed;inset:0;z-index:99;display:grid;place-items:center;padding:24px;background:#0b1e16;color:#e6eee8;font:17px/1.5 system-ui,sans-serif;text-align:center';
     box.innerHTML = '<div style="max-width:560px"><p style="font-size:22px;font-weight:700;margin:0 0 12px">This map needs to be opened through a web server</p>' +
       '<p style="margin:0 0 10px">Browsers block 3D pages opened straight from a file, so double-clicking <code>index.html</code> will not work.</p>' +
       '<p style="margin:0"><b>To preview it on this computer:</b> double-click <b>Preview map.cmd</b> in this folder.</p></div>';

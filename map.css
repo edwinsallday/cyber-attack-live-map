@@ -1,17 +1,24 @@
-/* Live Cyber Attack Map: dark dashboard with a burnt-orange accent. */
+/* Live Cyber Attack Map: dark dashboard in Datafloq's brand colours.
+   Greens and ink are datafloq.com's own tokens: --df-brand-green #5aaf62, --df-brand-green-bright #8ae64d,
+   --df-brand-green-hover #4a9653, --df-brand-ink #0b1e16. Panel and text shades match the site's dark theme. */
 :root {
-  --bg: #0b0b0d;
-  --panel: rgba(22, 22, 24, 0.86);
-  --panel-solid: #161618;
-  --inset: #0e0e10;
-  --line: rgba(255, 255, 255, 0.075);
-  --line-strong: rgba(255, 255, 255, 0.14);
-  --accent: #ff4b14;
-  --accent-soft: rgba(255, 75, 20, 0.16);
-  --text: #f3f1ee;
-  --muted: #9b968f;
-  --good: #2fd47a;
-  --warn: #ffb23e;
+  --df-green: #5aaf62;
+  --df-green-bright: #8ae64d;
+  --df-green-hover: #4a9653;
+  --df-ink: #0b1e16;
+  --df-gradient: linear-gradient(90deg, #5aaf62 0%, #8ae64d 100%);
+  --bg: var(--df-ink);
+  --panel: rgba(16, 40, 28, 0.88);
+  --panel-solid: #10281c;
+  --inset: #081610;
+  --line: rgba(138, 230, 77, 0.12);
+  --line-strong: rgba(138, 230, 77, 0.24);
+  --accent: var(--df-green-bright);
+  --accent-soft: rgba(138, 230, 77, 0.14);
+  --text: #e6eee8;
+  --muted: #b7c7bb;
+  --good: var(--df-green-bright);
+  --warn: #ffb547;
   --radius: 14px;
   --gap: 14px;
   color-scheme: dark;
@@ -27,8 +34,8 @@ h1, h2, h3, p { margin: 0; }
 #app { height: 100%; min-height: 660px; padding: var(--gap); display: grid; gap: var(--gap);
   grid-template-columns: 236px minmax(0, 1fr) minmax(300px, 380px); grid-template-rows: auto minmax(0, 1fr);
   background:
-    radial-gradient(90% 60% at 34% -12%, rgba(255, 75, 20, 0.42), transparent 62%),
-    radial-gradient(60% 50% at 100% 0%, rgba(255, 120, 40, 0.10), transparent 70%),
+    radial-gradient(90% 60% at 34% -12%, rgba(90, 175, 98, 0.38), transparent 62%),
+    radial-gradient(60% 50% at 100% 0%, rgba(138, 230, 77, 0.10), transparent 70%),
     var(--bg); }
 .side, .kpi, .mapPanel, .activity { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); backdrop-filter: blur(14px); }
 
@@ -41,7 +48,7 @@ h1, h2, h3, p { margin: 0; }
 .mode { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin: 18px 0 8px; }
 .mode button { padding: 10px 8px; border: 1px solid var(--line-strong); border-radius: 8px; background: rgba(255, 255, 255, 0.03); cursor: pointer; font-weight: 500; font-size: 14px; color: var(--muted); }
 .mode button:hover { color: var(--text); }
-.mode button[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+.mode button[aria-pressed="true"] { background: var(--df-gradient); border-color: var(--df-green); color: var(--df-ink); font-weight: 600; }
 
 #legend { display: flex; flex-direction: column; gap: 2px; margin: 18px -4px 0; }
 #legend button { position: relative; display: flex; align-items: center; gap: 10px; width: 100%; padding: 9px 10px 9px 14px; border: 0; border-radius: 8px; background: none; cursor: pointer; text-align: left; font-size: 14.5px; color: var(--muted); }
@@ -85,15 +92,15 @@ h1, h2, h3, p { margin: 0; }
 
 .ticker { display: flex; align-items: center; gap: 10px; margin: 0 16px 10px; padding: 7px 10px 7px 8px; border: 1px solid var(--line); border-radius: 9px; background: rgba(0, 0, 0, 0.25); }
 .ticker[hidden] { display: none; }
-.ticker .live { flex: none; display: inline-flex; align-items: center; gap: 6px; padding: 2px 8px; border-radius: 99px; background: var(--accent-soft); color: #ff8a63; font-size: 11px; font-weight: 600; letter-spacing: 0.09em; }
+.ticker .live { flex: none; display: inline-flex; align-items: center; gap: 6px; padding: 2px 8px; border-radius: 99px; background: var(--accent-soft); color: var(--df-green-bright); font-size: 11px; font-weight: 600; letter-spacing: 0.09em; }
 .ticker .live i { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); animation: livePulse 1.6s ease-out infinite; }
 .ticker .live.replay { background: rgba(255, 178, 62, 0.14); color: #ffc56e; }
 .ticker .live.replay i { background: var(--warn); animation: none; }
-@keyframes livePulse { 0% { box-shadow: 0 0 0 0 rgba(255, 75, 20, 0.7); } 100% { box-shadow: 0 0 0 9px rgba(255, 75, 20, 0); } }
+@keyframes livePulse { 0% { box-shadow: 0 0 0 0 rgba(138, 230, 77, 0.7); } 100% { box-shadow: 0 0 0 9px rgba(138, 230, 77, 0); } }
 #tickText { min-width: 0; flex: 1; padding: 0; border: 0; background: none; text-align: left; cursor: pointer; font-size: 13.5px; font-weight: 400; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; opacity: 0; }
 #tickText.in { animation: tickIn 0.6s ease-out forwards; }
 @keyframes tickIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: none; } }
-#tickText:hover { color: #ff8a63; }
+#tickText:hover { color: var(--df-green-bright); }
 #tickText .tdot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 8px; }
 #tickText .tago { color: var(--muted); }
 
@@ -162,7 +169,7 @@ h1, h2, h3, p { margin: 0; }
 #card ul { margin: 0; padding-left: 18px; font-size: 14px; }
 #card li { margin: 4px 0; }
 #card .src { overflow-wrap: anywhere; }
-#card .src a { color: #ff8a63; }
+#card .src a { color: var(--df-green-bright); }
 
 /* ---------- medium widths: stat cards two by two ---------- */
 @media (max-width: 1240px) and (min-width: 900px) {
