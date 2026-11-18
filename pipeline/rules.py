@@ -60,7 +60,19 @@ HQ = {
     "Trezor": "Czechia", "Nokia": "Finland", "Ericsson": "Sweden", "Vodafone": "United Kingdom", "NHS": "United Kingdom",
     "Marks & Spencer": "United Kingdom", "Jaguar Land Rover": "United Kingdom", "Check Point": "Israel", "Qantas": "Australia",
     "Optus": "Australia", "Medibank": "Australia", "Maersk": "Denmark", "Expedia": "United States", "Uber": "United States",
-    "ConnectWise": "United States", "N-able": "United States", "CrowdStrike": "United States", "Airbus": "France", "Orange": "France", "Ubisoft": "France",
+    "ConnectWise": "United States", "N-able": "United States", "CrowdStrike": "United States",
+    # banks, payment companies and digital wallets
+    "Crédit Mutuel": "France", "Credit Mutuel": "France", "Crédit Agricole": "France", "BNP Paribas": "France",
+    "Société Générale": "France", "HSBC": "United Kingdom", "Barclays": "United Kingdom", "Lloyds": "United Kingdom",
+    "NatWest": "United Kingdom", "Santander": "Spain", "BBVA": "Spain", "Deutsche Bank": "Germany", "Commerzbank": "Germany",
+    "ING": "Netherlands", "ABN AMRO": "Netherlands", "Rabobank": "Netherlands", "UBS": "Switzerland", "UniCredit": "Italy",
+    "JPMorgan": "United States", "Chase": "United States", "Wells Fargo": "United States", "Bank of America": "United States",
+    "Citibank": "United States", "Citigroup": "United States", "Capital One": "United States", "Goldman Sachs": "United States",
+    "Commonwealth Bank": "Australia", "Westpac": "Australia", "ANZ": "Australia", "RBC": "Canada", "TD Bank": "Canada",
+    "DBS": "Singapore", "PayPal": "United States", "Venmo": "United States", "Cash App": "United States", "Zelle": "United States",
+    "Stripe": "United States", "Revolut": "United Kingdom", "Monzo": "United Kingdom", "Klarna": "Sweden", "Adyen": "Netherlands",
+    "GCash": "Philippines", "PayMaya": "Philippines", "M-Pesa": "Kenya", "Safaricom": "Kenya", "Paytm": "India",
+    "Alipay": "China", "Nubank": "Brazil", "Mercado Pago": "Argentina", "Airbus": "France", "Orange": "France", "Ubisoft": "France",
 }
 
 ATTACKER_AFTER = re.compile(r"^[\s-]*(?:-?(?:linked|nexus|aligned|backed|based|sponsored)\b|(?:state-sponsored |nation-state )?(?:hackers?|threat actors?|state actors?|spies|apt\b|cyber unit|campaign|group)|\(?aka\b|['’]s (?:islamic|irgc|gru|mss|lazarus|apt|\$?\d|\w+ (?:hackers?|group|scheme|spies)))", re.I)
@@ -155,14 +167,26 @@ GENERIC_NAME = re.compile(r"(?:^|\s)(?:Giant|Firm|Maker|Provider|Operator|Retail
 # ---------- sector ----------
 # Checked in order; the first match wins. Matched against the headline first, then the start of the excerpt.
 SECTOR_RULES = [
-    ("Crypto & blockchain", r"crypto|bitcoin|ethereum|blockchain|\bdefi\b|binance|coinbase|kraken|bybit|bitget|trezor|\bwallets?\b.*\b(?:seed|recovery)"),
-    ("Healthcare", r"hospital|health|medical|clinic|patient|pharma|dental|hipaa|nhs\b|biotech|oncology|epilep|physician|ambulance|care home|"
-                   r"laborator|healthcare"),
+    ("Crypto & digital assets", r"crypto|bitcoin|ethereum|blockchain|\bdefi\b|binance|coinbase|kraken|bybit|bitget|trezor|ledger wallet|"
+                                r"\bnft\b|stablecoin|\bwallets?\b.*\b(?:seed|recovery|private key)"),
+    # "health" alone also describes data ("student health and financial data"), so it counts only when no
+    # data word follows closely.
+    ("Healthcare", r"hospital|clinic|medical|patients?\b|pharma|dental|hipaa|\bnhs\b|biotech|oncology|epilep|physician|ambulance|"
+                   r"surger|care home|nursing home|laborator|health ?care|health (?:system|service|services|network|group|centre|"
+                   r"center|authority|board|plan|insurer|trust)|\bhealth\b(?![\w ,&-]{0,25}\b(?:data|information|records|details)\b)"),
     ("Education", r"universit|college|school|student|education|academ|campus|k-12|alumni"),
-    ("Finance & insurance", r"\bbank|financ|insur|credit union|fintech|payment|lender|mortgage|investment|securities|brokerage|"
-                            r"pension|\bloan|trading account|stockal|cr[ée]dit"),
+    ("Banking & finance", r"\bbanks?\b|banking|credit union|financial (?:services|institution|firm|group|company|regulator|sector)|"
+                          r"fintech|insur(?:er|ance)|lender|mortgage|investment firm|asset manag|securities|brokerage|stock exchange|"
+                          r"pension|\bloans?\b|trading account|stockal|cr[ée]dit (?:mutuel|agricole|suisse)|\bswift\b|\batms?\b|"
+                          r"payment (?:app|provider|processor|platform|company|service|network)|card (?:issuer|processor)|"
+                          r"digital wallet|e-?wallet|mobile money|money transfer|remittance|paypal|venmo|cash app|zelle|revolut|"
+                          r"\bwise\b|klarna|stripe|\bsquare\b|gcash|\bmaya\b|paymaya|m-pesa|paytm|alipay|wechat pay|apple pay|"
+                          r"google pay|\bvisa\b|mastercard|american express|\bamex\b"),
     ("Telecoms", r"telecom|telco|mobile operator|mobile network|carrier|broadband|\bisp\b|\bsms\b"),
-    ("Energy & utilities", r"\benergy|\boil\b|\bgas\b|power grid|power plant|electric|utilit|water (?:utility|supply|treatment)|nuclear|engie"),
+    ("Energy & utilities", r"\benergy\b|\boil\b|\bgas\b(?! station)|power (?:grid|plant|station|company|utility|supplier|provider|"
+                           r"outage|network|distribution)|electricity|electric (?:utility|company|cooperative|grid)|\butilit(?:y|ies)\b|"
+                           r"water (?:utility|supply|treatment|system|plant|authority|company|district)|wastewater|nuclear|"
+                           r"pipeline operator|solar|wind farm|substation|\bgrid\b|engie"),
     ("Transport & logistics", r"airline|airport|aviation|\brail|railway|shipping|maritime|\bport of|logistics|transport|freight|"
                               r"maersk|transit|metro\b|passenger|widerøe|tunnel|postal|la poste|maileva|post office|courier"),
     ("Travel & hospitality", r"hotel|resort|restaurant|travel|cruise|theme park|legoland|expedia|booking|karaoke|casino"),
@@ -182,6 +206,18 @@ SECTOR_RULES = [
                    r"teams|exchange servers?|infoblox|gyazo"),
 ]
 SECTOR_RES = [(name, re.compile(pat, re.I)) for name, pat in SECTOR_RULES]
+
+# "Critical infrastructure": the essential-services sectors, plus stories about industrial control systems,
+# operational technology or critical infrastructure in general.
+CI_SECTORS = {"Energy & utilities", "Healthcare", "Banking & finance", "Telecoms", "Transport & logistics"}
+CI_WORDS = re.compile(r"critical infrastructure|critical national infrastructure|\bics\b|\bscada\b|\bplcs?\b|industrial control|"
+                      r"operational technology|\bot (?:network|system|environment|device|controller)s?|refrigeration|"
+                      r"cold chain|food supply|water (?:utility|supply|treatment|system)|power grid|electricity|dam\b|"
+                      r"emergency services|911\b", re.I)
+
+
+def is_critical(sector, text):
+    return sector in CI_SECTORS or bool(CI_WORDS.search(text or ""))
 
 
 def sector_of(title, excerpt):
@@ -234,6 +270,7 @@ def extract(items):
         m_scale, m_actor = SCALE.search(title), ACTORS.search(text)      # scale from the headline only: excerpts are too noisy
         rec.update(
             victim=victim, country=country, sector=sector_of(title, excerpt),
+            critical=is_critical(sector_of(title, excerpt), title + " " + excerpt[:300]),
             attack_type=next((t for t, pat in TYPE_RULES if re.search(pat, low)), "other"),
             records=m_scale.group(1).strip() if m_scale else None,
             actor=m_actor.group(1) if m_actor else None,

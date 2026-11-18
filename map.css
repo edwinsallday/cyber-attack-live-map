@@ -50,13 +50,13 @@ h1, h2, h3, p { margin: 0; }
 .mode button:hover { color: var(--text); }
 .mode button[aria-pressed="true"] { background: var(--df-gradient); border-color: var(--df-green); color: var(--df-ink); font-weight: 600; }
 
-#legend { display: flex; flex-direction: column; gap: 2px; margin: 18px -4px 0; }
-#legend button { position: relative; display: flex; align-items: center; gap: 10px; width: 100%; padding: 9px 10px 9px 14px; border: 0; border-radius: 8px; background: none; cursor: pointer; text-align: left; font-size: 14.5px; color: var(--muted); }
-#legend button:hover { color: var(--text); background: rgba(255, 255, 255, 0.03); }
-#legend button[aria-current="true"] { color: var(--text); background: rgba(255, 255, 255, 0.06); }
-#legend button[aria-current="true"]::before { content: ""; position: absolute; left: 0; top: 8px; bottom: 8px; width: 2px; border-radius: 2px; background: var(--text); }
-#legend .sw { flex: none; width: 9px; height: 9px; border-radius: 3px; background: var(--muted); }
-#legend .n { margin-left: auto; font-size: 12.5px; font-variant-numeric: tabular-nums; color: var(--muted); }
+#legend , #focus { display: flex; flex-direction: column; gap: 2px; margin: 18px -4px 0; }
+#legend button , #focus button { position: relative; display: flex; align-items: center; gap: 10px; width: 100%; padding: 9px 10px 9px 14px; border: 0; border-radius: 8px; background: none; cursor: pointer; text-align: left; font-size: 14.5px; color: var(--muted); }
+#legend button:hover , #focus button:hover { color: var(--text); background: rgba(255, 255, 255, 0.03); }
+#legend button[aria-current="true"] , #focus button[aria-current="true"] { color: var(--text); background: rgba(255, 255, 255, 0.06); }
+#legend button[aria-current="true"]::before , #focus button[aria-current="true"]::before { content: ""; position: absolute; left: 0; top: 8px; bottom: 8px; width: 2px; border-radius: 2px; background: var(--text); }
+#legend .sw , #focus .sw { flex: none; width: 9px; height: 9px; border-radius: 3px; background: var(--muted); }
+#legend .n , #focus .n { margin-left: auto; font-size: 12.5px; font-variant-numeric: tabular-nums; color: var(--muted); }
 
 .side-foot { margin-top: auto; padding-top: 16px; }
 .about { border-top: 1px solid var(--line); padding-top: 12px; margin-bottom: 8px; font-size: 13px; color: var(--muted); }
@@ -225,11 +225,11 @@ h1, h2, h3, p { margin: 0; }
   #app { height: auto; min-height: 0; grid-template-columns: minmax(0, 1fr); grid-template-rows: none; padding: 12px; gap: 12px; }
   .side { grid-row: auto; overflow: visible; padding: 16px; }
   .side h1 { margin-top: 14px; }
-  #legend { flex-direction: row; overflow-x: auto; margin: 14px -16px 0; padding: 0 16px 4px; gap: 6px; scrollbar-width: none; }
-  #legend button { flex: none; width: auto; padding: 8px 12px; border: 1px solid var(--line); border-radius: 99px; white-space: nowrap; }
-  #legend button[aria-current="true"]::before { display: none; }
-  #legend button[aria-current="true"] { border-color: var(--text); }
-  #legend .n { margin-left: 4px; }
+  #legend , #focus { flex-direction: row; overflow-x: auto; margin: 14px -16px 0; padding: 0 16px 4px; gap: 6px; scrollbar-width: none; }
+  #legend button , #focus button { flex: none; width: auto; padding: 8px 12px; border: 1px solid var(--line); border-radius: 99px; white-space: nowrap; }
+  #legend button[aria-current="true"]::before , #focus button[aria-current="true"]::before { display: none; }
+  #legend button[aria-current="true"] , #focus button[aria-current="true"] { border-color: var(--text); }
+  #legend .n , #focus .n { margin-left: 4px; }
   .side-foot { margin-top: 14px; padding-top: 0; }
   .kpis { grid-column: auto; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
   .kpi { min-height: 92px; padding: 12px; }
@@ -266,3 +266,11 @@ h1, h2, h3, p { margin: 0; }
 .bdhead { flex-wrap: wrap; row-gap: 4px; }
 #bdNote { font-size: 11.5px; }
 @media (max-width: 1240px) and (min-width: 900px) { #bdNote { display: none; } }
+
+/* sidebar section headings */
+.side-h { margin: 18px 0 2px; font-size: 11.5px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+#focus { margin-top: 6px; }
+#legend { margin-top: 6px; }
+#focus button[aria-current="true"] { color: var(--text); background: var(--accent-soft); }
+#focus .sw { border-radius: 50%; }
+@media (max-width: 899px) { .side-h { margin-top: 14px; } }

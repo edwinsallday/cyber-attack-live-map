@@ -303,6 +303,11 @@ def victim_key(name):
 
 
 STOP = set("that this with from into over after about their they have been were will says said more than amid your what when".split())
+# Words nearly every breach headline shares; they say nothing about which incident it is.
+STOP |= set("data breach breaches breached hack hacked hackers attack attacks attacker attackers cyberattack cyberattacks cyber "
+            "security incident ransomware stolen steal stole users customers patients employees people million billion "
+            "affecting affects affected impacts impacting exposes exposed exposing confirms confirmed reports reported "
+            "reveals discloses notifies personal information leak leaked leaks systems system company firm".split())
 
 
 def words(title):
@@ -339,6 +344,7 @@ def merge(incidents, items, results):
             r = {**r, "country": it["default_country"], "confidence": "low", "country_source": "source"}
         if not r.get("sector") and it.get("default_sector"):
             r = {**r, "sector": it["default_sector"]}
+        r = {**r, "critical": bool(r.get("critical")) or r.get("sector") in rules.CI_SECTORS}
         title = it["title"]
         if it.get("facts_only"):          # the source's own wording is not republished; show a label built from the facts
             where = r.get("country") or "an unreported country"
@@ -359,6 +365,7 @@ def merge(incidents, items, results):
                 twin["last_seen"] = twin["sources"][-1]["published"]
                 for f in ("records", "actor", "city", "sector"):      # a later report may add detail
                     twin[f] = twin.get(f) or r.get(f)
+                twin["critical"] = bool(twin.get("critical")) or r["critical"] or twin.get("sector") in rules.CI_SECTORS
                 if not twin.get("country_key") and country_key(r.get("country")):   # a later report names the country
                     t_lat, t_lon, t_prec = locate(r.get("country"), None, None)
                     twin.update(country=r["country"], country_key=country_key(r["country"]), lat=t_lat, lon=t_lon,
@@ -386,6 +393,7 @@ def merge(incidents, items, results):
             "lat": lat, "lon": lon, "precision": precision, "country_source": r.get("country_source"),
             "type": r["attack_type"], "records": r.get("records"), "actor": r.get("actor"),
             "attacker_country": a_country, "attacker_lat": a_lat, "attacker_lon": a_lon,
+            "critical": r["critical"],
             "summary": r.get("summary"), "confidence": r.get("confidence", "low"),
             "first_seen": it["published"], "last_seen": it["published"], "sources": [src],
         })

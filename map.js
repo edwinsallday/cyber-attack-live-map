@@ -314,6 +314,21 @@ const daysAgo = (iso) => (Date.now() - Date.parse(iso)) / DAY;
 const countBy = (arr, key) => { const m = new Map(); for (const o of arr) { const k = key(o); if (k) m.set(k, (m.get(k) || 0) + 1); } return m; };
 const topOf = (m) => [...m].sort((a, b) => b[1] - a[1])[0];
 const plural = (n, one, many) => `${n} ${n === 1 ? one : many}`;
+// Sectors always listed in the dropdown (even with no incidents yet), in this order.
+const SECTOR_ORDER = ['Healthcare', 'Banking & finance', 'Crypto & digital assets', 'Energy & utilities', 'Telecoms',
+  'Transport & logistics', 'Government & defence', 'Education', 'Retail & e-commerce', 'Manufacturing & industry', 'Technology',
+  'Media & entertainment', 'Travel & hospitality', 'Legal & professional services', 'Charities & non-profits'];
+const CI = '__ci';                     // dropdown value for "all critical infrastructure"
+const CI_LABEL = 'Critical infrastructure';
+const FOCUS = [
+  { label: 'Hospitals & healthcare', value: 'Healthcare', color: '#ff7a8a' },
+  { label: 'Banks & digital wallets', value: 'Banking & finance', color: '#5fd4ff' },
+  { label: 'Power & utilities', value: 'Energy & utilities', color: '#ffd166' },
+  { label: CI_LABEL, value: CI, color: '#8ae64d', title: 'Energy and utilities, healthcare, banking and finance, telecoms and transport, plus attacks on industrial control systems' },
+  { label: 'Crypto & digital assets', value: 'Crypto & digital assets', color: '#c39bff' },
+];
+const sectorLabel = (v) => (v === CI ? CI_LABEL : v);
+const inSector = (c, v) => (v === CI ? !!c.critical : c.sector === v);
 // Collection is complete only from the date the map started collecting continuously (data.coverage_from).
 // Period comparisons are shown only when both periods fall after it; earlier days are drawn dimmed.
 let coverageFrom = null;
@@ -324,7 +339,7 @@ const coveredFrom = (days) => new Date(Date.parse(coverageFrom) + days * DAY).to
 function matches(o, ignoreWindow) {
   const c = o.c, days = Number(windowSel.value), q = search.value.trim().toLowerCase();
   if (onlyType && typeKey(c) !== onlyType) return false;
-  if (sectorSel.value && c.sector !== sectorSel.value) return false;
+  if (sectorSel.value && !inSector(c, sectorSel.value)) return false;
   if (onlyCountry && c.country_key !== onlyCountry) return false;
   if (!ignoreWindow && days && ageHours(c.last_seen) > days * 24) return false;
   if (!q) return true;
@@ -355,7 +370,7 @@ function drawChips() {
   };
   const chips = [];
   if (onlyType) chips.push(chip(TYPES[onlyType].label, () => { onlyType = ''; }));
-  if (sectorSel.value) chips.push(chip(sectorSel.value, () => { sectorSel.value = ''; }));
+  if (sectorSel.value) chips.push(chip(sectorLabel(sectorSel.value), () => { sectorSel.value = ''; }));
   if (onlyCountry) chips.push(chip(countryName.get(onlyCountry) || onlyCountry, () => { onlyCountry = ''; }));
   if (search.value.trim()) chips.push(chip('“' + search.value.trim() + '”', () => { search.value = ''; }));
   $('#chips').replaceChildren(...chips);
@@ -376,6 +391,7 @@ function refresh() {
     + (feedErrors.length ? 'Some news sources could not be read on the last update.' : '');
   if (selected && !shownSet.has(selected)) select(null);
   for (const b of $('#legend').children) b.setAttribute('aria-current', String(b.dataset.type === onlyType));
+  for (const b of $('#focus').children) b.setAttribute('aria-current', String(b.dataset.value === sectorSel.value));
   outlineCountries(shown);
   ticker.items = shown.slice(0, 6); ticker.i = -1; tick();
   drawChips(); drawStats(shown); drawBreakdown(shown);
@@ -454,7 +470,7 @@ function drawStats(shown) {
 function drawInsight(w) {
   const n = w.now.length, p = w.prev.length, parts = [];
   if (!n && !p) { $('#insight').hidden = true; return; }
-  const scope = [onlyType && TYPES[onlyType].label.toLowerCase(), sectorSel.value && sectorSel.value.toLowerCase(),
+  const scope = [onlyType && TYPES[onlyType].label.toLowerCase(), sectorSel.value && sectorLabel(sectorSel.value).toLowerCase(),
     onlyCountry && 'in ' + countryName.get(onlyCountry)].filter(Boolean).join(', ');
   let s = `${plural(n, 'incident was', 'incidents were')} reported in the last 7 days${scope ? ' (' + scope + ')' : ''}`;
   const canCompare = coveredFor(14);
@@ -491,7 +507,7 @@ function drawBreakdown(shown) {
   }
   const key = { country: o => o.c.country_key, sector: o => o.c.sector, type: o => typeKey(o.c) }[bdTab];
   const label = { country: k => countryName.get(k) || k, sector: k => k, type: k => TYPES[k].label }[bdTab];
-  const active = { country: onlyCountry, sector: sectorSel.value, type: onlyType }[bdTab];
+  const active = { country: onlyCountry, sector: sectorSel.value === CI ? '' : sectorSel.value, type: onlyType }[bdTab];
   const days = Number(windowSel.value);
   const before = days && coveredFor(2 * days) ? countBy(incidents.filter(o => o.c.date_precision !== 'month' && matches(o, true)
     && ageHours(o.c.last_seen) > days * 24 && ageHours(o.c.last_seen) <= 2 * days * 24), key) : null;
@@ -560,9 +576,21 @@ function buildLegend() {
   }
   if (onlyCountry && !countryName.has(onlyCountry)) onlyCountry = '';
   const sectors = countBy(incidents, o => o.c.sector), current = sectorSel.value;
+  const nCritical = incidents.filter(o => o.c.critical).length;
+  const names = [...SECTOR_ORDER, ...[...sectors.keys()].filter(k => !SECTOR_ORDER.includes(k)).sort()];
   sectorSel.replaceChildren(el('option', { value: '', text: 'All sectors' }),
-    ...[...sectors].sort((a, b) => b[1] - a[1]).map(([k, n]) => el('option', { value: k, text: `${k} (${n})` })));
-  sectorSel.value = sectors.has(current) ? current : '';
+    el('option', { value: CI, text: `${CI_LABEL} (${nCritical})` }),
+    ...names.map(k => el('option', { value: k, text: `${k} (${sectors.get(k) || 0})` })));
+  sectorSel.value = current === CI || names.includes(current) ? current : '';
+
+  // "Sectors in focus" shortcuts in the sidebar
+  $('#focus').replaceChildren(...FOCUS.map(f => {
+    const n = f.value === CI ? nCritical : sectors.get(f.value) || 0;
+    const b = el('button', { type: 'button', 'data-value': f.value, title: f.title || `Show only ${f.label.toLowerCase()}` },
+      el('span', { class: 'sw', style: `background:${f.color}` }), f.label, el('span', { class: 'n', text: String(n) }));
+    b.addEventListener('click', () => { sectorSel.value = sectorSel.value === f.value ? '' : f.value; refresh(); });
+    return b;
+  }));
 }
 
 // ---------- detail card ----------
@@ -577,7 +605,8 @@ function select(o, fly) {
 function renderCard(c) {
   const t = typeOf(c);
   const dl = el('dl', {});
-  for (const [k, v] of [['Victim', c.victim], ['Attack type', t.label], ['Sector', c.sector], ['Scale', c.records], ['Group named', c.actor],
+  for (const [k, v] of [['Victim', c.victim], ['Attack type', t.label],
+    ['Sector', c.sector ? c.sector + (c.critical ? ' (critical infrastructure)' : '') : c.critical ? CI_LABEL : null], ['Scale', c.records], ['Group named', c.actor],
     ['Attributed to', c.attacker_country ? c.attacker_country + ' (as stated in the report)' : null],
     ['First reported', c.date_precision === 'month' ? monthOf(c.first_seen) : fmtDate(c.first_seen)], ['Latest report', c.sources.length > 1 ? fmtDate(c.last_seen) : null]]) {
     if (v) dl.append(el('dt', { text: k }), el('dd', { text: v }));
