@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-19T11:29:17Z",
+ "updated": "2026-11-19T19:37:03Z",
  "coverage_from": "2026-11-18T03:12:00Z",
  "sources": [
   "The Hacker News",
@@ -26,9 +26,246 @@
   "CSIS"
  ],
  "feed_errors": [
+  "Cybersecurity News: not well-formed (invalid token): line 1, column 119",
   "Inside Higher Ed: undefined entity: line 49, column 98"
  ],
  "incidents": [
+  {
+   "id": "1977168802",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Transport & logistics",
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": true,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-19T18:20:01Z",
+   "last_seen": "2026-11-19T18:20:01Z",
+   "sources": [
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/transport-for-london-breach-exposes-265-000-oyster-card-users-data/",
+     "title": "Transport for London breach exposes 265,000 Oyster card users' data",
+     "published": "2026-11-19T18:20:01Z"
+    }
+   ]
+  },
+  {
+   "id": "2ff5d2ac87",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Banking & finance",
+   "country": "United States",
+   "country_key": "United States of America",
+   "city": null,
+   "lat": 39.5,
+   "lon": -99.06,
+   "precision": "country",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": true,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-19T17:16:31Z",
+   "last_seen": "2026-11-19T17:16:31Z",
+   "sources": [
+    {
+     "name": "DataBreaches.net",
+     "url": "https://databreaches.net/2026/11/19/visa-mastercard-and-jpmorgan-customer-data-leaked-by-hackers/",
+     "title": "Visa, Mastercard and JPMorgan Customer Data Leaked by Hackers",
+     "published": "2026-11-19T17:16:31Z"
+    }
+   ]
+  },
+  {
+   "id": "82b92648e8",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Technology",
+   "country": "Russia",
+   "country_key": "Russia",
+   "city": null,
+   "lat": 60.0,
+   "lon": 95.0,
+   "precision": "country",
+   "country_source": null,
+   "type": "other",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-19T17:16:14Z",
+   "last_seen": "2026-11-19T17:16:14Z",
+   "sources": [
+    {
+     "name": "DataBreaches.net",
+     "url": "https://databreaches.net/2026/11/19/google-spots-first-ever-autonomous-ai-cyberattack-by-russian-speaking-hackers-targeting-france/",
+     "title": "Google spots first-ever autonomous AI cyberattack by Russian-speaking hackers targeting France",
+     "published": "2026-11-19T17:16:14Z"
+    }
+   ]
+  },
+  {
+   "id": "d45dac2d40",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Technology",
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-19T09:53:35Z",
+   "last_seen": "2026-11-19T15:15:00Z",
+   "sources": [
+    {
+     "name": "Cybersecurity News",
+     "url": "https://cybersecuritynews.com/european-commission-cyberattack/",
+     "title": "Hackers Target European Commission with ARTEX AI Tool in Major Cyberattack",
+     "published": "2026-11-19T09:53:35Z"
+    },
+    {
+     "name": "Security Affairs",
+     "url": "https://securityaffairs.com/203483/hacking/european-commission-cyberattack-artex-ai-tool-suspected-in-prolonged-disruption.html",
+     "title": "European Commission Cyberattack: ARTEX AI Tool Suspected in Prolonged Disruption",
+     "published": "2026-11-19T15:06:40Z"
+    },
+    {
+     "name": "The Record",
+     "url": "https://therecord.media/european-commission-confirms-cyberattack-using-ai",
+     "title": "European Commission confirms cyberattack, says hackers used AI tool",
+     "published": "2026-11-19T15:15:00Z"
+    }
+   ]
+  },
+  {
+   "id": "75044bab3e",
+   "victim": null,
+   "victim_key": "",
+   "sector": null,
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "country_source": null,
+   "type": "ransomware",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-19T15:00:10Z",
+   "last_seen": "2026-11-19T15:00:10Z",
+   "sources": [
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/five-warning-signs-of-ransomware-breach-before-encryption-or-data-theft/",
+     "title": "Five warning signs of ransomware breach before encryption or data theft",
+     "published": "2026-11-19T15:00:10Z"
+    }
+   ]
+  },
+  {
+   "id": "dcf0c6422c",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Technology",
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "country_source": null,
+   "type": "espionage",
+   "records": null,
+   "actor": null,
+   "attacker_country": "Russia",
+   "attacker_lat": 60.0,
+   "attacker_lon": 95.0,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-19T14:42:20Z",
+   "last_seen": "2026-11-19T14:42:20Z",
+   "sources": [
+    {
+     "name": "Help Net Security",
+     "url": "https://www.helpnetsecurity.com/2026/11/19/russian-spies-impersonation-cloud-breach/",
+     "title": "Russian spies turn one cloud breach into a stepping stone for the next",
+     "published": "2026-11-19T14:42:20Z"
+    }
+   ]
+  },
+  {
+   "id": "049017878e",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Healthcare",
+   "country": "Ukraine",
+   "country_key": "Ukraine",
+   "city": null,
+   "lat": 49.15,
+   "lon": 31.23,
+   "precision": "country",
+   "country_source": null,
+   "type": "ransomware",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": true,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-19T13:30:00Z",
+   "last_seen": "2026-11-19T13:30:00Z",
+   "sources": [
+    {
+     "name": "The Record",
+     "url": "https://therecord.media/ukraine-ransomware-arrests-cyber",
+     "title": "Ukraine exposes ransomware network extorting US oil, healthcare firms",
+     "published": "2026-11-19T13:30:00Z"
+    }
+   ]
+  },
   {
    "id": "67401cc888",
    "victim": null,
@@ -96,38 +333,6 @@
      "url": "https://www.helpnetsecurity.com/2026/11/19/ukraine-ransomware-gang-arrests-fake-it-support-calls/",
      "title": "Ukraine arrests key members of ransomware gang that extorted $40.5 million posing as IT support",
      "published": "2026-11-19T10:07:30Z"
-    }
-   ]
-  },
-  {
-   "id": "d45dac2d40",
-   "victim": null,
-   "victim_key": "",
-   "sector": "Technology",
-   "country": null,
-   "country_key": null,
-   "city": null,
-   "lat": null,
-   "lon": null,
-   "precision": "none",
-   "country_source": null,
-   "type": "data_breach",
-   "records": null,
-   "actor": null,
-   "attacker_country": null,
-   "attacker_lat": null,
-   "attacker_lon": null,
-   "critical": false,
-   "summary": null,
-   "confidence": "low",
-   "first_seen": "2026-11-19T09:53:35Z",
-   "last_seen": "2026-11-19T09:53:35Z",
-   "sources": [
-    {
-     "name": "Cybersecurity News",
-     "url": "https://cybersecuritynews.com/european-commission-cyberattack/",
-     "title": "Hackers Target European Commission with ARTEX AI Tool in Major Cyberattack",
-     "published": "2026-11-19T09:53:35Z"
     }
    ]
   },
