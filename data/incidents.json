@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-18T21:21:52Z",
+ "updated": "2026-11-19T02:46:10Z",
  "coverage_from": "2026-11-18T03:12:00Z",
  "sources": [
   "The Hacker News",
@@ -27,6 +27,38 @@
  ],
  "feed_errors": [],
  "incidents": [
+  {
+   "id": "84415312a0",
+   "victim": "Russia's Cold Relic APT Turns One Cloud",
+   "victim_key": "russias cold relic apt turns one cloud",
+   "sector": "Technology",
+   "country": "Russia",
+   "country_key": "Russia",
+   "city": null,
+   "lat": 60.0,
+   "lon": 95.0,
+   "precision": "country",
+   "country_source": null,
+   "type": "phishing",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "medium",
+   "first_seen": "2026-11-18T21:59:46Z",
+   "last_seen": "2026-11-18T21:59:46Z",
+   "sources": [
+    {
+     "name": "Dark Reading",
+     "url": "https://www.darkreading.com/cyberattacks-data-breaches/cold-relic-turns-one-cloud-breach-into-another",
+     "title": "Russia's Cold Relic APT Turns One Cloud Breach Into Another",
+     "published": "2026-11-18T21:59:46Z"
+    }
+   ]
+  },
   {
    "id": "b0d9354dce",
    "victim": null,
