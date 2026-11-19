@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-19T02:46:10Z",
+ "updated": "2026-11-19T11:29:17Z",
  "coverage_from": "2026-11-18T03:12:00Z",
  "sources": [
   "The Hacker News",
@@ -25,8 +25,150 @@
   "Wired Security",
   "CSIS"
  ],
- "feed_errors": [],
+ "feed_errors": [
+  "Inside Higher Ed: undefined entity: line 49, column 98"
+ ],
  "incidents": [
+  {
+   "id": "67401cc888",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Technology",
+   "country": "United States",
+   "country_key": "United States of America",
+   "city": null,
+   "lat": 39.5,
+   "lon": -99.06,
+   "precision": "country",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-19T09:31:26Z",
+   "last_seen": "2026-11-19T10:44:04Z",
+   "sources": [
+    {
+     "name": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/n-able-confirms-hackers-accessed-cloud.html",
+     "title": "Hackers Breach N-able Cloud Server, Disrupting Email Security Management Across 3 Regions",
+     "published": "2026-11-19T09:31:26Z"
+    },
+    {
+     "name": "Cybersecurity News",
+     "url": "https://cybersecuritynews.com/n-able-confirms-server-breach/",
+     "title": "N-able Confirms Server Breach, Disables Mail Assure and SpamExperts Management Access",
+     "published": "2026-11-19T10:44:04Z"
+    }
+   ]
+  },
+  {
+   "id": "d4531eaedc",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Government & defence",
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "country_source": null,
+   "type": "ransomware",
+   "records": "$40.5 million",
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-19T10:07:30Z",
+   "last_seen": "2026-11-19T10:07:30Z",
+   "sources": [
+    {
+     "name": "Help Net Security",
+     "url": "https://www.helpnetsecurity.com/2026/11/19/ukraine-ransomware-gang-arrests-fake-it-support-calls/",
+     "title": "Ukraine arrests key members of ransomware gang that extorted $40.5 million posing as IT support",
+     "published": "2026-11-19T10:07:30Z"
+    }
+   ]
+  },
+  {
+   "id": "d45dac2d40",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Technology",
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-19T09:53:35Z",
+   "last_seen": "2026-11-19T09:53:35Z",
+   "sources": [
+    {
+     "name": "Cybersecurity News",
+     "url": "https://cybersecuritynews.com/european-commission-cyberattack/",
+     "title": "Hackers Target European Commission with ARTEX AI Tool in Major Cyberattack",
+     "published": "2026-11-19T09:53:35Z"
+    }
+   ]
+  },
+  {
+   "id": "d0edd2ef74",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Manufacturing & industry",
+   "country": "United States",
+   "country_key": "United States of America",
+   "city": null,
+   "lat": 39.5,
+   "lon": -99.06,
+   "precision": "country",
+   "country_source": "wikidata",
+   "type": "ransomware",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-18T13:37:43Z",
+   "last_seen": "2026-11-19T09:23:21Z",
+   "sources": [
+    {
+     "name": "Cybersecurity News",
+     "url": "https://cybersecuritynews.com/nvidia-data-breach-claim/",
+     "title": "The Gentlemen Ransomware Gang Allegedly Claims to Have Breached NVIDIA",
+     "published": "2026-11-18T13:37:43Z"
+    },
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/nvidia-investigating-gentlemen-ransomware-breach-claims/",
+     "title": "NVIDIA investigating Gentlemen ransomware breach claims",
+     "published": "2026-11-19T09:23:21Z"
+    }
+   ]
+  },
   {
    "id": "84415312a0",
    "victim": "Russia's Cold Relic APT Turns One Cloud",
@@ -488,38 +630,6 @@
      "url": "https://therecord.media/russia-cyber-espionage-google",
      "title": "Russian cyber-espionage group used stolen cloud data to hack into organizations, Google says",
      "published": "2026-11-18T15:15:00Z"
-    }
-   ]
-  },
-  {
-   "id": "d0edd2ef74",
-   "victim": null,
-   "victim_key": "",
-   "sector": "Manufacturing & industry",
-   "country": null,
-   "country_key": null,
-   "city": null,
-   "lat": null,
-   "lon": null,
-   "precision": "none",
-   "country_source": null,
-   "type": "ransomware",
-   "records": null,
-   "actor": null,
-   "attacker_country": null,
-   "attacker_lat": null,
-   "attacker_lon": null,
-   "critical": false,
-   "summary": null,
-   "confidence": "low",
-   "first_seen": "2026-11-18T13:37:43Z",
-   "last_seen": "2026-11-18T13:37:43Z",
-   "sources": [
-    {
-     "name": "Cybersecurity News",
-     "url": "https://cybersecuritynews.com/nvidia-data-breach-claim/",
-     "title": "The Gentlemen Ransomware Gang Allegedly Claims to Have Breached NVIDIA",
-     "published": "2026-11-18T13:37:43Z"
     }
    ]
   },

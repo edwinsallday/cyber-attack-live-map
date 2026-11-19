@@ -73,6 +73,13 @@
  "maileva": {
   "checked": "2026-11-18"
  },
+ "nvidia": {
+  "qid": "Q182477",
+  "label": "Nvidia",
+  "description": "American multinational technology company",
+  "country": "United States",
+  "checked": "2026-11-19"
+ },
  "optimizely": {
   "qid": "Q17073302",
   "label": "Optimizely",
