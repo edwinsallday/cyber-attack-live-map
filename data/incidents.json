@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20T09:07:38Z",
+ "updated": "2026-11-20T17:58:45Z",
  "coverage_from": "2026-11-18T03:12:00Z",
  "sources": [
   "The Hacker News",
@@ -26,14 +26,46 @@
   "CSIS"
  ],
  "feed_errors": [
-  "Inside Higher Ed: undefined entity: line 49, column 98"
+  "Inside Higher Ed: undefined entity: line 75, column 10"
  ],
  "incidents": [
   {
-   "id": "e9069e703a",
-   "victim": "European Commission",
-   "victim_key": "european commission",
-   "sector": "Technology",
+   "id": "fc406d2fbc",
+   "victim": "Nvidia",
+   "victim_key": "nvidia",
+   "sector": null,
+   "country": "United States",
+   "country_key": "United States of America",
+   "city": null,
+   "lat": 39.5,
+   "lon": -99.06,
+   "precision": "country",
+   "country_source": "wikidata",
+   "type": "ransomware",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-20T17:28:05Z",
+   "last_seen": "2026-11-20T17:28:05Z",
+   "sources": [
+    {
+     "name": "SC Media",
+     "url": "https://www.scworld.com/brief/nvidia-investigates-potential-security-incident-involving-third-party-partner",
+     "title": "Nvidia investigates potential security incident involving third-party partner",
+     "published": "2026-11-20T17:28:05Z"
+    }
+   ]
+  },
+  {
+   "id": "9dbbebdeb6",
+   "victim": null,
+   "victim_key": "",
+   "sector": null,
    "country": null,
    "country_key": null,
    "city": null,
@@ -50,14 +82,14 @@
    "critical": false,
    "summary": null,
    "confidence": "low",
-   "first_seen": "2026-11-20T08:52:29Z",
-   "last_seen": "2026-11-20T08:52:29Z",
+   "first_seen": "2026-11-20T16:58:16Z",
+   "last_seen": "2026-11-20T16:58:16Z",
    "sources": [
     {
-     "name": "Help Net Security",
-     "url": "https://www.helpnetsecurity.com/2026/11/20/european-commission-ai-generated-cyberattack-publicly-available-tool/",
-     "title": "European Commission confirms AI-generated cyberattack disrupted its systems",
-     "published": "2026-11-20T08:52:29Z"
+     "name": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/bazuka-android-malware-uses-fake-screen.html",
+     "title": "Bazuka Android Malware Uses Fake Screen Overlays to Hide Credential Theft and Device Control",
+     "published": "2026-11-20T16:58:16Z"
     }
    ]
   },
@@ -83,7 +115,7 @@
    "summary": null,
    "confidence": "low",
    "first_seen": "2026-11-19T16:14:31Z",
-   "last_seen": "2026-11-20T07:35:46Z",
+   "last_seen": "2026-11-20T16:15:00Z",
    "sources": [
     {
      "name": "Cybersecurity News",
@@ -108,6 +140,368 @@
      "url": "https://www.securityweek.com/jpmorgan-visa-mastercard-cite-third-party-incidents-amid-data-leak/",
      "title": "JPMorgan, Visa, Mastercard Cite Third-Party Incidents Amid Data Leak",
      "published": "2026-11-20T07:35:46Z"
+    },
+    {
+     "name": "Security Affairs",
+     "url": "https://securityaffairs.com/203614/data-breach/jpmorgan-visa-and-mastercard-report-third-party-data-breaches-after-n0n-claims.html",
+     "title": "JPMorgan, Visa and Mastercard Report Third-Party Data Breaches After N0n Claims",
+     "published": "2026-11-20T14:56:32Z"
+    },
+    {
+     "name": "Cybersecurity Dive",
+     "url": "https://www.cybersecuritydive.com/news/jpmorgan-visa-customer-data-leaked-third-party-hacks/875333/",
+     "title": "JPMorgan, Visa confirm customer data taken in third-party vendor hacks",
+     "published": "2026-11-20T15:52:41Z"
+    },
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/vendor-data-breach-exposes-chase-visa-mastercard-customer-info/",
+     "title": "Vendor data breach exposes Chase, Visa, Mastercard customer info",
+     "published": "2026-11-20T15:58:06Z"
+    },
+    {
+     "name": "Infosecurity Magazine",
+     "url": "https://www.infosecurity-magazine.com/news/jpmorgan-data-breach-third-party/",
+     "title": "JPMorgan Confirms Customer Data Breach Following Third-Party Compromise",
+     "published": "2026-11-20T16:15:00Z"
+    }
+   ]
+  },
+  {
+   "id": "c21f2f095f",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Banking & finance",
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": true,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-20T14:24:00Z",
+   "last_seen": "2026-11-20T14:24:00Z",
+   "sources": [
+    {
+     "name": "The Record",
+     "url": "https://therecord.media/dozens-of-credit-unions-hit-by-supplier-breach",
+     "title": "Dozens of credit unions hit by supplier breach that went unnoticed for six weeks",
+     "published": "2026-11-20T14:24:00Z"
+    }
+   ]
+  },
+  {
+   "id": "389f46b9e9",
+   "victim": "Access Dental Management",
+   "victim_key": "access dental management",
+   "sector": "Healthcare",
+   "country": "United States",
+   "country_key": "United States of America",
+   "city": null,
+   "lat": 39.5,
+   "lon": -99.06,
+   "precision": "country",
+   "country_source": "source",
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": true,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-17T12:59:04Z",
+   "last_seen": "2026-11-20T14:12:26Z",
+   "sources": [
+    {
+     "name": "SecurityWeek",
+     "url": "https://www.securityweek.com/access-dental-management-data-breach-impacts-over-340000/",
+     "title": "Access Dental Management Data Breach Impacts Over 340,000",
+     "published": "2026-11-17T12:59:04Z"
+    },
+    {
+     "name": "HIPAA Journal",
+     "url": "https://www.hipaajournal.com/access-dental-valley-family-health-care-ochsner-health-data-breach/",
+     "title": "Access Dental Management Breach Affects Over 341,000 Individuals",
+     "published": "2026-11-20T14:12:26Z"
+    }
+   ]
+  },
+  {
+   "id": "d9a3251505",
+   "victim": "N-able",
+   "victim_key": "nable",
+   "sector": "Technology",
+   "country": "United States",
+   "country_key": "United States of America",
+   "city": null,
+   "lat": 39.5,
+   "lon": -99.06,
+   "precision": "country",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "medium",
+   "first_seen": "2026-11-20T13:18:36Z",
+   "last_seen": "2026-11-20T13:18:36Z",
+   "sources": [
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/microsoft/n-able-says-recent-security-breach-led-to-major-service-outage/",
+     "title": "N-able says recent security breach led to major service outage",
+     "published": "2026-11-20T13:18:36Z"
+    }
+   ]
+  },
+  {
+   "id": "f62c75a917",
+   "victim": "Skagerak Energi",
+   "victim_key": "skagerak energi",
+   "sector": "Energy & utilities",
+   "country": "Norway",
+   "country_key": "Norway",
+   "city": null,
+   "lat": 64.54,
+   "lon": 14.24,
+   "precision": "country",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": true,
+   "summary": null,
+   "confidence": "medium",
+   "first_seen": "2026-11-20T12:58:22Z",
+   "last_seen": "2026-11-20T12:58:22Z",
+   "sources": [
+    {
+     "name": "Industrial Cyber",
+     "url": "https://industrialcyber.co/utilities-energy-power-water-waste/equinor-thwarts-cyberattack-as-separate-intrusion-at-skagerak-energi-raises-concerns-across-norways-energy-sector/",
+     "title": "Equinor thwarts cyberattack as separate intrusion at Skagerak Energi raises concerns across Norway’s energy sector",
+     "published": "2026-11-20T12:58:22Z"
+    }
+   ]
+  },
+  {
+   "id": "3827cbac51",
+   "victim": "SBC Medical Group",
+   "victim_key": "sbc medical",
+   "sector": "Healthcare",
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": true,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-20T11:36:51Z",
+   "last_seen": "2026-11-20T11:36:51Z",
+   "sources": [
+    {
+     "name": "SecurityWeek",
+     "url": "https://www.securityweek.com/sbc-medical-group-data-breach-impacts-over-2-million/",
+     "title": "SBC Medical Group Data Breach Impacts Over 2 Million",
+     "published": "2026-11-20T11:36:51Z"
+    }
+   ]
+  },
+  {
+   "id": "e9069e703a",
+   "victim": "European Commission",
+   "victim_key": "european commission",
+   "sector": "Technology",
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "country_source": null,
+   "type": "other",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-20T08:52:29Z",
+   "last_seen": "2026-11-20T10:51:42Z",
+   "sources": [
+    {
+     "name": "Help Net Security",
+     "url": "https://www.helpnetsecurity.com/2026/11/20/european-commission-ai-generated-cyberattack-publicly-available-tool/",
+     "title": "European Commission confirms AI-generated cyberattack disrupted its systems",
+     "published": "2026-11-20T08:52:29Z"
+    },
+    {
+     "name": "SecurityWeek",
+     "url": "https://www.securityweek.com/european-commission-confirms-ai-assisted-cyberattack-disrupted-services/",
+     "title": "European Commission Confirms AI-Assisted Cyberattack Disrupted Services",
+     "published": "2026-11-20T10:51:42Z"
+    }
+   ]
+  },
+  {
+   "id": "1977168802",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Transport & logistics",
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": true,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-19T18:20:01Z",
+   "last_seen": "2026-11-20T10:21:41Z",
+   "sources": [
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/transport-for-london-breach-exposes-265-000-oyster-card-users-data/",
+     "title": "Transport for London breach exposes 265,000 Oyster card users' data",
+     "published": "2026-11-19T18:20:01Z"
+    },
+    {
+     "name": "Help Net Security",
+     "url": "https://www.helpnetsecurity.com/2026/11/20/transport-for-london-oyster-photocard-data-breach/",
+     "title": "265,000 Oyster photocard customers’ data exposed in Transport for London breach",
+     "published": "2026-11-20T10:21:41Z"
+    }
+   ]
+  },
+  {
+   "id": "eb8f36fe95",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Transport & logistics",
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "country_source": null,
+   "type": "data_breach",
+   "records": "265,000 Customers",
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": true,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-20T09:48:17Z",
+   "last_seen": "2026-11-20T09:48:17Z",
+   "sources": [
+    {
+     "name": "Cybersecurity News",
+     "url": "https://cybersecuritynews.com/hackers-breach-tfl-oyster-photocard-accounts/",
+     "title": "Hackers Breach TfL Oyster Photocard Accounts, Exposing Personal Data of 265,000 Customers",
+     "published": "2026-11-20T09:48:17Z"
+    }
+   ]
+  },
+  {
+   "id": "1842d6db44",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Technology",
+   "country": "United States",
+   "country_key": "United States of America",
+   "city": null,
+   "lat": 39.5,
+   "lon": -99.06,
+   "precision": "country",
+   "country_source": null,
+   "type": "other",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-20T09:08:35Z",
+   "last_seen": "2026-11-20T09:08:35Z",
+   "sources": [
+    {
+     "name": "SecurityWeek",
+     "url": "https://www.securityweek.com/n-able-blames-service-disruption-on-cyberattack/",
+     "title": "N-able Blames Service Disruption on Cyberattack",
+     "published": "2026-11-20T09:08:35Z"
+    }
+   ]
+  },
+  {
+   "id": "17c3a4b45a",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Banking & finance",
+   "country": "Russia",
+   "country_key": "Russia",
+   "city": null,
+   "lat": 60.0,
+   "lon": 95.0,
+   "precision": "country",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": true,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-20T09:03:11Z",
+   "last_seen": "2026-11-20T09:03:11Z",
+   "sources": [
+    {
+     "name": "Security Affairs",
+     "url": "https://securityaffairs.com/203554/cyber-crime/hunt-io-uncovers-russian-speaking-credential-theft-operation-targeting-us-banks-and-government-accounts.html",
+     "title": "Hunt.io Uncovers Russian-Speaking Credential Theft Operation Targeting US Banks and Government Accounts",
+     "published": "2026-11-20T09:03:11Z"
     }
    ]
   },
@@ -204,38 +598,6 @@
      "url": "https://www.darkreading.com/cyberattacks-data-breaches/second-norwegian-energy-company-breached",
      "title": "Second Norwegian Energy Company Breached in Two Days",
      "published": "2026-11-19T20:14:15Z"
-    }
-   ]
-  },
-  {
-   "id": "1977168802",
-   "victim": null,
-   "victim_key": "",
-   "sector": "Transport & logistics",
-   "country": null,
-   "country_key": null,
-   "city": null,
-   "lat": null,
-   "lon": null,
-   "precision": "none",
-   "country_source": null,
-   "type": "data_breach",
-   "records": null,
-   "actor": null,
-   "attacker_country": null,
-   "attacker_lat": null,
-   "attacker_lon": null,
-   "critical": true,
-   "summary": null,
-   "confidence": "low",
-   "first_seen": "2026-11-19T18:20:01Z",
-   "last_seen": "2026-11-19T18:20:01Z",
-   "sources": [
-    {
-     "name": "BleepingComputer",
-     "url": "https://www.bleepingcomputer.com/news/security/transport-for-london-breach-exposes-265-000-oyster-card-users-data/",
-     "title": "Transport for London breach exposes 265,000 Oyster card users' data",
-     "published": "2026-11-19T18:20:01Z"
     }
    ]
   },
@@ -1650,38 +2012,6 @@
      "url": "https://cybersecuritynews.com/barracuda-cloud-accounts/",
      "title": "Hackers Exploit Exposed AI Vendor Key to Breach 10 Barracuda Cloud Accounts in 44 Hours",
      "published": "2026-11-17T13:13:20Z"
-    }
-   ]
-  },
-  {
-   "id": "389f46b9e9",
-   "victim": "Access Dental Management",
-   "victim_key": "access dental management",
-   "sector": "Healthcare",
-   "country": null,
-   "country_key": null,
-   "city": null,
-   "lat": null,
-   "lon": null,
-   "precision": "none",
-   "country_source": null,
-   "type": "data_breach",
-   "records": null,
-   "actor": null,
-   "attacker_country": null,
-   "attacker_lat": null,
-   "attacker_lon": null,
-   "critical": true,
-   "summary": null,
-   "confidence": "low",
-   "first_seen": "2026-11-17T12:59:04Z",
-   "last_seen": "2026-11-17T12:59:04Z",
-   "sources": [
-    {
-     "name": "SecurityWeek",
-     "url": "https://www.securityweek.com/access-dental-management-data-breach-impacts-over-340000/",
-     "title": "Access Dental Management Data Breach Impacts Over 340,000",
-     "published": "2026-11-17T12:59:04Z"
     }
    ]
   },
@@ -4784,38 +5114,6 @@
      "url": "https://www.infosecurity-magazine.com/news/eu-auditors-slam-blocs-cyberinfo/",
      "title": "EU Auditors Warn Information-Sharing Gaps Are Hindering Cyber Incident Response",
      "published": "2026-09-23T08:30:00Z"
-    }
-   ]
-  },
-  {
-   "id": "cf845c7119",
-   "victim": null,
-   "victim_key": "",
-   "sector": "Technology",
-   "country": null,
-   "country_key": null,
-   "city": null,
-   "lat": null,
-   "lon": null,
-   "precision": "none",
-   "country_source": null,
-   "type": "data_breach",
-   "records": null,
-   "actor": null,
-   "attacker_country": null,
-   "attacker_lat": null,
-   "attacker_lon": null,
-   "critical": false,
-   "summary": null,
-   "confidence": "low",
-   "first_seen": "2026-09-21T09:30:00Z",
-   "last_seen": "2026-09-21T09:30:00Z",
-   "sources": [
-    {
-     "name": "Infosecurity Magazine",
-     "url": "https://www.infosecurity-magazine.com/news/experts-gyazos-breach-490-million/",
-     "title": "Experts Alarmed Over Gyazo’s Breach of 490 Million Metadata Records",
-     "published": "2026-09-21T09:30:00Z"
     }
    ]
   }

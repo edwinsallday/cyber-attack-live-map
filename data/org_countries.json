@@ -2,6 +2,9 @@
  "access dental management": {
   "checked": "2026-11-18"
  },
+ "after n0n claims": {
+  "checked": "2026-11-20"
+ },
  "asos": {
   "qid": "Q211951",
   "label": "ASOS",
@@ -97,6 +100,9 @@
   "country": "Lithuania",
   "checked": "2026-11-18"
  },
+ "sbc medical group": {
+  "checked": "2026-11-20"
+ },
  "stockal": {
   "checked": "2026-11-18"
  },
@@ -109,5 +115,8 @@
  },
  "uta": {
   "checked": "2026-11-18"
+ },
+ "vendor": {
+  "checked": "2026-11-20"
  }
 }
