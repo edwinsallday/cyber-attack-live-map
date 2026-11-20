@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-19T19:37:03Z",
+ "updated": "2026-11-20T01:26:47Z",
  "coverage_from": "2026-11-18T03:12:00Z",
  "sources": [
   "The Hacker News",
@@ -26,10 +26,73 @@
   "CSIS"
  ],
  "feed_errors": [
-  "Cybersecurity News: not well-formed (invalid token): line 1, column 119",
   "Inside Higher Ed: undefined entity: line 49, column 98"
  ],
  "incidents": [
+  {
+   "id": "ae8cd71501",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Healthcare",
+   "country": "United States",
+   "country_key": "United States of America",
+   "city": null,
+   "lat": 39.5,
+   "lon": -99.06,
+   "precision": "country",
+   "country_source": null,
+   "type": "ransomware",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": true,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-19T20:25:27Z",
+   "last_seen": "2026-11-19T20:25:27Z",
+   "sources": [
+    {
+     "name": "HIPAA Journal",
+     "url": "https://www.hipaajournal.com/tis-the-season-to-be-hacked/",
+     "title": "‘Tis the Season … to Be Hacked!",
+     "published": "2026-11-19T20:25:27Z"
+    }
+   ]
+  },
+  {
+   "id": "150f8fb554",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Energy & utilities",
+   "country": "Norway",
+   "country_key": "Norway",
+   "city": null,
+   "lat": 64.54,
+   "lon": 14.24,
+   "precision": "country",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": true,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-19T20:14:15Z",
+   "last_seen": "2026-11-19T20:14:15Z",
+   "sources": [
+    {
+     "name": "Dark Reading",
+     "url": "https://www.darkreading.com/cyberattacks-data-breaches/second-norwegian-energy-company-breached",
+     "title": "Second Norwegian Energy Company Breached in Two Days",
+     "published": "2026-11-19T20:14:15Z"
+    }
+   ]
+  },
   {
    "id": "1977168802",
    "victim": null,
@@ -83,9 +146,15 @@
    "critical": true,
    "summary": null,
    "confidence": "low",
-   "first_seen": "2026-11-19T17:16:31Z",
+   "first_seen": "2026-11-19T16:14:31Z",
    "last_seen": "2026-11-19T17:16:31Z",
    "sources": [
+    {
+     "name": "Cybersecurity News",
+     "url": "https://cybersecuritynews.com/jpmorgan-third-party-data-breach/",
+     "title": "JPMorgan Chase Confirms Third-Party Cyberattack That May Have Exposed Customer Names and Emails",
+     "published": "2026-11-19T16:14:31Z"
+    },
     {
      "name": "DataBreaches.net",
      "url": "https://databreaches.net/2026/11/19/visa-mastercard-and-jpmorgan-customer-data-leaked-by-hackers/",
@@ -235,6 +304,70 @@
    ]
   },
   {
+   "id": "90cf961f30",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Media & entertainment",
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "country_source": null,
+   "type": "other",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-19T14:05:35Z",
+   "last_seen": "2026-11-19T14:05:35Z",
+   "sources": [
+    {
+     "name": "Cybersecurity News",
+     "url": "https://cybersecuritynews.com/badbox-3-0-malware/",
+     "title": "BADBOX 3.0 Malware Infects Android TV Boxes to Generate 40 Billion Fraudulent Ad Requests Daily",
+     "published": "2026-11-19T14:05:35Z"
+    }
+   ]
+  },
+  {
+   "id": "fb601fc055",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Banking & finance",
+   "country": "United States",
+   "country_key": "United States of America",
+   "city": null,
+   "lat": 39.5,
+   "lon": -99.06,
+   "precision": "country",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": true,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-19T13:43:37Z",
+   "last_seen": "2026-11-19T13:43:37Z",
+   "sources": [
+    {
+     "name": "Cybersecurity News",
+     "url": "https://cybersecuritynews.com/hackers-steal-us-bank/",
+     "title": "Hackers Steal US Bank, IRS and Social Security Login Credentials From Infected Computers",
+     "published": "2026-11-19T13:43:37Z"
+    }
+   ]
+  },
+  {
    "id": "049017878e",
    "victim": null,
    "victim_key": "",
@@ -263,6 +396,38 @@
      "url": "https://therecord.media/ukraine-ransomware-arrests-cyber",
      "title": "Ukraine exposes ransomware network extorting US oil, healthcare firms",
      "published": "2026-11-19T13:30:00Z"
+    }
+   ]
+  },
+  {
+   "id": "caeaed8b9e",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Government & defence",
+   "country": "Russia",
+   "country_key": "Russia",
+   "city": null,
+   "lat": 60.0,
+   "lon": 95.0,
+   "precision": "country",
+   "country_source": null,
+   "type": "espionage",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-19T12:44:02Z",
+   "last_seen": "2026-11-19T12:44:02Z",
+   "sources": [
+    {
+     "name": "Cybersecurity News",
+     "url": "https://cybersecuritynews.com/russian-national-silicon-valley-spy/",
+     "title": "Russian National Accused of Using Remote Access Tools to Spy on Silicon Valley Defense Firm",
+     "published": "2026-11-19T12:44:02Z"
     }
    ]
   },
