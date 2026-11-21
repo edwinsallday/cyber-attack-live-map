@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21T15:17:13Z",
+ "updated": "2026-11-21T21:04:56Z",
  "coverage_from": "2026-11-18T03:12:00Z",
  "sources": [
   "The Hacker News",
@@ -29,6 +29,38 @@
   "Inside Higher Ed: undefined entity: line 75, column 10"
  ],
  "incidents": [
+  {
+   "id": "a4f7124565",
+   "victim": "Austrian Foreign Ministry",
+   "victim_key": "austrian foreign ministry",
+   "sector": "Government & defence",
+   "country": "Austria",
+   "country_key": "Austria",
+   "city": null,
+   "lat": 47.61,
+   "lon": 14.08,
+   "precision": "country",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "medium",
+   "first_seen": "2026-11-21T18:22:52Z",
+   "last_seen": "2026-11-21T18:22:52Z",
+   "sources": [
+    {
+     "name": "Security Affairs",
+     "url": "https://securityaffairs.com/203680/hacking/cyberattack-on-austrian-foreign-ministry-exposes-diplomatic-staff-data.html",
+     "title": "Cyberattack on Austrian Foreign Ministry Exposes Diplomatic Staff Data",
+     "published": "2026-11-21T18:22:52Z"
+    }
+   ]
+  },
   {
    "id": "efef5bd50b",
    "victim": null,
