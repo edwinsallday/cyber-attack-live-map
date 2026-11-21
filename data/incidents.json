@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21T06:56:07Z",
+ "updated": "2026-11-21T15:17:13Z",
  "coverage_from": "2026-11-18T03:12:00Z",
  "sources": [
   "The Hacker News",
@@ -29,6 +29,108 @@
   "Inside Higher Ed: undefined entity: line 75, column 10"
  ],
  "incidents": [
+  {
+   "id": "efef5bd50b",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Government & defence",
+   "country": "United States",
+   "country_key": "United States of America",
+   "city": null,
+   "lat": 39.5,
+   "lon": -99.06,
+   "precision": "country",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-21T12:37:22Z",
+   "last_seen": "2026-11-21T14:26:04Z",
+   "sources": [
+    {
+     "name": "DataBreaches.net",
+     "url": "https://databreaches.net/2026/11/21/fbi-hacked-again-criminal-information-database-targeted/",
+     "title": "FBI hacked again; criminal information database targeted",
+     "published": "2026-11-21T12:37:22Z"
+    },
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/fbi-reportedly-hacked-again-this-time-targeting-nationwide-police-database/",
+     "title": "FBI reportedly hacked again, this time targeting nationwide police database",
+     "published": "2026-11-21T14:26:04Z"
+    }
+   ]
+  },
+  {
+   "id": "6569893361",
+   "victim": "Algonquin Dam",
+   "victim_key": "algonquin dam",
+   "sector": "Government & defence",
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": true,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-21T12:37:13Z",
+   "last_seen": "2026-11-21T12:37:13Z",
+   "sources": [
+    {
+     "name": "DataBreaches.net",
+     "url": "https://databreaches.net/2026/11/21/officials-probe-attempted-cyberattack-on-algonquin-dam/",
+     "title": "Officials probe attempted cyberattack on Algonquin Dam",
+     "published": "2026-11-21T12:37:13Z"
+    }
+   ]
+  },
+  {
+   "id": "4945b68dab",
+   "victim": null,
+   "victim_key": "",
+   "sector": null,
+   "country": "Singapore",
+   "country_key": "Singapore",
+   "city": null,
+   "lat": 1.35,
+   "lon": 103.82,
+   "precision": "country",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-21T12:36:54Z",
+   "last_seen": "2026-11-21T12:36:54Z",
+   "sources": [
+    {
+     "name": "DataBreaches.net",
+     "url": "https://databreaches.net/2026/11/21/sg-ymcas-youth-for-causes-portal-associated-database-hit-by-cybersecurity-breach/",
+     "title": "SG: YMCA’s Youth For Causes portal, associated database hit by cybersecurity breach",
+     "published": "2026-11-21T12:36:54Z"
+    }
+   ]
+  },
   {
    "id": "814531fc15",
    "victim": null,
