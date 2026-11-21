@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20T23:57:02Z",
+ "updated": "2026-11-21T06:56:07Z",
  "coverage_from": "2026-11-18T03:12:00Z",
  "sources": [
   "The Hacker News",
@@ -29,6 +29,82 @@
   "Inside Higher Ed: undefined entity: line 75, column 10"
  ],
  "incidents": [
+  {
+   "id": "814531fc15",
+   "victim": null,
+   "victim_key": "",
+   "sector": null,
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-21T00:50:58Z",
+   "last_seen": "2026-11-21T00:50:58Z",
+   "sources": [
+    {
+     "name": "SC Media",
+     "url": "https://www.scworld.com/brief/carnegie-endowment-for-international-peace-reports-data-breach",
+     "title": "Carnegie Endowment for International Peace reports data breach",
+     "published": "2026-11-21T00:50:58Z"
+    }
+   ]
+  },
+  {
+   "id": "6c623452a1",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Telecoms",
+   "country": "Canada",
+   "country_key": "Canada",
+   "city": null,
+   "lat": 57.75,
+   "lon": -101.57,
+   "precision": "country",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": true,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-20T18:51:43Z",
+   "last_seen": "2026-11-21T00:46:14Z",
+   "sources": [
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/bell-canada-says-agentic-hacker-stole-enterprise-customer-data/",
+     "title": "Bell Canada says 'agentic' hacker stole enterprise customer data",
+     "published": "2026-11-20T18:51:43Z"
+    },
+    {
+     "name": "DataBreaches.net",
+     "url": "https://databreaches.net/2026/11/20/bell-canada-says-agentic-hacker-stole-enterprise-customer-data/",
+     "title": "Bell Canada says ‘agentic’ hacker stole enterprise customer data",
+     "published": "2026-11-20T18:56:50Z"
+    },
+    {
+     "name": "SC Media",
+     "url": "https://www.scworld.com/brief/bell-canada-confirms-data-breach-involving-agentic-threat-actor",
+     "title": "Bell Canada confirms data breach involving agentic threat actor",
+     "published": "2026-11-21T00:46:14Z"
+    }
+   ]
+  },
   {
    "id": "f0b8696c25",
    "victim": null,
@@ -90,44 +166,6 @@
      "url": "https://therecord.media/container-store-restores-systems-cyberattack",
      "title": "Container Store restores systems after cyberattack",
      "published": "2026-11-20T19:32:00Z"
-    }
-   ]
-  },
-  {
-   "id": "6c623452a1",
-   "victim": null,
-   "victim_key": "",
-   "sector": "Telecoms",
-   "country": "Canada",
-   "country_key": "Canada",
-   "city": null,
-   "lat": 57.75,
-   "lon": -101.57,
-   "precision": "country",
-   "country_source": null,
-   "type": "data_breach",
-   "records": null,
-   "actor": null,
-   "attacker_country": null,
-   "attacker_lat": null,
-   "attacker_lon": null,
-   "critical": true,
-   "summary": null,
-   "confidence": "low",
-   "first_seen": "2026-11-20T18:51:43Z",
-   "last_seen": "2026-11-20T18:56:50Z",
-   "sources": [
-    {
-     "name": "BleepingComputer",
-     "url": "https://www.bleepingcomputer.com/news/security/bell-canada-says-agentic-hacker-stole-enterprise-customer-data/",
-     "title": "Bell Canada says 'agentic' hacker stole enterprise customer data",
-     "published": "2026-11-20T18:51:43Z"
-    },
-    {
-     "name": "DataBreaches.net",
-     "url": "https://databreaches.net/2026/11/20/bell-canada-says-agentic-hacker-stole-enterprise-customer-data/",
-     "title": "Bell Canada says ‘agentic’ hacker stole enterprise customer data",
-     "published": "2026-11-20T18:56:50Z"
     }
    ]
   },
