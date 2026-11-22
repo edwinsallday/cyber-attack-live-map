@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-22T01:13:22Z",
+ "updated": "2026-11-22T08:44:58Z",
  "coverage_from": "2026-11-18T03:12:00Z",
  "sources": [
   "The Hacker News",
@@ -26,9 +26,42 @@
   "CSIS"
  ],
  "feed_errors": [
+  "Cybersecurity News: not well-formed (invalid token): line 1, column 119",
   "Inside Higher Ed: undefined entity: line 75, column 10"
  ],
  "incidents": [
+  {
+   "id": "78074d39df",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Technology",
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-22T05:06:55Z",
+   "last_seen": "2026-11-22T05:06:55Z",
+   "sources": [
+    {
+     "name": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/openrouter-drops-3-providers-after.html",
+     "title": "OpenRouter Drops 3 Providers After Researchers Catch Months of Prompt Theft at AI Hosting Firms",
+     "published": "2026-11-22T05:06:55Z"
+    }
+   ]
+  },
   {
    "id": "a4f7124565",
    "victim": "Austrian Foreign Ministry",
@@ -5388,38 +5421,6 @@
      "url": "https://www.infosecurity-magazine.com/news/hundreds-leaked-github-app-keys/",
      "title": "Hundreds of Leaked GitHub App Keys Still Authenticate",
      "published": "2026-09-23T15:00:00Z"
-    }
-   ]
-  },
-  {
-   "id": "e4b1af7aac",
-   "victim": null,
-   "victim_key": "",
-   "sector": "Legal & professional services",
-   "country": null,
-   "country_key": null,
-   "city": null,
-   "lat": null,
-   "lon": null,
-   "precision": "none",
-   "country_source": null,
-   "type": "other",
-   "records": null,
-   "actor": null,
-   "attacker_country": null,
-   "attacker_lat": null,
-   "attacker_lon": null,
-   "critical": false,
-   "summary": null,
-   "confidence": "low",
-   "first_seen": "2026-09-23T08:30:00Z",
-   "last_seen": "2026-09-23T08:30:00Z",
-   "sources": [
-    {
-     "name": "Infosecurity Magazine",
-     "url": "https://www.infosecurity-magazine.com/news/eu-auditors-slam-blocs-cyberinfo/",
-     "title": "EU Auditors Warn Information-Sharing Gaps Are Hindering Cyber Incident Response",
-     "published": "2026-09-23T08:30:00Z"
     }
    ]
   }
