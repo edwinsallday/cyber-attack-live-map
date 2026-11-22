@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-22T08:44:58Z",
+ "updated": "2026-11-22T17:04:03Z",
  "coverage_from": "2026-11-18T03:12:00Z",
  "sources": [
   "The Hacker News",
@@ -26,10 +26,73 @@
   "CSIS"
  ],
  "feed_errors": [
-  "Cybersecurity News: not well-formed (invalid token): line 1, column 119",
   "Inside Higher Ed: undefined entity: line 75, column 10"
  ],
  "incidents": [
+  {
+   "id": "855a50efe0",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Retail & e-commerce",
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-22T15:43:04Z",
+   "last_seen": "2026-11-22T15:43:04Z",
+   "sources": [
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/cleverbridge-warns-hackers-stole-credit-card-numbers-cvvs-in-data-breach/",
+     "title": "Cleverbridge warns hackers stole credit card numbers, CVVs in data breach",
+     "published": "2026-11-22T15:43:04Z"
+    }
+   ]
+  },
+  {
+   "id": "40034c303f",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Telecoms",
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": true,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-22T13:51:01Z",
+   "last_seen": "2026-11-22T13:51:01Z",
+   "sources": [
+    {
+     "name": "DataBreaches.net",
+     "url": "https://databreaches.net/2026/11/22/huge-european-telecom-leak-exposes-swedbank-seb-airbaltic-and-dozens-of-other-companies-clients/",
+     "title": "Huge European telecom leak exposes Swedbank, SEB, airBaltic and dozens of other companies’ clients",
+     "published": "2026-11-22T13:51:01Z"
+    }
+   ]
+  },
   {
    "id": "78074d39df",
    "victim": null,
@@ -59,6 +122,38 @@
      "url": "https://thehackernews.com/2026/11/openrouter-drops-3-providers-after.html",
      "title": "OpenRouter Drops 3 Providers After Researchers Catch Months of Prompt Theft at AI Hosting Firms",
      "published": "2026-11-22T05:06:55Z"
+    }
+   ]
+  },
+  {
+   "id": "2218dd8c52",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Technology",
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-22T03:58:45Z",
+   "last_seen": "2026-11-22T03:58:45Z",
+   "sources": [
+    {
+     "name": "Cybersecurity News",
+     "url": "https://cybersecuritynews.com/openrouter-ai-chat-leaks/",
+     "title": "OpenRouter Users’ Private AI Chats Possibly Exposed Via Compromised Third-Party Providers",
+     "published": "2026-11-22T03:58:45Z"
     }
    ]
   },
@@ -5389,38 +5484,6 @@
      "url": "https://www.infosecurity-magazine.com/news/bitget-restarts-withdrawals-387-5m/",
      "title": "Bitget Restarts Bitcoin Withdrawals Following $387.5m Wallet Breach",
      "published": "2026-09-28T15:00:00Z"
-    }
-   ]
-  },
-  {
-   "id": "5a182e4023",
-   "victim": null,
-   "victim_key": "",
-   "sector": "Technology",
-   "country": "United States",
-   "country_key": "United States of America",
-   "city": null,
-   "lat": 39.5,
-   "lon": -99.06,
-   "precision": "country",
-   "country_source": null,
-   "type": "data_breach",
-   "records": null,
-   "actor": null,
-   "attacker_country": null,
-   "attacker_lat": null,
-   "attacker_lon": null,
-   "critical": false,
-   "summary": null,
-   "confidence": "low",
-   "first_seen": "2026-09-23T15:00:00Z",
-   "last_seen": "2026-09-23T15:00:00Z",
-   "sources": [
-    {
-     "name": "Infosecurity Magazine",
-     "url": "https://www.infosecurity-magazine.com/news/hundreds-leaked-github-app-keys/",
-     "title": "Hundreds of Leaked GitHub App Keys Still Authenticate",
-     "published": "2026-09-23T15:00:00Z"
     }
    ]
   }
