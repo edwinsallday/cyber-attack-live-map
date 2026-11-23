@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-23T03:03:29Z",
+ "updated": "2026-11-23T12:19:15Z",
  "coverage_from": "2026-11-18T03:12:00Z",
  "sources": [
   "The Hacker News",
@@ -26,7 +26,7 @@
   "CSIS"
  ],
  "feed_errors": [
-  "Inside Higher Ed: undefined entity: line 75, column 10"
+  "Inside Higher Ed: undefined entity: line 179, column 51"
  ],
  "incidents": [
   {
@@ -34,13 +34,13 @@
    "victim": null,
    "victim_key": "",
    "sector": "Retail & e-commerce",
-   "country": null,
-   "country_key": null,
+   "country": "Germany",
+   "country_key": "Germany",
    "city": null,
-   "lat": null,
-   "lon": null,
-   "precision": "none",
-   "country_source": null,
+   "lat": 51.13,
+   "lon": 10.29,
+   "precision": "country",
+   "country_source": "wikidata",
    "type": "data_breach",
    "records": null,
    "actor": null,
@@ -51,13 +51,217 @@
    "summary": null,
    "confidence": "low",
    "first_seen": "2026-11-23T02:45:54Z",
-   "last_seen": "2026-11-23T02:45:54Z",
+   "last_seen": "2026-11-23T10:45:00Z",
    "sources": [
     {
      "name": "SC Media",
      "url": "https://www.scworld.com/brief/cleverbridge-reports-data-breach-involving-payment-card-information",
      "title": "Cleverbridge reports data breach involving payment card information",
      "published": "2026-11-23T02:45:54Z"
+    },
+    {
+     "name": "Infosecurity Magazine",
+     "url": "https://www.infosecurity-magazine.com/news/cleverbridge-payment-card-breached/",
+     "title": "Cleverbridge Confirms Customers’ Payment Card Data Breached",
+     "published": "2026-11-23T10:45:00Z"
+    }
+   ]
+  },
+  {
+   "id": "34595b5908",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Technology",
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "country_source": null,
+   "type": "data_breach",
+   "records": "10 Organizations",
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-23T10:27:37Z",
+   "last_seen": "2026-11-23T10:27:37Z",
+   "sources": [
+    {
+     "name": "Cybersecurity News",
+     "url": "https://cybersecuritynews.com/hackers-use-autonomous-ai/",
+     "title": "Hackers Use Autonomous AI to Breach 10 Organizations and Access Over 1 Million Personal Records",
+     "published": "2026-11-23T10:27:37Z"
+    }
+   ]
+  },
+  {
+   "id": "a2d48fff91",
+   "victim": "Bulgaria Discovers Massive Government",
+   "victim_key": "bulgaria discovers massive government",
+   "sector": "Government & defence",
+   "country": "Bulgaria",
+   "country_key": "Bulgaria",
+   "city": null,
+   "lat": 42.75,
+   "lon": 25.19,
+   "precision": "country",
+   "country_source": null,
+   "type": "espionage",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "medium",
+   "first_seen": "2026-11-23T08:01:36Z",
+   "last_seen": "2026-11-23T09:46:56Z",
+   "sources": [
+    {
+     "name": "Cybersecurity News",
+     "url": "https://cybersecuritynews.com/bulgarian-government/",
+     "title": "Hackers Secretly Spy on Bulgarian Government for Five Years and Steal 62 Million Pages of Documents",
+     "published": "2026-11-23T08:01:36Z"
+    },
+    {
+     "name": "Security Affairs",
+     "url": "https://securityaffairs.com/203794/intelligence/bulgaria-discovers-massive-government-breach-after-five-years-of-undetected-spying.html",
+     "title": "Bulgaria Discovers Massive Government Breach After Five Years of Undetected Spying",
+     "published": "2026-11-23T09:46:56Z"
+    }
+   ]
+  },
+  {
+   "id": "0fe6a8a246",
+   "victim": "Samsung Securities",
+   "victim_key": "samsung securities",
+   "sector": "Banking & finance",
+   "country": "South Korea",
+   "country_key": "South Korea",
+   "city": null,
+   "lat": 36.43,
+   "lon": 127.82,
+   "precision": "country",
+   "country_source": null,
+   "type": "data_breach",
+   "records": "8,241 Customers",
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": true,
+   "summary": null,
+   "confidence": "medium",
+   "first_seen": "2026-11-23T08:53:13Z",
+   "last_seen": "2026-11-23T08:53:13Z",
+   "sources": [
+    {
+     "name": "Cybersecurity News",
+     "url": "https://cybersecuritynews.com/samsung-securities-data-breach/",
+     "title": "Samsung Securities Data Breach Exposes 8,241 Customers’ Personal and Account Details",
+     "published": "2026-11-23T08:53:13Z"
+    }
+   ]
+  },
+  {
+   "id": "80927b607c",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Banking & finance",
+   "country": "India",
+   "country_key": "India",
+   "city": null,
+   "lat": 22.92,
+   "lon": 79.59,
+   "precision": "country",
+   "country_source": null,
+   "type": "other",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": true,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-23T08:24:15Z",
+   "last_seen": "2026-11-23T08:24:15Z",
+   "sources": [
+    {
+     "name": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/ai-assisted-cyberattacks-trigger.html",
+     "title": "AI-Assisted Cyberattacks Trigger Unauthorized Payments at Indian Banks and Fintech Firms",
+     "published": "2026-11-23T08:24:15Z"
+    }
+   ]
+  },
+  {
+   "id": "e5628202ee",
+   "victim": null,
+   "victim_key": "",
+   "sector": null,
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "country_source": null,
+   "type": "other",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-23T08:06:18Z",
+   "last_seen": "2026-11-23T08:06:18Z",
+   "sources": [
+    {
+     "name": "Help Net Security",
+     "url": "https://www.helpnetsecurity.com/2026/11/23/badbox-3-0-ad-fraud-operation/",
+     "title": "Infected TV boxes in BADBOX 3.0 rent out their owners’ home internet",
+     "published": "2026-11-23T08:06:18Z"
+    }
+   ]
+  },
+  {
+   "id": "ee7f30cc60",
+   "victim": null,
+   "victim_key": "",
+   "sector": null,
+   "country": "Germany",
+   "country_key": "Germany",
+   "city": null,
+   "lat": 51.13,
+   "lon": 10.29,
+   "precision": "country",
+   "country_source": null,
+   "type": "espionage",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-23T03:09:11Z",
+   "last_seen": "2026-11-23T03:09:11Z",
+   "sources": [
+    {
+     "name": "Cybersecurity News",
+     "url": "https://cybersecuritynews.com/hack-volkswagen-cars-via-bluetooth/",
+     "title": "Researchers Hack Volkswagen Cars via Bluetooth to Spy on Conversations and Track GPS Locations",
+     "published": "2026-11-23T03:09:11Z"
     }
    ]
   },
@@ -196,6 +400,44 @@
    ]
   },
   {
+   "id": "a4f7124565",
+   "victim": "Austrian Foreign Ministry",
+   "victim_key": "austrian foreign ministry",
+   "sector": "Government & defence",
+   "country": "Austria",
+   "country_key": "Austria",
+   "city": null,
+   "lat": 47.61,
+   "lon": 14.08,
+   "precision": "country",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "medium",
+   "first_seen": "2026-11-21T18:22:52Z",
+   "last_seen": "2026-11-23T00:00:00Z",
+   "sources": [
+    {
+     "name": "Security Affairs",
+     "url": "https://securityaffairs.com/203680/hacking/cyberattack-on-austrian-foreign-ministry-exposes-diplomatic-staff-data.html",
+     "title": "Cyberattack on Austrian Foreign Ministry Exposes Diplomatic Staff Data",
+     "published": "2026-11-21T18:22:52Z"
+    },
+    {
+     "name": "The Record",
+     "url": "https://therecord.media/austrian-foreign-ministry-says-website-hacked",
+     "title": "Hackers breach Austrian Foreign Ministry website, access diplomats' contact details",
+     "published": "2026-11-23T00:00:00Z"
+    }
+   ]
+  },
+  {
    "id": "40034c303f",
    "victim": null,
    "victim_key": "",
@@ -288,38 +530,6 @@
      "url": "https://cybersecuritynews.com/openrouter-ai-chat-leaks/",
      "title": "OpenRouter Users’ Private AI Chats Possibly Exposed Via Compromised Third-Party Providers",
      "published": "2026-11-22T03:58:45Z"
-    }
-   ]
-  },
-  {
-   "id": "a4f7124565",
-   "victim": "Austrian Foreign Ministry",
-   "victim_key": "austrian foreign ministry",
-   "sector": "Government & defence",
-   "country": "Austria",
-   "country_key": "Austria",
-   "city": null,
-   "lat": 47.61,
-   "lon": 14.08,
-   "precision": "country",
-   "country_source": null,
-   "type": "data_breach",
-   "records": null,
-   "actor": null,
-   "attacker_country": null,
-   "attacker_lat": null,
-   "attacker_lon": null,
-   "critical": false,
-   "summary": null,
-   "confidence": "medium",
-   "first_seen": "2026-11-21T18:22:52Z",
-   "last_seen": "2026-11-21T18:22:52Z",
-   "sources": [
-    {
-     "name": "Security Affairs",
-     "url": "https://securityaffairs.com/203680/hacking/cyberattack-on-austrian-foreign-ministry-exposes-diplomatic-staff-data.html",
-     "title": "Cyberattack on Austrian Foreign Ministry Exposes Diplomatic Staff Data",
-     "published": "2026-11-21T18:22:52Z"
     }
    ]
   },
