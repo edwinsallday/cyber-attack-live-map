@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-22T22:26:12Z",
+ "updated": "2026-11-23T03:03:29Z",
  "coverage_from": "2026-11-18T03:12:00Z",
  "sources": [
   "The Hacker News",
@@ -30,7 +30,7 @@
  ],
  "incidents": [
   {
-   "id": "855a50efe0",
+   "id": "a5650ed5ee",
    "victim": null,
    "victim_key": "",
    "sector": "Retail & e-commerce",
@@ -50,14 +50,148 @@
    "critical": false,
    "summary": null,
    "confidence": "low",
+   "first_seen": "2026-11-23T02:45:54Z",
+   "last_seen": "2026-11-23T02:45:54Z",
+   "sources": [
+    {
+     "name": "SC Media",
+     "url": "https://www.scworld.com/brief/cleverbridge-reports-data-breach-involving-payment-card-information",
+     "title": "Cleverbridge reports data breach involving payment card information",
+     "published": "2026-11-23T02:45:54Z"
+    }
+   ]
+  },
+  {
+   "id": "7905caa823",
+   "victim": "GL.iNet",
+   "victim_key": "glinet",
+   "sector": "Technology",
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "country_source": null,
+   "type": "other",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-23T02:44:06Z",
+   "last_seen": "2026-11-23T02:44:06Z",
+   "sources": [
+    {
+     "name": "SC Media",
+     "url": "https://www.scworld.com/brief/gl-inet-confirms-cloud-vulnerability-led-to-router-and-kvm-malware-infections",
+     "title": "GL.iNet confirms cloud vulnerability led to router and KVM malware infections",
+     "published": "2026-11-23T02:44:06Z"
+    }
+   ]
+  },
+  {
+   "id": "07882a253e",
+   "victim": "Rackspace",
+   "victim_key": "rackspace",
+   "sector": "Technology",
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-23T02:39:35Z",
+   "last_seen": "2026-11-23T02:39:35Z",
+   "sources": [
+    {
+     "name": "SC Media",
+     "url": "https://www.scworld.com/brief/rackspace-discloses-security-breach-of-spot-cloud-platform",
+     "title": "Rackspace discloses security breach of Spot cloud platform",
+     "published": "2026-11-23T02:39:35Z"
+    }
+   ]
+  },
+  {
+   "id": "855a50efe0",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Retail & e-commerce",
+   "country": "Germany",
+   "country_key": "Germany",
+   "city": null,
+   "lat": 51.13,
+   "lon": 10.29,
+   "precision": "country",
+   "country_source": "wikidata",
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
    "first_seen": "2026-11-22T15:43:04Z",
-   "last_seen": "2026-11-22T15:43:04Z",
+   "last_seen": "2026-11-23T02:37:31Z",
    "sources": [
     {
      "name": "BleepingComputer",
      "url": "https://www.bleepingcomputer.com/news/security/cleverbridge-warns-hackers-stole-credit-card-numbers-cvvs-in-data-breach/",
      "title": "Cleverbridge warns hackers stole credit card numbers, CVVs in data breach",
      "published": "2026-11-22T15:43:04Z"
+    },
+    {
+     "name": "Cybersecurity News",
+     "url": "https://cybersecuritynews.com/cleverbridge-data-breach/",
+     "title": "Cleverbridge Confirms Hackers Stole Customer Card Numbers and CVV Codes in a Major Data Breach",
+     "published": "2026-11-23T02:37:31Z"
+    }
+   ]
+  },
+  {
+   "id": "2dc92d8161",
+   "victim": "Microsoft",
+   "victim_key": "microsoft",
+   "sector": "Healthcare",
+   "country": "United States",
+   "country_key": "United States of America",
+   "city": null,
+   "lat": 39.5,
+   "lon": -99.06,
+   "precision": "country",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": true,
+   "summary": null,
+   "confidence": "medium",
+   "first_seen": "2026-11-23T02:24:47Z",
+   "last_seen": "2026-11-23T02:24:47Z",
+   "sources": [
+    {
+     "name": "SC Media",
+     "url": "https://www.scworld.com/brief/microsoft-discloses-data-breach-involving-entra-connect-health-service",
+     "title": "Microsoft discloses data breach involving Entra Connect Health service",
+     "published": "2026-11-23T02:24:47Z"
     }
    ]
   },

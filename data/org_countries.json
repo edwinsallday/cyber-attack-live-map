@@ -29,6 +29,13 @@
   "country": "Japan",
   "checked": "2026-11-18"
  },
+ "cleverbridge": {
+  "qid": "Q139579308",
+  "label": "Cleverbridge",
+  "description": "a cloud-based e-commerce platform and Merchant of Record (MoR) that provides billing solutions for digital goods, online services, and Software-as-a-Service (SaaS) companies",
+  "country": "Germany",
+  "checked": "2026-11-23"
+ },
  "cognitive health technologies": {
   "checked": "2026-11-18"
  },
@@ -65,6 +72,9 @@
  "frontline education": {
   "checked": "2026-11-18"
  },
+ "gl.inet": {
+  "checked": "2026-11-23"
+ },
  "infoblox": {
   "qid": "Q15831130",
   "label": "Infoblox",
@@ -95,6 +105,9 @@
   "description": "American multinational Internet and technology corporation",
   "country": "United States",
   "checked": "2026-11-18"
+ },
+ "rackspace": {
+  "checked": "2026-11-23"
  },
  "revolut": {
   "qid": "Q22908307",
