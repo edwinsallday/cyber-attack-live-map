@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-23T12:19:15Z",
+ "updated": "2026-11-24T00:17:47Z",
  "coverage_from": "2026-11-18T03:12:00Z",
  "sources": [
   "The Hacker News",
@@ -51,7 +51,7 @@
    "summary": null,
    "confidence": "low",
    "first_seen": "2026-11-23T02:45:54Z",
-   "last_seen": "2026-11-23T10:45:00Z",
+   "last_seen": "2026-11-23T22:54:22Z",
    "sources": [
     {
      "name": "SC Media",
@@ -64,6 +64,572 @@
      "url": "https://www.infosecurity-magazine.com/news/cleverbridge-payment-card-breached/",
      "title": "Cleverbridge Confirms Customers’ Payment Card Data Breached",
      "published": "2026-11-23T10:45:00Z"
+    },
+    {
+     "name": "Security Affairs",
+     "url": "https://securityaffairs.com/203851/data-breach/cleverbridge-confirms-attackers-copied-payment-card-data-from-its-platform.html",
+     "title": "Cleverbridge Confirms Attackers Copied Payment Card Data From Its Platform",
+     "published": "2026-11-23T19:14:17Z"
+    },
+    {
+     "name": "SC Media",
+     "url": "https://www.scworld.com/brief/cleverbridge-discloses-data-breach-involving-payment-card-information",
+     "title": "Cleverbridge discloses data breach involving payment card information",
+     "published": "2026-11-23T22:54:22Z"
+    }
+   ]
+  },
+  {
+   "id": "74fd8eee3a",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Technology",
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-23T22:54:05Z",
+   "last_seen": "2026-11-23T22:54:05Z",
+   "sources": [
+    {
+     "name": "SC Media",
+     "url": "https://www.scworld.com/brief/laliga-reports-data-breach-affecting-fan-services-platform",
+     "title": "LaLiga reports data breach affecting fan services platform",
+     "published": "2026-11-23T22:54:05Z"
+    }
+   ]
+  },
+  {
+   "id": "f1397973b7",
+   "victim": null,
+   "victim_key": "",
+   "sector": null,
+   "country": "South Korea",
+   "country_key": "South Korea",
+   "city": null,
+   "lat": 36.43,
+   "lon": 127.82,
+   "precision": "country",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-23T20:54:51Z",
+   "last_seen": "2026-11-23T20:54:51Z",
+   "sources": [
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/south-koreas-power-giant-kepco-confirms-data-breach-impacting-15-million/",
+     "title": "South Korea’s power giant KEPCO confirms data breach impacting 1.5 million",
+     "published": "2026-11-23T20:54:51Z"
+    }
+   ]
+  },
+  {
+   "id": "78074d39df",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Technology",
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-22T05:06:55Z",
+   "last_seen": "2026-11-23T20:00:20Z",
+   "sources": [
+    {
+     "name": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/openrouter-drops-3-providers-after.html",
+     "title": "OpenRouter Drops 3 Providers After Researchers Catch Months of Prompt Theft at AI Hosting Firms",
+     "published": "2026-11-22T05:06:55Z"
+    },
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/openrouter-drops-ai-providers-over-leaked-prompts-and-secrets/",
+     "title": "OpenRouter drops AI providers over leaked prompts and secrets",
+     "published": "2026-11-23T20:00:20Z"
+    }
+   ]
+  },
+  {
+   "id": "f714b48247",
+   "victim": "Spanish LaLiga",
+   "victim_key": "spanish laliga",
+   "sector": null,
+   "country": "Spain",
+   "country_key": "Spain",
+   "city": null,
+   "lat": 40.35,
+   "lon": -3.62,
+   "precision": "country",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "medium",
+   "first_seen": "2026-11-23T18:38:40Z",
+   "last_seen": "2026-11-23T18:38:40Z",
+   "sources": [
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/spanish-laliga-confirms-hackers-stole-soccer-fans-personal-data/",
+     "title": "Spanish LaLiga confirms hackers stole soccer fans’ personal data",
+     "published": "2026-11-23T18:38:40Z"
+    }
+   ]
+  },
+  {
+   "id": "4ca5a6cc42",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Government & defence",
+   "country": "United States",
+   "country_key": "United States of America",
+   "city": null,
+   "lat": 39.5,
+   "lon": -99.06,
+   "precision": "country",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-23T18:30:00Z",
+   "last_seen": "2026-11-23T18:30:00Z",
+   "sources": [
+    {
+     "name": "The Record",
+     "url": "https://therecord.media/fbi-cyberattack-data-breach",
+     "title": "FBI reportedly facing second data breach involving National Crime Information Center",
+     "published": "2026-11-23T18:30:00Z"
+    }
+   ]
+  },
+  {
+   "id": "d9a3251505",
+   "victim": "N-able",
+   "victim_key": "nable",
+   "sector": "Technology",
+   "country": "United States",
+   "country_key": "United States of America",
+   "city": null,
+   "lat": 39.5,
+   "lon": -99.06,
+   "precision": "country",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "medium",
+   "first_seen": "2026-11-20T13:18:36Z",
+   "last_seen": "2026-11-23T15:06:49Z",
+   "sources": [
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/microsoft/n-able-says-recent-security-breach-led-to-major-service-outage/",
+     "title": "N-able says recent security breach led to major service outage",
+     "published": "2026-11-20T13:18:36Z"
+    },
+    {
+     "name": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/n-able-discloses-critical-mail-assure.html",
+     "title": "N-able Discloses Critical Mail Assure Vulnerability Found During Breach Investigation",
+     "published": "2026-11-23T12:28:09Z"
+    },
+    {
+     "name": "SecurityWeek",
+     "url": "https://www.securityweek.com/n-able-patches-critical-flaw-disclosed-after-mail-assure-cyberattack/",
+     "title": "N-able Patches Critical Flaw Disclosed After Mail Assure Cyberattack",
+     "published": "2026-11-23T15:06:49Z"
+    }
+   ]
+  },
+  {
+   "id": "309b2650e8",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Technology",
+   "country": "China",
+   "country_key": "China",
+   "city": null,
+   "lat": 36.61,
+   "lon": 103.87,
+   "precision": "country",
+   "country_source": null,
+   "type": "other",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-23T15:05:50Z",
+   "last_seen": "2026-11-23T15:05:50Z",
+   "sources": [
+    {
+     "name": "Help Net Security",
+     "url": "https://www.helpnetsecurity.com/2026/11/23/gl-inet-cloud-compromise-malware-backdoors/",
+     "title": "GL.iNet cloud compromise hits routers and KVMs, older backdoors also found",
+     "published": "2026-11-23T15:05:50Z"
+    }
+   ]
+  },
+  {
+   "id": "1a3c6c64ea",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Education",
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-23T14:34:27Z",
+   "last_seen": "2026-11-23T14:34:27Z",
+   "sources": [
+    {
+     "name": "Cybersecurity News",
+     "url": "https://cybersecuritynews.com/eu-academy-disabled/",
+     "title": "European Commission Disables Access to EU Academy After Cyberattack Exposes User Data",
+     "published": "2026-11-23T14:34:27Z"
+    }
+   ]
+  },
+  {
+   "id": "2dc92d8161",
+   "victim": "Microsoft",
+   "victim_key": "microsoft",
+   "sector": "Healthcare",
+   "country": "United States",
+   "country_key": "United States of America",
+   "city": null,
+   "lat": 39.5,
+   "lon": -99.06,
+   "precision": "country",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": true,
+   "summary": null,
+   "confidence": "medium",
+   "first_seen": "2026-11-23T02:24:47Z",
+   "last_seen": "2026-11-23T14:33:37Z",
+   "sources": [
+    {
+     "name": "SC Media",
+     "url": "https://www.scworld.com/brief/microsoft-discloses-data-breach-involving-entra-connect-health-service",
+     "title": "Microsoft discloses data breach involving Entra Connect Health service",
+     "published": "2026-11-23T02:24:47Z"
+    },
+    {
+     "name": "Security Affairs",
+     "url": "https://securityaffairs.com/203820/data-breach/microsoft-entra-connect-health-breach-exposes-tenant-metadata-and-admin-details.html",
+     "title": "Microsoft Entra Connect Health Breach Exposes Tenant Metadata and Admin Details",
+     "published": "2026-11-23T14:33:37Z"
+    }
+   ]
+  },
+  {
+   "id": "041ce1fb7e",
+   "victim": "IT",
+   "victim_key": "it",
+   "sector": "Healthcare",
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "country_source": null,
+   "type": "other",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": true,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-23T14:16:13Z",
+   "last_seen": "2026-11-23T14:16:13Z",
+   "sources": [
+    {
+     "name": "DataBreaches.net",
+     "url": "https://databreaches.net/2026/11/23/major-cyberattack-hits-it-systems-at-guadeloupe-university-hospital/",
+     "title": "Major cyberattack hits IT systems at Guadeloupe university hospital",
+     "published": "2026-11-23T14:16:13Z"
+    }
+   ]
+  },
+  {
+   "id": "0fe6a8a246",
+   "victim": "Samsung Securities",
+   "victim_key": "samsung securities",
+   "sector": "Banking & finance",
+   "country": "South Korea",
+   "country_key": "South Korea",
+   "city": null,
+   "lat": 36.43,
+   "lon": 127.82,
+   "precision": "country",
+   "country_source": null,
+   "type": "data_breach",
+   "records": "8,241 Customers",
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": true,
+   "summary": null,
+   "confidence": "medium",
+   "first_seen": "2026-11-23T08:53:13Z",
+   "last_seen": "2026-11-23T14:15:55Z",
+   "sources": [
+    {
+     "name": "Cybersecurity News",
+     "url": "https://cybersecuritynews.com/samsung-securities-data-breach/",
+     "title": "Samsung Securities Data Breach Exposes 8,241 Customers’ Personal and Account Details",
+     "published": "2026-11-23T08:53:13Z"
+    },
+    {
+     "name": "DataBreaches.net",
+     "url": "https://databreaches.net/2026/11/23/samsung-securities-hacked-names-addresses-and-account-details-of-thousands-of-customers-exposed-online/",
+     "title": "Samsung Securities Hacked: Names, Addresses And Account Details Of Thousands Of Customers Exposed Online",
+     "published": "2026-11-23T14:15:55Z"
+    }
+   ]
+  },
+  {
+   "id": "09fa056d11",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Media & entertainment",
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-23T14:15:28Z",
+   "last_seen": "2026-11-23T14:15:28Z",
+   "sources": [
+    {
+     "name": "DataBreaches.net",
+     "url": "https://databreaches.net/2026/11/23/jpn-tower-records-online-hit-by-cyberattack-11-million-customer-records-potentially-leaked/",
+     "title": "Jpn: Tower Records Online Hit by Cyberattack, 11 Million Customer Records Potentially Leaked",
+     "published": "2026-11-23T14:15:28Z"
+    }
+   ]
+  },
+  {
+   "id": "ae6f6f5dce",
+   "victim": null,
+   "victim_key": "",
+   "sector": null,
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "country_source": null,
+   "type": "other",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-23T13:58:49Z",
+   "last_seen": "2026-11-23T13:58:49Z",
+   "sources": [
+    {
+     "name": "Cybersecurity News",
+     "url": "https://cybersecuritynews.com/hackers-plant-13-clickfix-traps/",
+     "title": "Hackers Plant 13 ClickFix Traps on Compromised WordPress Site to Trick Visitors Into Running Malware",
+     "published": "2026-11-23T13:58:49Z"
+    }
+   ]
+  },
+  {
+   "id": "8f14d200b8",
+   "victim": "Prism Medical Products",
+   "victim_key": "prism medical products",
+   "sector": "Healthcare",
+   "country": "United States",
+   "country_key": "United States of America",
+   "city": null,
+   "lat": 39.5,
+   "lon": -99.06,
+   "precision": "country",
+   "country_source": "source",
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": true,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-23T13:51:26Z",
+   "last_seen": "2026-11-23T13:51:26Z",
+   "sources": [
+    {
+     "name": "HIPAA Journal",
+     "url": "https://www.hipaajournal.com/prism-medical-products-data-breach/",
+     "title": "Prism Medical Products Data Breach Affects 1.3 Million Individuals",
+     "published": "2026-11-23T13:51:26Z"
+    }
+   ]
+  },
+  {
+   "id": "855a50efe0",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Retail & e-commerce",
+   "country": "Germany",
+   "country_key": "Germany",
+   "city": null,
+   "lat": 51.13,
+   "lon": 10.29,
+   "precision": "country",
+   "country_source": "wikidata",
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-22T15:43:04Z",
+   "last_seen": "2026-11-23T13:00:14Z",
+   "sources": [
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/cleverbridge-warns-hackers-stole-credit-card-numbers-cvvs-in-data-breach/",
+     "title": "Cleverbridge warns hackers stole credit card numbers, CVVs in data breach",
+     "published": "2026-11-22T15:43:04Z"
+    },
+    {
+     "name": "Cybersecurity News",
+     "url": "https://cybersecuritynews.com/cleverbridge-data-breach/",
+     "title": "Cleverbridge Confirms Hackers Stole Customer Card Numbers and CVV Codes in a Major Data Breach",
+     "published": "2026-11-23T02:37:31Z"
+    },
+    {
+     "name": "Help Net Security",
+     "url": "https://www.helpnetsecurity.com/2026/11/23/cleverbridge-data-breach-card-numbers-cvv/",
+     "title": "Cleverbridge alerts customers that hackers stole their credit card and CVV numbers",
+     "published": "2026-11-23T13:00:14Z"
+    }
+   ]
+  },
+  {
+   "id": "17e792aba6",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Technology",
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "country_source": null,
+   "type": "other",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-23T12:16:20Z",
+   "last_seen": "2026-11-23T12:16:20Z",
+   "sources": [
+    {
+     "name": "SecurityWeek",
+     "url": "https://www.securityweek.com/ai-inference-providers-failed-to-detect-hacking-and-prompt-theft-says-dragos/",
+     "title": "AI Inference Providers Failed to Detect Hacking and Prompt Theft, Says Dragos",
+     "published": "2026-11-23T12:16:20Z"
     }
    ]
   },
@@ -134,38 +700,6 @@
      "url": "https://securityaffairs.com/203794/intelligence/bulgaria-discovers-massive-government-breach-after-five-years-of-undetected-spying.html",
      "title": "Bulgaria Discovers Massive Government Breach After Five Years of Undetected Spying",
      "published": "2026-11-23T09:46:56Z"
-    }
-   ]
-  },
-  {
-   "id": "0fe6a8a246",
-   "victim": "Samsung Securities",
-   "victim_key": "samsung securities",
-   "sector": "Banking & finance",
-   "country": "South Korea",
-   "country_key": "South Korea",
-   "city": null,
-   "lat": 36.43,
-   "lon": 127.82,
-   "precision": "country",
-   "country_source": null,
-   "type": "data_breach",
-   "records": "8,241 Customers",
-   "actor": null,
-   "attacker_country": null,
-   "attacker_lat": null,
-   "attacker_lon": null,
-   "critical": true,
-   "summary": null,
-   "confidence": "medium",
-   "first_seen": "2026-11-23T08:53:13Z",
-   "last_seen": "2026-11-23T08:53:13Z",
-   "sources": [
-    {
-     "name": "Cybersecurity News",
-     "url": "https://cybersecuritynews.com/samsung-securities-data-breach/",
-     "title": "Samsung Securities Data Breach Exposes 8,241 Customers’ Personal and Account Details",
-     "published": "2026-11-23T08:53:13Z"
     }
    ]
   },
@@ -330,76 +864,6 @@
    ]
   },
   {
-   "id": "855a50efe0",
-   "victim": null,
-   "victim_key": "",
-   "sector": "Retail & e-commerce",
-   "country": "Germany",
-   "country_key": "Germany",
-   "city": null,
-   "lat": 51.13,
-   "lon": 10.29,
-   "precision": "country",
-   "country_source": "wikidata",
-   "type": "data_breach",
-   "records": null,
-   "actor": null,
-   "attacker_country": null,
-   "attacker_lat": null,
-   "attacker_lon": null,
-   "critical": false,
-   "summary": null,
-   "confidence": "low",
-   "first_seen": "2026-11-22T15:43:04Z",
-   "last_seen": "2026-11-23T02:37:31Z",
-   "sources": [
-    {
-     "name": "BleepingComputer",
-     "url": "https://www.bleepingcomputer.com/news/security/cleverbridge-warns-hackers-stole-credit-card-numbers-cvvs-in-data-breach/",
-     "title": "Cleverbridge warns hackers stole credit card numbers, CVVs in data breach",
-     "published": "2026-11-22T15:43:04Z"
-    },
-    {
-     "name": "Cybersecurity News",
-     "url": "https://cybersecuritynews.com/cleverbridge-data-breach/",
-     "title": "Cleverbridge Confirms Hackers Stole Customer Card Numbers and CVV Codes in a Major Data Breach",
-     "published": "2026-11-23T02:37:31Z"
-    }
-   ]
-  },
-  {
-   "id": "2dc92d8161",
-   "victim": "Microsoft",
-   "victim_key": "microsoft",
-   "sector": "Healthcare",
-   "country": "United States",
-   "country_key": "United States of America",
-   "city": null,
-   "lat": 39.5,
-   "lon": -99.06,
-   "precision": "country",
-   "country_source": null,
-   "type": "data_breach",
-   "records": null,
-   "actor": null,
-   "attacker_country": null,
-   "attacker_lat": null,
-   "attacker_lon": null,
-   "critical": true,
-   "summary": null,
-   "confidence": "medium",
-   "first_seen": "2026-11-23T02:24:47Z",
-   "last_seen": "2026-11-23T02:24:47Z",
-   "sources": [
-    {
-     "name": "SC Media",
-     "url": "https://www.scworld.com/brief/microsoft-discloses-data-breach-involving-entra-connect-health-service",
-     "title": "Microsoft discloses data breach involving Entra Connect Health service",
-     "published": "2026-11-23T02:24:47Z"
-    }
-   ]
-  },
-  {
    "id": "a4f7124565",
    "victim": "Austrian Foreign Ministry",
    "victim_key": "austrian foreign ministry",
@@ -466,38 +930,6 @@
      "url": "https://databreaches.net/2026/11/22/huge-european-telecom-leak-exposes-swedbank-seb-airbaltic-and-dozens-of-other-companies-clients/",
      "title": "Huge European telecom leak exposes Swedbank, SEB, airBaltic and dozens of other companies’ clients",
      "published": "2026-11-22T13:51:01Z"
-    }
-   ]
-  },
-  {
-   "id": "78074d39df",
-   "victim": null,
-   "victim_key": "",
-   "sector": "Technology",
-   "country": null,
-   "country_key": null,
-   "city": null,
-   "lat": null,
-   "lon": null,
-   "precision": "none",
-   "country_source": null,
-   "type": "data_breach",
-   "records": null,
-   "actor": null,
-   "attacker_country": null,
-   "attacker_lat": null,
-   "attacker_lon": null,
-   "critical": false,
-   "summary": null,
-   "confidence": "low",
-   "first_seen": "2026-11-22T05:06:55Z",
-   "last_seen": "2026-11-22T05:06:55Z",
-   "sources": [
-    {
-     "name": "The Hacker News",
-     "url": "https://thehackernews.com/2026/11/openrouter-drops-3-providers-after.html",
-     "title": "OpenRouter Drops 3 Providers After Researchers Catch Months of Prompt Theft at AI Hosting Firms",
-     "published": "2026-11-22T05:06:55Z"
     }
    ]
   },
@@ -1012,38 +1444,6 @@
      "url": "https://www.hipaajournal.com/access-dental-valley-family-health-care-ochsner-health-data-breach/",
      "title": "Access Dental Management Breach Affects Over 341,000 Individuals",
      "published": "2026-11-20T14:12:26Z"
-    }
-   ]
-  },
-  {
-   "id": "d9a3251505",
-   "victim": "N-able",
-   "victim_key": "nable",
-   "sector": "Technology",
-   "country": "United States",
-   "country_key": "United States of America",
-   "city": null,
-   "lat": 39.5,
-   "lon": -99.06,
-   "precision": "country",
-   "country_source": null,
-   "type": "data_breach",
-   "records": null,
-   "actor": null,
-   "attacker_country": null,
-   "attacker_lat": null,
-   "attacker_lon": null,
-   "critical": false,
-   "summary": null,
-   "confidence": "medium",
-   "first_seen": "2026-11-20T13:18:36Z",
-   "last_seen": "2026-11-20T13:18:36Z",
-   "sources": [
-    {
-     "name": "BleepingComputer",
-     "url": "https://www.bleepingcomputer.com/news/microsoft/n-able-says-recent-security-breach-led-to-major-service-outage/",
-     "title": "N-able says recent security breach led to major service outage",
-     "published": "2026-11-20T13:18:36Z"
     }
    ]
   },
