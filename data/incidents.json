@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24T10:22:38Z",
+ "updated": "2026-11-24T20:50:52Z",
  "coverage_from": "2026-11-18T03:12:00Z",
  "sources": [
   "The Hacker News",
@@ -26,10 +26,773 @@
   "CSIS"
  ],
  "feed_errors": [
-  "Cybersecurity News: not well-formed (invalid token): line 1, column 119",
   "Inside Higher Ed: undefined entity: line 75, column 180"
  ],
  "incidents": [
+  {
+   "id": "0bc0f96921",
+   "victim": null,
+   "victim_key": "",
+   "sector": null,
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "country_source": null,
+   "type": "ransomware",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-24T16:30:00Z",
+   "last_seen": "2026-11-24T20:21:20Z",
+   "sources": [
+    {
+     "name": "Infosecurity Magazine",
+     "url": "https://www.infosecurity-magazine.com/news/inception-extortion-sso-vishing/",
+     "title": "New Inception Extortion Brand Tied to SSO Vishing Campaign",
+     "published": "2026-11-24T16:30:00Z"
+    },
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/new-inception-extortion-gang-launches-large-scale-vishing-campaign/",
+     "title": "New Inception extortion gang launches large-scale vishing campaign",
+     "published": "2026-11-24T20:21:20Z"
+    }
+   ]
+  },
+  {
+   "id": "5f76ac4f7c",
+   "victim": "Turnitin",
+   "victim_key": "turnitin",
+   "sector": null,
+   "country": "United States",
+   "country_key": "United States of America",
+   "city": null,
+   "lat": 39.5,
+   "lon": -99.06,
+   "precision": "country",
+   "country_source": "wikidata",
+   "type": "other",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-24T18:59:52Z",
+   "last_seen": "2026-11-24T18:59:52Z",
+   "sources": [
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/turnitin-discloses-cyberattack-affecting-customer-facing-systems/",
+     "title": "Turnitin discloses cyberattack affecting customer-facing systems",
+     "published": "2026-11-24T18:59:52Z"
+    }
+   ]
+  },
+  {
+   "id": "853c45e9cb",
+   "victim": null,
+   "victim_key": "",
+   "sector": null,
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "country_source": null,
+   "type": "other",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-24T18:52:59Z",
+   "last_seen": "2026-11-24T18:52:59Z",
+   "sources": [
+    {
+     "name": "SC Media",
+     "url": "https://www.scworld.com/brief/next-reports-cyber-incident-involving-third-party-supplier",
+     "title": "Next reports cyber incident involving third-party supplier",
+     "published": "2026-11-24T18:52:59Z"
+    }
+   ]
+  },
+  {
+   "id": "adb18ca6ae",
+   "victim": "Radware",
+   "victim_key": "radware",
+   "sector": "Technology",
+   "country": "Israel",
+   "country_key": "Israel",
+   "city": null,
+   "lat": 31.49,
+   "lon": 35.0,
+   "precision": "country",
+   "country_source": "wikidata",
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-24T17:49:05Z",
+   "last_seen": "2026-11-24T17:49:05Z",
+   "sources": [
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/radware-discloses-breach-exposing-customer-cloud-access-keys/",
+     "title": "Radware discloses breach exposing customer cloud access keys",
+     "published": "2026-11-24T17:49:05Z"
+    }
+   ]
+  },
+  {
+   "id": "3127c44d38",
+   "victim": null,
+   "victim_key": "",
+   "sector": null,
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-24T17:34:23Z",
+   "last_seen": "2026-11-24T17:34:23Z",
+   "sources": [
+    {
+     "name": "DataBreaches.net",
+     "url": "https://databreaches.net/2026/11/24/gingko-bioworks-holdings-issued-a-statement-on-october-8-about-a-data-breach-getting-an-update-from-them-has-been-difficult/",
+     "title": "Gingko Bioworks Holdings issued a statement on October 8 about a data breach. Getting an update from them has been difficult.",
+     "published": "2026-11-24T17:34:23Z"
+    }
+   ]
+  },
+  {
+   "id": "e9069e703a",
+   "victim": "European Commission",
+   "victim_key": "european commission",
+   "sector": "Technology",
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "country_source": null,
+   "type": "other",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-20T08:52:29Z",
+   "last_seen": "2026-11-24T16:22:44Z",
+   "sources": [
+    {
+     "name": "Help Net Security",
+     "url": "https://www.helpnetsecurity.com/2026/11/20/european-commission-ai-generated-cyberattack-publicly-available-tool/",
+     "title": "European Commission confirms AI-generated cyberattack disrupted its systems",
+     "published": "2026-11-20T08:52:29Z"
+    },
+    {
+     "name": "SecurityWeek",
+     "url": "https://www.securityweek.com/european-commission-confirms-ai-assisted-cyberattack-disrupted-services/",
+     "title": "European Commission Confirms AI-Assisted Cyberattack Disrupted Services",
+     "published": "2026-11-20T10:51:42Z"
+    },
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/european-commission-confirms-data-theft-in-eu-academy-breach/",
+     "title": "European Commission confirms data theft in EU Academy breach",
+     "published": "2026-11-24T16:22:44Z"
+    }
+   ]
+  },
+  {
+   "id": "5ba708d91b",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Technology",
+   "country": "Israel",
+   "country_key": "Israel",
+   "city": null,
+   "lat": 31.49,
+   "lon": 35.0,
+   "precision": "country",
+   "country_source": null,
+   "type": "other",
+   "records": "22 organizations",
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-24T14:21:56Z",
+   "last_seen": "2026-11-24T16:15:23Z",
+   "sources": [
+    {
+     "name": "SecurityWeek",
+     "url": "https://www.securityweek.com/check-point-security-management-servers-hacked-in-ai-assisted-campaign/",
+     "title": "Check Point Security Management Servers Hacked in AI-Assisted Campaign",
+     "published": "2026-11-24T14:21:56Z"
+    },
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/hackers-compromise-check-point-servers-in-22-organizations/",
+     "title": "Hackers compromise Check Point Servers in 22 organizations",
+     "published": "2026-11-24T16:15:23Z"
+    }
+   ]
+  },
+  {
+   "id": "814531fc15",
+   "victim": null,
+   "victim_key": "",
+   "sector": null,
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-21T00:50:58Z",
+   "last_seen": "2026-11-24T16:00:00Z",
+   "sources": [
+    {
+     "name": "SC Media",
+     "url": "https://www.scworld.com/brief/carnegie-endowment-for-international-peace-reports-data-breach",
+     "title": "Carnegie Endowment for International Peace reports data breach",
+     "published": "2026-11-21T00:50:58Z"
+    },
+    {
+     "name": "The Record",
+     "url": "https://therecord.media/carnegie-endowment-data-breach",
+     "title": "Carnegie Endowment for International Peace says third-party breach leaked donation info",
+     "published": "2026-11-24T16:00:00Z"
+    }
+   ]
+  },
+  {
+   "id": "b85dd6d510",
+   "victim": null,
+   "victim_key": "",
+   "sector": null,
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-24T15:46:58Z",
+   "last_seen": "2026-11-24T15:46:58Z",
+   "sources": [
+    {
+     "name": "SC Media",
+     "url": "https://www.scworld.com/brief/artificial-intelligence-agents-leak-confidential-data-to-complete-tasks",
+     "title": "Artificial intelligence agents leak confidential data to complete tasks",
+     "published": "2026-11-24T15:46:58Z"
+    }
+   ]
+  },
+  {
+   "id": "deea569e27",
+   "victim": "GlobeTopper",
+   "victim_key": "globetopper",
+   "sector": "Retail & e-commerce",
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "country_source": null,
+   "type": "other",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-24T15:39:51Z",
+   "last_seen": "2026-11-24T15:39:51Z",
+   "sources": [
+    {
+     "name": "SC Media",
+     "url": "https://www.scworld.com/brief/globetopper-suffers-cyberattack-resulting-in-financial-losses",
+     "title": "GlobeTopper suffers cyberattack resulting in financial losses",
+     "published": "2026-11-24T15:39:51Z"
+    }
+   ]
+  },
+  {
+   "id": "230a967c24",
+   "victim": "McDonald's Japan",
+   "victim_key": "mcdonalds japan",
+   "sector": "Technology",
+   "country": "Japan",
+   "country_key": "Japan",
+   "city": null,
+   "lat": 36.02,
+   "lon": 136.88,
+   "precision": "country",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "medium",
+   "first_seen": "2026-11-24T14:09:37Z",
+   "last_seen": "2026-11-24T15:39:05Z",
+   "sources": [
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/mcdonalds-japan-data-breach-exposes-customer-location-information/",
+     "title": "McDonald's Japan data breach exposes customer location information",
+     "published": "2026-11-24T14:09:37Z"
+    },
+    {
+     "name": "Cybersecurity News",
+     "url": "https://cybersecuritynews.com/mcdonalds-japan-data-breach/",
+     "title": "McDonald’s Japan Confirms Data Breach – Customer Information and Location Data Exposed",
+     "published": "2026-11-24T15:39:05Z"
+    }
+   ]
+  },
+  {
+   "id": "d2294fb10f",
+   "victim": "European Commission Uncovers",
+   "victim_key": "european commission uncovers",
+   "sector": "Education",
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-24T14:49:59Z",
+   "last_seen": "2026-11-24T14:49:59Z",
+   "sources": [
+    {
+     "name": "SecurityWeek",
+     "url": "https://www.securityweek.com/european-commission-uncovers-data-breach-in-cyberattack-investigation/",
+     "title": "European Commission Uncovers Data Breach in Cyberattack Investigation",
+     "published": "2026-11-24T14:49:59Z"
+    }
+   ]
+  },
+  {
+   "id": "261fc9e910",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Healthcare",
+   "country": "Hong Kong",
+   "country_key": "Hong Kong",
+   "city": null,
+   "lat": 22.32,
+   "lon": 114.17,
+   "precision": "country",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": true,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-24T14:00:34Z",
+   "last_seen": "2026-11-24T14:00:34Z",
+   "sources": [
+    {
+     "name": "DataBreaches.net",
+     "url": "https://databreaches.net/2026/11/24/hk-gleneagles-hospital-suspends-app-after-data-breach/",
+     "title": "HK: Gleneagles Hospital suspends app after data breach",
+     "published": "2026-11-24T14:00:34Z"
+    }
+   ]
+  },
+  {
+   "id": "c790a2af9d",
+   "victim": null,
+   "victim_key": "",
+   "sector": null,
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-24T11:00:00Z",
+   "last_seen": "2026-11-24T14:00:22Z",
+   "sources": [
+    {
+     "name": "Wired Security",
+     "url": "https://www.wired.com/story/3-billion-usernames-passwords-and-documents-leaked-online/",
+     "title": "Database Leaks Expose 3.5 Billion Usernames, Passwords, and Documents",
+     "published": "2026-11-24T11:00:00Z"
+    },
+    {
+     "name": "DataBreaches.net",
+     "url": "https://databreaches.net/2026/11/24/two-unrelated-database-leaks-expose-3-5-billion-uusernames-passwords-and-documents/",
+     "title": "Two unrelated database leaks expose 3.5 billion Uusernames, passwords, and documents",
+     "published": "2026-11-24T14:00:22Z"
+    }
+   ]
+  },
+  {
+   "id": "0c4445d4cc",
+   "victim": null,
+   "victim_key": "",
+   "sector": null,
+   "country": "United States",
+   "country_key": "United States of America",
+   "city": null,
+   "lat": 39.5,
+   "lon": -99.06,
+   "precision": "country",
+   "country_source": null,
+   "type": "ransomware",
+   "records": null,
+   "actor": "ShinyHunters",
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-24T13:28:21Z",
+   "last_seen": "2026-11-24T13:28:21Z",
+   "sources": [
+    {
+     "name": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/okta-links-shinyhunters-associated.html",
+     "title": "Okta Links ShinyHunters-Associated Vishing Group to New INCEPTION Data Leak Site",
+     "published": "2026-11-24T13:28:21Z"
+    }
+   ]
+  },
+  {
+   "id": "887479947b",
+   "victim": null,
+   "victim_key": "",
+   "sector": null,
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "country_source": null,
+   "type": "phishing",
+   "records": null,
+   "actor": "ShinyHunters",
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-24T12:47:07Z",
+   "last_seen": "2026-11-24T12:47:07Z",
+   "sources": [
+    {
+     "name": "Help Net Security",
+     "url": "https://www.helpnetsecurity.com/2026/11/24/shinyhunters-inception-leak-site-okta/",
+     "title": "ShinyHunters-linked crew resurfaces on new leak site",
+     "published": "2026-11-24T12:47:07Z"
+    }
+   ]
+  },
+  {
+   "id": "f1397973b7",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Energy & utilities",
+   "country": "South Korea",
+   "country_key": "South Korea",
+   "city": null,
+   "lat": 36.43,
+   "lon": 127.82,
+   "precision": "country",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": true,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-23T20:54:51Z",
+   "last_seen": "2026-11-24T11:50:21Z",
+   "sources": [
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/south-koreas-power-giant-kepco-confirms-data-breach-impacting-15-million/",
+     "title": "South Korea’s power giant KEPCO confirms data breach impacting 1.5 million",
+     "published": "2026-11-23T20:54:51Z"
+    },
+    {
+     "name": "SecurityWeek",
+     "url": "https://www.securityweek.com/1-5-million-impacted-by-data-breach-at-south-korean-electric-company-kepco/",
+     "title": "1.5 Million Impacted by Data Breach at South Korean Electric Company KEPCO",
+     "published": "2026-11-24T11:50:21Z"
+    }
+   ]
+  },
+  {
+   "id": "f683fcf9b0",
+   "victim": "Colla Health",
+   "victim_key": "colla health",
+   "sector": "Healthcare",
+   "country": "United States",
+   "country_key": "United States of America",
+   "city": null,
+   "lat": 39.5,
+   "lon": -99.06,
+   "precision": "country",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": true,
+   "summary": null,
+   "confidence": "medium",
+   "first_seen": "2026-11-24T11:00:56Z",
+   "last_seen": "2026-11-24T11:00:56Z",
+   "sources": [
+    {
+     "name": "HIPAA Journal",
+     "url": "https://www.hipaajournal.com/colla-health-bausch-health-opn-healthcare-data-breaches/",
+     "title": "Colla Health Data Breach Affects 336K Individuals",
+     "published": "2026-11-24T11:00:56Z"
+    }
+   ]
+  },
+  {
+   "id": "083732d422",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Healthcare",
+   "country": "United States",
+   "country_key": "United States of America",
+   "city": null,
+   "lat": 39.5,
+   "lon": -99.06,
+   "precision": "country",
+   "country_source": "source",
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": true,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-24T11:00:41Z",
+   "last_seen": "2026-11-24T11:00:41Z",
+   "sources": [
+    {
+     "name": "HIPAA Journal",
+     "url": "https://www.hipaajournal.com/data-breaches-announced-by-payrhealth-medcom-solutions/",
+     "title": "Data Breaches Announced by PayrHealth & MedCom Solutions",
+     "published": "2026-11-24T11:00:41Z"
+    }
+   ]
+  },
+  {
+   "id": "20534b25c7",
+   "victim": "US Uranium Mine",
+   "victim_key": "us uranium mine",
+   "sector": "Energy & utilities",
+   "country": "United States",
+   "country_key": "United States of America",
+   "city": null,
+   "lat": 39.5,
+   "lon": -99.06,
+   "precision": "country",
+   "country_source": null,
+   "type": "other",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": true,
+   "summary": null,
+   "confidence": "medium",
+   "first_seen": "2026-11-24T10:35:04Z",
+   "last_seen": "2026-11-24T10:35:04Z",
+   "sources": [
+    {
+     "name": "SecurityWeek",
+     "url": "https://www.securityweek.com/peninsula-energy-halts-trading-after-cyber-incident-hits-us-uranium-mine/",
+     "title": "Peninsula Energy Halts Trading After Cyber Incident Hits US Uranium Mine",
+     "published": "2026-11-24T10:35:04Z"
+    }
+   ]
+  },
+  {
+   "id": "f714b48247",
+   "victim": "Spanish LaLiga",
+   "victim_key": "spanish laliga",
+   "sector": null,
+   "country": "Spain",
+   "country_key": "Spain",
+   "city": null,
+   "lat": 40.35,
+   "lon": -3.62,
+   "precision": "country",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "medium",
+   "first_seen": "2026-11-23T18:38:40Z",
+   "last_seen": "2026-11-24T10:30:00Z",
+   "sources": [
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/spanish-laliga-confirms-hackers-stole-soccer-fans-personal-data/",
+     "title": "Spanish LaLiga confirms hackers stole soccer fans’ personal data",
+     "published": "2026-11-23T18:38:40Z"
+    },
+    {
+     "name": "The Record",
+     "url": "https://therecord.media/laliga-hacked-spain-top-professional-league-confirms-cyber-incident",
+     "title": "LaLiga hacked: Spain’s top football league confirms theft of fans’ personal data",
+     "published": "2026-11-24T00:00:00Z"
+    },
+    {
+     "name": "Infosecurity Magazine",
+     "url": "https://www.infosecurity-magazine.com/news/la-liga-says-football-fans/",
+     "title": "LaLiga Says Football Fans’ Personal Data Stolen",
+     "published": "2026-11-24T10:30:00Z"
+    }
+   ]
+  },
+  {
+   "id": "176c4a90ee",
+   "victim": "Suzlon Energy",
+   "victim_key": "suzlon energy",
+   "sector": "Energy & utilities",
+   "country": "India",
+   "country_key": "India",
+   "city": null,
+   "lat": 22.92,
+   "lon": 79.59,
+   "precision": "country",
+   "country_source": "wikidata",
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": true,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-24T09:28:06Z",
+   "last_seen": "2026-11-24T09:28:06Z",
+   "sources": [
+    {
+     "name": "Cybersecurity News",
+     "url": "https://cybersecuritynews.com/suzlon-energy-cyberattack/",
+     "title": "Suzlon Energy Cyberattack – Company Confirms Critical Infrastructure Operational",
+     "published": "2026-11-24T09:28:06Z"
+    }
+   ]
+  },
   {
    "id": "fc406d2fbc",
    "victim": "Nvidia",
@@ -151,44 +914,6 @@
    ]
   },
   {
-   "id": "f714b48247",
-   "victim": "Spanish LaLiga",
-   "victim_key": "spanish laliga",
-   "sector": null,
-   "country": "Spain",
-   "country_key": "Spain",
-   "city": null,
-   "lat": 40.35,
-   "lon": -3.62,
-   "precision": "country",
-   "country_source": null,
-   "type": "data_breach",
-   "records": null,
-   "actor": null,
-   "attacker_country": null,
-   "attacker_lat": null,
-   "attacker_lon": null,
-   "critical": false,
-   "summary": null,
-   "confidence": "medium",
-   "first_seen": "2026-11-23T18:38:40Z",
-   "last_seen": "2026-11-24T00:00:00Z",
-   "sources": [
-    {
-     "name": "BleepingComputer",
-     "url": "https://www.bleepingcomputer.com/news/security/spanish-laliga-confirms-hackers-stole-soccer-fans-personal-data/",
-     "title": "Spanish LaLiga confirms hackers stole soccer fans’ personal data",
-     "published": "2026-11-23T18:38:40Z"
-    },
-    {
-     "name": "The Record",
-     "url": "https://therecord.media/laliga-hacked-spain-top-professional-league-confirms-cyber-incident",
-     "title": "LaLiga hacked: Spain’s top football league confirms theft of fans’ personal data",
-     "published": "2026-11-24T00:00:00Z"
-    }
-   ]
-  },
-  {
    "id": "a5650ed5ee",
    "victim": null,
    "victim_key": "",
@@ -267,38 +992,6 @@
      "url": "https://www.scworld.com/brief/laliga-reports-data-breach-affecting-fan-services-platform",
      "title": "LaLiga reports data breach affecting fan services platform",
      "published": "2026-11-23T22:54:05Z"
-    }
-   ]
-  },
-  {
-   "id": "f1397973b7",
-   "victim": null,
-   "victim_key": "",
-   "sector": null,
-   "country": "South Korea",
-   "country_key": "South Korea",
-   "city": null,
-   "lat": 36.43,
-   "lon": 127.82,
-   "precision": "country",
-   "country_source": null,
-   "type": "data_breach",
-   "records": null,
-   "actor": null,
-   "attacker_country": null,
-   "attacker_lat": null,
-   "attacker_lon": null,
-   "critical": false,
-   "summary": null,
-   "confidence": "low",
-   "first_seen": "2026-11-23T20:54:51Z",
-   "last_seen": "2026-11-23T20:54:51Z",
-   "sources": [
-    {
-     "name": "BleepingComputer",
-     "url": "https://www.bleepingcomputer.com/news/security/south-koreas-power-giant-kepco-confirms-data-breach-impacting-15-million/",
-     "title": "South Korea’s power giant KEPCO confirms data breach impacting 1.5 million",
-     "published": "2026-11-23T20:54:51Z"
     }
    ]
   },
@@ -1125,38 +1818,6 @@
    ]
   },
   {
-   "id": "814531fc15",
-   "victim": null,
-   "victim_key": "",
-   "sector": null,
-   "country": null,
-   "country_key": null,
-   "city": null,
-   "lat": null,
-   "lon": null,
-   "precision": "none",
-   "country_source": null,
-   "type": "data_breach",
-   "records": null,
-   "actor": null,
-   "attacker_country": null,
-   "attacker_lat": null,
-   "attacker_lon": null,
-   "critical": false,
-   "summary": null,
-   "confidence": "low",
-   "first_seen": "2026-11-21T00:50:58Z",
-   "last_seen": "2026-11-21T00:50:58Z",
-   "sources": [
-    {
-     "name": "SC Media",
-     "url": "https://www.scworld.com/brief/carnegie-endowment-for-international-peace-reports-data-breach",
-     "title": "Carnegie Endowment for International Peace reports data breach",
-     "published": "2026-11-21T00:50:58Z"
-    }
-   ]
-  },
-  {
    "id": "6c623452a1",
    "victim": null,
    "victim_key": "",
@@ -1533,44 +2194,6 @@
      "url": "https://www.securityweek.com/sbc-medical-group-data-breach-impacts-over-2-million/",
      "title": "SBC Medical Group Data Breach Impacts Over 2 Million",
      "published": "2026-11-20T11:36:51Z"
-    }
-   ]
-  },
-  {
-   "id": "e9069e703a",
-   "victim": "European Commission",
-   "victim_key": "european commission",
-   "sector": "Technology",
-   "country": null,
-   "country_key": null,
-   "city": null,
-   "lat": null,
-   "lon": null,
-   "precision": "none",
-   "country_source": null,
-   "type": "other",
-   "records": null,
-   "actor": null,
-   "attacker_country": null,
-   "attacker_lat": null,
-   "attacker_lon": null,
-   "critical": false,
-   "summary": null,
-   "confidence": "low",
-   "first_seen": "2026-11-20T08:52:29Z",
-   "last_seen": "2026-11-20T10:51:42Z",
-   "sources": [
-    {
-     "name": "Help Net Security",
-     "url": "https://www.helpnetsecurity.com/2026/11/20/european-commission-ai-generated-cyberattack-publicly-available-tool/",
-     "title": "European Commission confirms AI-generated cyberattack disrupted its systems",
-     "published": "2026-11-20T08:52:29Z"
-    },
-    {
-     "name": "SecurityWeek",
-     "url": "https://www.securityweek.com/european-commission-confirms-ai-assisted-cyberattack-disrupted-services/",
-     "title": "European Commission Confirms AI-Assisted Cyberattack Disrupted Services",
-     "published": "2026-11-20T10:51:42Z"
     }
    ]
   },

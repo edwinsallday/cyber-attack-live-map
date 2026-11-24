@@ -66,6 +66,9 @@
  "european commission": {
   "checked": "2026-11-19"
  },
+ "european commission uncovers": {
+  "checked": "2026-11-24"
+ },
  "fireworks ai": {
   "checked": "2026-11-18"
  },
@@ -74,6 +77,9 @@
  },
  "gl.inet": {
   "checked": "2026-11-23"
+ },
+ "globetopper": {
+  "checked": "2026-11-24"
  },
  "infoblox": {
   "qid": "Q15831130",
@@ -90,6 +96,13 @@
   "checked": "2026-11-18"
  },
  "it": {
+  "checked": "2026-11-24"
+ },
+ "laliga": {
+  "qid": "Q4453842",
+  "label": "Liga Nacional de Fútbol Profesional",
+  "description": "Spanish national association football organization",
+  "country": "Spain",
   "checked": "2026-11-24"
  },
  "maileva": {
@@ -115,6 +128,13 @@
  "rackspace": {
   "checked": "2026-11-23"
  },
+ "radware": {
+  "qid": "Q2907743",
+  "label": "Radware",
+  "description": "Israeli cybersecurity company",
+  "country": "Israel",
+  "checked": "2026-11-24"
+ },
  "revolut": {
   "qid": "Q22908307",
   "label": "Revolut",
@@ -128,12 +148,26 @@
  "stockal": {
   "checked": "2026-11-18"
  },
+ "suzlon energy": {
+  "qid": "Q1402563",
+  "label": "Suzlon Energy",
+  "description": "Indian wind turbine company",
+  "country": "India",
+  "checked": "2026-11-24"
+ },
  "tsmc": {
   "qid": "Q713418",
   "label": "TSMC",
   "description": "semiconductor foundry company headquartered in Taiwan",
   "country": "Taiwan",
   "checked": "2026-11-18"
+ },
+ "turnitin": {
+  "qid": "Q7856068",
+  "label": "Turnitin",
+  "description": "Internet-based plagiarism-prevention service",
+  "country": "United States",
+  "checked": "2026-11-24"
  },
  "uta": {
   "checked": "2026-11-18"
