@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24T00:17:47Z",
+ "updated": "2026-11-24T10:22:38Z",
  "coverage_from": "2026-11-18T03:12:00Z",
  "sources": [
   "The Hacker News",
@@ -26,9 +26,168 @@
   "CSIS"
  ],
  "feed_errors": [
-  "Inside Higher Ed: undefined entity: line 179, column 51"
+  "Cybersecurity News: not well-formed (invalid token): line 1, column 119",
+  "Inside Higher Ed: undefined entity: line 75, column 180"
  ],
  "incidents": [
+  {
+   "id": "fc406d2fbc",
+   "victim": "Nvidia",
+   "victim_key": "nvidia",
+   "sector": "Manufacturing & industry",
+   "country": "United States",
+   "country_key": "United States of America",
+   "city": null,
+   "lat": 39.5,
+   "lon": -99.06,
+   "precision": "country",
+   "country_source": "wikidata",
+   "type": "ransomware",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-20T17:28:05Z",
+   "last_seen": "2026-11-24T07:42:34Z",
+   "sources": [
+    {
+     "name": "SC Media",
+     "url": "https://www.scworld.com/brief/nvidia-investigates-potential-security-incident-involving-third-party-partner",
+     "title": "Nvidia investigates potential security incident involving third-party partner",
+     "published": "2026-11-20T17:28:05Z"
+    },
+    {
+     "name": "The Cyber Express",
+     "url": "https://thecyberexpress.com/nvidia-cyberattack-data-breach-the-gentlemen/",
+     "title": "NVIDIA Investigates Possible Third-Party Breach After Ransomware Group Threat",
+     "published": "2026-11-24T07:42:34Z"
+    }
+   ]
+  },
+  {
+   "id": "1a3c6c64ea",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Education",
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-23T14:34:27Z",
+   "last_seen": "2026-11-24T07:13:49Z",
+   "sources": [
+    {
+     "name": "Cybersecurity News",
+     "url": "https://cybersecuritynews.com/eu-academy-disabled/",
+     "title": "European Commission Disables Access to EU Academy After Cyberattack Exposes User Data",
+     "published": "2026-11-23T14:34:27Z"
+    },
+    {
+     "name": "The Cyber Express",
+     "url": "https://thecyberexpress.com/eu-academy-data-breach-exposes-users-names/",
+     "title": "European Commission Shuts Down EU Academy After Hackers Leak User Data",
+     "published": "2026-11-24T07:13:49Z"
+    }
+   ]
+  },
+  {
+   "id": "efef5bd50b",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Government & defence",
+   "country": "United States",
+   "country_key": "United States of America",
+   "city": null,
+   "lat": 39.5,
+   "lon": -99.06,
+   "precision": "country",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-21T12:37:22Z",
+   "last_seen": "2026-11-24T07:05:05Z",
+   "sources": [
+    {
+     "name": "DataBreaches.net",
+     "url": "https://databreaches.net/2026/11/21/fbi-hacked-again-criminal-information-database-targeted/",
+     "title": "FBI hacked again; criminal information database targeted",
+     "published": "2026-11-21T12:37:22Z"
+    },
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/fbi-reportedly-hacked-again-this-time-targeting-nationwide-police-database/",
+     "title": "FBI reportedly hacked again, this time targeting nationwide police database",
+     "published": "2026-11-21T14:26:04Z"
+    },
+    {
+     "name": "Security Affairs",
+     "url": "https://securityaffairs.com/203865/cyber-crime/hackers-may-have-breached-fbi-database-used-by-police-nationwide.html",
+     "title": "Hackers May Have Breached FBI Database Used by Police Nationwide",
+     "published": "2026-11-24T07:05:05Z"
+    }
+   ]
+  },
+  {
+   "id": "f714b48247",
+   "victim": "Spanish LaLiga",
+   "victim_key": "spanish laliga",
+   "sector": null,
+   "country": "Spain",
+   "country_key": "Spain",
+   "city": null,
+   "lat": 40.35,
+   "lon": -3.62,
+   "precision": "country",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "medium",
+   "first_seen": "2026-11-23T18:38:40Z",
+   "last_seen": "2026-11-24T00:00:00Z",
+   "sources": [
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/spanish-laliga-confirms-hackers-stole-soccer-fans-personal-data/",
+     "title": "Spanish LaLiga confirms hackers stole soccer fans’ personal data",
+     "published": "2026-11-23T18:38:40Z"
+    },
+    {
+     "name": "The Record",
+     "url": "https://therecord.media/laliga-hacked-spain-top-professional-league-confirms-cyber-incident",
+     "title": "LaLiga hacked: Spain’s top football league confirms theft of fans’ personal data",
+     "published": "2026-11-24T00:00:00Z"
+    }
+   ]
+  },
   {
    "id": "a5650ed5ee",
    "victim": null,
@@ -182,38 +341,6 @@
    ]
   },
   {
-   "id": "f714b48247",
-   "victim": "Spanish LaLiga",
-   "victim_key": "spanish laliga",
-   "sector": null,
-   "country": "Spain",
-   "country_key": "Spain",
-   "city": null,
-   "lat": 40.35,
-   "lon": -3.62,
-   "precision": "country",
-   "country_source": null,
-   "type": "data_breach",
-   "records": null,
-   "actor": null,
-   "attacker_country": null,
-   "attacker_lat": null,
-   "attacker_lon": null,
-   "critical": false,
-   "summary": null,
-   "confidence": "medium",
-   "first_seen": "2026-11-23T18:38:40Z",
-   "last_seen": "2026-11-23T18:38:40Z",
-   "sources": [
-    {
-     "name": "BleepingComputer",
-     "url": "https://www.bleepingcomputer.com/news/security/spanish-laliga-confirms-hackers-stole-soccer-fans-personal-data/",
-     "title": "Spanish LaLiga confirms hackers stole soccer fans’ personal data",
-     "published": "2026-11-23T18:38:40Z"
-    }
-   ]
-  },
-  {
    "id": "4ca5a6cc42",
    "victim": null,
    "victim_key": "",
@@ -318,38 +445,6 @@
      "url": "https://www.helpnetsecurity.com/2026/11/23/gl-inet-cloud-compromise-malware-backdoors/",
      "title": "GL.iNet cloud compromise hits routers and KVMs, older backdoors also found",
      "published": "2026-11-23T15:05:50Z"
-    }
-   ]
-  },
-  {
-   "id": "1a3c6c64ea",
-   "victim": null,
-   "victim_key": "",
-   "sector": "Education",
-   "country": null,
-   "country_key": null,
-   "city": null,
-   "lat": null,
-   "lon": null,
-   "precision": "none",
-   "country_source": null,
-   "type": "data_breach",
-   "records": null,
-   "actor": null,
-   "attacker_country": null,
-   "attacker_lat": null,
-   "attacker_lon": null,
-   "critical": false,
-   "summary": null,
-   "confidence": "low",
-   "first_seen": "2026-11-23T14:34:27Z",
-   "last_seen": "2026-11-23T14:34:27Z",
-   "sources": [
-    {
-     "name": "Cybersecurity News",
-     "url": "https://cybersecuritynews.com/eu-academy-disabled/",
-     "title": "European Commission Disables Access to EU Academy After Cyberattack Exposes User Data",
-     "published": "2026-11-23T14:34:27Z"
     }
    ]
   },
@@ -966,44 +1061,6 @@
    ]
   },
   {
-   "id": "efef5bd50b",
-   "victim": null,
-   "victim_key": "",
-   "sector": "Government & defence",
-   "country": "United States",
-   "country_key": "United States of America",
-   "city": null,
-   "lat": 39.5,
-   "lon": -99.06,
-   "precision": "country",
-   "country_source": null,
-   "type": "data_breach",
-   "records": null,
-   "actor": null,
-   "attacker_country": null,
-   "attacker_lat": null,
-   "attacker_lon": null,
-   "critical": false,
-   "summary": null,
-   "confidence": "low",
-   "first_seen": "2026-11-21T12:37:22Z",
-   "last_seen": "2026-11-21T14:26:04Z",
-   "sources": [
-    {
-     "name": "DataBreaches.net",
-     "url": "https://databreaches.net/2026/11/21/fbi-hacked-again-criminal-information-database-targeted/",
-     "title": "FBI hacked again; criminal information database targeted",
-     "published": "2026-11-21T12:37:22Z"
-    },
-    {
-     "name": "BleepingComputer",
-     "url": "https://www.bleepingcomputer.com/news/security/fbi-reportedly-hacked-again-this-time-targeting-nationwide-police-database/",
-     "title": "FBI reportedly hacked again, this time targeting nationwide police database",
-     "published": "2026-11-21T14:26:04Z"
-    }
-   ]
-  },
-  {
    "id": "6569893361",
    "victim": "Algonquin Dam",
    "victim_key": "algonquin dam",
@@ -1236,38 +1293,6 @@
      "url": "https://databreaches.net/2026/11/20/u-s-department-of-agriculture-grapples-with-security-breach-as-it-staff-take-multiple-systems-offline/",
      "title": "U.S. Department of Agriculture grapples with security breach as IT staff take multiple systems offline",
      "published": "2026-11-20T18:44:27Z"
-    }
-   ]
-  },
-  {
-   "id": "fc406d2fbc",
-   "victim": "Nvidia",
-   "victim_key": "nvidia",
-   "sector": null,
-   "country": "United States",
-   "country_key": "United States of America",
-   "city": null,
-   "lat": 39.5,
-   "lon": -99.06,
-   "precision": "country",
-   "country_source": "wikidata",
-   "type": "ransomware",
-   "records": null,
-   "actor": null,
-   "attacker_country": null,
-   "attacker_lat": null,
-   "attacker_lon": null,
-   "critical": false,
-   "summary": null,
-   "confidence": "low",
-   "first_seen": "2026-11-20T17:28:05Z",
-   "last_seen": "2026-11-20T17:28:05Z",
-   "sources": [
-    {
-     "name": "SC Media",
-     "url": "https://www.scworld.com/brief/nvidia-investigates-potential-security-incident-involving-third-party-partner",
-     "title": "Nvidia investigates potential security incident involving third-party partner",
-     "published": "2026-11-20T17:28:05Z"
     }
    ]
   },
