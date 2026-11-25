@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T14:14:45Z",
+ "updated": "2026-11-25T23:16:18Z",
  "coverage_from": "2026-11-18T03:12:00Z",
  "sources": [
   "The Hacker News",
@@ -27,6 +27,210 @@
  ],
  "feed_errors": [],
  "incidents": [
+  {
+   "id": "70f66acc3d",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Technology",
+   "country": "United States",
+   "country_key": "United States of America",
+   "city": null,
+   "lat": 39.5,
+   "lon": -99.06,
+   "precision": "country",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-25T21:33:33Z",
+   "last_seen": "2026-11-25T21:33:33Z",
+   "sources": [
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/1password-customer-data-stolen-after-employee-github-account-breach/",
+     "title": "1Password customer data stolen after employee GitHub account breach",
+     "published": "2026-11-25T21:33:33Z"
+    }
+   ]
+  },
+  {
+   "id": "14c2f279b5",
+   "victim": "Switzerland",
+   "victim_key": "switzerland",
+   "sector": "Technology",
+   "country": "Switzerland",
+   "country_key": "Switzerland",
+   "city": null,
+   "lat": 46.79,
+   "lon": 8.12,
+   "precision": "country",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": true,
+   "summary": null,
+   "confidence": "medium",
+   "first_seen": "2026-11-25T16:02:38Z",
+   "last_seen": "2026-11-25T21:06:55Z",
+   "sources": [
+    {
+     "name": "Cybersecurity News",
+     "url": "https://cybersecuritynews.com/switzerland-ai-agent-cyberattacks/",
+     "title": "Switzerland Confirms First AI-Agent Cyberattacks That Successfully Compromised IT Systems",
+     "published": "2026-11-25T16:02:38Z"
+    },
+    {
+     "name": "Security Affairs",
+     "url": "https://securityaffairs.com/204004/hacking/switzerland-confirms-first-ai-agent-cyberattacks-on-local-organisations.html",
+     "title": "Switzerland Confirms First AI-Agent Cyberattacks on Local Organisations",
+     "published": "2026-11-25T21:06:55Z"
+    }
+   ]
+  },
+  {
+   "id": "bdffc96b6a",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Technology",
+   "country": "United States",
+   "country_key": "United States of America",
+   "city": null,
+   "lat": 39.5,
+   "lon": -99.06,
+   "precision": "country",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-25T20:01:09Z",
+   "last_seen": "2026-11-25T20:01:09Z",
+   "sources": [
+    {
+     "name": "SC Media",
+     "url": "https://www.scworld.com/brief/colorado-shuts-down-mycolorado-app-following-data-breach",
+     "title": "Colorado shuts down myColorado app following data breach",
+     "published": "2026-11-25T20:01:09Z"
+    }
+   ]
+  },
+  {
+   "id": "63da0c2dc0",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Technology",
+   "country": "Italy",
+   "country_key": "Italy",
+   "city": null,
+   "lat": 43.47,
+   "lon": 12.22,
+   "precision": "country",
+   "country_source": null,
+   "type": "other",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": true,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-25T19:39:31Z",
+   "last_seen": "2026-11-25T19:39:31Z",
+   "sources": [
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/italy-and-switzerland-warn-of-autonomous-ai-driven-cyberattacks/",
+     "title": "Italy and Switzerland warn of autonomous AI-driven cyberattacks",
+     "published": "2026-11-25T19:39:31Z"
+    }
+   ]
+  },
+  {
+   "id": "72ebe52efb",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Media & entertainment",
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": true,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-25T12:22:34Z",
+   "last_seen": "2026-11-25T17:01:30Z",
+   "sources": [
+    {
+     "name": "DataBreaches.net",
+     "url": "https://databreaches.net/2026/11/25/treasurys-fincen-says-cybersecurity-incident-includes-unauthorized-access-of-some-systems/",
+     "title": "Treasury’s FinCEN says ‘cybersecurity incident’ includes ‘unauthorized access’ of some systems",
+     "published": "2026-11-25T12:22:34Z"
+    },
+    {
+     "name": "Cybersecurity News",
+     "url": "https://cybersecuritynews.com/fincen-confirms-cyberattack/",
+     "title": "U.S. Treasury’s FinCEN Confirms Cyberattack, Takes Systems Offline After Unauthorized Access",
+     "published": "2026-11-25T17:01:30Z"
+    }
+   ]
+  },
+  {
+   "id": "018cb0cdfd",
+   "victim": "Task Management App Todoist",
+   "victim_key": "task management app todoist",
+   "sector": "Technology",
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-25T16:39:28Z",
+   "last_seen": "2026-11-25T16:39:28Z",
+   "sources": [
+    {
+     "name": "Cybersecurity News",
+     "url": "https://cybersecuritynews.com/todoist-production-system-breach/",
+     "title": "Task Management App Todoist Hacked, Attackers Breach Production Systems",
+     "published": "2026-11-25T16:39:28Z"
+    }
+   ]
+  },
   {
    "id": "7c0a300934",
    "victim": null,
@@ -88,38 +292,6 @@
      "url": "https://www.securityweek.com/us-treasurys-fincen-disconnects-systems-following-cyber-incident/",
      "title": "US Treasury’s FinCEN Disconnects Systems Following Cyber Incident",
      "published": "2026-11-25T13:39:21Z"
-    }
-   ]
-  },
-  {
-   "id": "72ebe52efb",
-   "victim": null,
-   "victim_key": "",
-   "sector": "Media & entertainment",
-   "country": null,
-   "country_key": null,
-   "city": null,
-   "lat": null,
-   "lon": null,
-   "precision": "none",
-   "country_source": null,
-   "type": "data_breach",
-   "records": null,
-   "actor": null,
-   "attacker_country": null,
-   "attacker_lat": null,
-   "attacker_lon": null,
-   "critical": false,
-   "summary": null,
-   "confidence": "low",
-   "first_seen": "2026-11-25T12:22:34Z",
-   "last_seen": "2026-11-25T12:22:34Z",
-   "sources": [
-    {
-     "name": "DataBreaches.net",
-     "url": "https://databreaches.net/2026/11/25/treasurys-fincen-says-cybersecurity-incident-includes-unauthorized-access-of-some-systems/",
-     "title": "Treasury’s FinCEN says ‘cybersecurity incident’ includes ‘unauthorized access’ of some systems",
-     "published": "2026-11-25T12:22:34Z"
     }
    ]
   },

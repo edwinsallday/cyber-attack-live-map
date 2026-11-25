@@ -161,6 +161,9 @@
   "country": "India",
   "checked": "2026-11-24"
  },
+ "task management app todoist": {
+  "checked": "2026-11-25"
+ },
  "tsmc": {
   "qid": "Q713418",
   "label": "TSMC",
@@ -174,6 +177,9 @@
   "description": "Internet-based plagiarism-prevention service",
   "country": "United States",
   "checked": "2026-11-24"
+ },
+ "u.s. treasury’s fincen": {
+  "checked": "2026-11-25"
  },
  "us treasury": {
   "checked": "2026-11-25"
