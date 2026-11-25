@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24T20:50:52Z",
+ "updated": "2026-11-25T04:06:16Z",
  "coverage_from": "2026-11-18T03:12:00Z",
  "sources": [
   "The Hacker News",
@@ -26,9 +26,112 @@
   "CSIS"
  ],
  "feed_errors": [
+  "Cybersecurity News: not well-formed (invalid token): line 1, column 119",
   "Inside Higher Ed: undefined entity: line 75, column 180"
  ],
  "incidents": [
+  {
+   "id": "9a8d459488",
+   "victim": null,
+   "victim_key": "",
+   "sector": null,
+   "country": "United States",
+   "country_key": "United States of America",
+   "city": null,
+   "lat": 39.5,
+   "lon": -99.06,
+   "precision": "country",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-25T01:52:45Z",
+   "last_seen": "2026-11-25T01:52:45Z",
+   "sources": [
+    {
+     "name": "DataBreaches.net",
+     "url": "https://databreaches.net/2026/11/24/cia-system-breached-in-latest-cyberattack-targeting-us-intelligence-agencies/",
+     "title": "CIA system breached in latest cyberattack targeting US intelligence agencies",
+     "published": "2026-11-25T01:52:45Z"
+    }
+   ]
+  },
+  {
+   "id": "ae79bb5847",
+   "victim": "An Unclassified CIA System Was",
+   "victim_key": "an unclassified cia system was",
+   "sector": null,
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-24T22:41:58Z",
+   "last_seen": "2026-11-24T22:41:58Z",
+   "sources": [
+    {
+     "name": "SecurityWeek",
+     "url": "https://www.securityweek.com/an-unclassified-cia-system-was-breached-in-a-cyberattack-ap-source-says/",
+     "title": "An Unclassified CIA System Was Breached in a Cyberattack, AP Source Says",
+     "published": "2026-11-24T22:41:58Z"
+    }
+   ]
+  },
+  {
+   "id": "07882a253e",
+   "victim": "Rackspace",
+   "victim_key": "rackspace",
+   "sector": "Technology",
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-23T02:39:35Z",
+   "last_seen": "2026-11-24T21:37:30Z",
+   "sources": [
+    {
+     "name": "SC Media",
+     "url": "https://www.scworld.com/brief/rackspace-discloses-security-breach-of-spot-cloud-platform",
+     "title": "Rackspace discloses security breach of Spot cloud platform",
+     "published": "2026-11-23T02:39:35Z"
+    },
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/rackspace-shuts-down-spot-cloud-platform-after-security-breach/",
+     "title": "Rackspace shuts down Spot cloud platform after security breach",
+     "published": "2026-11-24T21:37:30Z"
+    }
+   ]
+  },
   {
    "id": "0bc0f96921",
    "victim": null,
@@ -1616,38 +1719,6 @@
      "url": "https://www.scworld.com/brief/gl-inet-confirms-cloud-vulnerability-led-to-router-and-kvm-malware-infections",
      "title": "GL.iNet confirms cloud vulnerability led to router and KVM malware infections",
      "published": "2026-11-23T02:44:06Z"
-    }
-   ]
-  },
-  {
-   "id": "07882a253e",
-   "victim": "Rackspace",
-   "victim_key": "rackspace",
-   "sector": "Technology",
-   "country": null,
-   "country_key": null,
-   "city": null,
-   "lat": null,
-   "lon": null,
-   "precision": "none",
-   "country_source": null,
-   "type": "data_breach",
-   "records": null,
-   "actor": null,
-   "attacker_country": null,
-   "attacker_lat": null,
-   "attacker_lon": null,
-   "critical": false,
-   "summary": null,
-   "confidence": "low",
-   "first_seen": "2026-11-23T02:39:35Z",
-   "last_seen": "2026-11-23T02:39:35Z",
-   "sources": [
-    {
-     "name": "SC Media",
-     "url": "https://www.scworld.com/brief/rackspace-discloses-security-breach-of-spot-cloud-platform",
-     "title": "Rackspace discloses security breach of Spot cloud platform",
-     "published": "2026-11-23T02:39:35Z"
     }
    ]
   },
