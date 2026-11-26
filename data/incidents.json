@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T23:16:18Z",
+ "updated": "2026-11-26T05:25:00Z",
  "coverage_from": "2026-11-18T03:12:00Z",
  "sources": [
   "The Hacker News",
@@ -25,7 +25,9 @@
   "Wired Security",
   "CSIS"
  ],
- "feed_errors": [],
+ "feed_errors": [
+  "Cybersecurity News: not well-formed (invalid token): line 1, column 119"
+ ],
  "incidents": [
   {
    "id": "70f66acc3d",
@@ -49,13 +51,19 @@
    "summary": null,
    "confidence": "low",
    "first_seen": "2026-11-25T21:33:33Z",
-   "last_seen": "2026-11-25T21:33:33Z",
+   "last_seen": "2026-11-26T04:20:22Z",
    "sources": [
     {
      "name": "BleepingComputer",
      "url": "https://www.bleepingcomputer.com/news/security/1password-customer-data-stolen-after-employee-github-account-breach/",
      "title": "1Password customer data stolen after employee GitHub account breach",
      "published": "2026-11-25T21:33:33Z"
+    },
+    {
+     "name": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/1password-hacked-customer-data-and.html",
+     "title": "1Password Hacked, Customer Data and Source Code Stolen in GitHub Account Breach",
+     "published": "2026-11-26T04:20:22Z"
     }
    ]
   },
