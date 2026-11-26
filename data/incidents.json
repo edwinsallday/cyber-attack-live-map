@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-26T05:25:00Z",
+ "updated": "2026-11-26T15:42:51Z",
  "coverage_from": "2026-11-18T03:12:00Z",
  "sources": [
   "The Hacker News",
@@ -25,10 +25,314 @@
   "Wired Security",
   "CSIS"
  ],
- "feed_errors": [
-  "Cybersecurity News: not well-formed (invalid token): line 1, column 119"
- ],
+ "feed_errors": [],
  "incidents": [
+  {
+   "id": "8381e505ba",
+   "victim": "Todoist",
+   "victim_key": "todoist",
+   "sector": null,
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-26T14:23:00Z",
+   "last_seen": "2026-11-26T14:23:00Z",
+   "sources": [
+    {
+     "name": "SC Media",
+     "url": "https://www.scworld.com/brief/todoist-confirms-data-breach-involving-stolen-credentials",
+     "title": "Todoist confirms data breach involving stolen credentials",
+     "published": "2026-11-26T14:23:00Z"
+    }
+   ]
+  },
+  {
+   "id": "0fe6a8a246",
+   "victim": "Samsung Securities",
+   "victim_key": "samsung securities",
+   "sector": "Banking & finance",
+   "country": "South Korea",
+   "country_key": "South Korea",
+   "city": null,
+   "lat": 36.43,
+   "lon": 127.82,
+   "precision": "country",
+   "country_source": null,
+   "type": "data_breach",
+   "records": "8,241 Customers",
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": true,
+   "summary": null,
+   "confidence": "medium",
+   "first_seen": "2026-11-23T08:53:13Z",
+   "last_seen": "2026-11-26T14:09:42Z",
+   "sources": [
+    {
+     "name": "Cybersecurity News",
+     "url": "https://cybersecuritynews.com/samsung-securities-data-breach/",
+     "title": "Samsung Securities Data Breach Exposes 8,241 Customers’ Personal and Account Details",
+     "published": "2026-11-23T08:53:13Z"
+    },
+    {
+     "name": "DataBreaches.net",
+     "url": "https://databreaches.net/2026/11/23/samsung-securities-hacked-names-addresses-and-account-details-of-thousands-of-customers-exposed-online/",
+     "title": "Samsung Securities Hacked: Names, Addresses And Account Details Of Thousands Of Customers Exposed Online",
+     "published": "2026-11-23T14:15:55Z"
+    },
+    {
+     "name": "Cybersecurity News",
+     "url": "https://cybersecuritynews.com/bithumb-hacked-for-15-days/",
+     "title": "Bithumb Hacked for 15 Days, Customer Passport Numbers, Bank Details and Wallet Addresses Stolen",
+     "published": "2026-11-26T14:09:42Z"
+    }
+   ]
+  },
+  {
+   "id": "933ee50b64",
+   "victim": "Financial Crimes Enforcement Network",
+   "victim_key": "financial crimes enforcement network",
+   "sector": null,
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "country_source": null,
+   "type": "other",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-26T14:03:54Z",
+   "last_seen": "2026-11-26T14:03:54Z",
+   "sources": [
+    {
+     "name": "SC Media",
+     "url": "https://www.scworld.com/brief/financial-crimes-enforcement-network-investigates-cybersecurity-incident",
+     "title": "Financial Crimes Enforcement Network investigates cybersecurity incident",
+     "published": "2026-11-26T14:03:54Z"
+    }
+   ]
+  },
+  {
+   "id": "989f216c24",
+   "victim": "Standard Chartered’s Zodia Custody",
+   "victim_key": "standard chartereds zodia custody",
+   "sector": "Crypto & digital assets",
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-26T14:01:01Z",
+   "last_seen": "2026-11-26T14:01:01Z",
+   "sources": [
+    {
+     "name": "Cybersecurity News",
+     "url": "https://cybersecuritynews.com/zodia-custody-data-breach/",
+     "title": "Standard Chartered’s Zodia Custody Hacked, Client and Employee Data Exposed",
+     "published": "2026-11-26T14:01:01Z"
+    }
+   ]
+  },
+  {
+   "id": "0084f4bf02",
+   "victim": null,
+   "victim_key": "",
+   "sector": null,
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "country_source": null,
+   "type": "other",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-26T13:18:58Z",
+   "last_seen": "2026-11-26T13:18:58Z",
+   "sources": [
+    {
+     "name": "DataBreaches.net",
+     "url": "https://databreaches.net/2026/11/26/fifa-says-it-has-been-victim-of-a-cyberattack-accessing-personal-and-business-information/",
+     "title": "FIFA says it has been victim of a cyberattack accessing ‘personal and business information’",
+     "published": "2026-11-26T13:18:58Z"
+    }
+   ]
+  },
+  {
+   "id": "c01f0716c0",
+   "victim": "Australia’s Flight Centre",
+   "victim_key": "australias flight centre",
+   "sector": "Travel & hospitality",
+   "country": "Australia",
+   "country_key": "Australia",
+   "city": null,
+   "lat": -25.56,
+   "lon": 134.38,
+   "precision": "country",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "medium",
+   "first_seen": "2026-11-26T11:51:11Z",
+   "last_seen": "2026-11-26T13:18:46Z",
+   "sources": [
+    {
+     "name": "Security Affairs",
+     "url": "https://securityaffairs.com/204049/data-breach/australias-flight-centre-data-breach-exposes-customer-records-and-passport-details.html",
+     "title": "Australia’s Flight Centre Data Breach Exposes Customer Records and Passport Details",
+     "published": "2026-11-26T11:51:11Z"
+    },
+    {
+     "name": "DataBreaches.net",
+     "url": "https://databreaches.net/2026/11/26/australias-flight-centre-data-breach-exposes-customer-records-and-passport-details/",
+     "title": "Australia’s Flight Centre Data Breach Exposes Customer Records and Passport Details",
+     "published": "2026-11-26T13:18:46Z"
+    }
+   ]
+  },
+  {
+   "id": "23ec231ca0",
+   "victim": null,
+   "victim_key": "",
+   "sector": null,
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "country_source": null,
+   "type": "espionage",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-26T11:50:17Z",
+   "last_seen": "2026-11-26T11:50:17Z",
+   "sources": [
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/sys010-malware-abuses-browser-management-to-spy-on-gmail-outlook/",
+     "title": "SYS010 malware abuses browser management to spy on Gmail, Outlook",
+     "published": "2026-11-26T11:50:17Z"
+    }
+   ]
+  },
+  {
+   "id": "98404916e8",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Government & defence",
+   "country": "United States",
+   "country_key": "United States of America",
+   "city": null,
+   "lat": 39.5,
+   "lon": -99.06,
+   "precision": "country",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-26T11:05:01Z",
+   "last_seen": "2026-11-26T11:05:01Z",
+   "sources": [
+    {
+     "name": "Help Net Security",
+     "url": "https://www.helpnetsecurity.com/2026/11/26/fincen-breach-systems-offline/",
+     "title": "US agency tracking money laundering is latest casualty in string of federal breaches",
+     "published": "2026-11-26T11:05:01Z"
+    }
+   ]
+  },
+  {
+   "id": "08c2500833",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Technology",
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-26T09:42:47Z",
+   "last_seen": "2026-11-26T09:42:47Z",
+   "sources": [
+    {
+     "name": "Security Affairs",
+     "url": "https://securityaffairs.com/204031/cyber-crime/1password-hacked-customer-names-and-emails-copied-vaults-untouched.html",
+     "title": "1Password Hacked: Customer Names and Emails Copied, Vaults Untouched",
+     "published": "2026-11-26T09:42:47Z"
+    }
+   ]
+  },
   {
    "id": "70f66acc3d",
    "victim": null,
@@ -51,7 +355,7 @@
    "summary": null,
    "confidence": "low",
    "first_seen": "2026-11-25T21:33:33Z",
-   "last_seen": "2026-11-26T04:20:22Z",
+   "last_seen": "2026-11-26T09:32:00Z",
    "sources": [
     {
      "name": "BleepingComputer",
@@ -64,6 +368,158 @@
      "url": "https://thehackernews.com/2026/11/1password-hacked-customer-data-and.html",
      "title": "1Password Hacked, Customer Data and Source Code Stolen in GitHub Account Breach",
      "published": "2026-11-26T04:20:22Z"
+    },
+    {
+     "name": "SecurityWeek",
+     "url": "https://www.securityweek.com/1password-breach-exposes-customer-data-internal-source-code/",
+     "title": "1Password Breach Exposes Customer Data, Internal Source Code",
+     "published": "2026-11-26T08:32:10Z"
+    },
+    {
+     "name": "Help Net Security",
+     "url": "https://www.helpnetsecurity.com/2026/11/26/1password-breach-github-customer-records/",
+     "title": "1Password breached through hijacked employee GitHub account, customer names and emails stolen",
+     "published": "2026-11-26T08:42:32Z"
+    },
+    {
+     "name": "Infosecurity Magazine",
+     "url": "https://www.infosecurity-magazine.com/news/1password-github-account-backend/",
+     "title": "1Password Hit by Backend Breach via Hijacked Employee GitHub Account",
+     "published": "2026-11-26T09:32:00Z"
+    }
+   ]
+  },
+  {
+   "id": "16d535d8b6",
+   "victim": "FIFA Alleged",
+   "victim_key": "fifa alleged",
+   "sector": null,
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-26T08:07:35Z",
+   "last_seen": "2026-11-26T08:07:35Z",
+   "sources": [
+    {
+     "name": "Cybersecurity News",
+     "url": "https://cybersecuritynews.com/fifa-alleged-breach/",
+     "title": "FIFA Alleged Breach – Hackers Claim Access to 12.2 GB of Sensitive Internal Documents",
+     "published": "2026-11-26T08:07:35Z"
+    }
+   ]
+  },
+  {
+   "id": "b06a969cf2",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Technology",
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-25T12:11:01Z",
+   "last_seen": "2026-11-26T07:39:00Z",
+   "sources": [
+    {
+     "name": "Cybersecurity News",
+     "url": "https://cybersecuritynews.com/hackers-use-autonomous-ai-agents-2/",
+     "title": "Hackers Use Autonomous AI Agents to Steal Credentials and Breach Corporate Networks",
+     "published": "2026-11-25T12:11:01Z"
+    },
+    {
+     "name": "Cybersecurity News",
+     "url": "https://cybersecuritynews.com/artex-ai-agents-2/",
+     "title": "Microsoft Warns State-Backed Hackers Are Using ARTEX AI Agents to Steal Credentials and Breach Networks",
+     "published": "2026-11-26T07:39:00Z"
+    }
+   ]
+  },
+  {
+   "id": "9f9782706d",
+   "victim": null,
+   "victim_key": "",
+   "sector": null,
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "country_source": null,
+   "type": "other",
+   "records": "$5.9 Million",
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-26T06:37:34Z",
+   "last_seen": "2026-11-26T06:37:34Z",
+   "sources": [
+    {
+     "name": "The Cyber Express",
+     "url": "https://thecyberexpress.com/new-zealand-cyber-incidents-hit-two-year-high/",
+     "title": "New Zealanders Lost $5.9 Million to Cyber Attacks in Just Three Months",
+     "published": "2026-11-26T06:37:34Z"
+    }
+   ]
+  },
+  {
+   "id": "3764c956b7",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Technology",
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-26T03:04:19Z",
+   "last_seen": "2026-11-26T03:04:19Z",
+   "sources": [
+    {
+     "name": "Cybersecurity News",
+     "url": "https://cybersecuritynews.com/1password-hacked-2/",
+     "title": "1Password Hacked – Attackers Breach Backend Systems and Steal Customer Data",
+     "published": "2026-11-26T03:04:19Z"
     }
    ]
   },
@@ -300,38 +756,6 @@
      "url": "https://www.securityweek.com/us-treasurys-fincen-disconnects-systems-following-cyber-incident/",
      "title": "US Treasury’s FinCEN Disconnects Systems Following Cyber Incident",
      "published": "2026-11-25T13:39:21Z"
-    }
-   ]
-  },
-  {
-   "id": "b06a969cf2",
-   "victim": null,
-   "victim_key": "",
-   "sector": "Technology",
-   "country": null,
-   "country_key": null,
-   "city": null,
-   "lat": null,
-   "lon": null,
-   "precision": "none",
-   "country_source": null,
-   "type": "data_breach",
-   "records": null,
-   "actor": null,
-   "attacker_country": null,
-   "attacker_lat": null,
-   "attacker_lon": null,
-   "critical": false,
-   "summary": null,
-   "confidence": "low",
-   "first_seen": "2026-11-25T12:11:01Z",
-   "last_seen": "2026-11-25T12:11:01Z",
-   "sources": [
-    {
-     "name": "Cybersecurity News",
-     "url": "https://cybersecuritynews.com/hackers-use-autonomous-ai-agents-2/",
-     "title": "Hackers Use Autonomous AI Agents to Steal Credentials and Breach Corporate Networks",
-     "published": "2026-11-25T12:11:01Z"
     }
    ]
   },
@@ -1852,44 +2276,6 @@
      "url": "https://databreaches.net/2026/11/23/major-cyberattack-hits-it-systems-at-guadeloupe-university-hospital/",
      "title": "Major cyberattack hits IT systems at Guadeloupe university hospital",
      "published": "2026-11-23T14:16:13Z"
-    }
-   ]
-  },
-  {
-   "id": "0fe6a8a246",
-   "victim": "Samsung Securities",
-   "victim_key": "samsung securities",
-   "sector": "Banking & finance",
-   "country": "South Korea",
-   "country_key": "South Korea",
-   "city": null,
-   "lat": 36.43,
-   "lon": 127.82,
-   "precision": "country",
-   "country_source": null,
-   "type": "data_breach",
-   "records": "8,241 Customers",
-   "actor": null,
-   "attacker_country": null,
-   "attacker_lat": null,
-   "attacker_lon": null,
-   "critical": true,
-   "summary": null,
-   "confidence": "medium",
-   "first_seen": "2026-11-23T08:53:13Z",
-   "last_seen": "2026-11-23T14:15:55Z",
-   "sources": [
-    {
-     "name": "Cybersecurity News",
-     "url": "https://cybersecuritynews.com/samsung-securities-data-breach/",
-     "title": "Samsung Securities Data Breach Exposes 8,241 Customers’ Personal and Account Details",
-     "published": "2026-11-23T08:53:13Z"
-    },
-    {
-     "name": "DataBreaches.net",
-     "url": "https://databreaches.net/2026/11/23/samsung-securities-hacked-names-addresses-and-account-details-of-thousands-of-customers-exposed-online/",
-     "title": "Samsung Securities Hacked: Names, Addresses And Account Details Of Thousands Of Customers Exposed Online",
-     "published": "2026-11-23T14:15:55Z"
     }
    ]
   },

@@ -25,6 +25,13 @@
   "country": "United Arab Emirates",
   "checked": "2026-11-18"
  },
+ "bithumb": {
+  "qid": "Q55730566",
+  "label": "Bithumb",
+  "description": "bitcoin exchange based in South Korea",
+  "country": "South Korea",
+  "checked": "2026-11-26"
+ },
  "capcom": {
   "qid": "Q14428",
   "label": "Capcom",
@@ -71,6 +78,12 @@
  },
  "european commission uncovers": {
   "checked": "2026-11-24"
+ },
+ "fifa alleged": {
+  "checked": "2026-11-26"
+ },
+ "financial crimes enforcement network": {
+  "checked": "2026-11-26"
  },
  "fireworks ai": {
   "checked": "2026-11-18"
@@ -151,6 +164,9 @@
  "sbc medical group": {
   "checked": "2026-11-20"
  },
+ "standard chartered’s zodia custody": {
+  "checked": "2026-11-26"
+ },
  "stockal": {
   "checked": "2026-11-18"
  },
@@ -163,6 +179,9 @@
  },
  "task management app todoist": {
   "checked": "2026-11-25"
+ },
+ "todoist": {
+  "checked": "2026-11-26"
  },
  "tsmc": {
   "qid": "Q713418",
