@@ -5,6 +5,9 @@
  "after n0n claims": {
   "checked": "2026-11-20"
  },
+ "air force cloud one": {
+  "checked": "2026-11-27"
+ },
  "algonquin dam": {
   "checked": "2026-11-21"
  },
@@ -59,6 +62,9 @@
   "country": "United States",
   "checked": "2026-11-18"
  },
+ "confirmed": {
+  "checked": "2026-11-27"
+ },
  "copenhagen university": {
   "qid": "Q186285",
   "label": "University of Copenhagen",
@@ -78,6 +84,9 @@
  },
  "european commission uncovers": {
   "checked": "2026-11-24"
+ },
+ "fifa": {
+  "checked": "2026-11-27"
  },
  "fifa alleged": {
   "checked": "2026-11-26"
@@ -179,6 +188,9 @@
  },
  "task management app todoist": {
   "checked": "2026-11-25"
+ },
+ "the biggest": {
+  "checked": "2026-11-27"
  },
  "todoist": {
   "checked": "2026-11-26"

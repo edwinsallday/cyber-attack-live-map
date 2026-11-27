@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-27T09:00:05Z",
+ "updated": "2026-11-27T18:52:10Z",
  "coverage_from": "2026-11-18T03:12:00Z",
  "sources": [
   "The Hacker News",
@@ -28,6 +28,254 @@
  "feed_errors": [],
  "incidents": [
   {
+   "id": "2b2a3ed32a",
+   "victim": "Confirmed",
+   "victim_key": "confirmed",
+   "sector": "Healthcare",
+   "country": "United States",
+   "country_key": "United States of America",
+   "city": null,
+   "lat": 39.5,
+   "lon": -99.06,
+   "precision": "country",
+   "country_source": "source",
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": true,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-27T16:37:36Z",
+   "last_seen": "2026-11-27T16:37:36Z",
+   "sources": [
+    {
+     "name": "HIPAA Journal",
+     "url": "https://www.hipaajournal.com/data-breaches-leggett-comprehensive-orthopedics-kern-county-behavioral-health/",
+     "title": "Data Breaches Confirmed by Leggett & Platt; Comprehensive Orthopedics; Kern County Behavioral Health",
+     "published": "2026-11-27T16:37:36Z"
+    }
+   ]
+  },
+  {
+   "id": "98404916e8",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Government & defence",
+   "country": "United States",
+   "country_key": "United States of America",
+   "city": null,
+   "lat": 39.5,
+   "lon": -99.06,
+   "precision": "country",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-26T11:05:01Z",
+   "last_seen": "2026-11-27T15:09:40Z",
+   "sources": [
+    {
+     "name": "Help Net Security",
+     "url": "https://www.helpnetsecurity.com/2026/11/26/fincen-breach-systems-offline/",
+     "title": "US agency tracking money laundering is latest casualty in string of federal breaches",
+     "published": "2026-11-26T11:05:01Z"
+    },
+    {
+     "name": "DataBreaches.net",
+     "url": "https://databreaches.net/2026/11/27/hackers-breach-us-air-force-cloud-one-platform-putting-military-data-at-risk/",
+     "title": "Hackers breach US Air Force Cloud One platform, putting military data at risk",
+     "published": "2026-11-27T13:02:10Z"
+    },
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/us-air-force-cloud-platform-reportedly-hacked-in-latest-federal-breach/",
+     "title": "US Air Force cloud platform reportedly hacked in latest federal breach",
+     "published": "2026-11-27T15:09:40Z"
+    }
+   ]
+  },
+  {
+   "id": "0be27de9c8",
+   "victim": "Air Force Cloud One",
+   "victim_key": "air force cloud one",
+   "sector": "Technology",
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-27T15:03:05Z",
+   "last_seen": "2026-11-27T15:03:05Z",
+   "sources": [
+    {
+     "name": "Security Affairs",
+     "url": "https://securityaffairs.com/204136/security/air-force-cloud-one-breach-updates-blocked-migration-paused-scope-unknown.html",
+     "title": "Air Force Cloud One Breach: Updates Blocked, Migration Paused, Scope Unknown",
+     "published": "2026-11-27T15:03:05Z"
+    }
+   ]
+  },
+  {
+   "id": "be33846cc7",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Manufacturing & industry",
+   "country": "China",
+   "country_key": "China",
+   "city": null,
+   "lat": 36.61,
+   "lon": 103.87,
+   "precision": "country",
+   "country_source": null,
+   "type": "ransomware",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-27T14:23:07Z",
+   "last_seen": "2026-11-27T14:23:07Z",
+   "sources": [
+    {
+     "name": "SC Media",
+     "url": "https://www.scworld.com/brief/ransomware-attack-cripples-chinese-manufacturer-after-backup-failure",
+     "title": "Ransomware attack cripples a Chinese manufacturer after backup failure",
+     "published": "2026-11-27T14:23:07Z"
+    }
+   ]
+  },
+  {
+   "id": "4a82d37230",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Education",
+   "country": "Japan",
+   "country_key": "Japan",
+   "city": null,
+   "lat": 36.02,
+   "lon": 136.88,
+   "precision": "country",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-27T14:15:00Z",
+   "last_seen": "2026-11-27T14:15:00Z",
+   "sources": [
+    {
+     "name": "The Record",
+     "url": "https://therecord.media/japan-education-ministry-cyberattack",
+     "title": "Japan’s education ministry discloses breach of government procurement system",
+     "published": "2026-11-27T14:15:00Z"
+    }
+   ]
+  },
+  {
+   "id": "7c06c14bd3",
+   "victim": "The Biggest",
+   "victim_key": "biggest",
+   "sector": null,
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-27T14:14:55Z",
+   "last_seen": "2026-11-27T14:14:55Z",
+   "sources": [
+    {
+     "name": "DataBreaches.net",
+     "url": "https://databreaches.net/2026/11/27/the-biggest-data-breach-settlements-of-2026/",
+     "title": "The Biggest Data Breach Settlements of 2026",
+     "published": "2026-11-27T14:14:55Z"
+    }
+   ]
+  },
+  {
+   "id": "ae06ba599e",
+   "victim": "FIFA",
+   "victim_key": "fifa",
+   "sector": null,
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-27T08:48:03Z",
+   "last_seen": "2026-11-27T13:21:50Z",
+   "sources": [
+    {
+     "name": "Security Affairs",
+     "url": "https://securityaffairs.com/204100/data-breach/fifa-confirms-a-cyberattack-hackers-claim-12-gb-of-internal-files.html",
+     "title": "FIFA Confirms a Cyberattack, Hackers Claim 12 GB of Internal Files",
+     "published": "2026-11-27T08:48:03Z"
+    },
+    {
+     "name": "Infosecurity Magazine",
+     "url": "https://www.infosecurity-magazine.com/news/fifa-confirms-cyberattack/",
+     "title": "FIFA Confirms Cyber-Attack, Personal and Business Information Compromised",
+     "published": "2026-11-27T10:30:00Z"
+    },
+    {
+     "name": "Help Net Security",
+     "url": "https://www.helpnetsecurity.com/2026/11/27/fifa-cyberattack-data-leak/",
+     "title": "FIFA hacked, cybercriminals claim access to sensitive internal records",
+     "published": "2026-11-27T13:21:50Z"
+    }
+   ]
+  },
+  {
    "id": "62ce00fb3a",
    "victim": "SAP",
    "victim_key": "sap",
@@ -49,7 +297,7 @@
    "summary": null,
    "confidence": "medium",
    "first_seen": "2026-11-27T03:39:12Z",
-   "last_seen": "2026-11-27T07:36:14Z",
+   "last_seen": "2026-11-27T13:15:00Z",
    "sources": [
     {
      "name": "Cybersecurity News",
@@ -62,6 +310,278 @@
      "url": "https://www.securityweek.com/sap-confirms-cyberattack-source-code-reportedly-compromised/",
      "title": "SAP Confirms Cyberattack, Source Code Reportedly Compromised",
      "published": "2026-11-27T07:36:14Z"
+    },
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/sap-confirms-security-incident-after-suspicious-github-activity/",
+     "title": "SAP confirms security incident after suspicious GitHub activity",
+     "published": "2026-11-27T09:56:36Z"
+    },
+    {
+     "name": "The Record",
+     "url": "https://therecord.media/sap-germany-cyberattack-github",
+     "title": "Software giant SAP confirms cyber incident amid reports of source code breach",
+     "published": "2026-11-27T13:15:00Z"
+    }
+   ]
+  },
+  {
+   "id": "e9045b4692",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Banking & finance",
+   "country": "United States",
+   "country_key": "United States of America",
+   "city": null,
+   "lat": 39.5,
+   "lon": -99.06,
+   "precision": "country",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": true,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-27T13:02:05Z",
+   "last_seen": "2026-11-27T13:02:05Z",
+   "sources": [
+    {
+     "name": "DataBreaches.net",
+     "url": "https://databreaches.net/2026/11/27/barclays-us-banking-arm-confirms-data-breach/",
+     "title": "Barclays’ US banking arm confirms data breach",
+     "published": "2026-11-27T13:02:05Z"
+    }
+   ]
+  },
+  {
+   "id": "07882a253e",
+   "victim": "Rackspace",
+   "victim_key": "rackspace",
+   "sector": "Technology",
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-23T02:39:35Z",
+   "last_seen": "2026-11-27T13:01:59Z",
+   "sources": [
+    {
+     "name": "SC Media",
+     "url": "https://www.scworld.com/brief/rackspace-discloses-security-breach-of-spot-cloud-platform",
+     "title": "Rackspace discloses security breach of Spot cloud platform",
+     "published": "2026-11-23T02:39:35Z"
+    },
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/rackspace-shuts-down-spot-cloud-platform-after-security-breach/",
+     "title": "Rackspace shuts down Spot cloud platform after security breach",
+     "published": "2026-11-24T21:37:30Z"
+    },
+    {
+     "name": "DataBreaches.net",
+     "url": "https://databreaches.net/2026/11/27/global-news-agency-afp-reports-cyberattack-shuts-down-content-platform/",
+     "title": "Global news agency AFP reports cyberattack, shuts down content platform",
+     "published": "2026-11-27T13:01:59Z"
+    }
+   ]
+  },
+  {
+   "id": "5551d7471f",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Government & defence",
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "country_source": null,
+   "type": "data_breach",
+   "records": "210,000 Records",
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-27T13:01:43Z",
+   "last_seen": "2026-11-27T13:01:43Z",
+   "sources": [
+    {
+     "name": "DataBreaches.net",
+     "url": "https://databreaches.net/2026/11/27/korea-scientists-and-engineers-mutual-aid-association-hit-by-hack-210000-records-leaked/",
+     "title": "Korea Scientists and Engineers Mutual-aid Association Hit by Hack, 210,000 Records Leaked",
+     "published": "2026-11-27T13:01:43Z"
+    }
+   ]
+  },
+  {
+   "id": "71d573bc8f",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Technology",
+   "country": "Germany",
+   "country_key": "Germany",
+   "city": null,
+   "lat": 51.13,
+   "lon": 10.29,
+   "precision": "country",
+   "country_source": null,
+   "type": "supply_chain",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-27T11:39:20Z",
+   "last_seen": "2026-11-27T11:39:20Z",
+   "sources": [
+    {
+     "name": "Security Affairs",
+     "url": "https://securityaffairs.com/204121/data-breach/sap-security-incident-stolen-tokens-raise-supply-chain-concerns.html",
+     "title": "SAP Security Incident: Stolen Tokens Raise Supply Chain Concerns",
+     "published": "2026-11-27T11:39:20Z"
+    }
+   ]
+  },
+  {
+   "id": "8cbae16fd0",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Banking & finance",
+   "country": "United Kingdom",
+   "country_key": "United Kingdom",
+   "city": null,
+   "lat": 53.88,
+   "lon": -2.66,
+   "precision": "country",
+   "country_source": null,
+   "type": "other",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": true,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-27T00:00:00Z",
+   "last_seen": "2026-11-27T11:15:00Z",
+   "sources": [
+    {
+     "name": "The Record",
+     "url": "https://therecord.media/uk-department-work-pensions-cyber-incident",
+     "title": "British government takes services offline following ‘cyber incident’",
+     "published": "2026-11-27T00:00:00Z"
+    },
+    {
+     "name": "Infosecurity Magazine",
+     "url": "https://www.infosecurity-magazine.com/news/uk-welfare-services-offline/",
+     "title": "UK Welfare and Pension Services Taken Offline Following Cyber Incident",
+     "published": "2026-11-27T11:15:00Z"
+    }
+   ]
+  },
+  {
+   "id": "564b556565",
+   "victim": null,
+   "victim_key": "",
+   "sector": null,
+   "country": "United States",
+   "country_key": "United States of America",
+   "city": null,
+   "lat": 39.5,
+   "lon": -99.06,
+   "precision": "country",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-27T09:30:54Z",
+   "last_seen": "2026-11-27T09:30:54Z",
+   "sources": [
+    {
+     "name": "SecurityWeek",
+     "url": "https://www.securityweek.com/100000-potentially-impacted-by-colorado-data-breach/",
+     "title": "100,000 Potentially Impacted by Colorado Data Breach",
+     "published": "2026-11-27T09:30:54Z"
+    }
+   ]
+  },
+  {
+   "id": "14c2f279b5",
+   "victim": "Switzerland",
+   "victim_key": "switzerland",
+   "sector": "Technology",
+   "country": "Switzerland",
+   "country_key": "Switzerland",
+   "city": null,
+   "lat": 46.79,
+   "lon": 8.12,
+   "precision": "country",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": true,
+   "summary": null,
+   "confidence": "medium",
+   "first_seen": "2026-11-25T16:02:38Z",
+   "last_seen": "2026-11-27T09:08:37Z",
+   "sources": [
+    {
+     "name": "Cybersecurity News",
+     "url": "https://cybersecuritynews.com/switzerland-ai-agent-cyberattacks/",
+     "title": "Switzerland Confirms First AI-Agent Cyberattacks That Successfully Compromised IT Systems",
+     "published": "2026-11-25T16:02:38Z"
+    },
+    {
+     "name": "Security Affairs",
+     "url": "https://securityaffairs.com/204004/hacking/switzerland-confirms-first-ai-agent-cyberattacks-on-local-organisations.html",
+     "title": "Switzerland Confirms First AI-Agent Cyberattacks on Local Organisations",
+     "published": "2026-11-25T21:06:55Z"
+    },
+    {
+     "name": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/switzerland-confirms-ai-assisted.html",
+     "title": "Switzerland Confirms AI-Assisted Cyberattacks Breached Critical Infrastructure Operators",
+     "published": "2026-11-27T06:04:20Z"
+    },
+    {
+     "name": "The Cyber Express",
+     "url": "https://thecyberexpress.com/ai-agent-cyberattacks-hit-switzerland/",
+     "title": "Switzerland Confirms First Autonomous AI Agent Cyberattacks on Critical Infrastructure",
+     "published": "2026-11-27T09:08:37Z"
     }
    ]
   },
@@ -94,50 +614,6 @@
      "url": "https://cybersecuritynews.com/military-and-government-networks/",
      "title": "Hackers Breach Military and Government Networks Across Southeast Asia, Stealing Sensitive Documents",
      "published": "2026-11-27T06:35:33Z"
-    }
-   ]
-  },
-  {
-   "id": "14c2f279b5",
-   "victim": "Switzerland",
-   "victim_key": "switzerland",
-   "sector": "Technology",
-   "country": "Switzerland",
-   "country_key": "Switzerland",
-   "city": null,
-   "lat": 46.79,
-   "lon": 8.12,
-   "precision": "country",
-   "country_source": null,
-   "type": "data_breach",
-   "records": null,
-   "actor": null,
-   "attacker_country": null,
-   "attacker_lat": null,
-   "attacker_lon": null,
-   "critical": true,
-   "summary": null,
-   "confidence": "medium",
-   "first_seen": "2026-11-25T16:02:38Z",
-   "last_seen": "2026-11-27T06:04:20Z",
-   "sources": [
-    {
-     "name": "Cybersecurity News",
-     "url": "https://cybersecuritynews.com/switzerland-ai-agent-cyberattacks/",
-     "title": "Switzerland Confirms First AI-Agent Cyberattacks That Successfully Compromised IT Systems",
-     "published": "2026-11-25T16:02:38Z"
-    },
-    {
-     "name": "Security Affairs",
-     "url": "https://securityaffairs.com/204004/hacking/switzerland-confirms-first-ai-agent-cyberattacks-on-local-organisations.html",
-     "title": "Switzerland Confirms First AI-Agent Cyberattacks on Local Organisations",
-     "published": "2026-11-25T21:06:55Z"
-    },
-    {
-     "name": "The Hacker News",
-     "url": "https://thehackernews.com/2026/11/switzerland-confirms-ai-assisted.html",
-     "title": "Switzerland Confirms AI-Assisted Cyberattacks Breached Critical Infrastructure Operators",
-     "published": "2026-11-27T06:04:20Z"
     }
    ]
   },
@@ -386,38 +862,6 @@
      "url": "https://www.bleepingcomputer.com/news/security/sys010-malware-abuses-browser-management-to-spy-on-gmail-outlook/",
      "title": "SYS010 malware abuses browser management to spy on Gmail, Outlook",
      "published": "2026-11-26T11:50:17Z"
-    }
-   ]
-  },
-  {
-   "id": "98404916e8",
-   "victim": null,
-   "victim_key": "",
-   "sector": "Government & defence",
-   "country": "United States",
-   "country_key": "United States of America",
-   "city": null,
-   "lat": 39.5,
-   "lon": -99.06,
-   "precision": "country",
-   "country_source": null,
-   "type": "data_breach",
-   "records": null,
-   "actor": null,
-   "attacker_country": null,
-   "attacker_lat": null,
-   "attacker_lon": null,
-   "critical": false,
-   "summary": null,
-   "confidence": "low",
-   "first_seen": "2026-11-26T11:05:01Z",
-   "last_seen": "2026-11-26T11:05:01Z",
-   "sources": [
-    {
-     "name": "Help Net Security",
-     "url": "https://www.helpnetsecurity.com/2026/11/26/fincen-breach-systems-offline/",
-     "title": "US agency tracking money laundering is latest casualty in string of federal breaches",
-     "published": "2026-11-26T11:05:01Z"
     }
    ]
   },
@@ -1214,44 +1658,6 @@
      "url": "https://www.securityweek.com/an-unclassified-cia-system-was-breached-in-a-cyberattack-ap-source-says/",
      "title": "An Unclassified CIA System Was Breached in a Cyberattack, AP Source Says",
      "published": "2026-11-24T22:41:58Z"
-    }
-   ]
-  },
-  {
-   "id": "07882a253e",
-   "victim": "Rackspace",
-   "victim_key": "rackspace",
-   "sector": "Technology",
-   "country": null,
-   "country_key": null,
-   "city": null,
-   "lat": null,
-   "lon": null,
-   "precision": "none",
-   "country_source": null,
-   "type": "data_breach",
-   "records": null,
-   "actor": null,
-   "attacker_country": null,
-   "attacker_lat": null,
-   "attacker_lon": null,
-   "critical": false,
-   "summary": null,
-   "confidence": "low",
-   "first_seen": "2026-11-23T02:39:35Z",
-   "last_seen": "2026-11-24T21:37:30Z",
-   "sources": [
-    {
-     "name": "SC Media",
-     "url": "https://www.scworld.com/brief/rackspace-discloses-security-breach-of-spot-cloud-platform",
-     "title": "Rackspace discloses security breach of Spot cloud platform",
-     "published": "2026-11-23T02:39:35Z"
-    },
-    {
-     "name": "BleepingComputer",
-     "url": "https://www.bleepingcomputer.com/news/security/rackspace-shuts-down-spot-cloud-platform-after-security-breach/",
-     "title": "Rackspace shuts down Spot cloud platform after security breach",
-     "published": "2026-11-24T21:37:30Z"
     }
    ]
   },
@@ -7924,38 +8330,6 @@
      "url": "https://www.infosecurity-magazine.com/news/japanese-railway-operators-cyber/",
      "title": "Japanese Railway Operators Hit with Weekend Cyber Attacks",
      "published": "2026-09-29T09:45:00Z"
-    }
-   ]
-  },
-  {
-   "id": "bd6b19d59d",
-   "victim": null,
-   "victim_key": "",
-   "sector": "Crypto & digital assets",
-   "country": null,
-   "country_key": null,
-   "city": null,
-   "lat": null,
-   "lon": null,
-   "precision": "none",
-   "country_source": null,
-   "type": "data_breach",
-   "records": "$387.5m",
-   "actor": null,
-   "attacker_country": null,
-   "attacker_lat": null,
-   "attacker_lon": null,
-   "critical": false,
-   "summary": null,
-   "confidence": "low",
-   "first_seen": "2026-09-28T15:00:00Z",
-   "last_seen": "2026-09-28T15:00:00Z",
-   "sources": [
-    {
-     "name": "Infosecurity Magazine",
-     "url": "https://www.infosecurity-magazine.com/news/bitget-restarts-withdrawals-387-5m/",
-     "title": "Bitget Restarts Bitcoin Withdrawals Following $387.5m Wallet Breach",
-     "published": "2026-09-28T15:00:00Z"
     }
    ]
   }
