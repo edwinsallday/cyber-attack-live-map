@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-26T15:42:51Z",
+ "updated": "2026-11-27T00:31:48Z",
  "coverage_from": "2026-11-18T03:12:00Z",
  "sources": [
   "The Hacker News",
@@ -27,6 +27,44 @@
  ],
  "feed_errors": [],
  "incidents": [
+  {
+   "id": "0084f4bf02",
+   "victim": null,
+   "victim_key": "",
+   "sector": null,
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "country_source": null,
+   "type": "other",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-26T13:18:58Z",
+   "last_seen": "2026-11-26T17:06:55Z",
+   "sources": [
+    {
+     "name": "DataBreaches.net",
+     "url": "https://databreaches.net/2026/11/26/fifa-says-it-has-been-victim-of-a-cyberattack-accessing-personal-and-business-information/",
+     "title": "FIFA says it has been victim of a cyberattack accessing ‘personal and business information’",
+     "published": "2026-11-26T13:18:58Z"
+    },
+    {
+     "name": "SecurityWeek",
+     "url": "https://www.securityweek.com/fifa-says-it-has-been-victim-of-a-cyberattack-accessing-personal-and-business-information/",
+     "title": "FIFA Says It Has Been Victim of a Cyberattack Accessing ‘Personal and Business Information’",
+     "published": "2026-11-26T17:06:55Z"
+    }
+   ]
+  },
   {
    "id": "8381e505ba",
    "victim": "Todoist",
@@ -164,38 +202,6 @@
      "url": "https://cybersecuritynews.com/zodia-custody-data-breach/",
      "title": "Standard Chartered’s Zodia Custody Hacked, Client and Employee Data Exposed",
      "published": "2026-11-26T14:01:01Z"
-    }
-   ]
-  },
-  {
-   "id": "0084f4bf02",
-   "victim": null,
-   "victim_key": "",
-   "sector": null,
-   "country": null,
-   "country_key": null,
-   "city": null,
-   "lat": null,
-   "lon": null,
-   "precision": "none",
-   "country_source": null,
-   "type": "other",
-   "records": null,
-   "actor": null,
-   "attacker_country": null,
-   "attacker_lat": null,
-   "attacker_lon": null,
-   "critical": false,
-   "summary": null,
-   "confidence": "low",
-   "first_seen": "2026-11-26T13:18:58Z",
-   "last_seen": "2026-11-26T13:18:58Z",
-   "sources": [
-    {
-     "name": "DataBreaches.net",
-     "url": "https://databreaches.net/2026/11/26/fifa-says-it-has-been-victim-of-a-cyberattack-accessing-personal-and-business-information/",
-     "title": "FIFA says it has been victim of a cyberattack accessing ‘personal and business information’",
-     "published": "2026-11-26T13:18:58Z"
     }
    ]
   },
