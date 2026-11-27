@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-27T00:31:48Z",
+ "updated": "2026-11-27T09:00:05Z",
  "coverage_from": "2026-11-18T03:12:00Z",
  "sources": [
   "The Hacker News",
@@ -27,6 +27,120 @@
  ],
  "feed_errors": [],
  "incidents": [
+  {
+   "id": "62ce00fb3a",
+   "victim": "SAP",
+   "victim_key": "sap",
+   "sector": "Technology",
+   "country": "Germany",
+   "country_key": "Germany",
+   "city": null,
+   "lat": 51.13,
+   "lon": 10.29,
+   "precision": "country",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "medium",
+   "first_seen": "2026-11-27T03:39:12Z",
+   "last_seen": "2026-11-27T07:36:14Z",
+   "sources": [
+    {
+     "name": "Cybersecurity News",
+     "url": "https://cybersecuritynews.com/sap-security-incident/",
+     "title": "SAP Confirms Security Incident as Hackers Reportedly Steal GitHub Tokens and Alter Code",
+     "published": "2026-11-27T03:39:12Z"
+    },
+    {
+     "name": "SecurityWeek",
+     "url": "https://www.securityweek.com/sap-confirms-cyberattack-source-code-reportedly-compromised/",
+     "title": "SAP Confirms Cyberattack, Source Code Reportedly Compromised",
+     "published": "2026-11-27T07:36:14Z"
+    }
+   ]
+  },
+  {
+   "id": "4e802c3161",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Government & defence",
+   "country": "Thailand",
+   "country_key": "Thailand",
+   "city": null,
+   "lat": 15.02,
+   "lon": 101.01,
+   "precision": "country",
+   "country_source": null,
+   "type": "espionage",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-27T06:35:33Z",
+   "last_seen": "2026-11-27T06:35:33Z",
+   "sources": [
+    {
+     "name": "Cybersecurity News",
+     "url": "https://cybersecuritynews.com/military-and-government-networks/",
+     "title": "Hackers Breach Military and Government Networks Across Southeast Asia, Stealing Sensitive Documents",
+     "published": "2026-11-27T06:35:33Z"
+    }
+   ]
+  },
+  {
+   "id": "14c2f279b5",
+   "victim": "Switzerland",
+   "victim_key": "switzerland",
+   "sector": "Technology",
+   "country": "Switzerland",
+   "country_key": "Switzerland",
+   "city": null,
+   "lat": 46.79,
+   "lon": 8.12,
+   "precision": "country",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": true,
+   "summary": null,
+   "confidence": "medium",
+   "first_seen": "2026-11-25T16:02:38Z",
+   "last_seen": "2026-11-27T06:04:20Z",
+   "sources": [
+    {
+     "name": "Cybersecurity News",
+     "url": "https://cybersecuritynews.com/switzerland-ai-agent-cyberattacks/",
+     "title": "Switzerland Confirms First AI-Agent Cyberattacks That Successfully Compromised IT Systems",
+     "published": "2026-11-25T16:02:38Z"
+    },
+    {
+     "name": "Security Affairs",
+     "url": "https://securityaffairs.com/204004/hacking/switzerland-confirms-first-ai-agent-cyberattacks-on-local-organisations.html",
+     "title": "Switzerland Confirms First AI-Agent Cyberattacks on Local Organisations",
+     "published": "2026-11-25T21:06:55Z"
+    },
+    {
+     "name": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/switzerland-confirms-ai-assisted.html",
+     "title": "Switzerland Confirms AI-Assisted Cyberattacks Breached Critical Infrastructure Operators",
+     "published": "2026-11-27T06:04:20Z"
+    }
+   ]
+  },
   {
    "id": "0084f4bf02",
    "victim": null,
@@ -526,44 +640,6 @@
      "url": "https://cybersecuritynews.com/1password-hacked-2/",
      "title": "1Password Hacked – Attackers Breach Backend Systems and Steal Customer Data",
      "published": "2026-11-26T03:04:19Z"
-    }
-   ]
-  },
-  {
-   "id": "14c2f279b5",
-   "victim": "Switzerland",
-   "victim_key": "switzerland",
-   "sector": "Technology",
-   "country": "Switzerland",
-   "country_key": "Switzerland",
-   "city": null,
-   "lat": 46.79,
-   "lon": 8.12,
-   "precision": "country",
-   "country_source": null,
-   "type": "data_breach",
-   "records": null,
-   "actor": null,
-   "attacker_country": null,
-   "attacker_lat": null,
-   "attacker_lon": null,
-   "critical": true,
-   "summary": null,
-   "confidence": "medium",
-   "first_seen": "2026-11-25T16:02:38Z",
-   "last_seen": "2026-11-25T21:06:55Z",
-   "sources": [
-    {
-     "name": "Cybersecurity News",
-     "url": "https://cybersecuritynews.com/switzerland-ai-agent-cyberattacks/",
-     "title": "Switzerland Confirms First AI-Agent Cyberattacks That Successfully Compromised IT Systems",
-     "published": "2026-11-25T16:02:38Z"
-    },
-    {
-     "name": "Security Affairs",
-     "url": "https://securityaffairs.com/204004/hacking/switzerland-confirms-first-ai-agent-cyberattacks-on-local-organisations.html",
-     "title": "Switzerland Confirms First AI-Agent Cyberattacks on Local Organisations",
-     "published": "2026-11-25T21:06:55Z"
     }
    ]
   },
