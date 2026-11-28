@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-27T18:52:10Z",
+ "updated": "2026-11-28T01:54:51Z",
  "coverage_from": "2026-11-18T03:12:00Z",
  "sources": [
   "The Hacker News",
@@ -27,6 +27,216 @@
  ],
  "feed_errors": [],
  "incidents": [
+  {
+   "id": "fc27df21d7",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Healthcare",
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "country_source": null,
+   "type": "other",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": true,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-28T01:18:52Z",
+   "last_seen": "2026-11-28T01:18:52Z",
+   "sources": [
+    {
+     "name": "DataBreaches.net",
+     "url": "https://databreaches.net/2026/11/27/cyber-incident-disrupting-services-for-pacific-blue-cross-members/",
+     "title": "Cyber incident disrupting services for Pacific Blue Cross members",
+     "published": "2026-11-28T01:18:52Z"
+    }
+   ]
+  },
+  {
+   "id": "21346dfa8a",
+   "victim": "Fédération Internationale de Football Association",
+   "victim_key": "fdration internationale de football association",
+   "sector": "Technology",
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-27T20:32:32Z",
+   "last_seen": "2026-11-27T20:32:32Z",
+   "sources": [
+    {
+     "name": "SC Media",
+     "url": "https://www.scworld.com/brief/federation-internationale-de-football-association-confirms-cyberattack",
+     "title": "Fédération Internationale de Football Association confirms cyberattack",
+     "published": "2026-11-27T20:32:32Z"
+    }
+   ]
+  },
+  {
+   "id": "c01f0716c0",
+   "victim": "Australia’s Flight Centre",
+   "victim_key": "australias flight centre",
+   "sector": "Travel & hospitality",
+   "country": "Australia",
+   "country_key": "Australia",
+   "city": null,
+   "lat": -25.56,
+   "lon": 134.38,
+   "precision": "country",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "medium",
+   "first_seen": "2026-11-26T11:51:11Z",
+   "last_seen": "2026-11-27T20:24:35Z",
+   "sources": [
+    {
+     "name": "Security Affairs",
+     "url": "https://securityaffairs.com/204049/data-breach/australias-flight-centre-data-breach-exposes-customer-records-and-passport-details.html",
+     "title": "Australia’s Flight Centre Data Breach Exposes Customer Records and Passport Details",
+     "published": "2026-11-26T11:51:11Z"
+    },
+    {
+     "name": "DataBreaches.net",
+     "url": "https://databreaches.net/2026/11/26/australias-flight-centre-data-breach-exposes-customer-records-and-passport-details/",
+     "title": "Australia’s Flight Centre Data Breach Exposes Customer Records and Passport Details",
+     "published": "2026-11-26T13:18:46Z"
+    },
+    {
+     "name": "SC Media",
+     "url": "https://www.scworld.com/brief/flight-centre-investigates-third-party-data-breach",
+     "title": "Flight Centre investigates third-party data breach",
+     "published": "2026-11-27T20:24:35Z"
+    }
+   ]
+  },
+  {
+   "id": "20534b25c7",
+   "victim": "US Uranium Mine",
+   "victim_key": "us uranium mine",
+   "sector": "Energy & utilities",
+   "country": "United States",
+   "country_key": "United States of America",
+   "city": null,
+   "lat": 39.5,
+   "lon": -99.06,
+   "precision": "country",
+   "country_source": null,
+   "type": "other",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": true,
+   "summary": null,
+   "confidence": "medium",
+   "first_seen": "2026-11-24T10:35:04Z",
+   "last_seen": "2026-11-27T20:22:44Z",
+   "sources": [
+    {
+     "name": "SecurityWeek",
+     "url": "https://www.securityweek.com/peninsula-energy-halts-trading-after-cyber-incident-hits-us-uranium-mine/",
+     "title": "Peninsula Energy Halts Trading After Cyber Incident Hits US Uranium Mine",
+     "published": "2026-11-24T10:35:04Z"
+    },
+    {
+     "name": "SC Media",
+     "url": "https://www.scworld.com/brief/peninsula-energy-suspends-uranium-operations-following-cyberattack",
+     "title": "Peninsula Energy suspends uranium operations following cyberattack",
+     "published": "2026-11-27T20:22:44Z"
+    }
+   ]
+  },
+  {
+   "id": "c33ac200ed",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Technology",
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "country_source": null,
+   "type": "other",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-27T19:26:04Z",
+   "last_seen": "2026-11-27T19:26:04Z",
+   "sources": [
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/pcloud-confirms-password-manager-hack-after-suspicious-login-alerts/",
+     "title": "pCloud confirms password manager hack after suspicious login alerts",
+     "published": "2026-11-27T19:26:04Z"
+    }
+   ]
+  },
+  {
+   "id": "72cf1a5347",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Healthcare",
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": true,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-27T18:57:42Z",
+   "last_seen": "2026-11-27T18:57:42Z",
+   "sources": [
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/new-boston-scientific-data-breach-exposes-personal-medical-info/",
+     "title": "New Boston Scientific data breach exposes personal, medical info",
+     "published": "2026-11-27T18:57:42Z"
+    }
+   ]
+  },
   {
    "id": "2b2a3ed32a",
    "victim": "Confirmed",
@@ -792,44 +1002,6 @@
      "url": "https://cybersecuritynews.com/zodia-custody-data-breach/",
      "title": "Standard Chartered’s Zodia Custody Hacked, Client and Employee Data Exposed",
      "published": "2026-11-26T14:01:01Z"
-    }
-   ]
-  },
-  {
-   "id": "c01f0716c0",
-   "victim": "Australia’s Flight Centre",
-   "victim_key": "australias flight centre",
-   "sector": "Travel & hospitality",
-   "country": "Australia",
-   "country_key": "Australia",
-   "city": null,
-   "lat": -25.56,
-   "lon": 134.38,
-   "precision": "country",
-   "country_source": null,
-   "type": "data_breach",
-   "records": null,
-   "actor": null,
-   "attacker_country": null,
-   "attacker_lat": null,
-   "attacker_lon": null,
-   "critical": false,
-   "summary": null,
-   "confidence": "medium",
-   "first_seen": "2026-11-26T11:51:11Z",
-   "last_seen": "2026-11-26T13:18:46Z",
-   "sources": [
-    {
-     "name": "Security Affairs",
-     "url": "https://securityaffairs.com/204049/data-breach/australias-flight-centre-data-breach-exposes-customer-records-and-passport-details.html",
-     "title": "Australia’s Flight Centre Data Breach Exposes Customer Records and Passport Details",
-     "published": "2026-11-26T11:51:11Z"
-    },
-    {
-     "name": "DataBreaches.net",
-     "url": "https://databreaches.net/2026/11/26/australias-flight-centre-data-breach-exposes-customer-records-and-passport-details/",
-     "title": "Australia’s Flight Centre Data Breach Exposes Customer Records and Passport Details",
-     "published": "2026-11-26T13:18:46Z"
     }
    ]
   },
@@ -2276,38 +2448,6 @@
      "url": "https://www.hipaajournal.com/data-breaches-announced-by-payrhealth-medcom-solutions/",
      "title": "Data Breaches Announced by PayrHealth & MedCom Solutions",
      "published": "2026-11-24T11:00:41Z"
-    }
-   ]
-  },
-  {
-   "id": "20534b25c7",
-   "victim": "US Uranium Mine",
-   "victim_key": "us uranium mine",
-   "sector": "Energy & utilities",
-   "country": "United States",
-   "country_key": "United States of America",
-   "city": null,
-   "lat": 39.5,
-   "lon": -99.06,
-   "precision": "country",
-   "country_source": null,
-   "type": "other",
-   "records": null,
-   "actor": null,
-   "attacker_country": null,
-   "attacker_lat": null,
-   "attacker_lon": null,
-   "critical": true,
-   "summary": null,
-   "confidence": "medium",
-   "first_seen": "2026-11-24T10:35:04Z",
-   "last_seen": "2026-11-24T10:35:04Z",
-   "sources": [
-    {
-     "name": "SecurityWeek",
-     "url": "https://www.securityweek.com/peninsula-energy-halts-trading-after-cyber-incident-hits-us-uranium-mine/",
-     "title": "Peninsula Energy Halts Trading After Cyber Incident Hits US Uranium Mine",
-     "published": "2026-11-24T10:35:04Z"
     }
    ]
   },

@@ -97,8 +97,18 @@
  "fireworks ai": {
   "checked": "2026-11-18"
  },
+ "flight centre": {
+  "qid": "Q5459202",
+  "label": "Flight Centre",
+  "description": "large retail travel agency in Australasia",
+  "country": "Australia",
+  "checked": "2026-11-28"
+ },
  "frontline education": {
   "checked": "2026-11-18"
+ },
+ "fédération internationale de football association": {
+  "checked": "2026-11-28"
  },
  "gl.inet": {
   "checked": "2026-11-23"
