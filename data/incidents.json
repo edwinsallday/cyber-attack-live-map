@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-28T01:54:51Z",
+ "updated": "2026-11-28T10:15:08Z",
  "coverage_from": "2026-11-18T03:12:00Z",
  "sources": [
   "The Hacker News",
@@ -27,6 +27,108 @@
  ],
  "feed_errors": [],
  "incidents": [
+  {
+   "id": "376475770e",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Technology",
+   "country": "Kenya",
+   "country_key": "Kenya",
+   "city": null,
+   "lat": 0.6,
+   "lon": 37.79,
+   "precision": "country",
+   "country_source": null,
+   "type": "data_breach",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-28T09:14:31Z",
+   "last_seen": "2026-11-28T09:14:31Z",
+   "sources": [
+    {
+     "name": "Cybersecurity News",
+     "url": "https://cybersecuritynews.com/kenya-ecitizen-data-breach/",
+     "title": "Kenya eCitizen Data Breach – Hackers Reportedly Leak Identity Records of 32 Million Kenyans",
+     "published": "2026-11-28T09:14:31Z"
+    }
+   ]
+  },
+  {
+   "id": "c33ac200ed",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Technology",
+   "country": "Switzerland",
+   "country_key": "Switzerland",
+   "city": null,
+   "lat": 46.79,
+   "lon": 8.12,
+   "precision": "country",
+   "country_source": null,
+   "type": "other",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-27T19:26:04Z",
+   "last_seen": "2026-11-28T08:08:11Z",
+   "sources": [
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/pcloud-confirms-password-manager-hack-after-suspicious-login-alerts/",
+     "title": "pCloud confirms password manager hack after suspicious login alerts",
+     "published": "2026-11-27T19:26:04Z"
+    },
+    {
+     "name": "The Hacker News",
+     "url": "https://thehackernews.com/2026/11/pcloud-password-manager-hit-by-cyber.html",
+     "title": "pCloud Password Manager Hit by Cyber Attack Involving Email Address Exposure and Login Attempts",
+     "published": "2026-11-28T08:08:11Z"
+    }
+   ]
+  },
+  {
+   "id": "436306d235",
+   "victim": null,
+   "victim_key": "",
+   "sector": "Technology",
+   "country": null,
+   "country_key": null,
+   "city": null,
+   "lat": null,
+   "lon": null,
+   "precision": "none",
+   "country_source": null,
+   "type": "other",
+   "records": null,
+   "actor": null,
+   "attacker_country": null,
+   "attacker_lat": null,
+   "attacker_lon": null,
+   "critical": false,
+   "summary": null,
+   "confidence": "low",
+   "first_seen": "2026-11-28T04:48:49Z",
+   "last_seen": "2026-11-28T04:48:49Z",
+   "sources": [
+    {
+     "name": "Cybersecurity News",
+     "url": "https://cybersecuritynews.com/iphone-users-are-being-hacked/",
+     "title": "Telegram Warns iPhone Users Are Being Hacked on a Massive Scale; Just Visiting a Website Could Be Enough",
+     "published": "2026-11-28T04:48:49Z"
+    }
+   ]
+  },
   {
    "id": "fc27df21d7",
    "victim": null,
@@ -170,38 +272,6 @@
      "url": "https://www.scworld.com/brief/peninsula-energy-suspends-uranium-operations-following-cyberattack",
      "title": "Peninsula Energy suspends uranium operations following cyberattack",
      "published": "2026-11-27T20:22:44Z"
-    }
-   ]
-  },
-  {
-   "id": "c33ac200ed",
-   "victim": null,
-   "victim_key": "",
-   "sector": "Technology",
-   "country": null,
-   "country_key": null,
-   "city": null,
-   "lat": null,
-   "lon": null,
-   "precision": "none",
-   "country_source": null,
-   "type": "other",
-   "records": null,
-   "actor": null,
-   "attacker_country": null,
-   "attacker_lat": null,
-   "attacker_lon": null,
-   "critical": false,
-   "summary": null,
-   "confidence": "low",
-   "first_seen": "2026-11-27T19:26:04Z",
-   "last_seen": "2026-11-27T19:26:04Z",
-   "sources": [
-    {
-     "name": "BleepingComputer",
-     "url": "https://www.bleepingcomputer.com/news/security/pcloud-confirms-password-manager-hack-after-suspicious-login-alerts/",
-     "title": "pCloud confirms password manager hack after suspicious login alerts",
-     "published": "2026-11-27T19:26:04Z"
     }
    ]
   },
@@ -8438,38 +8508,6 @@
      "url": "https://www.infosecurity-magazine.com/news/frontline-education-breach-k12/",
      "title": "Frontline Education Breach Impacts K-12 School District Staff",
      "published": "2026-10-05T09:00:00Z"
-    }
-   ]
-  },
-  {
-   "id": "67690d9ebc",
-   "victim": null,
-   "victim_key": "",
-   "sector": "Transport & logistics",
-   "country": "Japan",
-   "country_key": "Japan",
-   "city": null,
-   "lat": 36.02,
-   "lon": 136.88,
-   "precision": "country",
-   "country_source": null,
-   "type": "other",
-   "records": null,
-   "actor": null,
-   "attacker_country": null,
-   "attacker_lat": null,
-   "attacker_lon": null,
-   "critical": true,
-   "summary": null,
-   "confidence": "low",
-   "first_seen": "2026-09-29T09:45:00Z",
-   "last_seen": "2026-09-29T09:45:00Z",
-   "sources": [
-    {
-     "name": "Infosecurity Magazine",
-     "url": "https://www.infosecurity-magazine.com/news/japanese-railway-operators-cyber/",
-     "title": "Japanese Railway Operators Hit with Weekend Cyber Attacks",
-     "published": "2026-09-29T09:45:00Z"
     }
    ]
   }
